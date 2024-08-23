@@ -1,0 +1,440 @@
+{
+  "attack": {
+    "category": "player",
+    "sounds": ["attack"]
+  },
+  "attack2": {
+    "category": "player",
+    "sounds": ["attack2"]
+  },
+  "die": {
+    "category": "player",
+    "sounds": ["die"]
+  },
+  "die2": {
+    "category": "player",
+    "sounds": ["die2"]
+  },
+  "giggle": {
+    "category": "player",
+    "sounds": ["giggle"]
+  },
+  "giggle2": {
+    "category": "player",
+    "sounds": ["giggle2"]
+  },
+  "giggle3": {
+    "category": "player",
+    "sounds": ["giggle3"]
+  },
+  "hit": {
+    "category": "player",
+    "sounds": ["hit"]
+  },
+  "hit2": {
+    "category": "player",
+    "sounds": ["hit2"]
+  },
+  "pikaHit": {
+    "category": "player",
+    "sounds": ["pikaHit"]
+  },
+  "pikaDie": {
+    "category": "player",
+    "sounds": ["pikaDie"]
+  },
+  "pikaSay": {
+    "category": "player",
+    "sounds": ["pikaSay"]
+  },
+  "pikaAngry": {
+    "category": "player",
+    "sounds": ["pikaAngry"]
+  },
+  "pikaAngryShort": {
+    "category": "player",
+    "sounds": ["pikaAngryShort"]
+  },
+  "goombaStomp": {
+    "category": "player",
+    "sounds": ["goombaStomp"]
+  },
+  "koopaKick": {
+    "category": "player",
+    "sounds": ["koopaKick"]
+  },
+  "star": {
+    "category": "player",
+    "sounds": [{"name": "star", "stream": true}]
+  },
+  "charge": {
+    "category": "player",
+    "sounds": ["charge"]
+  },
+  "shoot": {
+    "category": "player",
+    "sounds": ["shoot"]
+  },
+  "energyHit": {
+    "category": "player",
+    "sounds": ["energyHit"]
+  },
+  "Darkness": {
+    "category": "player",
+    "sounds": ["Darkness"]
+  },
+  "DarknessShot": {
+    "category": "player",
+    "sounds": ["DarknessShot"]
+  },
+  "Fanfare": {
+    "category": "player",
+    "sounds": ["Fanfare"]
+  },
+  "Gohma": {
+    "category": "player",
+    "sounds": ["Gohma"]
+  },
+  "Gunshot": {
+    "category": "player",
+    "sounds": ["Gunshot"]
+  },
+  "MonsterLion": {
+    "category": "player",
+    "sounds": ["MonsterLion"]
+  },
+  "MonsterRoar": {
+    "category": "player",
+    "sounds": ["MonsterRoar"]
+  },
+  "RedeadDie": {
+    "category": "player",
+    "sounds": ["RedeadDie"]
+  },
+  "RedeadHit": {
+    "category": "player",
+    "sounds": ["RedeadHit"]
+  },
+  "Poke": {
+    "category": "player",
+    "sounds": ["Poke"]
+  },
+  "bossHurt": {
+    "category": "player",
+    "sounds": ["bossHurt"]
+  },
+  "lightsaber": {
+    "category": "player",
+    "sounds": ["lightsaber"]
+  },
+  "energysword": {
+    "category": "player",
+    "sounds": ["energysword"]
+  },
+  "mewRetro": {
+    "category": "player",
+    "sounds": ["mewRetro"]
+  },
+  "ropeThrow": {
+    "category": "player",
+    "sounds": ["ropeThrow"]
+  },
+  "ropeSwing": {
+    "category": "player",
+    "sounds": ["ropeSwing"]
+  },
+  "ocarina.lullaby": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/lullaby", "stream": true}]
+  },
+  "ocarina.bolero": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/bolero", "stream": true}]
+  },
+  "ocarina.healingsong": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/healingsong", "stream": true}]
+  },
+  "ocarina.nocturne": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/nocturne", "stream": true}]
+  },
+  "ocarina.prelude": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/prelude", "stream": true}]
+  },
+  "ocarina.sunsSong": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/sunsSong", "stream": true}]
+  },
+  "ocarina.saria": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/saria", "stream": true}]
+  },
+  "ocarina.stormsSong": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/stormsSong", "stream": true}]
+  },
+  "ocarina.timeSong": {
+    "category": "player",
+    "sounds": [{"name": "ocarina/timeSong", "stream": true}]
+  },
+  "chickenHurt": {
+    "category": "player",
+    "sounds": ["chickenHurt"]
+  },
+  "classicDeath": {
+    "category": "player",
+    "sounds": ["classicDeath"]
+  },
+  "fierceGrowl": {
+    "category": "player",
+    "sounds": ["fierceGrowl"]
+  },
+  "fierceHit": {
+    "category": "player",
+    "sounds": ["fierceHit"]
+  },
+  "jingle": {
+    "category": "player",
+    "sounds": ["jingle"]
+  },
+  "keeseDeath": {
+    "category": "player",
+    "sounds": ["keeseDeath"]
+  },
+  "lightBeam": {
+    "category": "player",
+    "sounds": ["lightBeam"]
+  },
+  "poeGiggle": {
+    "category": "player",
+    "sounds": ["poeGiggle"]
+  },
+  "redeadSay": {
+    "category": "player",
+    "sounds": ["RedeadSay1", "RedeadSay2"]
+  },
+  "Redead": {
+    "category": "player",
+    "sounds": ["RedeadSay1"]
+  },
+  "rupee": {
+    "category": "player",
+    "sounds": ["rupee"]
+  },
+  "toughMobHit": {
+    "category": "player",
+    "sounds": ["toughMobHit"]
+  },
+  "noAction": {
+    "category": "player",
+    "sounds": ["noAction"]
+  },
+  "armosSay": {
+    "category": "player",
+    "sounds": ["armosSay"]
+  },
+  "armosStep": {
+    "category": "player",
+    "sounds": ["armosStep"]
+  },
+  "bokoblinAttack": {
+    "category": "player",
+    "sounds": ["bokoblinAttack"]
+  },
+  "bokoblinDie": {
+    "category": "player",
+    "sounds": ["bokoblinDie"]
+  },
+  "bokoblinHit": {
+    "category": "player",
+    "sounds": ["bokoblinHit"]
+  },
+  "bombThrow": {
+    "category": "player",
+    "sounds": ["bombThrow"]
+  },
+  "bossSay": {
+    "category": "player",
+    "sounds": ["bossSay"]
+  },
+  "bugSay": {
+    "category": "player",
+    "sounds": ["bugSay"]
+  },
+  "chickenSay": {
+    "category": "player",
+    "sounds": ["chickenSay"]
+  },
+  "darknutAttack": {
+    "category": "player",
+    "sounds": ["darknutAttack"]
+  },
+  "darknutMAttack": {
+    "category": "player",
+    "sounds": ["darknutMAttack"]
+  },
+  "darknutSay": {
+    "category": "player",
+    "sounds": ["darknutSay"]
+  },
+  "dragonHit": {
+    "category": "player",
+    "sounds": ["dragonHit"]
+  },
+  "dragonSay": {
+    "category": "player",
+    "sounds": ["dragonSay1", "dragonSay2"]
+  },
+  "fierceDie": {
+    "category": "player",
+    "sounds": ["fierceDie"]
+  },
+  "gannonAttack": {
+    "category": "player",
+    "sounds": ["gannonAttack1", "gannonAttack2"]
+  },
+  "gannonHit": {
+    "category": "player",
+    "sounds": ["gannonHit1", "gannonHit2", "gannonHit3"]
+  },
+  "gannonHit1": {
+    "category": "player",
+    "sounds": ["gannonHit1"]
+  },
+  "gannonSay": {
+    "category": "player",
+    "sounds": ["gannonSay1", "gannonSay2"]
+  },
+  "getHeart": {
+    "category": "player",
+    "sounds": ["getHeart"]
+  },
+  "linkAngryAttack": {
+    "category": "player",
+    "sounds": ["linkAngryAttack"]
+  },
+  "linkHurt": {
+    "category": "player",
+    "sounds": ["linkHurt2", "linkHurt3"]
+  },
+  "metroid": {
+    "category": "player",
+    "sounds": ["metroid"]
+  },
+  "miniblinAttack": {
+    "category": "player",
+    "sounds": ["miniblinAttack"]
+  },
+  "miniblinSay": {
+    "category": "player",
+    "sounds": ["miniblinSay"]
+  },
+  "shrillDie": {
+    "category": "player",
+    "sounds": ["shrillDie"]
+  },
+  "skulltula1": {
+    "category": "player",
+    "sounds": ["skulltula1"]
+  },
+  "skulltula": {
+    "category": "player",
+    "sounds": ["skulltula1", "skulltula2", "skulltula3"]
+  },
+  "skulltula2": {
+    "category": "player",
+    "sounds": ["skulltula2"]
+  },
+  "skulltula3": {
+    "category": "player",
+    "sounds": ["skulltula3"]
+  },
+  "Item": {
+    "category": "player",
+    "sounds": ["Item"]
+  },
+  "tingleHit": {
+    "category": "player",
+    "sounds": ["tingleHit"]
+  },
+  "tingleDie": {
+    "category": "player",
+    "sounds": ["tingleDie"]
+  },
+  "koolimpah": {
+    "category": "player",
+    "sounds": ["koolimpah"]
+  },
+  "obtainSong": {
+    "category": "player",
+    "sounds": ["obtainSong"]
+  },
+  "lightBeam2": {
+    "category": "player",
+    "sounds": ["lightBeam2"]
+  },
+  "wind": {
+    "category": "player",
+    "sounds": ["wind"]
+  },
+  "charmanderRetro": {
+    "category": "player",
+    "sounds": ["charmanderRetro"]
+  },
+  "pokeballThrow": {
+    "category": "player",
+    "sounds": ["pokeballThrow"]
+  },
+  "heartGet": {
+    "category": "player",
+    "sounds": ["heartGet"]
+  },
+  "ffVictory": {
+    "category": "player",
+    "sounds": ["ffVictory"]
+  },
+  "shot": {
+    "category": "player",
+    "sounds": ["shot"]
+  },
+  "emptyClip": {
+    "category": "player",
+    "sounds": ["emptyClip"]
+  },
+  "getCoins": {
+    "category": "player",
+    "sounds": ["getCoins"]
+  },
+  "records.Halloween": {
+    "category": "record",
+    "sounds": [{"name": "records/Halloween",
+    "stream": true}]
+  },
+  "records.Omen": {
+    "category": "record",
+    "sounds": [{"name": "records/Omen",
+    "stream": true}]
+  },
+  "records.Pyramid": {
+    "category": "record",
+    "sounds": [{"name": "records/Pyramid",
+    "stream": true}]
+  },
+  "records.Siren": {
+    "category": "record",
+    "sounds": [{"name": "records/Siren",
+    "stream": true}]
+  },
+  "records.SirenWorld": {
+    "category": "music",
+    "sounds": [{"name": "records/SirenWorld",
+    "stream": true}]
+  },
+  "records.XFiles": {
+    "category": "record",
+    "sounds": [{"name": "records/XFiles",
+    "stream": true}]
+  }
+}
