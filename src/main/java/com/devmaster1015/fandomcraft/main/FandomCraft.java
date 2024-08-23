@@ -1,6 +1,5 @@
 package com.devmaster1015.fandomcraft.main;
 
-
 import com.devmaster1015.fandomcraft.world.FCOreGen;
 
 import net.minecraft.item.ItemGroup;
@@ -18,7 +17,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 
 @Mod("fandomcraft")
 public class FandomCraft{
@@ -42,8 +40,6 @@ public class FandomCraft{
 
             MinecraftForge.EVENT_BUS.addListener(FCOreGen::handleWorldGen);
         }
-
-
 
         private void setup(final FMLCommonSetupEvent event) {
             DeferredWorkQueue.runLater(() -> {

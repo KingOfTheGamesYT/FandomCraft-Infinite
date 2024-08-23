@@ -2,6 +2,7 @@ package com.devmaster1015.fandomcraft.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+
 import net.minecraftforge.common.ToolType;
 
 public class adamantiumOre extends Block {

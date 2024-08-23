@@ -14,18 +14,16 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '5.0.0'
-group = 'com.apocalypse.fandomcraft' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'modid'
+group = 'com.devmaster1015.fandomcraft' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'fandomcraft'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
 
-
     mappings channel: 'snapshot', version: '20210309-1.16.5'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
-
 
    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
@@ -39,7 +37,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                fandomcraft {
                     source sourceSets.main
                 }
             }
@@ -55,7 +53,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                fandomcraft {
                     source sourceSets.main
                 }
             }
@@ -68,7 +66,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
             args '--mod', 'fandomcraft', '--all', '--output', file('src/generated/resources/')
             mods {
-                dangerzone {
+                fandomcraft {
                     source sourceSets.main
                 }
             }
@@ -84,8 +82,6 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.20'
-
-
 
     implementation fg.deobf("curse.maven:jei-238222:3189632")
 }
@@ -104,9 +100,7 @@ jar {
     }
 }
 
-
 jar.finalizedBy('reobfJar')
-
 
 publishing {
     publications {

@@ -1,6 +1,7 @@
 package com.devmaster1015.fandomcraft.blocks;
 
 import com.devmaster1015.fandomcraft.main.FandomCraft;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

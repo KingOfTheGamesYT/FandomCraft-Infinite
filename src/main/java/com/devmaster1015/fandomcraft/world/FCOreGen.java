@@ -18,13 +18,10 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
-
 public class FCOreGen {
 
     public static ConfiguredFeature<?, ?> ADAMANTIUM_ORE;
     public static ConfiguredFeature<?, ?> ROCKSTONE;
-
-
 
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
 
@@ -45,7 +42,6 @@ public class FCOreGen {
         Registry.register(registry, new ResourceLocation("rock"), ROCKSTONE);
 
     }
-
 
     public static void handleWorldGen(BiomeLoadingEvent event){
         RegistryKey<Biome> biome = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName());
