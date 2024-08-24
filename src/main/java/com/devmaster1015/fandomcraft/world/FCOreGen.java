@@ -23,6 +23,7 @@ public class FCOreGen {
     public static ConfiguredFeature<?, ?> ADAMANTIUM_ORE;
     public static ConfiguredFeature<?, ?> ROCKSTONE;
     public static ConfiguredFeature<?, ?> GODDESS_ORE;
+    public static ConfiguredFeature<?, ?> UNKNOWN_ORE;
 
 
     public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
@@ -46,9 +47,16 @@ public class FCOreGen {
                         .square()
                         .chance/* repeat */(6));
 
+        UNKNOWN_ORE = Feature.ORE.withConfiguration(
+                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.UNKNOWN_ORE_BLOCK.get().getDefaultState(),5))
+                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
+                        .square()
+                        .chance/* repeat */(5));
+
         Registry.register(registry, new ResourceLocation("adamantium_ore"), ADAMANTIUM_ORE);
         Registry.register(registry, new ResourceLocation("rock"), ROCKSTONE);
-        Registry.register(registry, new ResourceLocation("godessoreblock"), GODDESS_ORE);
+        Registry.register(registry, new ResourceLocation("goddessoreblock"), GODDESS_ORE);
+        Registry.register(registry, new ResourceLocation("unknown_ore"), UNKNOWN_ORE);
 
     }
 
@@ -60,6 +68,8 @@ public class FCOreGen {
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ADAMANTIUM_ORE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ROCKSTONE);
         event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, GODDESS_ORE);
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, UNKNOWN_ORE);
+
 
     }
 
