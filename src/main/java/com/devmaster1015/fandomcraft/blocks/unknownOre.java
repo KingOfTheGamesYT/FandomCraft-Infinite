@@ -32,6 +32,6 @@ public class unknownOre extends OreBlock {
         List<ItemStack> dropsOriginal = super.getDrops(state, builder);
         if (!dropsOriginal.isEmpty())
             return dropsOriginal;
-        return Collections.singletonList(new ItemStack(RegistryHandler.ADAMANTIUM_ORE_BLOCK.get(), 1));
+        return Collections.singletonList(new ItemStack(RegistryHandler.UNKNOWN_MINERAL.get(), 1));
     }
 }
