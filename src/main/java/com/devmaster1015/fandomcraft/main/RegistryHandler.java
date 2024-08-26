@@ -46,6 +46,7 @@ public class RegistryHandler{
         public static final RegistryObject<Item> RUPEE_SILVER = ITEMS.register("rupee_silver", () -> new FItem("Silver Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 200 value."));
         public static final RegistryObject<Item> RUPEE_YELLOW = ITEMS.register("rupee_yellow", () -> new FItem("Yellow Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 100 value."));
         public static final RegistryObject<Item> DWARVEN_STEEL_INGOT = ITEMS.register("dwarven_steel_ingot", () -> new FItem("Dwarven Steel Ingot", FandomCraft.tabFandomCraftMaterials));
+        public static final RegistryObject<Item> HELLSTONE_INGOT = ITEMS.register("hellstone_ingot", () -> new FItem("Hellstone Ingot", FandomCraft.tabFandomCraftMaterials));
 
         //Spawn Eggs
 
