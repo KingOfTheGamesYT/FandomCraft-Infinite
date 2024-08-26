@@ -56,5 +56,13 @@ public class FandomCraft{
                 return new ItemStack(RegistryHandler.ROCK_STONE_BLOCK.get());
             }
         };
+
+        public static final ItemGroup tabFandomCraftMaterials = new ItemGroup("tabFandomCraftMaterials") {
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.RUPEE_GREEN.get());
+        }
+    };
     }
 

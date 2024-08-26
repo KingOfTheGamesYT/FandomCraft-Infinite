@@ -14,7 +14,7 @@ import java.util.List;
 public class FItem extends Item
 {
 	protected String name;
-	protected String[] info;
+	private String[] info = new String[0];
 
 	public FItem(String name, int stacksize, ItemGroup group, Rarity rarity)
 	{
@@ -42,50 +42,25 @@ public class FItem extends Item
 		this.name = name;
 	}
 
-	public FItem addInfo(String... info)
-	{
-		if (this.info == null)
-		{
-			this.info = info;
-		}
-		else
-		{
-			String[] newinfo = new String[this.info.length + info.length];
-			int i = 0;
-			for (String s : this.info)
-			{
-				newinfo[i] = s;
-				++i;
-			}
-			for (String s : info)
-			{
-				newinfo[i] = s;
-				++i;
-			}
-		}
-		return this;
-	}
-
 	protected static final Properties get(int stacksize, ItemGroup group, Rarity rarity)
 	{
 		return new Properties().maxStackSize(stacksize).group(group).rarity(rarity);
 	}
 
-
-	public ITextComponent getName(ItemStack stack)
-	{
-		return new StringTextComponent(name);
+	public FItem addInfo(String... newInfo) {
+		if (newInfo != null && newInfo.length > 0) {
+			String[] combinedInfo = new String[this.info.length + newInfo.length];
+			System.arraycopy(this.info, 0, combinedInfo, 0, this.info.length);
+			System.arraycopy(newInfo, 0, combinedInfo, this.info.length, newInfo.length);
+			this.info = combinedInfo;
+		}
+		return this;
 	}
 
-
-	public void appendHoverText(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag advanced)
-	{
-		if (info != null)
-		{
-			for (String s : info)
-			{
-				list.add(new StringTextComponent(s));
-			}
+	@Override
+	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn){
+		for (String s : info) {
+			list.add(new StringTextComponent(s));
 		}
 	}
 }

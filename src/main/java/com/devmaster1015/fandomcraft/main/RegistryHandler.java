@@ -10,6 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 
+import net.minecraft.item.Rarity;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -36,6 +37,14 @@ public class RegistryHandler{
         public static final RegistryObject<Item> APPRAISAL_KIT_BASIC = ITEMS.register("appraisal_kit_basic", () -> new FItem("Appraisal Kit Basic", FandomCraft.tabFandomCraftBlocks));
         public static final RegistryObject<Item> APPRAISAL_KIT_ADVANCED = ITEMS.register("appraisal_kit_advanced", () -> new FItem("Appraisal Kit Advanced", FandomCraft.tabFandomCraftBlocks));
         public static final RegistryObject<Item> APPRAISAL_KIT_MASTER = ITEMS.register("appraisal_kit_master", () -> new FItem("Appraisal Kit Master", FandomCraft.tabFandomCraftBlocks));
+        public static final RegistryObject<Item> ELVEN_STEEL_INGOT = ITEMS.register("elven_steel_ingot", () -> new FItem("Elven Steel Ingot", FandomCraft.tabFandomCraftMaterials));
+        public static final RegistryObject<Item> RUPEE_GREEN = ITEMS.register("rupee_green", () -> new FItem("Green Rupee", FandomCraft.tabFandomCraftMaterials, Rarity.UNCOMMON).addInfo("A gem of 1 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_RED = ITEMS.register("rupee_red", () -> new FItem("Red Rupee", FandomCraft.tabFandomCraftMaterials, Rarity.UNCOMMON).addInfo("A gem of 20 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_BLUE = ITEMS.register("rupee_blue", () -> new FItem("Blue Rupee", FandomCraft.tabFandomCraftMaterials, Rarity.UNCOMMON).addInfo("A gem of 5 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_ORANGE= ITEMS.register("rupee_orange", () -> new FItem("Orange Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 10 value."));
+        public static final RegistryObject<Item> RUPEE_PURPLE = ITEMS.register("rupee_purple", () -> new FItem("Purple Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 50 value."));
+        public static final RegistryObject<Item> RUPEE_SILVER = ITEMS.register("rupee_silver", () -> new FItem("Silver Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 200 value."));
+        public static final RegistryObject<Item> RUPEE_YELLOW = ITEMS.register("rupee_yellow", () -> new FItem("Yellow Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 100 value."));
 
         //Spawn Eggs
 

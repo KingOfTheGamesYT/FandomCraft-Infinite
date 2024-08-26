@@ -110,10 +110,10 @@ public class AppraisingOre extends Item
                 if (i == 69) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
-             /*   if (i == 70) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.elvenSteelIngot, i2));
+                if (i == 70) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ELVEN_STEEL_INGOT.get(), i2));
                 }
-                if (i == 71) {
+                /*  if (i == 71) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.dwarvenSteelIngot, i2));
                 } */
                 if (i == 72) {
@@ -196,10 +196,10 @@ public class AppraisingOre extends Item
                 if (i == 69) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
-               /* if (i == 70) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.elvenSteelIngot, i3));
+                if (i == 70) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ELVEN_STEEL_INGOT.get(), i3));
                 }
-                if (i == 71) {
+               /* if (i == 71) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.dwarvenSteelIngot, i3));
                 } */
                 if (i == 72) {
@@ -285,10 +285,10 @@ public class AppraisingOre extends Item
                 if (i == 69) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
-              /*  if (i == 70) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.elvenSteelIngot, i4));
+                if (i == 70) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ELVEN_STEEL_INGOT.get(), i4));
                 }
-                if (i == 71) {
+               /* if (i == 71) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.dwarvenSteelIngot, i4));
                 } */
                 if (i == 72) {
