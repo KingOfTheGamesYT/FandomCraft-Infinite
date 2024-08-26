@@ -1,76 +1,151 @@
 package com.devmaster1015.fandomcraft.world;
 
 import com.devmaster1015.fandomcraft.main.RegistryHandler;
+import static com.devmaster1015.fandomcraft.world.FCOreGen.OreType.*;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.RegistryKey;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.Dimension;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
+import net.minecraft.world.gen.placement.ConfiguredPlacement;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+
+import java.util.Arrays;
 
 public class FCOreGen {
 
-    public static ConfiguredFeature<?, ?> ADAMANTIUM_ORE;
-    public static ConfiguredFeature<?, ?> ROCKSTONE;
-    public static ConfiguredFeature<?, ?> GODDESS_ORE;
-    public static ConfiguredFeature<?, ?> UNKNOWN_ORE;
-
-
-    public static void addConfigFeatures(RegistryEvent.Register<Feature<?>> event){
-
-        Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
-        ADAMANTIUM_ORE = Feature.ORE.withConfiguration(
-                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ADAMANTIUM_ORE_BLOCK.get().getDefaultState(),3))
-                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 12))
-                        .square()
-                        .chance/* repeat */(2));
-
-        ROCKSTONE = Feature.ORE.withConfiguration(
-                new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.ROCK_STONE_BLOCK.get().getDefaultState(),50))
-                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
-                        .square()
-                        .chance/* repeat */(15));
-
-        GODDESS_ORE = Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.GODDESS_ORE_BLOCK.get().getDefaultState(),2))
-                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(10, 0, 48))
-                        .square()
-                        .chance/* repeat */(6));
-
-        UNKNOWN_ORE = Feature.ORE.withConfiguration(
-                        new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegistryHandler.UNKNOWN_ORE_BLOCK.get().getDefaultState(),5))
-                .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(0, 0, 128))
-                        .square()
-                        .chance/* repeat */(5));
-
-        Registry.register(registry, new ResourceLocation("adamantium_ore"), ADAMANTIUM_ORE);
-        Registry.register(registry, new ResourceLocation("rock"), ROCKSTONE);
-        Registry.register(registry, new ResourceLocation("goddessoreblock"), GODDESS_ORE);
-        Registry.register(registry, new ResourceLocation("unknown_ore"), UNKNOWN_ORE);
+    public static void handleWorldGen(final BiomeLoadingEvent event) {
+        spawnOreInAllBiomes(ADAMANTIUM_ORE, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(ROCKSTONE, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(GODDESS_ORE, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(UNKNOWN_ORE, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(HELLSTONE, event, Dimension.THE_NETHER.toString());
 
     }
 
-    public static void handleWorldGen(BiomeLoadingEvent event){
-        RegistryKey<Biome> biome = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName());
-        if (event.getCategory() == Biome.Category.NETHER
-                || event.getCategory() == Biome.Category.THEEND
-                || BiomeDictionary.hasType(biome, BiomeDictionary.Type.VOID)) return;
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ADAMANTIUM_ORE);
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ROCKSTONE);
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, GODDESS_ORE);
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, UNKNOWN_ORE);
-
-
+    private static OreFeatureConfig getOverworldFeatureConfig(OreType ore) {
+        return new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+                ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
     }
 
+    private static OreFeatureConfig getNetherFeatureConfig(OreType ore) {
+        return new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,
+                ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
+    }
+
+    private static OreFeatureConfig getEndFeatureConfig(OreType ore) {
+        return new OreFeatureConfig(new BlockMatchRuleTest(Blocks.END_STONE),
+                ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
+    }
+
+    // Currently only supports vanilla Dimensions
+    private static ConfiguredFeature<?, ?> makeOreFeature(OreType ore, String dimensionToSpawnIn) {
+        OreFeatureConfig oreFeatureConfig = null;
+
+        if (dimensionToSpawnIn.equals(Dimension.OVERWORLD.toString())) {
+            oreFeatureConfig = getOverworldFeatureConfig(ore);
+        } else if (dimensionToSpawnIn.equals(Dimension.THE_NETHER.toString())) {
+            oreFeatureConfig = getNetherFeatureConfig(ore);
+        } else if (dimensionToSpawnIn.equals(Dimension.THE_END.toString())) {
+            oreFeatureConfig = getEndFeatureConfig(ore);
+        }
+
+        ConfiguredPlacement<TopSolidRangeConfig> configuredPlacement = Placement.RANGE.configure(
+                new TopSolidRangeConfig(ore.getMinHeight(), ore.getMinHeight(), ore.getMaxHeight()));
+
+        return registerOreFeature(ore, oreFeatureConfig, configuredPlacement);
+    }
+
+    private static void spawnOreInOverworldInGivenBiomes(OreType ore, final BiomeLoadingEvent event, Biome... biomesToSpawnIn) {
+        OreFeatureConfig oreFeatureConfig = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+                ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
+
+        ConfiguredPlacement<TopSolidRangeConfig> configuredPlacement = Placement.RANGE.configure(
+                new TopSolidRangeConfig(ore.getMinHeight(), ore.getMinHeight(), ore.getMaxHeight()));
+
+        ConfiguredFeature<?, ?> oreFeature = registerOreFeature(ore, oreFeatureConfig, configuredPlacement);
+
+        if (Arrays.stream(biomesToSpawnIn).anyMatch(b -> b.getRegistryName().equals(event.getName()))) {
+            event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreFeature);
+        }
+    }
+
+
+    private static void spawnOreInSpecificModBiome(Biome biomeToSpawnIn, OreType currentOreType,
+                                                   final BiomeLoadingEvent event, String dimension) {
+        if (event.getName().toString().contains(biomeToSpawnIn.getRegistryName().toString())) {
+            event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, makeOreFeature(currentOreType, dimension));
+        }
+    }
+
+    private static void spawnOreInSpecificBiome(RegistryKey<Biome> biomeToSpawnIn, OreType currentOreType, final BiomeLoadingEvent event, String dimension) {
+        if (event.getName().toString().contains(biomeToSpawnIn.getLocation().toString())) {
+            event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, makeOreFeature(currentOreType, dimension));
+        }
+    }
+
+    private static void spawnOreInAllBiomes(OreType currentOreType, final BiomeLoadingEvent event, String dimension) {
+        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                makeOreFeature(currentOreType, dimension));
+    }
+
+    private static ConfiguredFeature<?, ?> registerOreFeature(OreType ore, OreFeatureConfig oreFeatureConfig, ConfiguredPlacement configuredPlacement) {
+        return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, ore.getBlock().get().getRegistryName(),
+                Feature.ORE.withConfiguration(oreFeatureConfig).withPlacement(configuredPlacement)
+                        .square()
+                        .count(ore.getVeinsPerChunk()));
+    }
+    public enum OreType {
+        ADAMANTIUM_ORE(Lazy.of(RegistryHandler.ADAMANTIUM_ORE_BLOCK), 2, 0, 12, 3),
+        ROCKSTONE(Lazy.of(RegistryHandler.ROCK_STONE_BLOCK), 50, 0, 128, 15),
+        GODDESS_ORE(Lazy.of(RegistryHandler.GODDESS_ORE_BLOCK), 2, 10, 48, 6),
+        UNKNOWN_ORE(Lazy.of(RegistryHandler.UNKNOWN_ORE_BLOCK), 5, 0, 128, 5),
+        HELLSTONE(Lazy.of(RegistryHandler.HELLSTONE_ORE_BLOCK), 5, 0, 30, 2);
+
+        private final Lazy<Block> block;
+        private final int maxVeinSize;
+        private final int minHeight;
+        private final int maxHeight;
+        private final int veinsPerChunk;
+
+        OreType(Lazy<Block> block, int maxVeinSize, int minHeight, int maxHeight, int veinsPerChunk) {
+            this.block = block;
+            this.maxVeinSize = maxVeinSize;
+            this.minHeight = minHeight;
+            this.maxHeight = maxHeight;
+            this.veinsPerChunk = veinsPerChunk;
+        }
+
+        public int getVeinsPerChunk() {
+            return veinsPerChunk;
+        }
+
+        public Lazy<Block> getBlock() {
+            return block;
+        }
+
+        public int getMaxVeinSize() {
+            return maxVeinSize;
+        }
+
+        public int getMinHeight() {
+            return minHeight;
+        }
+
+        public int getMaxHeight() {
+            return maxHeight;
+        }
+    }
 }

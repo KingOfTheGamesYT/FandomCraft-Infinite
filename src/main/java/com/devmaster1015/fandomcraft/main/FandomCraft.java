@@ -36,8 +36,6 @@ public class FandomCraft{
 
             MinecraftForge.EVENT_BUS.register(this);
 
-            FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(Feature.class, EventPriority.LOW, FCOreGen::addConfigFeatures);
-
             MinecraftForge.EVENT_BUS.addListener(FCOreGen::handleWorldGen);
         }
 
