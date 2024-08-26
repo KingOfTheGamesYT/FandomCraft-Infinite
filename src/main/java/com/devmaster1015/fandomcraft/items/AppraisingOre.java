@@ -97,10 +97,10 @@ public class AppraisingOre extends Item
                 }
                 if (i == 63) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.adamantiumIngot, i2));
-                }
+                }*/
                 if (i == 64 || i == 65) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.rupeeRed, i2));
-                } */
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.RUPEE_RED.get(), i2));
+                }
                 if (i == 66 || i == 67) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
@@ -113,9 +113,9 @@ public class AppraisingOre extends Item
                 if (i == 70) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ELVEN_STEEL_INGOT.get(), i2));
                 }
-                /*  if (i == 71) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.dwarvenSteelIngot, i2));
-                } */
+                  if (i == 71) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.DWARVEN_STEEL_INGOT.get(), i2));
+                }
                 if (i == 72) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
@@ -183,10 +183,10 @@ public class AppraisingOre extends Item
                 }
                 if (i == 63) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.adamantiumIngot, i3));
-                }
-                if (i == 64 || i == 65) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.rupeeRed, i3));
                 } */
+                if (i == 64 || i == 65) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.RUPEE_RED.get(), i3));
+                }
                 if (i == 66 || i == 67) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
@@ -199,9 +199,9 @@ public class AppraisingOre extends Item
                 if (i == 70) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ELVEN_STEEL_INGOT.get(), i3));
                 }
-               /* if (i == 71) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.dwarvenSteelIngot, i3));
-                } */
+                if (i == 71) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.DWARVEN_STEEL_INGOT.get(), i3));
+                }
                 if (i == 72) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
@@ -272,10 +272,10 @@ public class AppraisingOre extends Item
                 }
                 if (i == 63) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.adamantiumIngot, i4));
-                }
-                if (i == 64 || i == 65) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.rupeeRed, i4));
                 }*/
+                if (i == 64 || i == 65) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.RUPEE_RED.get(), i4));
+                }
                 if (i == 66 || i == 67) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
@@ -288,9 +288,9 @@ public class AppraisingOre extends Item
                 if (i == 70) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ELVEN_STEEL_INGOT.get(), i4));
                 }
-               /* if (i == 71) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.dwarvenSteelIngot, i4));
-                } */
+                if (i == 71) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.DWARVEN_STEEL_INGOT.get(), i4));
+                }
                 if (i == 72) {
                     System.out.println("Couldn't appraise the mineral...");
                 }
