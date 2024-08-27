@@ -53,6 +53,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> ADAMANTIUM_INGOT = ITEMS.register("adamantium_ingot", () -> new FItem("Adamantium Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> ERIDIUM_INGOT = ITEMS.register("eridium_ingot", () -> new FItem("Adamantium Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> SALT = ITEMS.register("salt", () -> new FItem("Salt", FandomCraft.tabFandomCraftMaterials));
+        public static final RegistryObject<Item> MYTHRIL_INGOT = ITEMS.register("mythril_ingot", () -> new FItem("Mythril Ingot", FandomCraft.tabFandomCraftMaterials));
+        public static final RegistryObject<Item> ORICHULUM_INGOT = ITEMS.register("orichulum_ingot", () -> new FItem("Orichulum Ingot", FandomCraft.tabFandomCraftMaterials));
 
         //Spawn Eggs
 
@@ -69,6 +71,8 @@ public class RegistryHandler{
         public static final RegistryObject<Block> FOOLS_GOLD_ORE_BLOCK = BLOCKS.register("fools_gold_ore", () -> new FBlock("Fools Gold Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
         public static final RegistryObject<Block> ERIDIUM_ORE_BLOCK = BLOCKS.register("eridium_ore", () -> new FBlock("Eridium Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(17.0F, 5.0F).harvestLevel(5).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
         public static final RegistryObject<Block> HALITE = BLOCKS.register("halite", () -> new FBlock("Halite", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(4.0F, 1.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> MYTHRIL_ORE = BLOCKS.register("mythril_ore", () -> new FBlock("Halite Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(14.0F, 5.0F).harvestLevel(4).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> ORICHULUM_ORE = BLOCKS.register("orichulum_ore", () -> new FBlock("Orichulum Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 5.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
 
         //Block Items
 
@@ -80,6 +84,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> FOOLS_GOLD_ORE_BLOCK_ITEM = ITEMS.register("fools_gold_ore", () -> new BlockItemBase(FOOLS_GOLD_ORE_BLOCK.get()));
         public static final RegistryObject<Item> ERIDIUM_ORE_BLOCK_ITEM = ITEMS.register("eridium_ore", () -> new BlockItemBase(ERIDIUM_ORE_BLOCK.get()));
         public static final RegistryObject<Item> HALITE_BLOCK_ITEM = ITEMS.register("halite", () -> new BlockItemBase(HALITE.get()));
+        public static final RegistryObject<Item> MYTHRIL_ORE_ITEM = ITEMS.register("mythril_ore", () -> new BlockItemBase(MYTHRIL_ORE.get()));
+        public static final RegistryObject<Item> ORICHULUM_ORE_ITEM = ITEMS.register("orichulum_ore", () -> new BlockItemBase(ORICHULUM_ORE.get()));
 
         //Dimensions
 }

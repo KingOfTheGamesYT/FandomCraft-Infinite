@@ -86,12 +86,12 @@ public class AppraisingOre extends Item
                 if (i == 50 || i == 51) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Blocks.SAND, i2));
                 }
-              /*  if (i == 57 || i == 58) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.orichulumIngot, i2));
+                if (i == 57 || i == 58) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ORICHULUM_INGOT.get(), i2));
                 }
                 if (i == 59 || i == 60) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.mythrilIngot, i2));
-                }*/
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.MYTHRIL_INGOT.get(), i2));
+                }
                 if (i == 61 || i == 62) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ERIDIUM_INGOT.get(), i2));
                 }
@@ -172,12 +172,12 @@ public class AppraisingOre extends Item
                 if (i == 50 || i == 51) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Blocks.STONE, i3));
                 }
-               /* if (i == 57 || i == 58) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.orichulumIngot, i3));
+                if (i == 57 || i == 58) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ORICHULUM_INGOT.get(), i3));
                 }
                 if (i == 59 || i == 60) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.mythrilIngot, i3));
-                }*/
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.MYTHRIL_INGOT.get(), i3));
+                }
                 if (i == 61 || i == 62) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ERIDIUM_INGOT.get(), i3));
                 }
@@ -261,12 +261,12 @@ public class AppraisingOre extends Item
                 if (i == 50 || i == 51) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Blocks.STONE, i4));
                 }
-              /*  if (i == 57 || i == 58) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.orichulumIngot, i4));
+                if (i == 57 || i == 58) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ORICHULUM_INGOT.get(), i4));
                 }
                 if (i == 59 || i == 60) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.mythrilIngot, i4));
-                }*/
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.MYTHRIL_INGOT.get(), i4));
+                }
                 if (i == 61 || i == 62) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ERIDIUM_INGOT.get(), i4));
                 }

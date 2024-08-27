@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "fandomcraft:mythril_ore"
+  },
+  "result": "fandomcraft:mythril_ingot",
+  "experience": 1.3,
+  "cookingtime": 100
+}

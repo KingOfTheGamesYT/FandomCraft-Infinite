@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "fandomcraft:orichulum_ore"
+  },
+  "result": "fandomcraft:orichulum_ingot",
+  "experience": 1.6,
+  "cookingtime": 200
+}

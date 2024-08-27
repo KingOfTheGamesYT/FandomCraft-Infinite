@@ -35,6 +35,8 @@ public class FCOreGen {
         spawnOreInAllBiomes(FOOLS_GOLD, event, Dimension.OVERWORLD.toString());
         spawnOreInAllBiomes(ERIDIUM_ORE, event, Dimension.OVERWORLD.toString());
         spawnOreInAllBiomes(HALITE, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(ORICHULUM_ORE, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(MYTHRIL_ORE, event, Dimension.OVERWORLD.toString());
 
     }
 
@@ -127,7 +129,9 @@ public class FCOreGen {
         HELLSTONE(Lazy.of(RegistryHandler.HELLSTONE_ORE_BLOCK), 5, 0, 30, 2),
         FOOLS_GOLD(Lazy.of(RegistryHandler.FOOLS_GOLD_ORE_BLOCK), 6, 0, 32, 2),
         ERIDIUM_ORE(Lazy.of(RegistryHandler.ERIDIUM_ORE_BLOCK), 6, 0, 30, 4),
-        HALITE(Lazy.of(RegistryHandler.HALITE),10, 0, 60, 50);
+        HALITE(Lazy.of(RegistryHandler.HALITE),10, 0, 60, 50),
+        ORICHULUM_ORE(Lazy.of(RegistryHandler.ORICHULUM_ORE), 4, 0, 60, 6),
+        MYTHRIL_ORE(Lazy.of(RegistryHandler.MYTHRIL_ORE),2, 0, 60, 6);
 
         private final Lazy<Block> block;
         private final int maxVeinSize;
