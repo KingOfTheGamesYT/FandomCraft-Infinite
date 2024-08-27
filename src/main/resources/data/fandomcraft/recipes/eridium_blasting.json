@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "fandomcraft:eridium_ore"
+  },
+  "result": "fandomcraft:eridium_ingot",
+  "experience": 1.6,
+  "cookingtime": 100
+}

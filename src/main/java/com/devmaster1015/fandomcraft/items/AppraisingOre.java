@@ -53,9 +53,9 @@ public class AppraisingOre extends Item
                 if (i == 19 || i == 20 || i == 21 || i == 22) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Items.IRON_INGOT, i2));
                 }
-             /*   if (i == 23 || i == 24 || i == 25 || i == 26) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.rockSalt, i2));
-                } */
+                if (i == 23 || i == 24 || i == 25 || i == 26) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.SALT.get(), i2));
+                }
                 if (i == 27 || i == 28 || i == 29) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Items.EMERALD, i2));
                 }
@@ -91,13 +91,13 @@ public class AppraisingOre extends Item
                 }
                 if (i == 59 || i == 60) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.mythrilIngot, i2));
-                }
+                }*/
                 if (i == 61 || i == 62) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.eridiumIngot, i2));
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ERIDIUM_INGOT.get(), i2));
                 }
                 if (i == 63) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.adamantiumIngot, i2));
-                }*/
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ADAMANTIUM_INGOT.get(), i2));
+                }
                 if (i == 64 || i == 65) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.RUPEE_RED.get(), i2));
                 }
@@ -139,9 +139,9 @@ public class AppraisingOre extends Item
                 if (i == 19 || i == 20 || i == 21 || i == 22) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Items.IRON_INGOT, i3));
                 }
-              /*  if (i == 23 || i == 24 || i == 25 || i == 26) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.rockSalt, i3));
-                } */
+                if (i == 23 || i == 24 || i == 25 || i == 26) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.SALT.get(), i3));
+                }
                 if (i == 27 || i == 28 || i == 29) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Items.EMERALD, i3));
                 }
@@ -177,13 +177,13 @@ public class AppraisingOre extends Item
                 }
                 if (i == 59 || i == 60) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.mythrilIngot, i3));
-                }
+                }*/
                 if (i == 61 || i == 62) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.eridiumIngot, i3));
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ERIDIUM_INGOT.get(), i3));
                 }
                 if (i == 63) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.adamantiumIngot, i3));
-                } */
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ADAMANTIUM_INGOT.get(), i3));
+                }
                 if (i == 64 || i == 65) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.RUPEE_RED.get(), i3));
                 }
@@ -228,9 +228,9 @@ public class AppraisingOre extends Item
                 if (i == 19 || i == 20 || i == 21 || i == 22) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Items.IRON_INGOT, i4));
                 }
-              /*  if (i == 23 || i == 24 || i == 25 || i == 26) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.rockSalt, i4));
-                }*/
+                if (i == 23 || i == 24 || i == 25 || i == 26) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.SALT.get(), i4));
+                }
                 if (i == 27 || i == 28 || i == 29) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Items.EMERALD, i4));
                 }
@@ -266,13 +266,13 @@ public class AppraisingOre extends Item
                 }
                 if (i == 59 || i == 60) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.mythrilIngot, i4));
-                }
+                }*/
                 if (i == 61 || i == 62) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.eridiumIngot, i4));
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ERIDIUM_INGOT.get(), i4));
                 }
                 if (i == 63) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.adamantiumIngot, i4));
-                }*/
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ADAMANTIUM_INGOT.get(), i4));
+                }
                 if (i == 64 || i == 65) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.RUPEE_RED.get(), i4));
                 }

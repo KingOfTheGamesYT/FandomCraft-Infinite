@@ -33,6 +33,8 @@ public class FCOreGen {
         spawnOreInAllBiomes(UNKNOWN_ORE, event, Dimension.OVERWORLD.toString());
         spawnOreInAllBiomes(HELLSTONE, event, Dimension.THE_NETHER.toString());
         spawnOreInAllBiomes(FOOLS_GOLD, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(ERIDIUM_ORE, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(HALITE, event, Dimension.OVERWORLD.toString());
 
     }
 
@@ -46,6 +48,11 @@ public class FCOreGen {
                 ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
     }
 
+    private static OreFeatureConfig getHaliteFeatureConfig(OreType ore) {
+        return new OreFeatureConfig(new BlockMatchRuleTest(Blocks.SAND),
+                ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
+    }
+
     private static OreFeatureConfig getEndFeatureConfig(OreType ore) {
         return new OreFeatureConfig(new BlockMatchRuleTest(Blocks.END_STONE),
                 ore.getBlock().get().getDefaultState(), ore.getMaxVeinSize());
@@ -56,7 +63,11 @@ public class FCOreGen {
         OreFeatureConfig oreFeatureConfig = null;
 
         if (dimensionToSpawnIn.equals(Dimension.OVERWORLD.toString())) {
-            oreFeatureConfig = getOverworldFeatureConfig(ore);
+            if (ore == OreType.HALITE) {
+                oreFeatureConfig = getHaliteFeatureConfig(ore);
+            } else {
+                oreFeatureConfig = getOverworldFeatureConfig(ore);
+            }
         } else if (dimensionToSpawnIn.equals(Dimension.THE_NETHER.toString())) {
             oreFeatureConfig = getNetherFeatureConfig(ore);
         } else if (dimensionToSpawnIn.equals(Dimension.THE_END.toString())) {
@@ -109,12 +120,14 @@ public class FCOreGen {
                         .count(ore.getVeinsPerChunk()));
     }
     public enum OreType {
-        ADAMANTIUM_ORE(Lazy.of(RegistryHandler.ADAMANTIUM_ORE_BLOCK), 2, 0, 12, 3),
+        ADAMANTIUM_ORE(Lazy.of(RegistryHandler.ADAMANTIUM_ORE_BLOCK), 3, 0, 12, 2),
         ROCKSTONE(Lazy.of(RegistryHandler.ROCK_STONE_BLOCK), 50, 0, 128, 15),
         GODDESS_ORE(Lazy.of(RegistryHandler.GODDESS_ORE_BLOCK), 2, 10, 48, 6),
         UNKNOWN_ORE(Lazy.of(RegistryHandler.UNKNOWN_ORE_BLOCK), 5, 0, 128, 5),
         HELLSTONE(Lazy.of(RegistryHandler.HELLSTONE_ORE_BLOCK), 5, 0, 30, 2),
-        FOOLS_GOLD(Lazy.of(RegistryHandler.FOOLS_GOLD_ORE_BLOCK), 2, 0, 32, 6);
+        FOOLS_GOLD(Lazy.of(RegistryHandler.FOOLS_GOLD_ORE_BLOCK), 6, 0, 32, 2),
+        ERIDIUM_ORE(Lazy.of(RegistryHandler.ERIDIUM_ORE_BLOCK), 6, 0, 30, 4),
+        HALITE(Lazy.of(RegistryHandler.HALITE),10, 0, 60, 50);
 
         private final Lazy<Block> block;
         private final int maxVeinSize;
