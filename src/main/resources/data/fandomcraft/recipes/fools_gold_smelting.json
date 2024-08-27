@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "fandomcraft:fools_gold_ore"
+  },
+  "result": "fandomcraft:fools_gold",
+  "experience": 100.0,
+  "cookingtime": 200
+}

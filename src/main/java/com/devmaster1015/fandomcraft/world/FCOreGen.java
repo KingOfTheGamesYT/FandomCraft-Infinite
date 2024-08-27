@@ -32,6 +32,7 @@ public class FCOreGen {
         spawnOreInAllBiomes(GODDESS_ORE, event, Dimension.OVERWORLD.toString());
         spawnOreInAllBiomes(UNKNOWN_ORE, event, Dimension.OVERWORLD.toString());
         spawnOreInAllBiomes(HELLSTONE, event, Dimension.THE_NETHER.toString());
+        spawnOreInAllBiomes(FOOLS_GOLD, event, Dimension.OVERWORLD.toString());
 
     }
 
@@ -112,7 +113,8 @@ public class FCOreGen {
         ROCKSTONE(Lazy.of(RegistryHandler.ROCK_STONE_BLOCK), 50, 0, 128, 15),
         GODDESS_ORE(Lazy.of(RegistryHandler.GODDESS_ORE_BLOCK), 2, 10, 48, 6),
         UNKNOWN_ORE(Lazy.of(RegistryHandler.UNKNOWN_ORE_BLOCK), 5, 0, 128, 5),
-        HELLSTONE(Lazy.of(RegistryHandler.HELLSTONE_ORE_BLOCK), 5, 0, 30, 2);
+        HELLSTONE(Lazy.of(RegistryHandler.HELLSTONE_ORE_BLOCK), 5, 0, 30, 2),
+        FOOLS_GOLD(Lazy.of(RegistryHandler.FOOLS_GOLD_ORE_BLOCK), 2, 0, 32, 6);
 
         private final Lazy<Block> block;
         private final int maxVeinSize;

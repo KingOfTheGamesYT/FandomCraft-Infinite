@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "fandomcraft:fools_gold_ore"
+  },
+  "result": "fandomcraft:fools_gold",
+  "experience": 100.0,
+  "cookingtime": 100
+}

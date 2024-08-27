@@ -211,9 +211,9 @@ public class AppraisingOre extends Item
                 if (i == 74) {
                     par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.DARKSTEEL_INGOT.get(), i3));
                 }
-               /* if (i <= 3) {
-                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.energyCrystal, i4));
-                } */
+                if (i <= 3) {
+                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ENERGY_CRYSTAL.get(), i4));
+                }
                 else {
                     System.out.println("Couldn't appraise the mineral...");
                 }
@@ -300,9 +300,9 @@ public class AppraisingOre extends Item
                if (i == 74) {
                    par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.DARKSTEEL_INGOT.get(), i4));
                 }
-               /* else {
-                   par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(Main.energyCrystal, i4));
-                }*/
+                else {
+                   par3EntityPlayer.inventory.addItemStackToInventory(new ItemStack(RegistryHandler.ENERGY_CRYSTAL.get(), i4));
+                }
             }
         }
         return new ActionResult<>(ActionResultType.SUCCESS, par1ItemStack);

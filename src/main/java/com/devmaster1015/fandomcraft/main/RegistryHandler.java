@@ -48,6 +48,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> DWARVEN_STEEL_INGOT = ITEMS.register("dwarven_steel_ingot", () -> new FItem("Dwarven Steel Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> HELLSTONE_INGOT = ITEMS.register("hellstone_ingot", () -> new FItem("Hellstone Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> DARKSTEEL_INGOT = ITEMS.register("darksteel_ingot", () -> new FItem("Darksteel Ingot", FandomCraft.tabFandomCraftMaterials));
+        public static final RegistryObject<Item> ENERGY_CRYSTAL = ITEMS.register("energy_crystal", () -> new FItem("Energy Crystal", FandomCraft.tabFandomCraftMaterials));
+        public static final RegistryObject<Item> FOOLS_GOLD = ITEMS.register("fools_gold", () -> new FItem("Fools Gold", FandomCraft.tabFandomCraftMaterials));
 
         //Spawn Eggs
 
@@ -61,6 +63,7 @@ public class RegistryHandler{
         public static final RegistryObject<Block> GODDESS_ORE_BLOCK = BLOCKS.register("goddessoreblock", () -> new FBlock("Goddess Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(65,1).harvestTool(ToolType.PICKAXE).harvestLevel(8).setRequiresTool(), 6));
         public static final RegistryObject<Block> UNKNOWN_ORE_BLOCK = BLOCKS.register("unknown_ore", unknownOre::new);
         public static final RegistryObject<Block> HELLSTONE_ORE_BLOCK = BLOCKS.register("hellstone_ore", () -> new FBlock("Hellstone Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(25.0F, 5.0F).harvestLevel(6).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> FOOLS_GOLD_ORE_BLOCK = BLOCKS.register("fools_gold_ore", () -> new FBlock("Fools Gold Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
 
         //Block Items
 
@@ -69,6 +72,7 @@ public class RegistryHandler{
         public static final RegistryObject<Item> GODDESS_ORE_BLOCK_ITEM = ITEMS.register("goddessoreblock", () -> new BlockItemBase(GODDESS_ORE_BLOCK.get()));
         public static final RegistryObject<Item> UNKNOWN_ORE_BLOCK_ITEM = ITEMS.register("unknown_ore", () -> new BlockItemBase(UNKNOWN_ORE_BLOCK.get()));
         public static final RegistryObject<Item> HELLSTONE_ORE_BLOCK_ITEM = ITEMS.register("hellstone_ore", () -> new BlockItemBase(HELLSTONE_ORE_BLOCK.get()));
+        public static final RegistryObject<Item> FOOLS_GOLD_ORE_BLOCK_ITEM = ITEMS.register("fools_gold_ore", () -> new BlockItemBase(FOOLS_GOLD_ORE_BLOCK.get()));
 
         //Dimensions
 }
