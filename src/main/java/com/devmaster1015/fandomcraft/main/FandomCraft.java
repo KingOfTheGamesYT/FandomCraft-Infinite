@@ -65,7 +65,7 @@ public class FandomCraft{
 
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.ENERGY_CRYSTAL.get());
+            return new ItemStack(RegistryHandler.ELVEN_STEEL_INGOT.get());
         }
     };
 
