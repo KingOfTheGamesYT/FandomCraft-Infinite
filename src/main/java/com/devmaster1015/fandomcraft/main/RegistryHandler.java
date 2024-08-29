@@ -34,17 +34,17 @@ public class RegistryHandler{
         //Items
 
         public static final RegistryObject<AppraisingOre> UNKNOWN_MINERAL = ITEMS.register("unknown_mineral", AppraisingOre::new);
-        public static final RegistryObject<Item> APPRAISAL_KIT_BASIC = ITEMS.register("appraisal_kit_basic", () -> new FItem("Appraisal Kit Basic", FandomCraft.tabFandomCraftBlocks));
-        public static final RegistryObject<Item> APPRAISAL_KIT_ADVANCED = ITEMS.register("appraisal_kit_advanced", () -> new FItem("Appraisal Kit Advanced", FandomCraft.tabFandomCraftBlocks));
-        public static final RegistryObject<Item> APPRAISAL_KIT_MASTER = ITEMS.register("appraisal_kit_master", () -> new FItem("Appraisal Kit Master", FandomCraft.tabFandomCraftBlocks));
+        public static final RegistryObject<Item> APPRAISAL_KIT_BASIC = ITEMS.register("appraisal_kit_basic", () -> new FItem("Appraisal Kit Basic", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> APPRAISAL_KIT_ADVANCED = ITEMS.register("appraisal_kit_advanced", () -> new FItem("Appraisal Kit Advanced", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> APPRAISAL_KIT_MASTER = ITEMS.register("appraisal_kit_master", () -> new FItem("Appraisal Kit Master", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> ELVEN_STEEL_INGOT = ITEMS.register("elven_steel_ingot", () -> new FItem("Elven Steel Ingot", FandomCraft.tabFandomCraftMaterials));
-        public static final RegistryObject<Item> RUPEE_GREEN = ITEMS.register("rupee_green", () -> new FItem("Green Rupee", FandomCraft.tabFandomCraftMaterials, Rarity.UNCOMMON).addInfo("A gem of 1 value.", "Can be smelted into ingots."));
-        public static final RegistryObject<Item> RUPEE_RED = ITEMS.register("rupee_red", () -> new FItem("Red Rupee", FandomCraft.tabFandomCraftMaterials, Rarity.UNCOMMON).addInfo("A gem of 20 value.", "Can be smelted into ingots."));
-        public static final RegistryObject<Item> RUPEE_BLUE = ITEMS.register("rupee_blue", () -> new FItem("Blue Rupee", FandomCraft.tabFandomCraftMaterials, Rarity.UNCOMMON).addInfo("A gem of 5 value.", "Can be smelted into ingots."));
-        public static final RegistryObject<Item> RUPEE_ORANGE= ITEMS.register("rupee_orange", () -> new FItem("Orange Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 10 value."));
-        public static final RegistryObject<Item> RUPEE_PURPLE = ITEMS.register("rupee_purple", () -> new FItem("Purple Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 50 value."));
-        public static final RegistryObject<Item> RUPEE_SILVER = ITEMS.register("rupee_silver", () -> new FItem("Silver Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 200 value."));
-        public static final RegistryObject<Item> RUPEE_YELLOW = ITEMS.register("rupee_yellow", () -> new FItem("Yellow Rupee", FandomCraft.tabFandomCraftMaterials).addInfo("A gem of 100 value."));
+        public static final RegistryObject<Item> RUPEE_GREEN = ITEMS.register("rupee_green", () -> new FItem("Green Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 1 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_RED = ITEMS.register("rupee_red", () -> new FItem("Red Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 20 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_BLUE = ITEMS.register("rupee_blue", () -> new FItem("Blue Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 5 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_ORANGE= ITEMS.register("rupee_orange", () -> new FItem("Orange Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 10 value."));
+        public static final RegistryObject<Item> RUPEE_PURPLE = ITEMS.register("rupee_purple", () -> new FItem("Purple Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 50 value."));
+        public static final RegistryObject<Item> RUPEE_SILVER = ITEMS.register("rupee_silver", () -> new FItem("Silver Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 200 value."));
+        public static final RegistryObject<Item> RUPEE_YELLOW = ITEMS.register("rupee_yellow", () -> new FItem("Yellow Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 100 value."));
         public static final RegistryObject<Item> DWARVEN_STEEL_INGOT = ITEMS.register("dwarven_steel_ingot", () -> new FItem("Dwarven Steel Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> HELLSTONE_INGOT = ITEMS.register("hellstone_ingot", () -> new FItem("Hellstone Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> DARKSTEEL_INGOT = ITEMS.register("darksteel_ingot", () -> new FItem("Darksteel Ingot", FandomCraft.tabFandomCraftMaterials));
@@ -52,9 +52,11 @@ public class RegistryHandler{
         public static final RegistryObject<Item> FOOLS_GOLD = ITEMS.register("fools_gold", () -> new FItem("Fools Gold", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> ADAMANTIUM_INGOT = ITEMS.register("adamantium_ingot", () -> new FItem("Adamantium Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> ERIDIUM_INGOT = ITEMS.register("eridium_ingot", () -> new FItem("Adamantium Ingot", FandomCraft.tabFandomCraftMaterials));
-        public static final RegistryObject<Item> SALT = ITEMS.register("salt", () -> new FItem("Salt", FandomCraft.tabFandomCraftMaterials));
+        public static final RegistryObject<Item> SALT = ITEMS.register("salt", () -> new FItem("Salt", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> MYTHRIL_INGOT = ITEMS.register("mythril_ingot", () -> new FItem("Mythril Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> ORICHULUM_INGOT = ITEMS.register("orichulum_ingot", () -> new FItem("Orichulum Ingot", FandomCraft.tabFandomCraftMaterials));
+        public static final RegistryObject<Item> ESSENCE_OF_NATURE = ITEMS.register("nature_essence", () -> new FItem("Nature Essence", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> PEARL = ITEMS.register("pearl", () -> new FItem("Pearl", FandomCraft.tabFandomCraftMisc));
 
         //Spawn Eggs
 
@@ -73,6 +75,7 @@ public class RegistryHandler{
         public static final RegistryObject<Block> HALITE = BLOCKS.register("halite", () -> new FBlock("Halite", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(4.0F, 1.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
         public static final RegistryObject<Block> MYTHRIL_ORE = BLOCKS.register("mythril_ore", () -> new FBlock("Halite Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(14.0F, 5.0F).harvestLevel(4).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
         public static final RegistryObject<Block> ORICHULUM_ORE = BLOCKS.register("orichulum_ore", () -> new FBlock("Orichulum Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 5.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> PEARL_STONE_BLOCK = BLOCKS.register("pearlstone", PearlStone::new);
 
         //Block Items
 
@@ -86,6 +89,7 @@ public class RegistryHandler{
         public static final RegistryObject<Item> HALITE_BLOCK_ITEM = ITEMS.register("halite", () -> new BlockItemBase(HALITE.get()));
         public static final RegistryObject<Item> MYTHRIL_ORE_ITEM = ITEMS.register("mythril_ore", () -> new BlockItemBase(MYTHRIL_ORE.get()));
         public static final RegistryObject<Item> ORICHULUM_ORE_ITEM = ITEMS.register("orichulum_ore", () -> new BlockItemBase(ORICHULUM_ORE.get()));
+        public static final RegistryObject<Item> PEARL_STONE_ITEM = ITEMS.register("pearlstone", () -> new BlockItemBase(PEARL_STONE_BLOCK.get()));
 
         //Dimensions
 }

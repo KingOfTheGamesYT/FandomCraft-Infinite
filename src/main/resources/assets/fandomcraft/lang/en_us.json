@@ -483,10 +483,10 @@
   "item.beer": "Beer",
   "item.ale": "Ale",
   "item.coffee": "Coffee",
-  "item.tea": "Tea",
-  "item.hotcocoa": "Hot Cocoa",
-  "item.cola": "Cola",
-  "item.lettuce": "Lettuce",
+  "item.fandomcraft.tea": "Tea",
+  "item.fandomcraft.hotcocoa": "Hot Cocoa",
+  "item.fandomcraft.cola": "Cola",
+  "item.fandomcraft.lettuce": "Lettuce",
 
 
   "block.fandomcraft.pearlstone": "Pearlstone",
@@ -514,13 +514,13 @@
   "block.infestedDirt": "Infested Dirt",
   "block.sandFossil": "Sand Fossil",
 
-  "item.pearl": "Pearl",
-  "item.aquaIngot": "Aquatic Ingot",
+  "item.fandomcraft.pearl": "Pearl",
+  "item.fandomcraft.aquaIngot": "Aquatic Ingot",
   "item.aquaEssence": "Essence of Water",
   "item.fandomcraft.earthEssence": "Essence of Earth",
   "item.fandomcraft.fireEssence": "Essence of Fire",
   "item.fandomcraft.voidEssence": "Essence of Sky",
-  "item.fandomcraft.natureEssence": "Essence of Life",
+  "item.fandomcraft.nature_essence": "Essence of Nature",
   "item.fandomcraft.obsidianChunk": "Obsidian Chunk",
   "item.fandomcraft.hellstone_ingot": "Hellstone Ingot",
 

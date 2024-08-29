@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#DE",
+    "UG ",
+    "GN "
+  ],
+  "key": {
+    "#": {
+      "item": "fandomcraft:appraisal_kit_basic"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "fandomcraft:nature_essence"
+    },
+    "U": {
+      "item": "fandomcraft:pearl"
+    },
+    "G": {
+      "item": "fandomcraft:unknown_mineral"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "fandomcraft:appraisal_kit_advanced",
+    "count": 1
+  }
+}

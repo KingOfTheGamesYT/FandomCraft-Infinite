@@ -65,6 +65,14 @@ public class FandomCraft{
 
         @Override
         public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.ENERGY_CRYSTAL.get());
+        }
+    };
+
+    public static final ItemGroup tabFandomCraftMisc = new ItemGroup("tabFandomCraftMisc") {
+
+        @Override
+        public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.RUPEE_GREEN.get());
         }
     };
