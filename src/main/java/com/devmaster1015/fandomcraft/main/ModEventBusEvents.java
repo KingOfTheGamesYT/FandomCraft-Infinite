@@ -1,11 +1,9 @@
 package com.devmaster1015.fandomcraft.main;
 
-import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 

@@ -3,6 +3,7 @@ package com.devmaster1015.fandomcraft.main;
 import com.devmaster1015.fandomcraft.blocks.*;
 
 import com.devmaster1015.fandomcraft.items.AppraisingOre;
+import com.devmaster1015.fandomcraft.items.Rupee;
 import com.devmaster1015.fandomcraft.items.itemtypes.FItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -11,6 +12,8 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 
 import net.minecraft.item.Rarity;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,11 +24,13 @@ public class RegistryHandler{
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FandomCraft.MOD_ID);
         public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FandomCraft.MOD_ID);
         public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, FandomCraft.MOD_ID);
+        public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, FandomCraft.MOD_ID);
 
         public static void init() {
             ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
             BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
             ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+            SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         }
 
@@ -38,13 +43,13 @@ public class RegistryHandler{
         public static final RegistryObject<Item> APPRAISAL_KIT_ADVANCED = ITEMS.register("appraisal_kit_advanced", () -> new FItem("Appraisal Kit Advanced", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> APPRAISAL_KIT_MASTER = ITEMS.register("appraisal_kit_master", () -> new FItem("Appraisal Kit Master", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> ELVEN_STEEL_INGOT = ITEMS.register("elven_steel_ingot", () -> new FItem("Elven Steel Ingot", FandomCraft.tabFandomCraftMaterials));
-        public static final RegistryObject<Item> RUPEE_GREEN = ITEMS.register("rupee_green", () -> new FItem("Green Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 1 value.", "Can be smelted into ingots."));
-        public static final RegistryObject<Item> RUPEE_RED = ITEMS.register("rupee_red", () -> new FItem("Red Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 20 value.", "Can be smelted into ingots."));
-        public static final RegistryObject<Item> RUPEE_BLUE = ITEMS.register("rupee_blue", () -> new FItem("Blue Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 5 value.", "Can be smelted into ingots."));
-        public static final RegistryObject<Item> RUPEE_ORANGE= ITEMS.register("rupee_orange", () -> new FItem("Orange Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 10 value."));
-        public static final RegistryObject<Item> RUPEE_PURPLE = ITEMS.register("rupee_purple", () -> new FItem("Purple Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 50 value."));
-        public static final RegistryObject<Item> RUPEE_SILVER = ITEMS.register("rupee_silver", () -> new FItem("Silver Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 200 value."));
-        public static final RegistryObject<Item> RUPEE_YELLOW = ITEMS.register("rupee_yellow", () -> new FItem("Yellow Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 100 value."));
+        public static final RegistryObject<Item> RUPEE_GREEN = ITEMS.register("rupee_green", () -> new Rupee("Green Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 1 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_RED = ITEMS.register("rupee_red", () -> new Rupee("Red Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 20 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_BLUE = ITEMS.register("rupee_blue", () -> new Rupee("Blue Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 5 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_ORANGE= ITEMS.register("rupee_orange", () -> new Rupee("Orange Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 10 value."));
+        public static final RegistryObject<Item> RUPEE_PURPLE = ITEMS.register("rupee_purple", () -> new Rupee("Purple Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 50 value."));
+        public static final RegistryObject<Item> RUPEE_SILVER = ITEMS.register("rupee_silver", () -> new Rupee("Silver Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 200 value."));
+        public static final RegistryObject<Item> RUPEE_YELLOW = ITEMS.register("rupee_yellow", () -> new Rupee("Yellow Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 100 value."));
         public static final RegistryObject<Item> DWARVEN_STEEL_INGOT = ITEMS.register("dwarven_steel_ingot", () -> new FItem("Dwarven Steel Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> HELLSTONE_INGOT = ITEMS.register("hellstone_ingot", () -> new FItem("Hellstone Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> DARKSTEEL_INGOT = ITEMS.register("darksteel_ingot", () -> new FItem("Darksteel Ingot", FandomCraft.tabFandomCraftMaterials));
@@ -92,4 +97,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> PEARL_STONE_ITEM = ITEMS.register("pearlstone", () -> new BlockItemBase(PEARL_STONE_BLOCK.get()));
 
         //Dimensions
+
+        //Sounds
+        public static final RegistryObject<SoundEvent> RUPEE_PICKUP = SOUNDS.register("rupee", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "rupee")));
+
 }
