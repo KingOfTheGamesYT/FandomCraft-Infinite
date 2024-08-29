@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#NG",
+    "NND",
+    "ZC "
+  ],
+  "key": {
+    "#": {
+      "item": "fandomcraft:appraisal_kit_advanced"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "Z": {
+      "item": "fandomcraft:elven_steel_ingot"
+    },
+    "C": {
+      "item": "fandomcraft:dwarven_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "fandomcraft:appraisal_kit_master",
+    "count": 1
+  }
+}
