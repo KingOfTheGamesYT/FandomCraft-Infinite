@@ -2,9 +2,9 @@ package com.devmaster1015.fandomcraft.items;
 
 import com.devmaster1015.fandomcraft.main.FandomCraft;
 import com.devmaster1015.fandomcraft.main.RegistryHandler;
+
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
@@ -18,7 +18,7 @@ import java.util.*;
 
 public class AppraisingOre extends Item {
     public AppraisingOre() {
-        super(new Item.Properties().group(FandomCraft.tabFandomCraftBlocks));
+        super(new Item.Properties().group(FandomCraft.tabFandomCraftMaterials));
     }
 
     @Override
