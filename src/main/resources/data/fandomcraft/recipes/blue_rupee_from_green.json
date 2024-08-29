@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fandomcraft:rupee_green"
+    },
+    {
+      "item": "fandomcraft:rupee_green"
+    },
+    {
+      "item": "fandomcraft:rupee_green"
+    },
+    {
+      "item": "fandomcraft:rupee_green"
+    },
+    {
+      "item": "fandomcraft:rupee_green"
+    }
+  ],
+  "result": {
+    "item": "fandomcraft:rupee_blue",
+    "count": 1
+  }
+}
