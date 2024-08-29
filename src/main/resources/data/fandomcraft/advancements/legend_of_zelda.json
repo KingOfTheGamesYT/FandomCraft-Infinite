@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "fandomcraft:rupee_green"
+    },
+    "title": "Legend Of Zelda",
+    "description": "Find your first Rupee",
+    "background": "minecraft:textures/block/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "fandomcraft:rupees"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "fandomcraft:rupee_blue",
+    "fandomcraft:rupee_green",
+    "fandomcraft:rupee_orange",
+    "fandomcraft:rupee_purple",
+    "fandomcraft:rupee_red",
+    "fandomcraft:rupee_silver",
+    "fandomcraft:rupee_yellow"
+  ]
+}

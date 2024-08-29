@@ -4,9 +4,12 @@ import com.devmaster1015.fandomcraft.blocks.LootTableModifier;
 import com.devmaster1015.fandomcraft.world.FCOreGen;
 
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
+import net.minecraft.tags.ITag;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
@@ -31,6 +34,7 @@ import javax.annotation.Nonnull;
 public class FandomCraft {
     public static final Logger LOGGER = LogManager.getLogger("FandomCraft");
     public static final String MOD_ID = "fandomcraft";
+    public static final ITag.INamedTag<Item> RUPEES = ItemTags.makeWrapperTag(FandomCraft.MOD_ID+":rupees");
 
     public FandomCraft() {
 
