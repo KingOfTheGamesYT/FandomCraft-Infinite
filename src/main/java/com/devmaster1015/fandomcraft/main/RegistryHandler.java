@@ -4,6 +4,7 @@ import com.devmaster1015.fandomcraft.blocks.*;
 
 import com.devmaster1015.fandomcraft.items.AppraisingOre;
 import com.devmaster1015.fandomcraft.items.Rupee;
+import com.devmaster1015.fandomcraft.items.itemtypes.Consumable;
 import com.devmaster1015.fandomcraft.items.itemtypes.FItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -12,6 +13,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 
 import net.minecraft.item.Rarity;
+import net.minecraft.item.UseAction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.ToolType;
@@ -62,6 +64,10 @@ public class RegistryHandler{
         public static final RegistryObject<Item> ORICHULUM_INGOT = ITEMS.register("orichulum_ingot", () -> new FItem("Orichulum Ingot", FandomCraft.tabFandomCraftMaterials));
         public static final RegistryObject<Item> ESSENCE_OF_NATURE = ITEMS.register("nature_essence", () -> new FItem("Nature Essence", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> PEARL = ITEMS.register("pearl", () -> new FItem("Pearl", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> WORM = ITEMS.register("worm", () -> new FItem("Worm", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> BLUE_BERRY = ITEMS.register("blueberry", () -> new Consumable("blueberry", 64, Rarity.COMMON).hunger(2,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> BgLUE_BERRY = ITEMS.register("blueberry", () -> new Consumable("blueberry", 64, Rarity.COMMON).hunger(2,1).action(UseAction.EAT));
+
 
         //Spawn Eggs
 

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "entries": [
-    "fandomcraft:mineshaft_custom_loot"
+    "fandomcraft:mineshaft_custom_loot",
+    "fandomcraft:dungeon_loot",
+    "fandomcraft:bonus_chest_loot"
   ]
 }
