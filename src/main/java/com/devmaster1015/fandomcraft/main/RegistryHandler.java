@@ -65,8 +65,11 @@ public class RegistryHandler{
         public static final RegistryObject<Item> ESSENCE_OF_NATURE = ITEMS.register("nature_essence", () -> new FItem("Nature Essence", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> PEARL = ITEMS.register("pearl", () -> new FItem("Pearl", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> WORM = ITEMS.register("worm", () -> new FItem("Worm", FandomCraft.tabFandomCraftMisc));
-        public static final RegistryObject<Item> BLUE_BERRY = ITEMS.register("blueberry", () -> new Consumable("blueberry", 64, Rarity.COMMON).hunger(2,1).meat().action(UseAction.EAT));
-        public static final RegistryObject<Item> BgLUE_BERRY = ITEMS.register("blueberry", () -> new Consumable("blueberry", 64, Rarity.COMMON).hunger(2,1).action(UseAction.EAT));
+        public static final RegistryObject<Item> BLUE_BERRY = ITEMS.register("blueberry", () -> new Consumable("Blueberry", 64, Rarity.COMMON).hunger(2,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Consumable("Grapes", 64, Rarity.COMMON).hunger(4,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce", () -> new Consumable("Lettuce", 64, Rarity.COMMON).hunger(3,0.8F).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry", () -> new Consumable("Strawberry", 64, Rarity.COMMON).hunger(3,1).meat().action(UseAction.EAT));
+
 
 
         //Spawn Eggs

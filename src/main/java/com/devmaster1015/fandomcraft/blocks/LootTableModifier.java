@@ -36,6 +36,9 @@ public class LootTableModifier {
             DROPS.add(new WeightedDrop(RegistryHandler.ESSENCE_OF_NATURE, 1));
             DROPS.add(new WeightedDrop(RegistryHandler.BLUE_BERRY, 5));
             DROPS.add(new WeightedDrop(RegistryHandler.WORM, 5));
+            DROPS.add(new WeightedDrop(RegistryHandler.GRAPES, 5));
+            DROPS.add(new WeightedDrop(RegistryHandler.LETTUCE, 5));
+            DROPS.add(new WeightedDrop(RegistryHandler.STRAWBERRY, 5));
 
             int totalWeight = 0;
             for (WeightedDrop drop : DROPS) {

@@ -5,8 +5,30 @@
       "loot_table_id": "minecraft:chests/spawn_bonus_chest"
     }
   ],
-  "addition": "fandomcraft:blueberry",
-  "weight": 6,
-  "minCount": 3,
-  "maxCount": 7
+  "entries": [
+    {
+      "addition": "fandomcraft:blueberry",
+      "weight": 6,
+      "minCount": 3,
+      "maxCount": 7
+    },
+    {
+      "addition": "fandomcraft:grapes",
+      "weight": 6,
+      "minCount": 3,
+      "maxCount": 7
+    },
+    {
+      "addition": "fandomcraft:lettuce",
+      "weight": 6,
+      "minCount": 3,
+      "maxCount": 7
+    },
+    {
+      "addition": "fandomcraft:strawberry",
+      "weight": 6,
+      "minCount": 3,
+      "maxCount": 7
+    }
+    ]
 }

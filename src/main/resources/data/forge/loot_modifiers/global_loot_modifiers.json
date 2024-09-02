@@ -3,6 +3,7 @@
   "entries": [
     "fandomcraft:mineshaft_custom_loot",
     "fandomcraft:dungeon_loot",
-    "fandomcraft:bonus_chest_loot"
+    "fandomcraft:bonus_chest_loot",
+    "fandomcraft:village_weaponsmith_loot"
   ]
 }

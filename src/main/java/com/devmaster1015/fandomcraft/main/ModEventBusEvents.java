@@ -21,7 +21,9 @@ public class ModEventBusEvents {
         new AddChestLootModifier.Serializer().setRegistryName
                 (new ResourceLocation(FandomCraft.MOD_ID,"bonus_chest_loot")),
         new AddChestLootModifier.Serializer().setRegistryName
-                (new ResourceLocation(FandomCraft.MOD_ID,"dungeon_loot"))
+                (new ResourceLocation(FandomCraft.MOD_ID,"dungeon_loot")),
+        new AddChestLootModifier.Serializer().setRegistryName
+                (new ResourceLocation(FandomCraft.MOD_ID,"village_weaponsmith_loot"))
         );
     }
 }

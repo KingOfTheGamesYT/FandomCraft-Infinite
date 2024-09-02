@@ -5,8 +5,24 @@
       "loot_table_id": "minecraft:chests/abandoned_mineshaft"
     }
   ],
-  "addition": "fandomcraft:rupee_silver",
-  "weight": 1,
-  "minCount": 1,
-  "maxCount": 3
+  "entries": [
+    {
+      "addition": "fandomcraft:rupee_silver",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 3
+    },
+    {
+      "addition": "fandomcraft:grapes",
+      "weight": 5,
+      "minCount": 3,
+      "maxCount": 7
+    },
+    {
+      "addition": "fandomcraft:strawberry",
+      "weight": 5,
+      "minCount": 3,
+      "maxCount": 7
+    }
+    ]
 }
