@@ -3,6 +3,7 @@ package com.devmaster1015.fandomcraft.main;
 import com.devmaster1015.fandomcraft.blocks.*;
 
 import com.devmaster1015.fandomcraft.items.AppraisingOre;
+import com.devmaster1015.fandomcraft.items.DampMulch;
 import com.devmaster1015.fandomcraft.items.Rupee;
 import com.devmaster1015.fandomcraft.items.itemtypes.Consumable;
 import com.devmaster1015.fandomcraft.items.itemtypes.FItem;
@@ -69,6 +70,9 @@ public class RegistryHandler{
         public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Consumable("Grapes", 64, Rarity.COMMON).hunger(4,1).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce", () -> new Consumable("Lettuce", 64, Rarity.COMMON).hunger(3,0.8F).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry", () -> new Consumable("Strawberry", 64, Rarity.COMMON).hunger(3,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> GREEN_PEPPER = ITEMS.register("green_pepper", () -> new Consumable("Green Pepper", 64, Rarity.COMMON).hunger(5,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> RED_PEPPER = ITEMS.register("red_pepper", () -> new Consumable("Red Pepper", 64, Rarity.COMMON).hunger(5,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> DAMP_MULCH = ITEMS.register("damp_mulch", DampMulch::new);
 
 
 

@@ -23,6 +23,12 @@
       "weight": 5,
       "minCount": 3,
       "maxCount": 7
+    },
+    {
+      "addition": "fandomcraft:red_pepper",
+      "weight": 5,
+      "minCount": 3,
+      "maxCount": 7
     }
     ]
 }
