@@ -11,6 +11,12 @@
       "weight": 5,
       "minCount": 3,
       "maxCount": 7
+    },
+    {
+      "addition": "minecraft:crossbow",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }
