@@ -39,6 +39,10 @@ public class RegistryHandler{
 
         //Entities
 
+        //Sounds
+        public static final RegistryObject<SoundEvent> RUPEE_PICKUP = SOUNDS.register("rupee", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "rupee")));
+        public static final RegistryObject<SoundEvent> HEART_PICKUP = SOUNDS.register("getheart", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "getheart")));
+
         //Items
 
         public static final RegistryObject<AppraisingOre> UNKNOWN_MINERAL = ITEMS.register("unknown_mineral", AppraisingOre::new);
@@ -73,6 +77,9 @@ public class RegistryHandler{
         public static final RegistryObject<Item> GREEN_PEPPER = ITEMS.register("green_pepper", () -> new Consumable("Green Pepper", 64, Rarity.COMMON).hunger(5,1).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> RED_PEPPER = ITEMS.register("red_pepper", () -> new Consumable("Red Pepper", 64, Rarity.COMMON).hunger(5,1).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> DAMP_MULCH = ITEMS.register("damp_mulch", DampMulch::new);
+        public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic", () -> new Consumable("Garlic", 64, Rarity.COMMON).hunger(2,0.2F).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> HEART = ITEMS.register("heart", () -> new Consumable("Heart", 1, Rarity.COMMON).useInstantly().health(2).setUseSound(() -> HEART_PICKUP.get()));
+
 
 
 
@@ -110,8 +117,5 @@ public class RegistryHandler{
         public static final RegistryObject<Item> PEARL_STONE_ITEM = ITEMS.register("pearlstone", () -> new BlockItemBase(PEARL_STONE_BLOCK.get()));
 
         //Dimensions
-
-        //Sounds
-        public static final RegistryObject<SoundEvent> RUPEE_PICKUP = SOUNDS.register("rupee", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "rupee")));
 
 }

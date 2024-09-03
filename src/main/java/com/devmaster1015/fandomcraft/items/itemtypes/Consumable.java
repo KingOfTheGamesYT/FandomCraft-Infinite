@@ -9,6 +9,8 @@ import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
 import org.apache.logging.log4j.util.TriConsumer;
@@ -16,9 +18,12 @@ import org.apache.logging.log4j.util.TriConsumer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class Consumable extends FItem
 {
+	private Supplier<SoundEvent> useSoundSupplier;
+
 	protected UseAction useaction = UseAction.BOW;
 	protected List<EffectInstance> effects;
 	protected TriConsumer<World, PlayerEntity, ItemStack> action;
@@ -40,6 +45,11 @@ public class Consumable extends FItem
 	public Consumable(String name, Properties p)
 	{
 		super(name, p);
+	}
+
+	public Consumable setUseSound(Supplier<SoundEvent> soundSupplier) {
+		this.useSoundSupplier = soundSupplier;
+		return this;
 	}
 
 	public Consumable useInstantly()
@@ -164,18 +174,27 @@ public class Consumable extends FItem
 		}
 	}
 
-	protected void use(World world, PlayerEntity player, ItemStack stack)
-	{
+	protected void use(World world, PlayerEntity player, ItemStack stack) {
+		if (useSoundSupplier != null && !world.isRemote) {
+			SoundEvent sound = useSoundSupplier.get();
+			if (sound != null) {
+				world.playSound(null, player.getPosX(), player.getPosY(), player.getPosZ(), sound, SoundCategory.PLAYERS, 1.0F, 1.0F);
+			}
+		}
 		doEffect(world, player, stack);
 		damage(stack, player, 1);
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
-	{
+	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
 		ItemStack stack = player.getHeldItem(hand);
-		if (useinstantly)
-		{
+		if (useinstantly) {
+			if (useSoundSupplier != null && !world.isRemote) {
+				SoundEvent sound = useSoundSupplier.get();
+				if (sound != null) {
+					world.playSound(null, player.getPosX(), player.getPosY(), player.getPosZ(), sound, SoundCategory.PLAYERS, 1.0F, 1.0F);
+				}
+			}
 			use(world, player, stack);
 			return ActionResult.resultConsume(stack);
 		}

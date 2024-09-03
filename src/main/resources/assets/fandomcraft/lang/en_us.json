@@ -467,7 +467,7 @@
   "block.skillet": "Skillet (WIP)",
   "block.cuttingboard": "Cutting Board (WIP)",
 
-  "item.lumpOfDough": "Flour",
+  "item.fandomcraft.lumpOfDough": "Flour",
   "item.fandomcraft.pizzaDough": "Pizza Dough",
   "item.fandomcraft.pizza": "Pizza",
   "item.fandomcraft.baconPizza": "Bacon Pizza",
@@ -769,29 +769,29 @@
   "block.twilightGlass": "Twilight Glass",
   "block.mirrorShard": "Mirror Shard",
   "block.mirrorOfTwilight": "Mirror of Twilight",
-  "block.TRPortal": "Twilight Realm Portal",
+  "block.fandomcraft.TRPortal": "Twilight Realm Portal",
 
-  "item.armCannon": "Arm Cannon",
+  "item.fandomcraft.armCannon": "Arm Cannon",
 
-  "item.magmaStone": "Magma Stone",
-  "item.ifritMagicite": "Ifrit Magicite",
-  "item.earthCrystal": "Earth Crystal",
+  "item.fandomcraft.magmaStone": "Magma Stone",
+  "item.fandomcraft.ifritMagicite": "Ifrit Magicite",
+  "item.fandomcraft.earthCrystal": "Earth Crystal",
 
-  "item.heart": "Heart",
-  "block.heartPot": "Heart Pot",
-  "item.dinsPearl": "Din's Pearl",
-  "item.gannonSword": "Ganon's Sword",
-  "item.zantSword": "Zant's Sword",
+  "item.fandomcraft.heart": "Heart",
+  "block.fandomcraft.heartPot": "Heart Pot",
+  "item.fandomcraft.dinsPearl": "Din's Pearl",
+  "item.fandomcraft.gannonSword": "Ganon's Sword",
+  "item.fandomcraft.zantSword": "Zant's Sword",
 
-  "block.gannonStatue": "Prince of Darkness Statue",
+  "block.fandomcraft.gannonStatue": "Prince of Darkness Statue",
 
   "itemGroup.fableWeapons": "Fable Weapons",
   "itemGroup.fableArmour": "Fable Armour",
   "itemGroup.fableMisc": "Fable Misc.",
   "itemGroup.fableMagic": "Fable Magic",
 
-  "entity.Hobbe": "Hobbe",
-  "entity.HollowMan": "Hollow Man",
+  "entity.fandomcraft.Hobbe": "Hobbe",
+  "entity.fandomcraft.HollowMan": "Hollow Man",
 
   "item.java": "Java",
   "item.silverKey": "Silver Key",

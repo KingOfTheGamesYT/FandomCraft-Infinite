@@ -7,5 +7,14 @@
         "stream": false
       }
     ]
+  },
+  "getheart": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fandomcraft:getheart",
+        "stream": false
+      }
+    ]
   }
 }
