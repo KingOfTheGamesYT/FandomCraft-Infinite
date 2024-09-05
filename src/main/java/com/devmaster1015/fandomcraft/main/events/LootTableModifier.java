@@ -1,6 +1,6 @@
-package com.devmaster1015.fandomcraft.blocks;
+package com.devmaster1015.fandomcraft.main.events;
 
-import com.devmaster1015.fandomcraft.main.RegistryHandler;
+import com.devmaster1015.fandomcraft.util.RegistryHandler;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.event.world.BlockEvent;

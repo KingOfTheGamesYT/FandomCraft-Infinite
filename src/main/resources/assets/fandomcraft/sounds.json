@@ -16,5 +16,23 @@
         "stream": false
       }
     ]
+  },
+  "hal_shoot": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fandomcraft:hal_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "empty_clip": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fandomcraft:empty_clip",
+        "stream": false
+      }
+    ]
   }
 }

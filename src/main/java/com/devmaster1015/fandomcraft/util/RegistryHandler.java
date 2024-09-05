@@ -1,22 +1,28 @@
-package com.devmaster1015.fandomcraft.main;
+package com.devmaster1015.fandomcraft.util;
 
 import com.devmaster1015.fandomcraft.blocks.*;
 
+import com.devmaster1015.fandomcraft.entities.EntityBullet;
 import com.devmaster1015.fandomcraft.items.AppraisingOre;
 import com.devmaster1015.fandomcraft.items.DampMulch;
+import com.devmaster1015.fandomcraft.items.HalsRifle;
 import com.devmaster1015.fandomcraft.items.Rupee;
 import com.devmaster1015.fandomcraft.items.itemtypes.Consumable;
 import com.devmaster1015.fandomcraft.items.itemtypes.FItem;
+import com.devmaster1015.fandomcraft.items.itemtypes.Weapon;
+import com.devmaster1015.fandomcraft.main.FandomCraft;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 
-import net.minecraft.item.Rarity;
-import net.minecraft.item.UseAction;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -37,11 +43,12 @@ public class RegistryHandler{
 
         }
 
-        //Entities
 
         //Sounds
         public static final RegistryObject<SoundEvent> RUPEE_PICKUP = SOUNDS.register("rupee", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "rupee")));
         public static final RegistryObject<SoundEvent> HEART_PICKUP = SOUNDS.register("getheart", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "getheart")));
+        public static final RegistryObject<SoundEvent> HAL_SHOOT = SOUNDS.register("hal_shoot", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "hal_shoot")));
+        public static final RegistryObject<SoundEvent> EMPTY_CLIP = SOUNDS.register("empty_clip", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "empty_clip")));
 
         //Items
 
@@ -79,9 +86,17 @@ public class RegistryHandler{
         public static final RegistryObject<Item> DAMP_MULCH = ITEMS.register("damp_mulch", DampMulch::new);
         public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic", () -> new Consumable("Garlic", 64, Rarity.COMMON).hunger(2,0.2F).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> HEART = ITEMS.register("heart", () -> new Consumable("Heart", 1, Rarity.COMMON).useInstantly().health(2).setUseSound(() -> HEART_PICKUP.get()));
+        public static final RegistryObject<Item> BULLET = ITEMS.register("bullet", () -> new FItem("Bullet", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> HALS_RIFLE = ITEMS.register("hals_rifle", () -> new HalsRifle("Hal's Rifle",2,2000, RegistryHandler.BULLET.get(), Items.AIR));
 
-
-
+        //Entities
+        public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
+                ENTITIES.register("bullet", () -> EntityType.Builder.
+                                <EntityBullet>create(EntityBullet::new, EntityClassification.MISC)
+                        .size(0.25f, 0.25f)
+                        .trackingRange(4)
+                        .updateInterval(4)
+                        .build(new ResourceLocation(FandomCraft.MOD_ID, "bullet").toString()));
 
         //Spawn Eggs
 

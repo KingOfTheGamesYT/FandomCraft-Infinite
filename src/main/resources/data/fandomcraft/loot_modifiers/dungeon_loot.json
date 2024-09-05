@@ -17,6 +17,18 @@
       "weight": 1,
       "minCount": 1,
       "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:hals_rifle",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:bullet",
+      "weight": 6,
+      "minCount": 1,
+      "maxCount": 4
     }
     ]
 }
