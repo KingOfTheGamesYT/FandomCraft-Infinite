@@ -1,25 +1,24 @@
 package com.devmaster1015.fandomcraft.main;
 
-import com.devmaster1015.fandomcraft.blocks.LootTableModifier;
+import com.devmaster1015.fandomcraft.main.events.LootTableModifier;
+import com.devmaster1015.fandomcraft.client.render.RenderBullet;
+import com.devmaster1015.fandomcraft.main.events.PickupEvent;
+import com.devmaster1015.fandomcraft.util.RegistryHandler;
+import com.devmaster1015.fandomcraft.main.events.VillagerTradeHandler;
 import com.devmaster1015.fandomcraft.world.FCOreGen;
 
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -27,8 +26,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import javax.annotation.Nonnull;
 
 @Mod("fandomcraft")
 public class FandomCraft {
@@ -62,6 +59,8 @@ public class FandomCraft {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BULLET_ENTITY.get(), RenderBullet::new);
+
     }
 
     public static final ItemGroup tabFandomCraftBlocks = new ItemGroup("tabFandomCraftBlocks") {
@@ -87,5 +86,11 @@ public class FandomCraft {
             return new ItemStack(RegistryHandler.RUPEE_GREEN.get());
         }
     };
+
+    @OnlyIn(Dist.CLIENT)
+    public static void dev(Object obj)
+    {
+        LOGGER.debug(obj);
+    }
 }
 

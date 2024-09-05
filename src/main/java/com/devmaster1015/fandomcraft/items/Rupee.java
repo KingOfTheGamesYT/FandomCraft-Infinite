@@ -1,8 +1,6 @@
 package com.devmaster1015.fandomcraft.items;
 
-import com.devmaster1015.fandomcraft.main.RegistryHandler;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

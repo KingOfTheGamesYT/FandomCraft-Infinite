@@ -1,6 +1,6 @@
 package com.devmaster1015.fandomcraft.blocks;
 
-import com.devmaster1015.fandomcraft.main.RegistryHandler;
+import com.devmaster1015.fandomcraft.util.RegistryHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
@@ -16,9 +16,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class PearlStone extends OreBlock {
     public PearlStone() {

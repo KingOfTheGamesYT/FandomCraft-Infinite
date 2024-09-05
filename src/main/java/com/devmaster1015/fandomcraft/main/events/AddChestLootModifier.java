@@ -1,4 +1,4 @@
-package com.devmaster1015.fandomcraft.main;
+package com.devmaster1015.fandomcraft.main.events;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

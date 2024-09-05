@@ -1,7 +1,8 @@
-package com.devmaster1015.fandomcraft.main;
+package com.devmaster1015.fandomcraft.main.events;
 
 import com.devmaster1015.fandomcraft.items.Rupee;
 
+import com.devmaster1015.fandomcraft.util.RegistryHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;

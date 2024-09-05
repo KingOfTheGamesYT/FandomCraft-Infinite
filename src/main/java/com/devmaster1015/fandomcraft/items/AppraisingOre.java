@@ -1,7 +1,7 @@
 package com.devmaster1015.fandomcraft.items;
 
 import com.devmaster1015.fandomcraft.main.FandomCraft;
-import com.devmaster1015.fandomcraft.main.RegistryHandler;
+import com.devmaster1015.fandomcraft.util.RegistryHandler;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;

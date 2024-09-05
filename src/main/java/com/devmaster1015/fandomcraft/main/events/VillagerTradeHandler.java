@@ -1,5 +1,6 @@
-package com.devmaster1015.fandomcraft.main;
+package com.devmaster1015.fandomcraft.main.events;
 
+import com.devmaster1015.fandomcraft.util.RegistryHandler;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 
 import net.minecraft.entity.merchant.villager.VillagerProfession;

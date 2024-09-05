@@ -1,16 +1,12 @@
 package com.devmaster1015.fandomcraft.blocks;
 
-import com.devmaster1015.fandomcraft.main.RegistryHandler;
+import com.devmaster1015.fandomcraft.util.RegistryHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 
 import net.minecraftforge.common.ToolType;
 

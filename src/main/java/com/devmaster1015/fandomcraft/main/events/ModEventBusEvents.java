@@ -1,5 +1,7 @@
-package com.devmaster1015.fandomcraft.main;
+package com.devmaster1015.fandomcraft.main.events;
 
+import com.devmaster1015.fandomcraft.main.FandomCraft;
+import com.devmaster1015.fandomcraft.main.events.AddChestLootModifier;
 import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;

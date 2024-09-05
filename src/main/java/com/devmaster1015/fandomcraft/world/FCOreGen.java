@@ -1,6 +1,6 @@
 package com.devmaster1015.fandomcraft.world;
 
-import com.devmaster1015.fandomcraft.main.RegistryHandler;
+import com.devmaster1015.fandomcraft.util.RegistryHandler;
 import static com.devmaster1015.fandomcraft.world.FCOreGen.OreType.*;
 
 import net.minecraft.block.Block;
