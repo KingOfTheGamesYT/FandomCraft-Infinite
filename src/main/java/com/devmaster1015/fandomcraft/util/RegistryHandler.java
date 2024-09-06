@@ -1,28 +1,20 @@
 package com.devmaster1015.fandomcraft.util;
 
 import com.devmaster1015.fandomcraft.blocks.*;
-
 import com.devmaster1015.fandomcraft.entities.EntityBullet;
-import com.devmaster1015.fandomcraft.items.AppraisingOre;
-import com.devmaster1015.fandomcraft.items.DampMulch;
-import com.devmaster1015.fandomcraft.items.HalsRifle;
-import com.devmaster1015.fandomcraft.items.Rupee;
-import com.devmaster1015.fandomcraft.items.itemtypes.Consumable;
-import com.devmaster1015.fandomcraft.items.itemtypes.FItem;
-import com.devmaster1015.fandomcraft.items.itemtypes.Weapon;
+import com.devmaster1015.fandomcraft.items.*;
+import com.devmaster1015.fandomcraft.items.itemtypes.*;
 import com.devmaster1015.fandomcraft.main.FandomCraft;
+
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
-
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -88,6 +80,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> HEART = ITEMS.register("heart", () -> new Consumable("Heart", 1, Rarity.COMMON).useInstantly().health(2).setUseSound(() -> HEART_PICKUP.get()));
         public static final RegistryObject<Item> BULLET = ITEMS.register("bullet", () -> new FItem("Bullet", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> HALS_RIFLE = ITEMS.register("hals_rifle", () -> new HalsRifle("Hal's Rifle",2,2000, RegistryHandler.BULLET.get(), Items.AIR));
+        public static final RegistryObject<Item> AXE_OF_DISHARMONY = ITEMS.register("axe_of_disharmony", () -> new Sword("Axe of Disharmony", new ModdedTier(4000, 14, 1,1.6F).material(Items.AIR), Rarity.COMMON).build(0, 0).addInfo("Heavy metal slayage"));
+        public static final RegistryObject<Item> PICKHAMMER = ITEMS.register("pickhammer", () -> new Pickaxe("Pickhammer", new ModdedTier(720, 8, 15, 1.6F).level(5).enchanting(20).material(Items.AIR), Rarity.COMMON).build(0, 0));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =

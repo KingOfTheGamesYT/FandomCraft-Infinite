@@ -29,6 +29,12 @@
       "weight": 6,
       "minCount": 1,
       "maxCount": 4
+    },
+    {
+      "addition": "fandomcraft:axe_of_disharmony",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }

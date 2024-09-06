@@ -1,24 +1,13 @@
 package com.devmaster1015.fandomcraft.items.itemtypes;
 
 import com.devmaster1015.fandomcraft.main.FandomCraft;
-import com.devmaster1015.fandomcraft.util.Elements;
 import com.devmaster1015.fandomcraft.util.Elements.Element;
 import com.devmaster1015.fandomcraft.util.IHasElement;
-import com.devmaster1015.fandomcraft.util.WeaponTier;
-
-
-import java.util.Collection;
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.UUID;
-import java.util.function.Consumer;
-
+import com.devmaster1015.fandomcraft.util.ModdedTier;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableMultimap.Builder;
 import com.google.common.collect.Multimap;
-
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
@@ -30,64 +19,67 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.Rarity;
-import net.minecraft.item.SwordItem;
 import net.minecraft.stats.Stats;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeMod;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.Map.Entry;
+import java.util.UUID;
+import java.util.function.Consumer;
 
-public class Weapon extends SwordItem implements IHasElement
+
+public class Pickaxe extends PickaxeItem implements IHasElement
 {
 	public static final Consumer<LivingEntity> breakbroadcast = (p) -> p.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	protected static final UUID MOVESPEED = UUID.fromString("35f5b798-7778-4017-98f9-ff557dc28f03");
 	protected static final UUID REACH = UUID.fromString("168fad76-3979-4638-91c9-a366c0933551");
 
 	protected String name;
-	protected String[] info;
-	protected boolean isblunt = false, isranged = true, ismagic = false;
-	protected float reach = 0, movespeed = 0;
+	private String[] info = new String[0];
+	protected float reach = 0, movespeed = 0, attackspeed = 0;
 	protected Multimap<Attribute, AttributeModifier> modifiers;
 	protected ActionResultType breakevent;
 	protected ItemStack repairitem;
 	protected Element element;
 
-	public Weapon(String name, WeaponTier tier, Rarity rarity)
+	public Pickaxe(String name, ModdedTier tier, Rarity rarity)
 	{
-		super(tier, -1, -2.4f, new Properties().group(FandomCraft.tabFandomCraftMisc).rarity(rarity));
+		super(tier, -1, -2.4F, new Properties().group(FandomCraft.tabFandomCraftMisc).rarity(rarity));
 		this.repairitem = tier.getRepairItem();
 		this.name = name;
 	}
 
-	public Weapon build(float reach, float movespeed)
+	public Pickaxe build(float reach, float movespeed)
 	{
 		this.reach = reach;
 		this.movespeed = movespeed;
 
 		Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-		builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", (double) getAttackDamage(), AttributeModifier.Operation.ADDITION));
-		builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", (double) (-2.4f * getTier().getEfficiency()), AttributeModifier.Operation.ADDITION));
+		builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Pickaxe modifier", (double) getAttackDamage(), Operation.ADDITION));
+		builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(ATTACK_SPEED_MODIFIER, "Pickaxe modifier", (double) (-2.4f), Operation.ADDITION));
 		modifiers = builder.build();
 		return this;
 	}
 
-	public Weapon rebuild()
+	public Pickaxe rebuild()
 	{
 		Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 		builder.putAll(modifiers);
 		if (movespeed != 0)
 		{
-			builder.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(MOVESPEED, "Weapon modifier", (double) movespeed, AttributeModifier.Operation.MULTIPLY_TOTAL));
+			builder.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(MOVESPEED, "Sword modifier", (double) movespeed, Operation.MULTIPLY_TOTAL));
 		}
 		if (reach != 0)
 		{
-			builder.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(REACH, "Weapon modifier", (double) reach, AttributeModifier.Operation.MULTIPLY_TOTAL));
+			builder.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(REACH, "Sword modifier", (double) reach, Operation.MULTIPLY_TOTAL));
 		}
 		modifiers = builder.build();
 
@@ -102,7 +94,7 @@ public class Weapon extends SwordItem implements IHasElement
 		return this;
 	}
 
-	public Weapon rebuildWith(Attribute attribute, UUID id, String modifiername, double value, Operation valuetype)
+	public Pickaxe rebuildWith(Attribute attribute, UUID id, String modifiername, double value, Operation valuetype)
 	{
 		Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 		builder.putAll(modifiers);
@@ -111,7 +103,7 @@ public class Weapon extends SwordItem implements IHasElement
 		return this;
 	}
 
-	public Weapon element(Element element)
+	public Pickaxe element(Element element)
 	{
 		this.element = element;
 		return this;
@@ -121,73 +113,6 @@ public class Weapon extends SwordItem implements IHasElement
 	public Element getElement()
 	{
 		return element != null ? element : IHasElement.super.getElement();
-	}
-
-	public Weapon addInfo(String... s)
-	{
-		if (info == null)
-		{
-			info = s;
-		}
-		else
-		{
-			String[] newinfo = new String[info.length + s.length];
-			int i = 0;
-			for (String si : this.info)
-			{
-				newinfo[i] = si;
-				++i;
-			}
-			for (String si : info)
-			{
-				newinfo[i] = si;
-				++i;
-			}
-		}
-		return this;
-	}
-
-	public Weapon setBlunt()
-	{
-		isblunt = true;
-		return this;
-	}
-
-	public Weapon setRanged()
-	{
-		isranged = true;
-		return this;
-	}
-
-	public Weapon setMagic()
-	{
-		ismagic = true;
-		return this;
-	}
-	public boolean isBlunt()
-	{
-		return isblunt;
-	}
-
-	public boolean isMelee()
-	{
-		return !isranged;
-	}
-
-	public boolean isRanged()
-	{
-		return isranged;
-	}
-
-	public boolean isMagic()
-	{
-		return ismagic;
-	}
-
-	public Weapon onBreak(ActionResultType event)
-	{
-		this.breakevent = event;
-		return this;
 	}
 
 	@Override
@@ -244,72 +169,34 @@ public class Weapon extends SwordItem implements IHasElement
 	@Override
 	public float getDestroySpeed(ItemStack stack, BlockState state)
 	{
-		if (isblunt)
-		{
-			if (state.getMaterial() == Material.ROCK || state.getMaterial() == Material.GLASS || state.getMaterial() == Material.REDSTONE_LIGHT || state.getMaterial() == Material.ICE
-					|| state.getMaterial() == Material.PACKED_ICE || state.getMaterial() == Material.GOURD)
-			{
-				return 15;
-			}
-		}
-		else
-		{
-			if (state.equals(Blocks.COBWEB))
-			{
-				return 15.0F;
-			}
-			else
-			{
-				Material material = state.getMaterial();
-				return material != Material.PLANTS && material != Material.TALL_PLANTS && material != Material.CORAL && !state.equals(BlockTags.LEAVES) && material != Material.GOURD ? 1.0F : 1.5F;
-			}
-		}
-		return 1f;
+		return state.getMaterial()== Material.IRON && state.getMaterial()== Material.ANVIL && state.getMaterial()== Material.ROCK ? super.getDestroySpeed(stack, state) : this.efficiency;
+
 	}
 
 	@Override
 	public boolean canHarvestBlock(BlockState state)
 	{
-		return isblunt ? state.getMaterial() == Material.ROCK : state.equals(Blocks.COBWEB);
+		int i = this.getTier().getHarvestLevel();
+		if (state.getHarvestTool() == net.minecraftforge.common.ToolType.PICKAXE) {
+			return i >= state.getHarvestLevel();
+		}
+		return state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getMaterial() == Material.ANVIL;
+	}
+
+	public Pickaxe addInfo(String... newInfo) {
+		if (newInfo != null && newInfo.length > 0) {
+			String[] combinedInfo = new String[this.info.length + newInfo.length];
+			System.arraycopy(this.info, 0, combinedInfo, 0, this.info.length);
+			System.arraycopy(newInfo, 0, combinedInfo, this.info.length, newInfo.length);
+			this.info = combinedInfo;
+		}
+		return this;
 	}
 
 	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag advanced)
-	{
-		if (info != null)
-		{
-			for (String s : info)
-			{
-				list.add(new StringTextComponent(s));
-			}
-		}
-		boolean needsspacing = true;
-		if (repairitem != null && !repairitem.isEmpty())
-		{
-			if (needsspacing)
-			{
-				list.add(new StringTextComponent(""));
-				needsspacing = false;
-			}
-			list.add(new StringTextComponent(TextFormatting.BLUE + "Material: " + getTier().getRepairMaterial().getMatchingStacks()[0].getDisplayName().getString()));
-		}
-		if (element != Elements.None)
-		{
-			if (needsspacing)
-			{
-				list.add(new StringTextComponent(""));
-				needsspacing = false;
-			}
-			list.add(new StringTextComponent(TextFormatting.BLUE + "Element: " + TextFormatting.WHITE + getElement().getName()));
-			if (getElement().getElementsWeakVS().size() > 0)
-			{
-
-				list.add(new StringTextComponent(TextFormatting.BLUE + "> Weak VS: " + TextFormatting.WHITE + getElement().getWeakVSText()));
-			}
-			if (getElement().getElementsStrongVS().size() > 0)
-			{
-				list.add(new StringTextComponent(TextFormatting.BLUE + "> Strong VS: " + TextFormatting.WHITE + getElement().getWeakVSText()));
-			}
+	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn){
+		for (String s : info) {
+			list.add(new StringTextComponent(s));
 		}
 	}
 

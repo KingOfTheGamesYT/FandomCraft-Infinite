@@ -5,37 +5,33 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 
-public class WeaponTier implements IItemTier
+public class ModdedTier implements IItemTier
 {
-	private int uses, harvestlevel = 2, enchantability = 0;
+	private int uses, harvestlevel = 2, enchantability = 0, efficiency = 0;
 	private float swingspeed = 1, damage;
 	private ItemStack repairitem;
 
-	public WeaponTier(int uses, float damage)
+	public ModdedTier(int uses, float damage, int efficiency, float swingspeed)
 	{
 		this.uses = uses;
 		this.damage = damage;
+		this.efficiency = efficiency;
+		this.swingspeed = swingspeed;
 	}
 
-	public WeaponTier level(int i)
+	public ModdedTier level(int i)
 	{
 		this.harvestlevel = i;
 		return this;
 	}
 
-	public WeaponTier enchanting(int i)
+	public ModdedTier enchanting(int i)
 	{
 		this.enchantability = i;
 		return this;
 	}
 
-	public WeaponTier speed(float f)
-	{
-		this.swingspeed = f;
-		return this;
-	}
-
-	public WeaponTier material(Item item)
+	public ModdedTier material(Item item)
 	{
 		repairitem = new ItemStack(item);
 		return this;
@@ -51,9 +47,21 @@ public class WeaponTier implements IItemTier
 		return uses;
 	}
 
+	// Modified method to set attack speed
+	public ModdedTier speed(float f)
+	{
+		this.swingspeed = f;
+		return this;
+	}
+
+	// New getter method for attack speed
+	public float getAttackSpeed() {
+		return swingspeed;
+	}
+
 	@Override
 	public float getEfficiency() {
-		return 0;
+		return efficiency;
 	}
 
 	@Override
