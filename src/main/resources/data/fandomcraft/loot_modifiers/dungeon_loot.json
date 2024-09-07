@@ -35,6 +35,18 @@
       "weight": 1,
       "minCount": 1,
       "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:pickhammer",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:greataxe",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }

@@ -81,7 +81,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> BULLET = ITEMS.register("bullet", () -> new FItem("Bullet", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> HALS_RIFLE = ITEMS.register("hals_rifle", () -> new HalsRifle("Hal's Rifle",2,2000, RegistryHandler.BULLET.get(), Items.AIR));
         public static final RegistryObject<Item> AXE_OF_DISHARMONY = ITEMS.register("axe_of_disharmony", () -> new Sword("Axe of Disharmony", new ModdedTier(4000, 14, 1,1.6F).material(Items.AIR), Rarity.COMMON).build(0, 0).addInfo("Heavy metal slayage"));
-        public static final RegistryObject<Item> PICKHAMMER = ITEMS.register("pickhammer", () -> new Pickaxe("Pickhammer", new ModdedTier(720, 8, 15, 1.6F).level(5).enchanting(20).material(Items.AIR), Rarity.COMMON).build(0, 0));
+        public static final RegistryObject<Item> PICKHAMMER = ITEMS.register("pickhammer", () -> new Pickaxe("Pickhammer", new ModdedTier(2250, 8, 15, 1.6F).level(5).enchanting(20).material(Items.AIR), Rarity.COMMON).build(0, 0));
+        public static final RegistryObject<Item> GREAT_AXE = ITEMS.register("greataxe", () -> new Axe("Greataxe", new ModdedTier(720, 8, 15, 1.6F).level(5).enchanting(20).material(Items.AIR), Rarity.COMMON).build(0, 0));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
