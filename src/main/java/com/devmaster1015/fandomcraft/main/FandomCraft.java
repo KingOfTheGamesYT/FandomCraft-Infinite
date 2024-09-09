@@ -1,6 +1,7 @@
 package com.devmaster1015.fandomcraft.main;
 
 import com.devmaster1015.fandomcraft.client.render.RenderEnergyBall;
+import com.devmaster1015.fandomcraft.client.render.RenderWoodenSlingshotAmmo;
 import com.devmaster1015.fandomcraft.main.events.LootTableModifier;
 import com.devmaster1015.fandomcraft.client.render.RenderBullet;
 import com.devmaster1015.fandomcraft.main.events.PickupEvent;
@@ -62,8 +63,7 @@ public class FandomCraft {
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BULLET_ENTITY.get(), RenderBullet::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ENERGY_BALL_ENTITY.get(), RenderEnergyBall::new);
-
-
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WOOD_SLINGSHOT_AMMO.get(), RenderWoodenSlingshotAmmo::new);
     }
 
     public static final ItemGroup tabFandomCraftBlocks = new ItemGroup("tabFandomCraftBlocks") {

@@ -3,6 +3,7 @@ package com.devmaster1015.fandomcraft.util;
 import com.devmaster1015.fandomcraft.blocks.*;
 import com.devmaster1015.fandomcraft.entities.EntityBullet;
 import com.devmaster1015.fandomcraft.entities.EntityEnergyBall;
+import com.devmaster1015.fandomcraft.entities.EntityWoodSlingshotAmmo;
 import com.devmaster1015.fandomcraft.items.*;
 import com.devmaster1015.fandomcraft.items.itemtypes.*;
 import com.devmaster1015.fandomcraft.main.FandomCraft;
@@ -42,6 +43,8 @@ public class RegistryHandler{
         public static final RegistryObject<SoundEvent> HEART_PICKUP = SOUNDS.register("getheart", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "getheart")));
         public static final RegistryObject<SoundEvent> HAL_SHOOT = SOUNDS.register("hal_shoot", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "hal_shoot")));
         public static final RegistryObject<SoundEvent> EMPTY_CLIP = SOUNDS.register("empty_clip", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "empty_clip")));
+        public static final RegistryObject<SoundEvent> ENERGY_SHOOT = SOUNDS.register("energy_shoot", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "energy_shoot")));
+        public static final RegistryObject<SoundEvent> ENERGY_HIT = SOUNDS.register("energy_hit", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "energy_hit")));
 
         //Items
 
@@ -93,6 +96,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", () -> new FItem("Ruby", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> ENERGY_TANK = ITEMS.register("energy_tank", () -> new FItem("Energy Tank", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> ARM_CANNON = ITEMS.register("arm_cannon", () -> new HandCannon("Arm Cannon",14,1200, RegistryHandler.ENERGY_CRYSTAL.get(), RegistryHandler.ENERGY_TANK.get(), Items.AIR).addInfo("Requires Energy Tanks and Crystals as ammo"));
+        public static final RegistryObject<Item> DEKUSEED = ITEMS.register("dekuseed", () -> new FItem("Deku Seed", FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Not edible or plantable, but hard", "enough to use as slingshot ammo."));
+        public static final RegistryObject<Item> WOODEN_SLINGSHOT = ITEMS.register("wooden_slingshot", () -> new WoodSlingshot("Wood Slingshot",4,32, RegistryHandler.DEKUSEED.get(), Items.STICK));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
@@ -109,6 +114,13 @@ public class RegistryHandler{
                         .trackingRange(4)
                         .updateInterval(4)
                         .build(new ResourceLocation(FandomCraft.MOD_ID, "energy_crystal").toString()));
+        public static final RegistryObject<EntityType<EntityWoodSlingshotAmmo>>WOOD_SLINGSHOT_AMMO =
+                ENTITIES.register("slingshotammo", () -> EntityType.Builder.
+                                <EntityWoodSlingshotAmmo>create(EntityWoodSlingshotAmmo::new, EntityClassification.MISC)
+                        .size(0.25f, 0.25f)
+                        .trackingRange(4)
+                        .updateInterval(4)
+                        .build(new ResourceLocation(FandomCraft.MOD_ID, "slingshotammo").toString()));
 
         //Spawn Eggs
 

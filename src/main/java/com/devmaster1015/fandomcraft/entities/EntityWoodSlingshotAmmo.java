@@ -9,7 +9,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.IPacket;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
@@ -18,20 +17,20 @@ import net.minecraftforge.fml.network.NetworkHooks;
 
 import org.apache.logging.log4j.util.TriConsumer;
 
-public class EntityEnergyBall extends FProjectile
+public class EntityWoodSlingshotAmmo extends FProjectile
 {
 	private ItemStack shot;
-	private TriConsumer<EntityEnergyBall, Entity, RayTraceResult> hitaction;
-	private float power = 14;
+	private TriConsumer<EntityWoodSlingshotAmmo, Entity, RayTraceResult> hitaction;
+	private float power = 4;
 
-	public EntityEnergyBall(EntityType<? extends EntityEnergyBall> type, World world)
+	public EntityWoodSlingshotAmmo(EntityType<? extends EntityWoodSlingshotAmmo> type, World world)
 	{
 		super(type, world);
 	}
 
-	public EntityEnergyBall(World world, LivingEntity sourceentity, ItemStack itemshot, float power, TriConsumer<EntityEnergyBall, Entity, RayTraceResult> hitaction)
+	public EntityWoodSlingshotAmmo(World world, LivingEntity sourceentity, ItemStack itemshot, float power, TriConsumer<EntityWoodSlingshotAmmo, Entity, RayTraceResult> hitaction)
 	{
-		super(RegistryHandler.ENERGY_BALL_ENTITY.get(), sourceentity, world);
+		super(RegistryHandler.WOOD_SLINGSHOT_AMMO.get(), sourceentity, world);
 		this.shot = itemshot;
 		this.power = power;
 	}
@@ -47,7 +46,6 @@ public class EntityEnergyBall extends FProjectile
 	{
 		super.onEntityHit(trace);
 		trace.getEntity().attackEntityFrom(DamageSource.causeThrownDamage(this, getShooter()), power);
-		this.world.playSound(null, trace.getEntity().getPosX(), trace.getEntity().getPosY(), trace.getEntity().getPosZ(), RegistryHandler.ENERGY_HIT.get(), SoundCategory.NEUTRAL, 1.0F, 1.0F);
 	}
 
 	@Override
@@ -70,6 +68,6 @@ public class EntityEnergyBall extends FProjectile
 	@Override
 	public Item getShotItem()
 	{
-		return shot == null ? RegistryHandler.ENERGY_CRYSTAL.get() : shot.getItem();
+		return shot == null ? RegistryHandler.DEKUSEED.get() : shot.getItem();
 	}
 }

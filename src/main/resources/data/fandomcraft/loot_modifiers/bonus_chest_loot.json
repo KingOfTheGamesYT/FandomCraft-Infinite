@@ -47,6 +47,12 @@
       "weight": 10,
       "minCount": 1,
       "maxCount": 5
+    },
+    {
+      "addition": "fandomcraft:wooden_slingshot",
+      "weight": 15,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }

@@ -34,5 +34,23 @@
         "stream": false
       }
     ]
+  },
+  "energy_shoot": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fandomcraft:energy_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "energy_hit": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fandomcraft:energy_hit",
+        "stream": false
+      }
+    ]
   }
 }

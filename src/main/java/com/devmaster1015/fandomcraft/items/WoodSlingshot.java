@@ -2,7 +2,7 @@ package com.devmaster1015.fandomcraft.items;
 
 import com.devmaster1015.fandomcraft.entities.EntityBullet;
 import com.devmaster1015.fandomcraft.entities.EntityEnergyBall;
-import com.devmaster1015.fandomcraft.items.itemtypes.Axe;
+import com.devmaster1015.fandomcraft.entities.EntityWoodSlingshotAmmo;
 import com.devmaster1015.fandomcraft.main.FandomCraft;
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
 
@@ -21,9 +21,11 @@ import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import net.minecraftforge.event.ForgeEventFactory;
@@ -33,17 +35,17 @@ import org.apache.logging.log4j.util.TriConsumer;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class HandCannon extends ShootableItem
+public class WoodSlingshot extends ShootableItem
 {
 	protected String name;
 	private String[] info = new String[0];
 	protected Ingredient repairitem;
-	protected ItemStack[] ammo;
-	protected TriConsumer<EntityEnergyBall, Entity, RayTraceResult> hitaction;
+	protected ItemStack ammo;
+	protected TriConsumer<EntityWoodSlingshotAmmo, Entity, RayTraceResult> hitaction;
 
 	protected float power;
 
-	public HandCannon(String name, float power, int durability, Item energyCrystal, Item energyTank, Item repairitem)
+	public WoodSlingshot(String name, float power, int durability, Item ammo, Item repairitem)
 	{
 		super(new Properties()
 				.maxStackSize(1)
@@ -51,7 +53,7 @@ public class HandCannon extends ShootableItem
 				.maxDamage(durability));
 		this.name = name;
 		this.power = power;
-		this.ammo = new ItemStack[]{new ItemStack(energyCrystal), new ItemStack(energyTank)};
+		this.ammo = new ItemStack(ammo);
 		this.repairitem = Ingredient.fromItems(repairitem);
 	}
 
@@ -60,50 +62,40 @@ public class HandCannon extends ShootableItem
 		return repairitem != null && repairitem.test(stack2);
 	}
 
-	public ItemStack[] getProjectiles(PlayerEntity player, ItemStack stack) {
-		ItemStack[] ammoStacks = new ItemStack[]{ItemStack.EMPTY, ItemStack.EMPTY};
-
-		Predicate<ItemStack> ammoPredicate = this.getInventoryAmmoPredicate();
-		for (int i = 0; i < player.inventory.getSizeInventory(); ++i) {
-			ItemStack itemstack = player.inventory.getStackInSlot(i);
-			if (ammoPredicate.test(itemstack)) {
-				if (itemstack.getItem() == ammo[0].getItem() && ammoStacks[0].isEmpty()) {
-					ammoStacks[0] = itemstack;
-				} else if (itemstack.getItem() == ammo[1].getItem() && ammoStacks[1].isEmpty()) {
-					ammoStacks[1] = itemstack;
+	public ItemStack getProjectile(PlayerEntity player, ItemStack stack) {
+		if (!(stack.getItem() instanceof ShootableItem)) {
+			return ItemStack.EMPTY;
+		} else {
+			Predicate<ItemStack> predicate = ((ShootableItem) stack.getItem()).getAmmoPredicate();
+			ItemStack itemstack = ShootableItem.getHeldAmmo(player, predicate);
+			if (!itemstack.isEmpty()) {
+				return itemstack;
+			} else {
+				for (int i = 0; i < player.inventory.getSizeInventory(); ++i) {
+					ItemStack itemstack1 = player.inventory.getStackInSlot(i);
+					if (predicate.test(itemstack1)) {
+						return itemstack1;
+					}
 				}
-				if (!ammoStacks[0].isEmpty() && !ammoStacks[1].isEmpty()) {
-					break;
-				}
+				return player.abilities.isCreativeMode ? new ItemStack(RegistryHandler.DEKUSEED.get()) : ItemStack.EMPTY;
 			}
 		}
-
-		if (player.abilities.isCreativeMode) {
-			if (ammoStacks[0].isEmpty()) ammoStacks[0] = new ItemStack(this.ammo[0].getItem());
-			if (ammoStacks[1].isEmpty()) ammoStacks[1] = new ItemStack(this.ammo[1].getItem());
-		}
-
-		return ammoStacks;
 	}
 
 	public void onPlayerStoppedUsing(ItemStack stack, World world, LivingEntity entity, int holdtime) {
 		if (entity instanceof PlayerEntity) {
 			PlayerEntity player = (PlayerEntity) entity;
 			boolean flag = player.abilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, stack) > 0;
-			ItemStack[] projectiles = getProjectiles(player, stack);
+			ItemStack itemstack = getProjectile(player, stack);
 
 			int i = this.getUseDuration(stack) - holdtime;
-			i = ForgeEventFactory.onArrowLoose(stack, world, player, i, (!projectiles[0].isEmpty() && !projectiles[1].isEmpty()) || flag);
+			i = ForgeEventFactory.onArrowLoose(stack, world, player, i, !itemstack.isEmpty() || flag);
 			if (i < 0) return;
 
-			if ((!projectiles[0].isEmpty() && !projectiles[1].isEmpty()) || flag) {
-				if (projectiles[0].isEmpty()) {
-					projectiles[0] = new ItemStack(this.ammo[0].getItem());
+			if (!itemstack.isEmpty() || flag) {
+				if (itemstack.isEmpty()) {
+					itemstack = new ItemStack(RegistryHandler.DEKUSEED.get());
 				}
-				if (projectiles[1].isEmpty()) {
-					projectiles[1] = new ItemStack(this.ammo[1].getItem());
-				}
-
 				float f = getPowerForTime(i);
 				if (!((double) f < 0.1D)) {
 					if (!world.isRemote) {
@@ -112,10 +104,9 @@ public class HandCannon extends ShootableItem
 							damage *= 0.75f;
 						}
 
-						EntityEnergyBall ammo = new EntityEnergyBall(world, player, projectiles[0], damage, hitaction);
-						ammo.setItem(projectiles[0]);
+						EntityWoodSlingshotAmmo ammo = new EntityWoodSlingshotAmmo(world, player, itemstack, damage, hitaction);
+						ammo.setItem(itemstack);
 						ammo.setDirectionAndMovement(player, player.rotationPitch, player.rotationYaw, 0.0F, 3.0F, 1.0F);
-
 						stack.damageItem(1, player, (p_220009_1_) ->
 						{
 							p_220009_1_.sendBreakAnimation(player.getActiveHand());
@@ -124,15 +115,11 @@ public class HandCannon extends ShootableItem
 						world.addEntity(ammo);
 					}
 
-					world.playSound((PlayerEntity) null, player.getPosX(), player.getPosY(), player.getPosZ(), RegistryHandler.ENERGY_SHOOT.get(), SoundCategory.PLAYERS, 0.5F, 2.0F / (random.nextFloat() * 0.4F + 1.2F) * 0.5F);
+					world.playSound((PlayerEntity) null, player.getPosX(), player.getPosY(), player.getPosZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (random.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
 					if (!player.abilities.isCreativeMode) {
-						projectiles[0].shrink(1);
-						projectiles[1].shrink(1);
-						if (projectiles[0].isEmpty()) {
-							player.inventory.deleteStack(projectiles[0]);
-						}
-						if (projectiles[1].isEmpty()) {
-							player.inventory.deleteStack(projectiles[1]);
+						itemstack.shrink(1);
+						if (itemstack.isEmpty()) {
+							player.inventory.removeStackFromSlot(1);
 						}
 					}
 					player.addStat(Stats.ITEM_USED.get(this));
@@ -168,8 +155,9 @@ public class HandCannon extends ShootableItem
 
 	@Override
 	public Predicate<ItemStack> getInventoryAmmoPredicate() {
-		return (stack) -> stack.getItem() == ammo[0].getItem() || stack.getItem() == ammo[1].getItem();
+		return (stack) -> stack.getItem() == ammo.getItem();
 	}
+
 	public static float getPowerForTime(int time)
 	{
 		float f = (float) time / 20F;
@@ -177,7 +165,7 @@ public class HandCannon extends ShootableItem
 		return f > 1f ? 1f : f;
 	}
 
-	public HandCannon addInfo(String... newInfo) {
+	public WoodSlingshot addInfo(String... newInfo) {
 		if (newInfo != null && newInfo.length > 0) {
 			String[] combinedInfo = new String[this.info.length + newInfo.length];
 			System.arraycopy(this.info, 0, combinedInfo, 0, this.info.length);
@@ -188,11 +176,31 @@ public class HandCannon extends ShootableItem
 	}
 
 	@Override
-	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn){
-		for (String s : info) {
-			list.add(new StringTextComponent(s));
+	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> list, ITooltipFlag flagIn) {
+		{
+			if (info != null) {
+				for (String s : info) {
+					list.add(new StringTextComponent(s));
+				}
+			}
+			list.add(new StringTextComponent(""));
+
+			if (ammo == null || (ammo != null && !ammo.isEmpty())) {
+				list.add(new StringTextComponent(TextFormatting.BLUE + "Ammo:"));
+				list.add(new StringTextComponent(" -> " + ammo.getDisplayName().getString()));
+			}
+			list.add(new StringTextComponent(TextFormatting.BLUE + "Damage:"));
+			list.add(new StringTextComponent(" -> " + power));
+
+			if (repairitem != null && !repairitem.hasNoMatchingItems()) {
+				list.add(new StringTextComponent(TextFormatting.BLUE + "Repaired with:"));
+				for (ItemStack i : repairitem.getMatchingStacks()) {
+					list.add(new StringTextComponent(" -> " + i.getDisplayName().getString()));
+				}
+			}
 		}
 	}
+
 	public UseAction getUseAction(ItemStack stack)
 	{
 		return UseAction.BOW;
