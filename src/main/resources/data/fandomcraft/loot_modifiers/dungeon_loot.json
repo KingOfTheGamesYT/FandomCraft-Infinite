@@ -59,6 +59,36 @@
       "weight": 1,
       "minCount": 1,
       "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:harbinger",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:bolt",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 4
+    },
+    {
+      "addition": "fandomcraft:jet",
+      "weight": 1,
+      "minCount": 0,
+      "maxCount": 3
+    },
+    {
+      "addition": "fandomcraft:amethyst",
+      "weight": 1,
+      "minCount": 2,
+      "maxCount": 6
+    },
+    {
+      "addition": "fandomcraft:ruby",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 4
     }
     ]
 }

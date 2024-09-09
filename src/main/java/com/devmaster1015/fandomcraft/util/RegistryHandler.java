@@ -2,6 +2,7 @@ package com.devmaster1015.fandomcraft.util;
 
 import com.devmaster1015.fandomcraft.blocks.*;
 import com.devmaster1015.fandomcraft.entities.EntityBullet;
+import com.devmaster1015.fandomcraft.entities.EntityEnergyBall;
 import com.devmaster1015.fandomcraft.items.*;
 import com.devmaster1015.fandomcraft.items.itemtypes.*;
 import com.devmaster1015.fandomcraft.main.FandomCraft;
@@ -85,6 +86,12 @@ public class RegistryHandler{
         public static final RegistryObject<Item> GREAT_AXE = ITEMS.register("greataxe", () -> new Axe("Greataxe", new ModdedTier(720, 8, 15, 1.6F).level(5).enchanting(20).material(Items.AIR), Rarity.COMMON).build(0, 0));
         public static final RegistryObject<Item> AVOS_TEAR = ITEMS.register("avostear", () -> new Sword("Avo's Tear", new ModdedTier(2400, 14, 1,1.6F).material(Items.AIR), Rarity.COMMON).build(0, 0).addInfo("The hidden sword"));
         public static final RegistryObject<Item> SWORD_OF_AEONS = ITEMS.register("sword_of_aeons", () -> new Sword("Sword of Aeons", new ModdedTier(4000, 14, 1,1.6F).material(Items.AIR), Rarity.COMMON).build(0, 0).addInfo("The power of Albion"));
+        public static final RegistryObject<Item> HARBINGER = ITEMS.register("harbinger", () -> new Sword("Harbinger", new ModdedTier(4000, 14, 1,1.6F).material(Items.AIR), Rarity.COMMON).build(0, 0).addInfo("...of death"));
+        public static final RegistryObject<Item> BOLT = ITEMS.register("bolt", () -> new FItem("Bolt", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> JET = ITEMS.register("jet", () -> new FItem("Jet", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", () -> new FItem("Amethyst", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", () -> new FItem("Ruby", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> ARM_CANNON = ITEMS.register("arm_cannon", () -> new HandCannon("Arm Cannon",14,1200, RegistryHandler.ENERGY_CRYSTAL.get(), Items.AIR).addInfo("Requires Energy Tanks as ammo", "unless wearing the Power Suit."));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
@@ -94,6 +101,13 @@ public class RegistryHandler{
                         .trackingRange(4)
                         .updateInterval(4)
                         .build(new ResourceLocation(FandomCraft.MOD_ID, "bullet").toString()));
+        public static final RegistryObject<EntityType<EntityEnergyBall>>ENERGY_BALL_ENTITY =
+                ENTITIES.register("energy_crystal", () -> EntityType.Builder.
+                                <EntityEnergyBall>create(EntityEnergyBall::new, EntityClassification.MISC)
+                        .size(0.25f, 0.25f)
+                        .trackingRange(4)
+                        .updateInterval(4)
+                        .build(new ResourceLocation(FandomCraft.MOD_ID, "energy_crystal").toString()));
 
         //Spawn Eggs
 
