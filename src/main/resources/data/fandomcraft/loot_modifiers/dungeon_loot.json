@@ -89,6 +89,12 @@
       "weight": 1,
       "minCount": 1,
       "maxCount": 4
+    },
+    {
+      "addition": "fandomcraft:energy_tank",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }

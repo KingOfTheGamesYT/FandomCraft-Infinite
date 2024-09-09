@@ -91,7 +91,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> JET = ITEMS.register("jet", () -> new FItem("Jet", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", () -> new FItem("Amethyst", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", () -> new FItem("Ruby", FandomCraft.tabFandomCraftMisc));
-        public static final RegistryObject<Item> ARM_CANNON = ITEMS.register("arm_cannon", () -> new HandCannon("Arm Cannon",14,1200, RegistryHandler.ENERGY_CRYSTAL.get(), Items.AIR).addInfo("Requires Energy Tanks as ammo", "unless wearing the Power Suit."));
+        public static final RegistryObject<Item> ENERGY_TANK = ITEMS.register("energy_tank", () -> new FItem("Energy Tank", FandomCraft.tabFandomCraftMisc));
+        public static final RegistryObject<Item> ARM_CANNON = ITEMS.register("arm_cannon", () -> new HandCannon("Arm Cannon",14,1200, RegistryHandler.ENERGY_CRYSTAL.get(), RegistryHandler.ENERGY_TANK.get(), Items.AIR).addInfo("Requires Energy Tanks and Crystals as ammo"));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
