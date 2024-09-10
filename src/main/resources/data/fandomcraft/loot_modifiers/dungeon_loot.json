@@ -95,6 +95,18 @@
       "weight": 1,
       "minCount": 1,
       "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:fairy_slingshot",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:ocarina",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }
