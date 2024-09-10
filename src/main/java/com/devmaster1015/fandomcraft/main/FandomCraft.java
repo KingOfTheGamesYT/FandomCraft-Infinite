@@ -1,5 +1,6 @@
 package com.devmaster1015.fandomcraft.main;
 
+import com.devmaster1015.fandomcraft.client.render.RenderDekuNut;
 import com.devmaster1015.fandomcraft.client.render.RenderEnergyBall;
 import com.devmaster1015.fandomcraft.client.render.RenderWoodenSlingshotAmmo;
 import com.devmaster1015.fandomcraft.main.events.LootTableModifier;
@@ -64,6 +65,8 @@ public class FandomCraft {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BULLET_ENTITY.get(), RenderBullet::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ENERGY_BALL_ENTITY.get(), RenderEnergyBall::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WOOD_SLINGSHOT_AMMO.get(), RenderWoodenSlingshotAmmo::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DEKUNUT_ENTITY.get(), RenderDekuNut::new);
+
     }
 
     public static final ItemGroup tabFandomCraftBlocks = new ItemGroup("tabFandomCraftBlocks") {

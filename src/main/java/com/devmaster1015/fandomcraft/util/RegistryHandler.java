@@ -2,6 +2,7 @@ package com.devmaster1015.fandomcraft.util;
 
 import com.devmaster1015.fandomcraft.blocks.*;
 import com.devmaster1015.fandomcraft.entities.EntityBullet;
+import com.devmaster1015.fandomcraft.entities.EntityDekuNut;
 import com.devmaster1015.fandomcraft.entities.EntityEnergyBall;
 import com.devmaster1015.fandomcraft.entities.EntityWoodSlingshotAmmo;
 import com.devmaster1015.fandomcraft.items.*;
@@ -98,6 +99,9 @@ public class RegistryHandler{
         public static final RegistryObject<Item> ARM_CANNON = ITEMS.register("arm_cannon", () -> new HandCannon("Arm Cannon",14,1200, RegistryHandler.ENERGY_CRYSTAL.get(), RegistryHandler.ENERGY_TANK.get(), Items.AIR).addInfo("Requires Energy Tanks and Crystals as ammo"));
         public static final RegistryObject<Item> DEKUSEED = ITEMS.register("dekuseed", () -> new FItem("Deku Seed", FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Not edible or plantable, but hard", "enough to use as slingshot ammo."));
         public static final RegistryObject<Item> WOODEN_SLINGSHOT = ITEMS.register("wooden_slingshot", () -> new WoodSlingshot("Wood Slingshot",4,32, RegistryHandler.DEKUSEED.get(), Items.STICK));
+        public static final RegistryObject<Item> DEKUNUT = ITEMS.register("dekunut", () -> new DekuNut("Deku Nut", 1, Rarity.COMMON).addInfo("Stuns enemies when thrown.", "Or can be crushed to reveal", "the inedible seeds inside."));
+        public static final RegistryObject<Item> FAIRY_SLINGSHOT = ITEMS.register("fairy_slingshot", () -> new WoodSlingshot("Fairy Slingshot",5,56, RegistryHandler.DEKUSEED.get(), Items.STICK));
+        public static final RegistryObject<Item> OCARINA = ITEMS.register("ocarina", () -> new FItem("Ocarina of Time", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
@@ -121,6 +125,13 @@ public class RegistryHandler{
                         .trackingRange(4)
                         .updateInterval(4)
                         .build(new ResourceLocation(FandomCraft.MOD_ID, "slingshotammo").toString()));
+        public static final RegistryObject<EntityType<EntityDekuNut>>DEKUNUT_ENTITY =
+                ENTITIES.register("dekunut", () -> EntityType.Builder.
+                                <EntityDekuNut>create(EntityDekuNut::new, EntityClassification.MISC)
+                        .size(0.25f, 0.25f)
+                        .trackingRange(4)
+                        .updateInterval(4)
+                        .build(new ResourceLocation(FandomCraft.MOD_ID, "dekunut").toString()));
 
         //Spawn Eggs
 
