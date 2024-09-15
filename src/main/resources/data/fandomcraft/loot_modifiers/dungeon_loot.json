@@ -107,6 +107,18 @@
       "weight": 1,
       "minCount": 1,
       "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:sonic_sneakers",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:rocket_boots",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }

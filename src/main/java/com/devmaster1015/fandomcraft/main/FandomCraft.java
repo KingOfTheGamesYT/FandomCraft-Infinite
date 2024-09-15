@@ -59,6 +59,7 @@ public class FandomCraft {
     private void setup(final FMLCommonSetupEvent event) {
         DeferredWorkQueue.runLater(() -> {
         });
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

@@ -8,13 +8,17 @@ import com.devmaster1015.fandomcraft.entities.EntityWoodSlingshotAmmo;
 import com.devmaster1015.fandomcraft.items.*;
 import com.devmaster1015.fandomcraft.items.itemtypes.*;
 import com.devmaster1015.fandomcraft.main.FandomCraft;
+import com.devmaster1015.fandomcraft.main.events.ArmourEvents;
+import com.devmaster1015.fandomcraft.main.events.ArmourEvents.EventType;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
@@ -54,9 +58,9 @@ public class RegistryHandler{
         public static final RegistryObject<Item> APPRAISAL_KIT_ADVANCED = ITEMS.register("appraisal_kit_advanced", () -> new FItem("Appraisal Kit Advanced", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> APPRAISAL_KIT_MASTER = ITEMS.register("appraisal_kit_master", () -> new FItem("Appraisal Kit Master", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> ELVEN_STEEL_INGOT = ITEMS.register("elven_steel_ingot", () -> new FItem("Elven Steel Ingot", FandomCraft.tabFandomCraftMaterials));
-        public static final RegistryObject<Item> RUPEE_GREEN = ITEMS.register("rupee_green", () -> new Rupee("Green Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 1 value.", "Can be smelted into ingots."));
-        public static final RegistryObject<Item> RUPEE_RED = ITEMS.register("rupee_red", () -> new Rupee("Red Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 20 value.", "Can be smelted into ingots."));
-        public static final RegistryObject<Item> RUPEE_BLUE = ITEMS.register("rupee_blue", () -> new Rupee("Blue Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 5 value.", "Can be smelted into ingots."));
+        public static final RegistryObject<Item> RUPEE_GREEN = ITEMS.register("rupee_green", () -> new Rupee("Green Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 1 value."));
+        public static final RegistryObject<Item> RUPEE_RED = ITEMS.register("rupee_red", () -> new Rupee("Red Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 20 value."));
+        public static final RegistryObject<Item> RUPEE_BLUE = ITEMS.register("rupee_blue", () -> new Rupee("Blue Rupee", FandomCraft.tabFandomCraftMisc, Rarity.UNCOMMON).addInfo("A gem of 5 value."));
         public static final RegistryObject<Item> RUPEE_ORANGE= ITEMS.register("rupee_orange", () -> new Rupee("Orange Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 10 value."));
         public static final RegistryObject<Item> RUPEE_PURPLE = ITEMS.register("rupee_purple", () -> new Rupee("Purple Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 50 value."));
         public static final RegistryObject<Item> RUPEE_SILVER = ITEMS.register("rupee_silver", () -> new Rupee("Silver Rupee", FandomCraft.tabFandomCraftMisc).addInfo("A gem of 200 value."));
@@ -102,6 +106,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> DEKUNUT = ITEMS.register("dekunut", () -> new DekuNut("Deku Nut", 1, Rarity.COMMON).addInfo("Stuns enemies when thrown.", "Or can be crushed to reveal", "the inedible seeds inside."));
         public static final RegistryObject<Item> FAIRY_SLINGSHOT = ITEMS.register("fairy_slingshot", () -> new WoodSlingshot("Fairy Slingshot",5,56, RegistryHandler.DEKUSEED.get(), Items.STICK));
         public static final RegistryObject<Item> OCARINA = ITEMS.register("ocarina", () -> new FItem("Ocarina of Time", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<ArmorItem> ROCKET_BOOTS = ITEMS.register("rocket_boots", () -> new Armour("Rocket Boots", new ArmourTier("fandomcraft:rocket_boots", 5, 1, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.JUMP_BOOST, 0, 0, false))).isSet(0, 1));
+        public static final RegistryObject<ArmorItem> SONIC_SNEAKERS = ITEMS.register("sonic_sneakers", () -> new Armour("Sonic Sneakers", new ArmourTier("fandomcraft:sonic_sneakers", 5, 1, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.SPEED, 3, 0, false))).isSet(1, 1));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
