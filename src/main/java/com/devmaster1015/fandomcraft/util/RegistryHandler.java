@@ -108,6 +108,12 @@ public class RegistryHandler{
         public static final RegistryObject<Item> OCARINA = ITEMS.register("ocarina", () -> new FItem("Ocarina of Time", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<ArmorItem> ROCKET_BOOTS = ITEMS.register("rocket_boots", () -> new Armour("Rocket Boots", new ArmourTier("fandomcraft:rocket_boots", 5, 1, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.JUMP_BOOST, 0, 0, false))).isSet(0, 1));
         public static final RegistryObject<ArmorItem> SONIC_SNEAKERS = ITEMS.register("sonic_sneakers", () -> new Armour("Sonic Sneakers", new ArmourTier("fandomcraft:sonic_sneakers", 5, 1, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.SPEED, 3, 0, false))).isSet(1, 1));
+        public static final RegistryObject<Item> CHAOS_GREY = ITEMS.register("chaos_grey", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> CHAOS_RED = ITEMS.register("chaos_red", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> CHAOS_PURPLE = ITEMS.register("chaos_purple", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> CHAOS_GREEN = ITEMS.register("chaos_green", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> CHAOS_BLUE = ITEMS.register("chaos_blue", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> CHAOS_YELLOW = ITEMS.register("chaos_yellow", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =

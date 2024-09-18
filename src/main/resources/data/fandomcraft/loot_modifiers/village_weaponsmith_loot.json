@@ -23,6 +23,18 @@
       "weight": 10,
       "minCount": 1,
       "maxCount": 5
+    },
+    {
+      "addition": "fandomcraft:chaos_purple",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:chaos_yellow",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }

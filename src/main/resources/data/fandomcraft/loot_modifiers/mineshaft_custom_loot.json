@@ -41,6 +41,18 @@
       "weight": 10,
       "minCount": 1,
       "maxCount": 5
+    },
+    {
+      "addition": "fandomcraft:chaos_grey",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:chaos_blue",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }
