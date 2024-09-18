@@ -131,6 +131,12 @@
       "weight": 1,
       "minCount": 1,
       "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:paopu",
+      "weight": 10,
+      "minCount": 4,
+      "maxCount": 10
     }
     ]
 }

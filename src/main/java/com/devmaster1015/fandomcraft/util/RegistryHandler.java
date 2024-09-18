@@ -114,6 +114,7 @@ public class RegistryHandler{
         public static final RegistryObject<Item> CHAOS_GREEN = ITEMS.register("chaos_green", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> CHAOS_BLUE = ITEMS.register("chaos_blue", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> CHAOS_YELLOW = ITEMS.register("chaos_yellow", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> PAOPU = ITEMS.register("paopu", () -> new Consumable("Paopu", 64, Rarity.COMMON).hunger(10,1.0F).meat().action(UseAction.EAT).addInfo("Connecting friends' hearts since 2001!"));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
