@@ -134,8 +134,14 @@
     },
     {
       "addition": "fandomcraft:paopu",
-      "weight": 10,
-      "minCount": 4,
+      "weight": 4,
+      "minCount": 10,
+      "maxCount": 10
+    },
+    {
+      "addition": "fandomcraft:red_vine",
+      "weight": 4,
+      "minCount": 10,
       "maxCount": 10
     }
     ]
