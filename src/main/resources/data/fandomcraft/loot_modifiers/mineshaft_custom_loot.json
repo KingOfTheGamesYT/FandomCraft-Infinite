@@ -53,6 +53,12 @@
       "weight": 1,
       "minCount": 1,
       "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:antivenom",
+      "weight": 1,
+      "minCount": 10,
+      "maxCount": 10
     }
     ]
 }

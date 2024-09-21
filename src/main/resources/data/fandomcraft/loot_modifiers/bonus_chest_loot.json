@@ -71,6 +71,24 @@
       "weight": 8,
       "minCount": 3,
       "maxCount": 12
+    },
+    {
+      "addition": "fandomcraft:dream_sword",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:practice_sword",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:antivenom",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 5
     }
     ]
 }

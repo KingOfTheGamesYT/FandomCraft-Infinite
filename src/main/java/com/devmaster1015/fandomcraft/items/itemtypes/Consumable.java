@@ -142,10 +142,8 @@ public class Consumable extends FItem
 		stack.shrink(i);
 	}
 
-	public void doEffect(World world, PlayerEntity player, ItemStack stack)
-	{
-		if (healamount > 0)
-		{
+	public void doEffect(World world, PlayerEntity player, ItemStack stack) {
+		if (healamount > 0) {
 			player.heal(healamount);
 		}
 		if (foodamount > 0) {
@@ -153,29 +151,37 @@ public class Consumable extends FItem
 				player.getFoodStats().addStats(foodamount, saturationamount);
 			}
 		}
-		if (effects != null)
-		{
-			for (EffectInstance i : effects)
-			{
-				player.addPotionEffect(i);
+		// Apply effects (add positive effects)
+		if (effects != null) {
+			for (EffectInstance i : effects) {
+				// Check if duration is 0; if so, remove the effect
+				if (i.getDuration() == 0) {
+					player.removePotionEffect(i.getPotion());
+				} else {
+					player.addPotionEffect(i);
+				}
 			}
 		}
-		if (action != null)
-		{
+		if (action != null) {
 			action.accept(world, player, stack);
 		}
 
 		int repairtype = repairamount > 0 ? 1 : repairpercentage > 0 ? 2 : 0;
-		if (repairtype > 0)
-		{
-			player.inventory.mainInventory.forEach((is) ->
-			{
-				if (is.isDamageable())
-				{
+		if (repairtype > 0) {
+			player.inventory.mainInventory.forEach((is) -> {
+				if (is.isDamageable()) {
 					is.setDamage((int) (Math.min(0, is.getDamage() - (repairtype == 1 ? repairamount : is.getMaxDamage() * repairpercentage))));
 				}
 			});
 		}
+	}
+
+	public Consumable removeEffect(Effect effect) {
+		if (effects == null) {
+			effects = new ArrayList<>();
+		}
+		effects.add(new EffectInstance(effect, 0, 0, false, false));  // We don't need duration or amplifier for removal
+		return this;
 	}
 
 	protected void use(World world, PlayerEntity player, ItemStack stack) {

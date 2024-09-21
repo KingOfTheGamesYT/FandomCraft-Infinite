@@ -117,6 +117,9 @@ public class RegistryHandler{
         public static final RegistryObject<Item> PAOPU = ITEMS.register("paopu", () -> new Consumable("Paopu", 64, Rarity.COMMON).hunger(10,1.0F).meat().action(UseAction.EAT).addInfo("Connecting friends' hearts since 2001!"));
         public static final RegistryObject<Item> CHESTNUT = ITEMS.register("chestnut", () -> new Consumable("Chestnut", 64, Rarity.COMMON).hunger(5,1.0F).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> RED_VINE = ITEMS.register("red_vine", () -> new Consumable("Red Vine", 64, Rarity.COMMON).hunger(20,1.0F).setAlwaysEdible(true).meat().action(UseAction.EAT).addInfo("Delicacy of parallel universes since 2008!"));
+        public static final RegistryObject<Item> DREAM_SWORD = ITEMS.register("dream_sword", () -> new Sword("Dream Sword", new ModdedTier(1, 5, 1,1.6F).enchanting(50).material(Items.AIR), Rarity.COMMON).build(0, 0));
+        public static final RegistryObject<Item> PRACTICE_SSWORD = ITEMS.register("practice_sword", () -> new Sword("Practice Sword", new ModdedTier(250, 6, 6,1.6F).level(2).enchanting(14).material(Items.AIR), Rarity.COMMON).build(0, 0));
+        public static final RegistryObject<Item> ANTI_VENOM = ITEMS.register("antivenom", () -> new Consumable("Anti-Venom", 24, Rarity.COMMON).hunger(0,0F).setAlwaysEdible(true).action(UseAction.DRINK).removeEffect(Effects.POISON).removeEffect(Effects.MINING_FATIGUE).removeEffect(Effects.SLOWNESS).removeEffect(Effects.NAUSEA).removeEffect(Effects.HUNGER).removeEffect(Effects.WEAKNESS).removeEffect(Effects.WITHER));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
