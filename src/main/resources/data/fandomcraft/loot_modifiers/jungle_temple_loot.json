@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/jungle_temple"
+    }
+  ],
+  "entries": [
+    {
+      "addition": "fandomcraft:triforce_of_wisdom",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    }
+    ]
+}

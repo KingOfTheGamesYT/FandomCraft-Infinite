@@ -93,6 +93,13 @@ public class FandomCraft {
             return new ItemStack(RegistryHandler.RUPEE_GREEN.get());
         }
     };
+    public static final ItemGroup tabFandomCraftfood = new ItemGroup("tabFandomCraftFood") {
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.RED_VINE.get());
+        }
+    };
 
     @OnlyIn(Dist.CLIENT)
     public static void dev(Object obj)

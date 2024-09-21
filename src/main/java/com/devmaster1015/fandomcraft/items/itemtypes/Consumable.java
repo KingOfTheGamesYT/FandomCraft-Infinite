@@ -33,6 +33,9 @@ public class Consumable extends FItem
 	protected boolean repaireverything, useinstantly;
 	protected boolean isMeat = false;
 
+	public Consumable(String name, int stacksize, Rarity rarity, ItemGroup tab) {
+		super(name, new Properties().maxStackSize(stacksize).group(tab).rarity(rarity));
+	}
 	public Consumable(String name, int stacksize, Rarity rarity)
 	{
 		super(name, stacksize, FandomCraft.tabFandomCraftMisc, rarity);

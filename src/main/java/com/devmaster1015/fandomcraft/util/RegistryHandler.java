@@ -78,14 +78,14 @@ public class RegistryHandler{
         public static final RegistryObject<Item> ESSENCE_OF_NATURE = ITEMS.register("nature_essence", () -> new FItem("Nature Essence", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> PEARL = ITEMS.register("pearl", () -> new FItem("Pearl", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> WORM = ITEMS.register("worm", () -> new FItem("Worm", FandomCraft.tabFandomCraftMisc));
-        public static final RegistryObject<Item> BLUE_BERRY = ITEMS.register("blueberry", () -> new Consumable("Blueberry", 64, Rarity.COMMON).hunger(2,1).meat().action(UseAction.EAT));
-        public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Consumable("Grapes", 64, Rarity.COMMON).hunger(4,1).meat().action(UseAction.EAT));
-        public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce", () -> new Consumable("Lettuce", 64, Rarity.COMMON).hunger(3,0.8F).meat().action(UseAction.EAT));
-        public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry", () -> new Consumable("Strawberry", 64, Rarity.COMMON).hunger(3,1).meat().action(UseAction.EAT));
-        public static final RegistryObject<Item> GREEN_PEPPER = ITEMS.register("green_pepper", () -> new Consumable("Green Pepper", 64, Rarity.COMMON).hunger(5,1).meat().action(UseAction.EAT));
-        public static final RegistryObject<Item> RED_PEPPER = ITEMS.register("red_pepper", () -> new Consumable("Red Pepper", 64, Rarity.COMMON).hunger(5,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> BLUE_BERRY = ITEMS.register("blueberry", () -> new Consumable("Blueberry", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(2,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Consumable("Grapes", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(4,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce", () -> new Consumable("Lettuce", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(3,0.8F).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry", () -> new Consumable("Strawberry", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(3,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> GREEN_PEPPER = ITEMS.register("green_pepper", () -> new Consumable("Green Pepper", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(5,1).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> RED_PEPPER = ITEMS.register("red_pepper", () -> new Consumable("Red Pepper", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(5,1).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> DAMP_MULCH = ITEMS.register("damp_mulch", DampMulch::new);
-        public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic", () -> new Consumable("Garlic", 64, Rarity.COMMON).hunger(2,0.2F).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic", () -> new Consumable("Garlic", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(2,0.2F).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> HEART = ITEMS.register("heart", () -> new Consumable("Heart", 1, Rarity.COMMON).useInstantly().health(2).setUseSound(() -> HEART_PICKUP.get()));
         public static final RegistryObject<Item> BULLET = ITEMS.register("bullet", () -> new FItem("Bullet", FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> HALS_RIFLE = ITEMS.register("hals_rifle", () -> new HalsRifle("Hal's Rifle",2,2000, RegistryHandler.BULLET.get(), Items.AIR));
@@ -114,12 +114,15 @@ public class RegistryHandler{
         public static final RegistryObject<Item> CHAOS_GREEN = ITEMS.register("chaos_green", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> CHAOS_BLUE = ITEMS.register("chaos_blue", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> CHAOS_YELLOW = ITEMS.register("chaos_yellow", () -> new FItem("Chaos Emerald", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
-        public static final RegistryObject<Item> PAOPU = ITEMS.register("paopu", () -> new Consumable("Paopu", 64, Rarity.COMMON).hunger(10,1.0F).meat().action(UseAction.EAT).addInfo("Connecting friends' hearts since 2001!"));
-        public static final RegistryObject<Item> CHESTNUT = ITEMS.register("chestnut", () -> new Consumable("Chestnut", 64, Rarity.COMMON).hunger(5,1.0F).meat().action(UseAction.EAT));
-        public static final RegistryObject<Item> RED_VINE = ITEMS.register("red_vine", () -> new Consumable("Red Vine", 64, Rarity.COMMON).hunger(20,1.0F).setAlwaysEdible(true).meat().action(UseAction.EAT).addInfo("Delicacy of parallel universes since 2008!"));
+        public static final RegistryObject<Item> PAOPU = ITEMS.register("paopu", () -> new Consumable("Paopu", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(10,1.0F).meat().action(UseAction.EAT).addInfo("Connecting friends' hearts since 2001!"));
+        public static final RegistryObject<Item> CHESTNUT = ITEMS.register("chestnut", () -> new Consumable("Chestnut", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(5,1.0F).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> RED_VINE = ITEMS.register("red_vine", () -> new Consumable("Red Vine", 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(20,1.0F).setAlwaysEdible(true).meat().action(UseAction.EAT).addInfo("Delicacy of parallel universes since 2008!"));
         public static final RegistryObject<Item> DREAM_SWORD = ITEMS.register("dream_sword", () -> new Sword("Dream Sword", new ModdedTier(1, 5, 1,1.6F).enchanting(50).material(Items.AIR), Rarity.COMMON).build(0, 0));
         public static final RegistryObject<Item> PRACTICE_SSWORD = ITEMS.register("practice_sword", () -> new Sword("Practice Sword", new ModdedTier(250, 6, 6,1.6F).level(2).enchanting(14).material(Items.AIR), Rarity.COMMON).build(0, 0));
         public static final RegistryObject<Item> ANTI_VENOM = ITEMS.register("antivenom", () -> new Consumable("Anti-Venom", 24, Rarity.COMMON).hunger(0,0F).setAlwaysEdible(true).action(UseAction.DRINK).removeEffect(Effects.POISON).removeEffect(Effects.MINING_FATIGUE).removeEffect(Effects.SLOWNESS).removeEffect(Effects.NAUSEA).removeEffect(Effects.HUNGER).removeEffect(Effects.WEAKNESS).removeEffect(Effects.WITHER));
+        public static final RegistryObject<Item> TRIFORCE_OF_POWER = ITEMS.register("triforce_of_power", () -> new FItem("Triforce of Power", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Power"));
+        public static final RegistryObject<Item> TRIFORCE_OF_COURAGE = ITEMS.register("triforce_of_courage", () -> new FItem("Triforce of Courage", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Courage"));
+        public static final RegistryObject<Item> TRIFORCE_OF_WISDOM = ITEMS.register("triforce_of_wisdom", () -> new FItem("Triforce of Wisdom", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Wisdom"));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =

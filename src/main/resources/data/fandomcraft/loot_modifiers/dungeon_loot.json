@@ -149,6 +149,12 @@
       "weight": 1,
       "minCount": 10,
       "maxCount": 10
+    },
+    {
+      "addition": "fandomcraft:triforce_of_power",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }

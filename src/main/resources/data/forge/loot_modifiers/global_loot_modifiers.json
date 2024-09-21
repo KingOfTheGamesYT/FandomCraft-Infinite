@@ -4,6 +4,9 @@
     "fandomcraft:mineshaft_custom_loot",
     "fandomcraft:dungeon_loot",
     "fandomcraft:bonus_chest_loot",
-    "fandomcraft:village_weaponsmith_loot"
+    "fandomcraft:village_weaponsmith_loot",
+    "fandomcraft:jungle_temple_loot",
+    "fandomcraft:stronghold_loot"
+
   ]
 }

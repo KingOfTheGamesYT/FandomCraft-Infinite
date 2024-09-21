@@ -25,7 +25,11 @@ public class ModEventBusEvents {
         new AddChestLootModifier.Serializer().setRegistryName
                 (new ResourceLocation(FandomCraft.MOD_ID,"dungeon_loot")),
         new AddChestLootModifier.Serializer().setRegistryName
-                (new ResourceLocation(FandomCraft.MOD_ID,"village_weaponsmith_loot"))
+                (new ResourceLocation(FandomCraft.MOD_ID,"village_weaponsmith_loot")),
+        new AddChestLootModifier.Serializer().setRegistryName
+                (new ResourceLocation(FandomCraft.MOD_ID,"stronghold_loot")),
+        new AddChestLootModifier.Serializer().setRegistryName
+                (new ResourceLocation(FandomCraft.MOD_ID,"jungle_temple_loot"))
         );
     }
 }
