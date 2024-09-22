@@ -59,6 +59,12 @@
       "weight": 1,
       "minCount": 10,
       "maxCount": 10
+    },
+    {
+      "addition": "fandomcraft:lost_illusion",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 3
     }
     ]
 }

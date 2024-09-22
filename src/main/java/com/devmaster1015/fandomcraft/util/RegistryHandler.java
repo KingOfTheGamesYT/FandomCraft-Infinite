@@ -123,6 +123,11 @@ public class RegistryHandler{
         public static final RegistryObject<Item> TRIFORCE_OF_POWER = ITEMS.register("triforce_of_power", () -> new FItem("Triforce of Power", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Power"));
         public static final RegistryObject<Item> TRIFORCE_OF_COURAGE = ITEMS.register("triforce_of_courage", () -> new FItem("Triforce of Courage", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Courage"));
         public static final RegistryObject<Item> TRIFORCE_OF_WISDOM = ITEMS.register("triforce_of_wisdom", () -> new FItem("Triforce of Wisdom", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Wisdom"));
+        public static final RegistryObject<Item> BLADE = ITEMS.register("blade", () -> new FItem("Master Blade", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> HILT = ITEMS.register("hilt", () -> new FItem("Master Hilt", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> INSIGNIA = ITEMS.register("insignia", () -> new FItem("Master Insignia", 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> LOST_ILLUSION = ITEMS.register("lost_illusion", () -> new FItem("Lost Illusion", FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> MANIFEST_ILLUSION = ITEMS.register("manifest_illusion", () -> new FItem("Manifest Illusion", FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =

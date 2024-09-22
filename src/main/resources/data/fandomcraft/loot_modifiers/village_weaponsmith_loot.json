@@ -41,6 +41,18 @@
       "weight": 6,
       "minCount": 3,
       "maxCount": 5
+    },
+    {
+      "addition": "fandomcraft:blade",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "addition": "fandomcraft:hilt",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
     }
     ]
 }
