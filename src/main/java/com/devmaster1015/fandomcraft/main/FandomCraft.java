@@ -5,6 +5,7 @@ import com.devmaster1015.fandomcraft.client.render.RenderEnergyBall;
 import com.devmaster1015.fandomcraft.client.render.RenderWoodenSlingshotAmmo;
 import com.devmaster1015.fandomcraft.main.events.LootTableModifier;
 import com.devmaster1015.fandomcraft.client.render.RenderBullet;
+import com.devmaster1015.fandomcraft.main.events.MobDrops;
 import com.devmaster1015.fandomcraft.main.events.PickupEvent;
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
 import com.devmaster1015.fandomcraft.main.events.VillagerTradeHandler;
@@ -53,6 +54,7 @@ public class FandomCraft {
         MinecraftForge.EVENT_BUS.register(VillagerTradeHandler.class);
         MinecraftForge.EVENT_BUS.register(LootTableModifier.class);
         MinecraftForge.EVENT_BUS.register(PickupEvent.class);
+        MinecraftForge.EVENT_BUS.register(MobDrops.class);
 
     }
 

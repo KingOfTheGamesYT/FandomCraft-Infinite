@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "fandomcraft:dark_heart"
+    },
+    "title": "Heartless",
+    "description": "Use the Dream Sword to kill an evil mob.",
+    "background": "minecraft:textures/block/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "fandomcraft:legend_of_zelda",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fandomcraft:dark_heart"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

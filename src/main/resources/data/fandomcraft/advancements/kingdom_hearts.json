@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "fandomcraft:dream_sword"
+    },
+    "title": "Kingdom Hearts",
+    "description": "Obtain the Dream Sword from the bonus chest or blacksmith.",
+    "background": "minecraft:textures/block/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "fandomcraft:legend_of_zelda",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fandomcraft:dream_sword"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

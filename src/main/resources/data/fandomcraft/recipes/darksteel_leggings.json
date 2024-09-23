@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "fandomcraft:darksteel_ingot"
+    }
+  },
+  "result": {
+    "item": "fandomcraft:darksteel_legs",
+    "count": 1
+  }
+}
