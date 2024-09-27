@@ -44,7 +44,6 @@ public class RegistryHandler{
 
         }
 
-
         //Sounds
         public static final RegistryObject<SoundEvent> RUPEE_PICKUP = SOUNDS.register("rupee", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "rupee")));
         public static final RegistryObject<SoundEvent> HEART_PICKUP = SOUNDS.register("getheart", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "getheart")));
@@ -54,7 +53,6 @@ public class RegistryHandler{
         public static final RegistryObject<SoundEvent> ENERGY_HIT = SOUNDS.register("energy_hit", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "energy_hit")));
 
         //Items
-
         public static final RegistryObject<AppraisingOre> UNKNOWN_MINERAL = ITEMS.register("unknown_mineral", AppraisingOre::new);
         public static final RegistryObject<Item> APPRAISAL_KIT_BASIC = ITEMS.register("appraisal_kit_basic", () -> new FItem(FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> APPRAISAL_KIT_ADVANCED = ITEMS.register("appraisal_kit_advanced", () -> new FItem(FandomCraft.tabFandomCraftMisc));
@@ -140,6 +138,7 @@ public class RegistryHandler{
         public static final RegistryObject<Item> SOUL_HARNESS = ITEMS.register("soul_harness", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> UNOBTAINIUM_INGOT = ITEMS.register("unobtainium_ingot", () -> new FItem(FandomCraft.tabFandomCraftMaterials, Rarity.COMMON));
         public static final RegistryObject<Item> SOUL_STONE = ITEMS.register("soul_stone", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> RAGING_SOUL = ITEMS.register("raging_soul", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
@@ -176,7 +175,6 @@ public class RegistryHandler{
         //Tools
 
         //Blocks
-
         public static final RegistryObject<Block> ADAMANTIUM_ORE_BLOCK = registerBlock("adamantium_ore", () -> new FBlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(20.0F, 5.0F).harvestLevel(6).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
         public static final RegistryObject<Block> ROCK_STONE_BLOCK = registerBlock("rock", () -> new FBlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 12.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
         public static final RegistryObject<Block> GODDESS_ORE_BLOCK = registerBlock("goddessoreblock", () -> new FBlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(65,1).harvestTool(ToolType.PICKAXE).harvestLevel(8).setRequiresTool(), 6));

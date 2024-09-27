@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RgR",
+    "RRR"
+  ],
+  "key": {
+    "g": {
+      "item": "fandomcraft:soul_stone"
+    },
+    "R": {
+      "item": "fandomcraft:raging_soul"
+    }
+  },
+  "result": {
+    "item": "fandomcraft:manifest_illusion",
+    "count": 1
+  }
+}

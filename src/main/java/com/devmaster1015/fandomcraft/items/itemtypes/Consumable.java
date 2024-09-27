@@ -15,7 +15,6 @@ import net.minecraft.world.World;
 
 import org.apache.logging.log4j.util.TriConsumer;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;

@@ -43,12 +43,13 @@ public class MobDrops {
                         entity instanceof PigEntity ||
                         entity instanceof SheepEntity ||
                         entity instanceof CreeperEntity ||
-                        entity instanceof SpiderEntity ||
-                        entity instanceof WitchEntity) {
+                        entity instanceof SpiderEntity){
 
                     // Drop a Soul item if it's one of the specified mobs
                     entity.entityDropItem(new ItemStack(RegistryHandler.SOUL.get()), 0);
                 }
+                if (entity instanceof WitchEntity)
+                    entity.entityDropItem(new ItemStack(RegistryHandler.RAGING_SOUL.get()), 0);
             }
             // Check if the weapon is the Dream Sword
             else if (weapon.getItem() == RegistryHandler.DREAM_SWORD.get()) {
