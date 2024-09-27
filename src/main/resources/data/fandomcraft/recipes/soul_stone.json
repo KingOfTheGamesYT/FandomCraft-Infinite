@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fandomcraft:soul_harness"
+    },
+    {
+      "item": "fandomcraft:soul"
+    }
+  ],
+  "result": {
+    "item": "fandomcraft:soul_stone",
+    "count": 1
+  }
+}

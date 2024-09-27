@@ -28,6 +28,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.function.Supplier;
+
 public class RegistryHandler{
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FandomCraft.MOD_ID);
         public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FandomCraft.MOD_ID);
@@ -135,6 +137,9 @@ public class RegistryHandler{
         public static final RegistryObject<Item> SOUL = ITEMS.register("soul", () -> new FItem("Soul", FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> DARK_HEART = ITEMS.register("dark_heart", () -> new FItem("Dark Heart", FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> PURE_HEART = ITEMS.register("pure_heart", () -> new FItem("Pure Heart", FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> SOUL_HARNESS = ITEMS.register("soul_harness", () -> new FItem("Soul Harness", FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> UNOBTAINIUM_INGOT = ITEMS.register("unobtainium_ingot", () -> new FItem("Unobtainium Ingot", FandomCraft.tabFandomCraftMaterials, Rarity.COMMON));
+        public static final RegistryObject<Item> SOUL_STONE = ITEMS.register("soul_stone", () -> new FItem("Soul Stone", FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
@@ -173,31 +178,28 @@ public class RegistryHandler{
 
         //Blocks
 
-        public static final RegistryObject<Block> ADAMANTIUM_ORE_BLOCK = BLOCKS.register("adamantium_ore", () -> new FBlock("Adamantium Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(20.0F, 5.0F).harvestLevel(6).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
-        public static final RegistryObject<Block> ROCK_STONE_BLOCK = BLOCKS.register("rock", () -> new FBlock("Adamantium Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 12.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
-        public static final RegistryObject<Block> GODDESS_ORE_BLOCK = BLOCKS.register("goddessoreblock", () -> new FBlock("Goddess Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(65,1).harvestTool(ToolType.PICKAXE).harvestLevel(8).setRequiresTool(), 6));
-        public static final RegistryObject<Block> UNKNOWN_ORE_BLOCK = BLOCKS.register("unknown_ore", unknownOre::new);
-        public static final RegistryObject<Block> HELLSTONE_ORE_BLOCK = BLOCKS.register("hellstone_ore", () -> new FBlock("Hellstone Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(25.0F, 5.0F).harvestLevel(6).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
-        public static final RegistryObject<Block> FOOLS_GOLD_ORE_BLOCK = BLOCKS.register("fools_gold_ore", () -> new FBlock("Fools Gold Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
-        public static final RegistryObject<Block> ERIDIUM_ORE_BLOCK = BLOCKS.register("eridium_ore", () -> new FBlock("Eridium Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(17.0F, 5.0F).harvestLevel(5).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
-        public static final RegistryObject<Block> HALITE = BLOCKS.register("halite", () -> new FBlock("Halite", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(4.0F, 1.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
-        public static final RegistryObject<Block> MYTHRIL_ORE = BLOCKS.register("mythril_ore", () -> new FBlock("Halite Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(14.0F, 5.0F).harvestLevel(4).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
-        public static final RegistryObject<Block> ORICHULUM_ORE = BLOCKS.register("orichulum_ore", () -> new FBlock("Orichulum Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 5.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
-        public static final RegistryObject<Block> PEARL_STONE_BLOCK = BLOCKS.register("pearlstone", PearlStone::new);
+        public static final RegistryObject<Block> ADAMANTIUM_ORE_BLOCK = registerBlock("adamantium_ore", () -> new FBlock("Adamantium Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(20.0F, 5.0F).harvestLevel(6).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> ROCK_STONE_BLOCK = registerBlock("rock", () -> new FBlock("Adamantium Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 12.0F).harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> GODDESS_ORE_BLOCK = registerBlock("goddessoreblock", () -> new FBlock("Goddess Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(65,1).harvestTool(ToolType.PICKAXE).harvestLevel(8).setRequiresTool(), 6));
+        public static final RegistryObject<Block> UNKNOWN_ORE_BLOCK = registerBlock("unknown_ore", unknownOre::new);
+        public static final RegistryObject<Block> HELLSTONE_ORE_BLOCK = registerBlock("hellstone_ore", () -> new FBlock("Hellstone Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(25.0F, 5.0F).harvestLevel(6).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> FOOLS_GOLD_ORE_BLOCK = registerBlock("fools_gold_ore", () -> new FBlock("Fools Gold Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> ERIDIUM_ORE_BLOCK = registerBlock("eridium_ore", () -> new FBlock("Eridium Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(17.0F, 5.0F).harvestLevel(5).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> HALITE = registerBlock("halite", () -> new FBlock("Halite", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(4.0F, 1.0F).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> MYTHRIL_ORE = registerBlock("mythril_ore", () -> new FBlock("Halite Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(14.0F, 5.0F).harvestLevel(4).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> ORICHULUM_ORE = registerBlock("orichulum_ore", () -> new FBlock("Orichulum Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 5.0F).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
+        public static final RegistryObject<Block> PEARL_STONE_BLOCK = registerBlock("pearlstone", PearlStone::new);
+        public static final RegistryObject<Block> UNOBTAINIUM_ORE = registerBlock("unobtainium_ore", () -> new FBlock("Orichulum Ore", AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(25.0F, 5.0F).harvestLevel(7).harvestTool(ToolType.PICKAXE).setRequiresTool(), 0));
 
         //Block Items
-
-        public static final RegistryObject<Item> ADAMANTIUM_ORE_BLOCK_ITEM = ITEMS.register("adamantium_ore", () -> new BlockItemBase(ADAMANTIUM_ORE_BLOCK.get()));
-        public static final RegistryObject<Item> ROCK_STONE_BLOCK_ITEM = ITEMS.register("rock", () -> new BlockItemBase(ROCK_STONE_BLOCK.get()));
-        public static final RegistryObject<Item> GODDESS_ORE_BLOCK_ITEM = ITEMS.register("goddessoreblock", () -> new BlockItemBase(GODDESS_ORE_BLOCK.get()));
-        public static final RegistryObject<Item> UNKNOWN_ORE_BLOCK_ITEM = ITEMS.register("unknown_ore", () -> new BlockItemBase(UNKNOWN_ORE_BLOCK.get()));
-        public static final RegistryObject<Item> HELLSTONE_ORE_BLOCK_ITEM = ITEMS.register("hellstone_ore", () -> new BlockItemBase(HELLSTONE_ORE_BLOCK.get()));
-        public static final RegistryObject<Item> FOOLS_GOLD_ORE_BLOCK_ITEM = ITEMS.register("fools_gold_ore", () -> new BlockItemBase(FOOLS_GOLD_ORE_BLOCK.get()));
-        public static final RegistryObject<Item> ERIDIUM_ORE_BLOCK_ITEM = ITEMS.register("eridium_ore", () -> new BlockItemBase(ERIDIUM_ORE_BLOCK.get()));
-        public static final RegistryObject<Item> HALITE_BLOCK_ITEM = ITEMS.register("halite", () -> new BlockItemBase(HALITE.get()));
-        public static final RegistryObject<Item> MYTHRIL_ORE_ITEM = ITEMS.register("mythril_ore", () -> new BlockItemBase(MYTHRIL_ORE.get()));
-        public static final RegistryObject<Item> ORICHULUM_ORE_ITEM = ITEMS.register("orichulum_ore", () -> new BlockItemBase(ORICHULUM_ORE.get()));
-        public static final RegistryObject<Item> PEARL_STONE_ITEM = ITEMS.register("pearlstone", () -> new BlockItemBase(PEARL_STONE_BLOCK.get()));
+        private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+                RegistryObject<T> toReturn = BLOCKS.register(name, block);
+                registerBlockItem(name, toReturn);
+                return toReturn;
+        }
+        private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+                return RegistryHandler.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(FandomCraft.tabFandomCraftBlocks)));
+        }
 
         //Dimensions
 
