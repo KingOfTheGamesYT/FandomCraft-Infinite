@@ -16,10 +16,8 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.util.SoundCategory;;
 import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 
 import net.minecraftforge.event.ForgeEventFactory;
@@ -37,13 +35,12 @@ public class HalsRifle extends ShootableItem
 
 	protected float power;
 
-	public HalsRifle(String name, float power, int durability, Item ammo, Item repairitem)
+	public HalsRifle(float power, int durability, Item ammo, Item repairitem)
 	{
 		super(new Properties()
 				.maxStackSize(1)
 				.group(FandomCraft.tabFandomCraftMisc)
 				.maxDamage(durability));
-		this.name = name;
 		this.power = power;
 		this.ammo = new ItemStack(ammo);
 		this.repairitem = Ingredient.fromItems(repairitem);

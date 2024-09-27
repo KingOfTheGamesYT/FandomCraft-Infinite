@@ -4,13 +4,13 @@ import com.devmaster1015.fandomcraft.main.FandomCraft;
 import com.devmaster1015.fandomcraft.util.Elements.Element;
 import com.devmaster1015.fandomcraft.util.IHasElement;
 import com.devmaster1015.fandomcraft.util.ModdedTier;
+
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableMultimap.Builder;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
-import net.minecraft.block.Block;
+
 import net.minecraft.block.BlockState;
-import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
@@ -30,6 +30,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
+
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.ToolType;
 
@@ -40,14 +41,12 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.function.Consumer;
 
-
 public class Axe extends AxeItem implements IHasElement
 {
 	private static final Set<Material> EFFECTIVE_ON_MATERIALS = Sets.newHashSet(Material.WOOD, Material.NETHER_WOOD, Material.PLANTS, Material.TALL_PLANTS, Material.BAMBOO, Material.GOURD);
 	public static final Consumer<LivingEntity> breakbroadcast = (p) -> p.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	protected static final UUID MOVESPEED = UUID.fromString("35f5b798-7778-4017-98f9-ff557dc28f03");
 	protected static final UUID REACH = UUID.fromString("168fad76-3979-4638-91c9-a366c0933551");
-
 	protected String name;
 	private String[] info = new String[0];
 	protected float reach = 0, movespeed = 0, attackspeed = 0;
@@ -56,11 +55,10 @@ public class Axe extends AxeItem implements IHasElement
 	protected ItemStack repairitem;
 	protected Element element;
 
-	public Axe(String name, ModdedTier tier, Rarity rarity)
+	public Axe(ModdedTier tier, Rarity rarity)
 	{
 		super(tier, -1, -2.4F, new Properties().group(FandomCraft.tabFandomCraftMisc).rarity(rarity));
 		this.repairitem = tier.getRepairItem();
-		this.name = name;
 	}
 
 	public Axe build(float reach, float movespeed)
@@ -204,7 +202,6 @@ public class Axe extends AxeItem implements IHasElement
 			list.add(new StringTextComponent(s));
 		}
 	}
-
 
 	@Override
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot)

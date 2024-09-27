@@ -13,33 +13,33 @@ import java.util.List;
 
 public class FItem extends Item
 {
-	protected String name;
+
 	private String[] info = new String[0];
 
-	public FItem(String name, int stacksize, ItemGroup group, Rarity rarity)
+	public FItem( int stacksize, ItemGroup group, Rarity rarity)
 	{
-		this(name, get(stacksize, group, rarity));
+		this(get(stacksize, group, rarity));
 	}
 
-	public FItem(String name, ItemGroup group, Rarity rarity)
+	public FItem( ItemGroup group, Rarity rarity)
 	{
-		this(name, get(64, group, rarity));
+		this( get(64, group, rarity));
 	}
 
-	public FItem(String name, int stacksize, ItemGroup group)
+	public FItem( int stacksize, ItemGroup group)
 	{
-		this(name, get(stacksize, group, Rarity.COMMON));
+		this( get(stacksize, group, Rarity.COMMON));
 	}
 
-	public FItem(String name, ItemGroup group)
+	public FItem(ItemGroup group)
 	{
-		this(name, get(64, group, Rarity.COMMON));
+		this( get(64, group, Rarity.COMMON));
 	}
 
-	public FItem(String name, Properties p)
+	public FItem(Properties p)
 	{
 		super(p);
-		this.name = name;
+
 	}
 
 	protected static final Properties get(int stacksize, ItemGroup group, Rarity rarity)

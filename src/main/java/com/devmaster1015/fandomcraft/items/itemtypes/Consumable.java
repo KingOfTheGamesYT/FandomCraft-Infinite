@@ -33,22 +33,22 @@ public class Consumable extends FItem
 	protected boolean repaireverything, useinstantly;
 	protected boolean isMeat = false;
 
-	public Consumable(String name, int stacksize, Rarity rarity, ItemGroup tab) {
-		super(name, new Properties().maxStackSize(stacksize).group(tab).rarity(rarity));
+	public Consumable(int stacksize, Rarity rarity, ItemGroup tab) {
+		super(new Properties().maxStackSize(stacksize).group(tab).rarity(rarity));
 	}
-	public Consumable(String name, int stacksize, Rarity rarity)
+	public Consumable(int stacksize, Rarity rarity)
 	{
-		super(name, stacksize, FandomCraft.tabFandomCraftMisc, rarity);
-	}
-
-	public Consumable(String name, int durability, ItemGroup tab, Rarity rarity)
-	{
-		super(name, new Properties().maxDamage(durability).group(tab).rarity(rarity));
+		super(stacksize, FandomCraft.tabFandomCraftMisc, rarity);
 	}
 
-	public Consumable(String name, Properties p)
+	public Consumable(int durability, ItemGroup tab, Rarity rarity)
 	{
-		super(name, p);
+		super(new Properties().maxDamage(durability).group(tab).rarity(rarity));
+	}
+
+	public Consumable(Properties p)
+	{
+		super(p);
 	}
 
 	public Consumable setUseSound(Supplier<SoundEvent> soundSupplier) {

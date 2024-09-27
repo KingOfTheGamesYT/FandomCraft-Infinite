@@ -5,7 +5,6 @@ import com.devmaster1015.fandomcraft.util.Elements.Element;
 import com.devmaster1015.fandomcraft.util.IHasElement;
 import com.devmaster1015.fandomcraft.util.ModdedTier;
 
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Map.Entry;
@@ -38,6 +37,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
+
 import net.minecraftforge.common.ForgeMod;
 
 
@@ -56,11 +56,10 @@ public class Sword extends SwordItem implements IHasElement
 	protected ItemStack repairitem;
 	protected Element element;
 
-	public Sword(String name, ModdedTier tier, Rarity rarity)
+	public Sword(ModdedTier tier, Rarity rarity)
 	{
 		super(tier, -1, -2.4f, new Properties().group(FandomCraft.tabFandomCraftMisc).rarity(rarity));
 		this.repairitem = tier.getRepairItem();
-		this.name = name;
 	}
 
 	public Sword build(float reach, float movespeed)
@@ -120,7 +119,6 @@ public class Sword extends SwordItem implements IHasElement
 	{
 		return element != null ? element : IHasElement.super.getElement();
 	}
-
 
 	public Sword setBlunt()
 	{
@@ -264,7 +262,6 @@ public class Sword extends SwordItem implements IHasElement
 			list.add(new StringTextComponent(s));
 		}
 	}
-
 
 	@Override
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot)

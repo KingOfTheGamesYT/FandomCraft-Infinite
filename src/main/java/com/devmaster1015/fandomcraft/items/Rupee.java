@@ -16,30 +16,29 @@ public class Rupee extends Item
 	protected String name;
 	private String[] info = new String[0];
 
-	public Rupee(String name, int stacksize, ItemGroup group, Rarity rarity)
+	public Rupee(int stacksize, ItemGroup group, Rarity rarity)
 	{
-		this(name, get(stacksize, group, rarity));
+		this(get(stacksize, group, rarity));
 	}
 
-	public Rupee(String name, ItemGroup group, Rarity rarity)
+	public Rupee(ItemGroup group, Rarity rarity)
 	{
-		this(name, get(64, group, rarity));
+		this(get(64, group, rarity));
 	}
 
-	public Rupee(String name, int stacksize, ItemGroup group)
+	public Rupee(int stacksize, ItemGroup group)
 	{
-		this(name, get(stacksize, group, Rarity.COMMON));
+		this(get(stacksize, group, Rarity.COMMON));
 	}
 
-	public Rupee(String name, ItemGroup group)
+	public Rupee( ItemGroup group)
 	{
-		this(name, get(64, group, Rarity.COMMON));
+		this(get(64, group, Rarity.COMMON));
 	}
 
-	public Rupee(String name, Properties p)
+	public Rupee(Properties p)
 	{
 		super(p);
-		this.name = name;
 	}
 
 	protected static final Properties get(int stacksize, ItemGroup group, Rarity rarity)

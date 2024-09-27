@@ -15,9 +15,9 @@ import net.minecraft.world.World;
 
 public class DekuNut extends Consumable
 {
-	public DekuNut(String name, int stacksize, Rarity rarity)
+	public DekuNut(int stacksize, Rarity rarity)
 	{
-		super(name, stacksize, FandomCraft.tabFandomCraftMisc, rarity);
+		super(stacksize, FandomCraft.tabFandomCraftMisc, rarity);
 	}
 
 	protected void use(World world, PlayerEntity player, ItemStack stack)

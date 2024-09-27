@@ -4,9 +4,11 @@ import com.devmaster1015.fandomcraft.main.FandomCraft;
 import com.devmaster1015.fandomcraft.util.Elements.Element;
 import com.devmaster1015.fandomcraft.util.IHasElement;
 import com.devmaster1015.fandomcraft.util.ModdedTier;
+
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableMultimap.Builder;
 import com.google.common.collect.Multimap;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
@@ -27,6 +29,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
+
 import net.minecraftforge.common.ForgeMod;
 
 import java.util.Collection;
@@ -35,13 +38,11 @@ import java.util.Map.Entry;
 import java.util.UUID;
 import java.util.function.Consumer;
 
-
 public class Pickaxe extends PickaxeItem implements IHasElement
 {
 	public static final Consumer<LivingEntity> breakbroadcast = (p) -> p.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	protected static final UUID MOVESPEED = UUID.fromString("35f5b798-7778-4017-98f9-ff557dc28f03");
 	protected static final UUID REACH = UUID.fromString("168fad76-3979-4638-91c9-a366c0933551");
-
 	protected String name;
 	private String[] info = new String[0];
 	protected float reach = 0, movespeed = 0, attackspeed = 0;
@@ -50,11 +51,10 @@ public class Pickaxe extends PickaxeItem implements IHasElement
 	protected ItemStack repairitem;
 	protected Element element;
 
-	public Pickaxe(String name, ModdedTier tier, Rarity rarity)
+	public Pickaxe(ModdedTier tier, Rarity rarity)
 	{
 		super(tier, -1, -2.4F, new Properties().group(FandomCraft.tabFandomCraftMisc).rarity(rarity));
 		this.repairitem = tier.getRepairItem();
-		this.name = name;
 	}
 
 	public Pickaxe build(float reach, float movespeed)
@@ -170,7 +170,6 @@ public class Pickaxe extends PickaxeItem implements IHasElement
 	public float getDestroySpeed(ItemStack stack, BlockState state)
 	{
 		return state.getMaterial()== Material.IRON && state.getMaterial()== Material.ANVIL && state.getMaterial()== Material.ROCK ? super.getDestroySpeed(stack, state) : this.efficiency;
-
 	}
 
 	@Override
@@ -199,7 +198,6 @@ public class Pickaxe extends PickaxeItem implements IHasElement
 			list.add(new StringTextComponent(s));
 		}
 	}
-
 
 	@Override
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot)
