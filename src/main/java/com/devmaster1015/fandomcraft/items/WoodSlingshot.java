@@ -1,7 +1,5 @@
 package com.devmaster1015.fandomcraft.items;
 
-import com.devmaster1015.fandomcraft.entities.EntityBullet;
-import com.devmaster1015.fandomcraft.entities.EntityEnergyBall;
 import com.devmaster1015.fandomcraft.entities.EntityWoodSlingshotAmmo;
 import com.devmaster1015.fandomcraft.main.FandomCraft;
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
@@ -37,7 +35,6 @@ import java.util.function.Predicate;
 
 public class WoodSlingshot extends ShootableItem
 {
-	protected String name;
 	private String[] info = new String[0];
 	protected Ingredient repairitem;
 	protected ItemStack ammo;
@@ -45,13 +42,12 @@ public class WoodSlingshot extends ShootableItem
 
 	protected float power;
 
-	public WoodSlingshot(String name, float power, int durability, Item ammo, Item repairitem)
+	public WoodSlingshot(float power, int durability, Item ammo, Item repairitem)
 	{
 		super(new Properties()
 				.maxStackSize(1)
 				.group(FandomCraft.tabFandomCraftMisc)
 				.maxDamage(durability));
-		this.name = name;
 		this.power = power;
 		this.ammo = new ItemStack(ammo);
 		this.repairitem = Ingredient.fromItems(repairitem);

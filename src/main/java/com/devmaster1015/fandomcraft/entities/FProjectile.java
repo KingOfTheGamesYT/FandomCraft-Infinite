@@ -6,6 +6,7 @@ import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.network.IPacket;
 import net.minecraft.world.World;
+
 import net.minecraftforge.fml.network.NetworkHooks;
 
 public abstract class FProjectile extends ProjectileItemEntity

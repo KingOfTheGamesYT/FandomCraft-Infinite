@@ -16,7 +16,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
@@ -32,7 +32,6 @@ public class HalsRifle extends ShootableItem
 	protected Ingredient repairitem;
 	protected ItemStack ammo;
 	protected TriConsumer<EntityBullet, Entity, RayTraceResult> hitaction;
-
 	protected float power;
 
 	public HalsRifle(float power, int durability, Item ammo, Item repairitem)

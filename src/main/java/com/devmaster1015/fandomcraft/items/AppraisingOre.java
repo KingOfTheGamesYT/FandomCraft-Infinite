@@ -329,4 +329,3 @@ public class AppraisingOre extends Item {
 
         }
     }
-

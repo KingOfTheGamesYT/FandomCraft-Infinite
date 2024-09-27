@@ -7,7 +7,6 @@ import com.devmaster1015.fandomcraft.util.IHasElement;
 import com.devmaster1015.fandomcraft.main.events.ArmourEvents.EventType;
 import com.devmaster1015.fandomcraft.util.Elements.Element;
 
-
 import java.util.Collection;
 import java.util.Map.Entry;
 import java.util.UUID;
@@ -27,10 +26,9 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Rarity;
-
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeMod;
 
+import net.minecraftforge.common.ForgeMod;
 
 public class Armour extends ArmorItem implements IHasElement
 {
@@ -47,17 +45,15 @@ public class Armour extends ArmorItem implements IHasElement
 	protected static final UUID SWING_SPEED = UUID.fromString("cac0fc03-0541-4c70-8266-1955ee5e0c6e");
 	protected ArmourEvents event;
 	protected Multimap<Attribute, AttributeModifier> modifiers;
-	protected String name;
 	protected String[] info, setbonus;
 	protected float movespeed, swimspeed, gravity;
 	protected float swingspeed;
 	protected int setid = -1, setpieces = 1;
 	protected Elements.Element element;
 
-	public Armour(String name, IArmorMaterial material, EquipmentSlotType slot, Rarity rarity)
+	public Armour(IArmorMaterial material, EquipmentSlotType slot, Rarity rarity)
 	{
 		super(material, slot, get(rarity));
-		this.name = name;
 		this.element = Elements.None;
 		setModifiers(slot);
 	}
@@ -132,7 +128,6 @@ public class Armour extends ArmorItem implements IHasElement
 		}
 		return this;
 	}
-
 
 	public Armour setModifiers(EquipmentSlotType slot)
 	{
@@ -213,7 +208,6 @@ public class Armour extends ArmorItem implements IHasElement
 		}
 		return this;
 	}
-
 
 	protected static final Properties get(Rarity rarity)
 	{

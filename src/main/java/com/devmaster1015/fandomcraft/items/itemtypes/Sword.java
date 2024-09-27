@@ -40,7 +40,6 @@ import net.minecraft.world.World;
 
 import net.minecraftforge.common.ForgeMod;
 
-
 public class Sword extends SwordItem implements IHasElement
 {
 	public static final Consumer<LivingEntity> breakbroadcast = (p) -> p.sendBreakAnimation(EquipmentSlotType.MAINHAND);

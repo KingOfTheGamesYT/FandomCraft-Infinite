@@ -12,7 +12,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
-
 public class DekuNut extends Consumable
 {
 	public DekuNut(int stacksize, Rarity rarity)

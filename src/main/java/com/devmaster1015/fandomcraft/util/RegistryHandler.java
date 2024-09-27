@@ -104,15 +104,15 @@ public class RegistryHandler{
         public static final RegistryObject<Item> ENERGY_TANK = ITEMS.register("energy_tank", () -> new FItem(FandomCraft.tabFandomCraftMisc));
         public static final RegistryObject<Item> ARM_CANNON = ITEMS.register("arm_cannon", () -> new HandCannon("Arm Cannon",14,1200, RegistryHandler.ENERGY_CRYSTAL.get(), RegistryHandler.ENERGY_TANK.get(), Items.AIR).addInfo("Requires Energy Tanks and Crystals as ammo"));
         public static final RegistryObject<Item> DEKUSEED = ITEMS.register("dekuseed", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON).addInfo("Not edible or plantable, but hard", "enough to use as slingshot ammo."));
-        public static final RegistryObject<Item> WOODEN_SLINGSHOT = ITEMS.register("wooden_slingshot", () -> new WoodSlingshot("Wood Slingshot",4,32, RegistryHandler.DEKUSEED.get(), Items.STICK));
+        public static final RegistryObject<Item> WOODEN_SLINGSHOT = ITEMS.register("wooden_slingshot", () -> new WoodSlingshot(4,32, RegistryHandler.DEKUSEED.get(), Items.STICK));
         public static final RegistryObject<Item> DEKUNUT = ITEMS.register("dekunut", () -> new DekuNut(1, Rarity.COMMON).addInfo("Stuns enemies when thrown.", "Or can be crushed to reveal", "the inedible seeds inside."));
-        public static final RegistryObject<Item> FAIRY_SLINGSHOT = ITEMS.register("fairy_slingshot", () -> new WoodSlingshot("Fairy Slingshot",5,56, RegistryHandler.DEKUSEED.get(), Items.STICK));
+        public static final RegistryObject<Item> FAIRY_SLINGSHOT = ITEMS.register("fairy_slingshot", () -> new WoodSlingshot(5,56, RegistryHandler.DEKUSEED.get(), Items.STICK));
         public static final RegistryObject<Item> OCARINA = ITEMS.register("ocarina", () -> new FItem( 1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
-        public static final RegistryObject<ArmorItem> ROCKET_BOOTS = ITEMS.register("rocket_boots", () -> new Armour("Rocket Boots", new ArmourTier("fandomcraft:rocket_boots", 1, 1, 1, 1.0f, 0.1f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.JUMP_BOOST, 0, 0, false))).isSet(0, 1));
-        public static final RegistryObject<ArmorItem> SONIC_SNEAKERS = ITEMS.register("sonic_sneakers", () -> new Armour("Sonic Sneakers", new ArmourTier("fandomcraft:sonic_sneakers", 1, 1, 1, 1.0f, 0.1f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.SPEED, 3, 0, false))).isSet(1, 1));
-        public static final RegistryObject<ArmorItem> INVISIBILITY_CLOAK = ITEMS.register("invisibility_cloak", () -> new Armour("Invisibility Cloak", new ArmourTier("fandomcraft:mining_helmet", 1, 1, 0, 1.0f, 0.1f, false, Items.AIR), EquipmentSlotType.CHEST, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.INVISIBILITY, 1, 10, false))).isSet(2, 1));
-        public static final RegistryObject<ArmorItem> MINING_HELMET = ITEMS.register("mining_helmet", () -> new Armour("Mining Helmet", new ArmourTier("fandomcraft:mining_helmet", 34, 4, 15, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.HEAD, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.NIGHT_VISION, 0, 20, false))).isSet(3, 1));
-        public static final RegistryObject<ArmorItem> DARKSTEEL_GREAVES = ITEMS.register("darksteel_legs", () -> new Armour("DarkSteel Greaves", new ArmourTier("fandomcraft:dark_steel", 38, 8, 15, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.LEGS, Rarity.COMMON));
+        public static final RegistryObject<ArmorItem> ROCKET_BOOTS = ITEMS.register("rocket_boots", () -> new Armour(new ArmourTier("fandomcraft:rocket_boots", 1, 1, 1, 1.0f, 0.1f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.JUMP_BOOST, 0, 0, false))).isSet(0, 1));
+        public static final RegistryObject<ArmorItem> SONIC_SNEAKERS = ITEMS.register("sonic_sneakers", () -> new Armour(new ArmourTier("fandomcraft:sonic_sneakers", 1, 1, 1, 1.0f, 0.1f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.SPEED, 3, 0, false))).isSet(1, 1));
+        public static final RegistryObject<ArmorItem> INVISIBILITY_CLOAK = ITEMS.register("invisibility_cloak", () -> new Armour(new ArmourTier("fandomcraft:mining_helmet", 1, 1, 0, 1.0f, 0.1f, false, Items.AIR), EquipmentSlotType.CHEST, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.INVISIBILITY, 1, 10, false))).isSet(2, 1));
+        public static final RegistryObject<ArmorItem> MINING_HELMET = ITEMS.register("mining_helmet", () -> new Armour(new ArmourTier("fandomcraft:mining_helmet", 34, 4, 15, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.HEAD, Rarity.COMMON).addEffect(new ArmourEvents(EventType.Auto, null, (player, enemy, source, helditem) -> Tools.addEffect(player, Effects.NIGHT_VISION, 0, 20, false))).isSet(3, 1));
+        public static final RegistryObject<ArmorItem> DARKSTEEL_GREAVES = ITEMS.register("darksteel_legs", () -> new Armour(new ArmourTier("fandomcraft:dark_steel", 38, 8, 15, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.LEGS, Rarity.COMMON));
         public static final RegistryObject<Item> CHAOS_GREY = ITEMS.register("chaos_grey", () -> new FItem(1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> CHAOS_RED = ITEMS.register("chaos_red", () -> new FItem(1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> CHAOS_PURPLE = ITEMS.register("chaos_purple", () -> new FItem(1, FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
@@ -173,7 +173,6 @@ public class RegistryHandler{
 
         //Spawn Eggs
 
-
         //Tools
 
         //Blocks
@@ -202,5 +201,4 @@ public class RegistryHandler{
         }
 
         //Dimensions
-
 }

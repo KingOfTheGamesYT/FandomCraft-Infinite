@@ -1,6 +1,7 @@
 package com.devmaster1015.fandomcraft.blocks;
 
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;

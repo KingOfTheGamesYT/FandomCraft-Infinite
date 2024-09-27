@@ -1,6 +1,7 @@
 package com.devmaster1015.fandomcraft.entities;
 
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -11,7 +12,9 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+
 import net.minecraftforge.fml.network.NetworkHooks;
+
 import org.apache.logging.log4j.util.TriConsumer;
 
 public class EntityBullet extends FProjectile

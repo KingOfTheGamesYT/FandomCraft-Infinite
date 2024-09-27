@@ -201,10 +201,8 @@ public class Consumable extends FItem
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
 		ItemStack stack = player.getHeldItem(hand);
-
 		// Check if the player is hungry or the item is always edible
 		boolean canEat = player.getFoodStats().needFood() || alwaysEdible;
-
 		// Only allow consumption if the player is hungry or the item is marked as always edible
 		if (canEat) {
 			if (useinstantly) {
@@ -218,12 +216,10 @@ public class Consumable extends FItem
 				use(world, player, stack);
 				return ActionResult.resultConsume(stack);
 			}
-
 			// Start normal consumption (holding the item to eat)
 			player.setActiveHand(hand);
 			return ActionResult.resultConsume(stack);
 		}
-
 		// If the player can't eat, return fail
 		return ActionResult.resultFail(stack);
 	}
@@ -233,10 +229,8 @@ public class Consumable extends FItem
 		// Ensure we only apply the effect if the entity is a player and they can eat
 		if (entity instanceof PlayerEntity) {
 			PlayerEntity player = (PlayerEntity) entity;
-
 			// Check if the player can eat (either because they need food or it's always edible)
 			boolean canEat = player.getFoodStats().needFood() || alwaysEdible;
-
 			// Only consume the item if the player can eat
 			if (canEat) {
 				use(world, player, stack);

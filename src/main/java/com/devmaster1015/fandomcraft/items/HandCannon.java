@@ -1,8 +1,6 @@
 package com.devmaster1015.fandomcraft.items;
 
-import com.devmaster1015.fandomcraft.entities.EntityBullet;
 import com.devmaster1015.fandomcraft.entities.EntityEnergyBall;
-import com.devmaster1015.fandomcraft.items.itemtypes.Axe;
 import com.devmaster1015.fandomcraft.main.FandomCraft;
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
 
@@ -40,7 +38,6 @@ public class HandCannon extends ShootableItem
 	protected Ingredient repairitem;
 	protected ItemStack[] ammo;
 	protected TriConsumer<EntityEnergyBall, Entity, RayTraceResult> hitaction;
-
 	protected float power;
 
 	public HandCannon(String name, float power, int durability, Item energyCrystal, Item energyTank, Item repairitem)
@@ -140,7 +137,6 @@ public class HandCannon extends ShootableItem
 			}
 		}
 	}
-
 
 	public int getUseDuration(ItemStack stack)
 	{

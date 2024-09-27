@@ -53,10 +53,6 @@ public class EntityDekuNut extends FProjectile
 		Vector3d impactPos = trace.getHitVec();
 		this.world.addParticle(ParticleTypes.LARGE_SMOKE, impactPos.x, impactPos.y, impactPos.z, 0, 0, 0);
 		spawnParticles(ParticleTypes.LARGE_SMOKE, 8, 0.1, 5);
-
-		// Spawn multiple particles in a small area around the impact point
-
-
 		// Apply effects to nearby entities
 		AxisAlignedBB affectedArea = new AxisAlignedBB(this.getPosition()).grow(5.0D);
 		List<LivingEntity> nearbyEntities = this.world.getEntitiesWithinAABB(LivingEntity.class, affectedArea);
