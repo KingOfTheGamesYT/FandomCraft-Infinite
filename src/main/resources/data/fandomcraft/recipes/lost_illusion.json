@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X#X",
+    "#X#",
+    "X#X"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "fandomcraft:empty_soul"
+      }
+    ],
+    "X": {
+      "item": "fandomcraft:soul_stone"
+    }
+  },
+  "result": {
+    "item": "fandomcraft:lost_illusion"
+  }
+}

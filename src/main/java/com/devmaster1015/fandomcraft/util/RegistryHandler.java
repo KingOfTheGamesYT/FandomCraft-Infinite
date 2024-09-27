@@ -139,6 +139,7 @@ public class RegistryHandler{
         public static final RegistryObject<Item> UNOBTAINIUM_INGOT = ITEMS.register("unobtainium_ingot", () -> new FItem(FandomCraft.tabFandomCraftMaterials, Rarity.COMMON));
         public static final RegistryObject<Item> SOUL_STONE = ITEMS.register("soul_stone", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> RAGING_SOUL = ITEMS.register("raging_soul", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<Item> EMPTY_SOUL = ITEMS.register("empty_soul", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
