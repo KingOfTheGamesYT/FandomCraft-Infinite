@@ -19,12 +19,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
 
-public class DampMulch extends Item{
-    public DampMulch() {
+public class Mulch extends Item{
+    public Mulch(int durability) {
         super(new Item.Properties()
-                .maxDamage(8)
+                .maxDamage(durability)
                 .group(FandomCraft.tabFandomCraftMisc));
     }
+
     @Override
     public ActionResultType onItemUse(ItemUseContext context) {
         World world = context.getWorld();
@@ -60,4 +61,5 @@ public class DampMulch extends Item{
 
         return ActionResultType.PASS;
     }
+
     }

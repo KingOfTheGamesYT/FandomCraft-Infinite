@@ -84,7 +84,7 @@ public class RegistryHandler{
         public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry", () -> new Consumable(64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(3,1).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> GREEN_PEPPER = ITEMS.register("green_pepper", () -> new Consumable(64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(5,1).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> RED_PEPPER = ITEMS.register("red_pepper", () -> new Consumable(64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(5,1).meat().action(UseAction.EAT));
-        public static final RegistryObject<Item> DAMP_MULCH = ITEMS.register("damp_mulch", DampMulch::new);
+        public static final RegistryObject<Item> DAMP_MULCH = ITEMS.register("damp_mulch", () -> new Mulch(8));
         public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic", () -> new Consumable( 64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(2,0.2F).meat().action(UseAction.EAT));
         public static final RegistryObject<Item> HEART = ITEMS.register("heart", () -> new Consumable(1, Rarity.COMMON).useInstantly().health(2).setUseSound(() -> HEART_PICKUP.get()));
         public static final RegistryObject<Item> BULLET = ITEMS.register("bullet", () -> new FItem(FandomCraft.tabFandomCraftMisc));
@@ -144,6 +144,10 @@ public class RegistryHandler{
         public static final RegistryObject<ArmorItem> MAGIC_ARMOR = ITEMS.register("magic_armor", () -> new OutfitHylian(new ArmourTier("fandomcraft:zelda", 1, 8, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.CHEST, Rarity.COMMON));
         public static final RegistryObject<ArmorItem> MAGIC_CHAINMAIL = ITEMS.register("magic_chainmail", () -> new OutfitHylian(new ArmourTier("fandomcraft:zelda", 1, 6, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.LEGS, Rarity.COMMON));
         public static final RegistryObject<ArmorItem> MEGATON_BOOTS = ITEMS.register("megaton_boots", () -> new OutfitHylian(new ArmourTier("fandomcraft:zelda", 1, 3, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON));
+        public static final RegistryObject<Item> PEANUT = ITEMS.register("peanut", () -> new Consumable(64, Rarity.COMMON, FandomCraft.tabFandomCraftfood).hunger(1,0.5F).setAlwaysEdible(true).meat().action(UseAction.EAT));
+        public static final RegistryObject<Item> STABLE_MULCH = ITEMS.register("stable_mulch", () -> new Mulch(32));
+        public static final RegistryObject<Item> GROWTH_MULCH = ITEMS.register("growth_mulch", () -> new Mulch(128));
+        public static final RegistryObject<Item> STAR_HAMMER = ITEMS.register("star_hammer", () -> new Sword(new ModdedTier(3600, 14, 13,1.6F).level(7).enchanting(16).material(Items.AIR), Rarity.COMMON).build(0, 0));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =

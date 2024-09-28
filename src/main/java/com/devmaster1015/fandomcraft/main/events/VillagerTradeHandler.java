@@ -27,7 +27,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.APPRAISAL_KIT_BASIC.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Wheat for Rupees trade
             trades.get(1).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.WHEAT, 9),
@@ -54,7 +53,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Feather for Rupees trade
             trades.get(1).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.FEATHER, 9),
@@ -95,6 +93,26 @@ public class VillagerTradeHandler {
                     new ItemStack(Items.DIAMOND, 1),
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 2),
                     16, 1, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_BLUE.get(), 1),
+                    new ItemStack(RegistryHandler.PEANUT.get(), 2),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
+                    new ItemStack(RegistryHandler.DAMP_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_RED.get(), 1),
+                    new ItemStack(RegistryHandler.STABLE_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_PURPLE.get(), 1),
+                    new ItemStack(RegistryHandler.GROWTH_MULCH.get(), 1),
+                    12, 2, 0.05F
             ));
 
             //Apprentice
@@ -103,7 +121,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.APPRAISAL_KIT_BASIC.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Wheat for Rupees trade
             trades.get(2).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.WHEAT, 9),
@@ -130,7 +147,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Feather for Rupees trade
             trades.get(2).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.FEATHER, 9),
@@ -171,6 +187,26 @@ public class VillagerTradeHandler {
                     new ItemStack(Items.DIAMOND, 1),
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 2),
                     16, 1, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_BLUE.get(), 1),
+                    new ItemStack(RegistryHandler.PEANUT.get(), 2),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
+                    new ItemStack(RegistryHandler.DAMP_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_RED.get(), 1),
+                    new ItemStack(RegistryHandler.STABLE_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_PURPLE.get(), 1),
+                    new ItemStack(RegistryHandler.GROWTH_MULCH.get(), 1),
+                    12, 2, 0.05F
             ));
 
             //Journeyman
@@ -179,7 +215,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.APPRAISAL_KIT_BASIC.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Wheat for Rupees trade
             trades.get(3).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.WHEAT, 9),
@@ -206,7 +241,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Feather for Rupees trade
             trades.get(3).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.FEATHER, 9),
@@ -247,6 +281,26 @@ public class VillagerTradeHandler {
                     new ItemStack(Items.DIAMOND, 1),
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 2),
                     16, 1, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_BLUE.get(), 1),
+                    new ItemStack(RegistryHandler.PEANUT.get(), 2),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
+                    new ItemStack(RegistryHandler.DAMP_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_RED.get(), 1),
+                    new ItemStack(RegistryHandler.STABLE_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_PURPLE.get(), 1),
+                    new ItemStack(RegistryHandler.GROWTH_MULCH.get(), 1),
+                    12, 2, 0.05F
             ));
 
             //Expert
@@ -255,7 +309,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.APPRAISAL_KIT_BASIC.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Wheat for Rupees trade
             trades.get(4).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.WHEAT, 9),
@@ -282,7 +335,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Feather for Rupees trade
             trades.get(4).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.FEATHER, 9),
@@ -323,6 +375,26 @@ public class VillagerTradeHandler {
                     new ItemStack(Items.DIAMOND, 1),
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 2),
                     16, 1, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_BLUE.get(), 1),
+                    new ItemStack(RegistryHandler.PEANUT.get(), 2),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
+                    new ItemStack(RegistryHandler.DAMP_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_RED.get(), 1),
+                    new ItemStack(RegistryHandler.STABLE_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_PURPLE.get(), 1),
+                    new ItemStack(RegistryHandler.GROWTH_MULCH.get(), 1),
+                    12, 2, 0.05F
             ));
 
             //Master
@@ -331,7 +403,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.APPRAISAL_KIT_BASIC.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Wheat for Rupees trade
             trades.get(5).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.WHEAT, 9),
@@ -358,7 +429,6 @@ public class VillagerTradeHandler {
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
                     12, 2, 0.05F
             ));
-
             // Add the Feather for Rupees trade
             trades.get(5).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.FEATHER, 9),
@@ -399,6 +469,26 @@ public class VillagerTradeHandler {
                     new ItemStack(Items.DIAMOND, 1),
                     new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 2),
                     16, 1, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_BLUE.get(), 1),
+                    new ItemStack(RegistryHandler.PEANUT.get(), 2),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_YELLOW.get(), 1),
+                    new ItemStack(RegistryHandler.DAMP_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_RED.get(), 1),
+                    new ItemStack(RegistryHandler.STABLE_MULCH.get(), 1),
+                    12, 2, 0.05F
+            ));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(RegistryHandler.RUPEE_PURPLE.get(), 1),
+                    new ItemStack(RegistryHandler.GROWTH_MULCH.get(), 1),
+                    12, 2, 0.05F
             ));
         }
     }
