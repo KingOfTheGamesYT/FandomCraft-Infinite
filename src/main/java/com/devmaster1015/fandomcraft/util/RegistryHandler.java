@@ -140,6 +140,10 @@ public class RegistryHandler{
         public static final RegistryObject<Item> SOUL_STONE = ITEMS.register("soul_stone", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> RAGING_SOUL = ITEMS.register("raging_soul", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
         public static final RegistryObject<Item> EMPTY_SOUL = ITEMS.register("empty_soul", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
+        public static final RegistryObject<ArmorItem> MAGIC_CROWN = ITEMS.register("magic_crown", () -> new OutfitHylian(new ArmourTier("fandomcraft:zelda", 1, 5, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.HEAD, Rarity.COMMON));
+        public static final RegistryObject<ArmorItem> MAGIC_ARMOR = ITEMS.register("magic_armor", () -> new OutfitHylian(new ArmourTier("fandomcraft:zelda", 1, 8, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.CHEST, Rarity.COMMON));
+        public static final RegistryObject<ArmorItem> MAGIC_CHAINMAIL = ITEMS.register("magic_chainmail", () -> new OutfitHylian(new ArmourTier("fandomcraft:zelda", 1, 6, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.LEGS, Rarity.COMMON));
+        public static final RegistryObject<ArmorItem> MEGATON_BOOTS = ITEMS.register("megaton_boots", () -> new OutfitHylian(new ArmourTier("fandomcraft:zelda", 1, 3, 0, 0.0f, 0.0f, false, Items.AIR), EquipmentSlotType.FEET, Rarity.COMMON));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =

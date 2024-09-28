@@ -211,7 +211,7 @@ public class Armour extends ArmorItem implements IHasElement
 
 	protected static final Properties get(Rarity rarity)
 	{
-		return new Properties().maxStackSize(1).group(FandomCraft.tabFandomCraftMisc).rarity(rarity);
+		return new Properties().maxStackSize(1).group(FandomCraft.tabFandomCraftOutfits).rarity(rarity);
 	}
 
 	public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot)

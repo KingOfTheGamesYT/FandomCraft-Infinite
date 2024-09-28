@@ -14,9 +14,9 @@ import com.devmaster1015.fandomcraft.world.FCOreGen;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
+
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
@@ -40,22 +40,16 @@ public class FandomCraft {
     public FandomCraft() {
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
-
         RegistryHandler.init();
-
         MinecraftForge.EVENT_BUS.register(this);
-
         MinecraftForge.EVENT_BUS.addListener(FCOreGen::handleWorldGen);
         MinecraftForge.EVENT_BUS.register(VillagerTradeHandler.class);
         MinecraftForge.EVENT_BUS.register(LootTableModifier.class);
         MinecraftForge.EVENT_BUS.register(PickupEvent.class);
         MinecraftForge.EVENT_BUS.register(MobDrops.class);
-
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -69,7 +63,6 @@ public class FandomCraft {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ENERGY_BALL_ENTITY.get(), RenderEnergyBall::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WOOD_SLINGSHOT_AMMO.get(), RenderWoodenSlingshotAmmo::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DEKUNUT_ENTITY.get(), RenderDekuNut::new);
-
     }
 
     public static final ItemGroup tabFandomCraftBlocks = new ItemGroup("tabFandomCraftBlocks") {
@@ -103,10 +96,17 @@ public class FandomCraft {
         }
     };
 
+    public static final ItemGroup tabFandomCraftOutfits = new ItemGroup("tabFandomCraftOutfits") {
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.MAGIC_ARMOR.get());
+        }
+    };
+
     @OnlyIn(Dist.CLIENT)
     public static void dev(Object obj)
     {
         LOGGER.debug(obj);
     }
 }
-
