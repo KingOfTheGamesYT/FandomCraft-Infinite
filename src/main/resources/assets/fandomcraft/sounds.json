@@ -52,5 +52,14 @@
         "stream": false
       }
     ]
+  },
+  "goomba_stomp": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fandomcraft:goomba_stomp",
+        "stream": false
+      }
+    ]
   }
 }

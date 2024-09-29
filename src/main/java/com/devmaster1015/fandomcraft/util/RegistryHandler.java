@@ -1,10 +1,7 @@
 package com.devmaster1015.fandomcraft.util;
 
 import com.devmaster1015.fandomcraft.blocks.*;
-import com.devmaster1015.fandomcraft.entities.EntityBullet;
-import com.devmaster1015.fandomcraft.entities.EntityDekuNut;
-import com.devmaster1015.fandomcraft.entities.EntityEnergyBall;
-import com.devmaster1015.fandomcraft.entities.EntityWoodSlingshotAmmo;
+import com.devmaster1015.fandomcraft.entities.*;
 import com.devmaster1015.fandomcraft.items.*;
 import com.devmaster1015.fandomcraft.items.itemtypes.*;
 import com.devmaster1015.fandomcraft.main.FandomCraft;
@@ -22,6 +19,7 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -41,7 +39,6 @@ public class RegistryHandler{
             BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
             ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
             SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
         }
 
         //Sounds
@@ -51,6 +48,7 @@ public class RegistryHandler{
         public static final RegistryObject<SoundEvent> EMPTY_CLIP = SOUNDS.register("empty_clip", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "empty_clip")));
         public static final RegistryObject<SoundEvent> ENERGY_SHOOT = SOUNDS.register("energy_shoot", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "energy_shoot")));
         public static final RegistryObject<SoundEvent> ENERGY_HIT = SOUNDS.register("energy_hit", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "energy_hit")));
+        public static final RegistryObject<SoundEvent> GOOMBA_STOMP = SOUNDS.register("goomba_stomp", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "goomba_stomp")));
 
         //Items
         public static final RegistryObject<AppraisingOre> UNKNOWN_MINERAL = ITEMS.register("unknown_mineral", AppraisingOre::new);
@@ -178,8 +176,14 @@ public class RegistryHandler{
                         .trackingRange(4)
                         .updateInterval(4)
                         .build(new ResourceLocation(FandomCraft.MOD_ID, "dekunut").toString()));
+        public static final RegistryObject<EntityType<EntityGoomba>>GOOMBA =
+                ENTITIES.register("goomba", () -> EntityType.Builder.
+                                <EntityGoomba>create(EntityGoomba::new, EntityClassification.MONSTER)
+                        .size(0.5f, 1.0f)
+                        .build(new ResourceLocation(FandomCraft.MOD_ID, "goomba").toString()));
 
         //Spawn Eggs
+        public static final RegistryObject<Item> GOOMBA_SPAWN_EGG = ITEMS.register("goomba_spawn_egg", () -> new ForgeSpawnEggItem(RegistryHandler.GOOMBA, 7888668, 16110193, new Item.Properties().group(FandomCraft.tabFandomCraftMisc)));
 
         //Tools
 

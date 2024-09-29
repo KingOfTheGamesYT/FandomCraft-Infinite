@@ -1,16 +1,14 @@
 package com.devmaster1015.fandomcraft.main;
 
-import com.devmaster1015.fandomcraft.client.render.RenderDekuNut;
-import com.devmaster1015.fandomcraft.client.render.RenderEnergyBall;
-import com.devmaster1015.fandomcraft.client.render.RenderWoodenSlingshotAmmo;
-import com.devmaster1015.fandomcraft.main.events.LootTableModifier;
-import com.devmaster1015.fandomcraft.client.render.RenderBullet;
-import com.devmaster1015.fandomcraft.main.events.MobDrops;
-import com.devmaster1015.fandomcraft.main.events.PickupEvent;
+import com.devmaster1015.fandomcraft.client.render.*;
+import com.devmaster1015.fandomcraft.entities.EntityGoomba;
+import com.devmaster1015.fandomcraft.main.events.*;
+import com.devmaster1015.fandomcraft.util.BaseConfig;
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
-import com.devmaster1015.fandomcraft.main.events.VillagerTradeHandler;
+import com.devmaster1015.fandomcraft.world.EntitySpawns;
 import com.devmaster1015.fandomcraft.world.FCOreGen;
 
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -22,12 +20,15 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -38,7 +39,8 @@ public class FandomCraft {
     public static final ITag.INamedTag<Item> RUPEES = ItemTags.makeWrapperTag(FandomCraft.MOD_ID+":rupees");
 
     public FandomCraft() {
-
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BaseConfig.COMMON, "fandomcraft-common.toml");
+        BaseConfig.loadConfig(BaseConfig.COMMON, FMLPaths.CONFIGDIR.get().resolve("fandomcraft-common.toml").toString());
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -50,10 +52,12 @@ public class FandomCraft {
         MinecraftForge.EVENT_BUS.register(LootTableModifier.class);
         MinecraftForge.EVENT_BUS.register(PickupEvent.class);
         MinecraftForge.EVENT_BUS.register(MobDrops.class);
+        MinecraftForge.EVENT_BUS.register(ModEventBusEvents.class);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         DeferredWorkQueue.runLater(() -> {
+            GlobalEntityTypeAttributes.put(RegistryHandler.GOOMBA.get(), EntityGoomba.setCustomAttributes().create());
         });
     }
 
@@ -62,6 +66,7 @@ public class FandomCraft {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ENERGY_BALL_ENTITY.get(), RenderEnergyBall::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WOOD_SLINGSHOT_AMMO.get(), RenderWoodenSlingshotAmmo::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DEKUNUT_ENTITY.get(), RenderDekuNut::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.GOOMBA.get(), RenderGoomba::new);
     }
 
     public static final ItemGroup tabFandomCraftBlocks = new ItemGroup("tabFandomCraftBlocks") {

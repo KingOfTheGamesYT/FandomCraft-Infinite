@@ -28,10 +28,10 @@ public class MobDrops {
 
         LivingEntity entity = (LivingEntity) event.getEntity();
         Entity source = event.getSource().getTrueSource();
-        PlayerEntity player = (PlayerEntity) source;
 
         // Check if the killer is a player
         if (source instanceof PlayerEntity) {
+            PlayerEntity player = (PlayerEntity) source;
 
             // Get the weapon the player used to kill the entity
             ItemStack weapon = player.getHeldItemMainhand();
