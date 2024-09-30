@@ -64,7 +64,7 @@ public class MobDrops {
                         entity instanceof EndermanEntity) {
 
                     // Drop a Dark Heart if it's one of the specified mobs
-                    entity.entityDropItem(new ItemStack(RegistryHandler.DARK_HEART.get()), 0);
+                    entity.entityDropItem(new ItemStack(RegistryHandler.COIN.get()), 0);
                 }
             }
             else if (weapon.getItem() == RegistryHandler.STAR_HAMMER.get()) {
@@ -72,7 +72,7 @@ public class MobDrops {
                         entity instanceof EntityKoopa) {
 
                     // Drop a Dark Heart if it's one of the specified mobs
-                    entity.entityDropItem(new ItemStack(RegistryHandler.DARK_HEART.get()), 0);
+                    entity.entityDropItem(new ItemStack(RegistryHandler.COIN.get()), 0);
                 }
             }
             // For all other weapons, drop a Green Rupee

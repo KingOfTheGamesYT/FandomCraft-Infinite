@@ -30,7 +30,7 @@ public class FCConfig {
         builder.push("Koopa Spawn Chances");
         Koopamin = builder.defineInRange("Koopa Min", 1, 0, 640);
         Koopamax = builder.defineInRange("Koopa Max", 2, 0, 640);
-        Koopaweight = builder.defineInRange("Koopa Weight", 7, 0, 100);
+        Koopaweight = builder.defineInRange("Koopa Weight", 5, 0, 100);
         builder.pop();
 
         Koopabiomes = builder

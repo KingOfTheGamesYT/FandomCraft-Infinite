@@ -61,5 +61,14 @@
         "stream": false
       }
     ]
+  },
+  "koopa_kick": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fandomcraft:koopa_kick",
+        "stream": false
+      }
+    ]
   }
 }

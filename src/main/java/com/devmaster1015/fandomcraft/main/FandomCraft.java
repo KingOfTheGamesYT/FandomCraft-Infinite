@@ -28,8 +28,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import net.minecraftforge.fml.loading.FMLPaths;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -72,6 +72,7 @@ public class FandomCraft {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DEKUNUT_ENTITY.get(), RenderDekuNut::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.GOOMBA.get(), RenderGoomba::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.KOOPA.get(), RenderKoopa::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.SHELL_ENTITY.get(), RenderShell::new);
 
     }
 

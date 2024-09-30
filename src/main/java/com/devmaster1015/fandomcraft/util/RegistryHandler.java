@@ -147,6 +147,8 @@ public class RegistryHandler{
         public static final RegistryObject<Item> STABLE_MULCH = ITEMS.register("stable_mulch", () -> new Mulch(32));
         public static final RegistryObject<Item> GROWTH_MULCH = ITEMS.register("growth_mulch", () -> new Mulch(128));
         public static final RegistryObject<Item> STAR_HAMMER = ITEMS.register("star_hammer", () -> new Sword(new ModdedTier(3600, 14, 13,1.6F).level(7).enchanting(16).material(Items.AIR), Rarity.COMMON).build(0, 0));
+        public static final RegistryObject<Item> SHELL = ITEMS.register("shell", () -> new Shell(1, Rarity.COMMON));
+        public static final RegistryObject<Item> COIN = ITEMS.register("coin", () -> new FItem(FandomCraft.tabFandomCraftMisc, Rarity.COMMON));
 
         //Entities
         public static final RegistryObject<EntityType<EntityBullet>> BULLET_ENTITY =
@@ -187,6 +189,14 @@ public class RegistryHandler{
                                 <EntityKoopa>create(EntityKoopa::new, EntityClassification.MONSTER)
                         .size(0.5f, 1.0f)
                         .build(new ResourceLocation(FandomCraft.MOD_ID, "koopa").toString()));
+        public static final RegistryObject<EntityType<EntityGreenShell>>SHELL_ENTITY =
+                ENTITIES.register("shell", () -> EntityType.Builder.
+                                <EntityGreenShell>create(EntityGreenShell::new, EntityClassification.MISC)
+                        .size(0.25f, 0.25f)
+                        .trackingRange(4)
+                        .updateInterval(4)
+                        .build(new ResourceLocation(FandomCraft.MOD_ID, "shell").toString()));
+
         //Spawn Eggs
         public static final RegistryObject<Item> GOOMBA_SPAWN_EGG = ITEMS.register("goomba_spawn_egg", () -> new ForgeSpawnEggItem(RegistryHandler.GOOMBA, 7888668, 16110193, new Item.Properties().group(FandomCraft.tabFandomCraftMisc)));
         public static final RegistryObject<Item> KOOPA_SPAWN_EGG = ITEMS.register("koopa_spawn_egg", () -> new ForgeSpawnEggItem(RegistryHandler.KOOPA, 892431, 16777215, new Item.Properties().group(FandomCraft.tabFandomCraftMisc)));

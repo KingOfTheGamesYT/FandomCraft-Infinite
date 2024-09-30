@@ -40,7 +40,7 @@ public class EntityKoopa extends MonsterEntity {
     protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHit) {
         int count = this.rand.nextInt(1 + looting);
         for (int i = 0; i < count; i++) {
-            this.entityDropItem(RegistryHandler.RUPEE_GREEN.get());
+            this.entityDropItem(RegistryHandler.SHELL.get());
         }
     }
 
