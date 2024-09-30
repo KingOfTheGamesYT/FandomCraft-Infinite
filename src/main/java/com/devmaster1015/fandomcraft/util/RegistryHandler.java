@@ -49,6 +49,7 @@ public class RegistryHandler{
         public static final RegistryObject<SoundEvent> ENERGY_SHOOT = SOUNDS.register("energy_shoot", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "energy_shoot")));
         public static final RegistryObject<SoundEvent> ENERGY_HIT = SOUNDS.register("energy_hit", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "energy_hit")));
         public static final RegistryObject<SoundEvent> GOOMBA_STOMP = SOUNDS.register("goomba_stomp", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "goomba_stomp")));
+        public static final RegistryObject<SoundEvent> KOOPA_KICK = SOUNDS.register("koopa_kick", () -> new SoundEvent(new ResourceLocation(FandomCraft.MOD_ID , "koopa_kick")));
 
         //Items
         public static final RegistryObject<AppraisingOre> UNKNOWN_MINERAL = ITEMS.register("unknown_mineral", AppraisingOre::new);
@@ -181,9 +182,14 @@ public class RegistryHandler{
                                 <EntityGoomba>create(EntityGoomba::new, EntityClassification.MONSTER)
                         .size(0.5f, 1.0f)
                         .build(new ResourceLocation(FandomCraft.MOD_ID, "goomba").toString()));
-
+        public static final RegistryObject<EntityType<EntityKoopa>>KOOPA =
+                ENTITIES.register("koopa", () -> EntityType.Builder.
+                                <EntityKoopa>create(EntityKoopa::new, EntityClassification.MONSTER)
+                        .size(0.5f, 1.0f)
+                        .build(new ResourceLocation(FandomCraft.MOD_ID, "koopa").toString()));
         //Spawn Eggs
         public static final RegistryObject<Item> GOOMBA_SPAWN_EGG = ITEMS.register("goomba_spawn_egg", () -> new ForgeSpawnEggItem(RegistryHandler.GOOMBA, 7888668, 16110193, new Item.Properties().group(FandomCraft.tabFandomCraftMisc)));
+        public static final RegistryObject<Item> KOOPA_SPAWN_EGG = ITEMS.register("koopa_spawn_egg", () -> new ForgeSpawnEggItem(RegistryHandler.KOOPA, 892431, 16777215, new Item.Properties().group(FandomCraft.tabFandomCraftMisc)));
 
         //Tools
 

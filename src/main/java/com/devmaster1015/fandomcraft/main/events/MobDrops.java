@@ -1,5 +1,7 @@
 package com.devmaster1015.fandomcraft.main.events;
 
+import com.devmaster1015.fandomcraft.entities.EntityGoomba;
+import com.devmaster1015.fandomcraft.entities.EntityKoopa;
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
 
 import net.minecraft.entity.Entity;
@@ -65,7 +67,15 @@ public class MobDrops {
                     entity.entityDropItem(new ItemStack(RegistryHandler.DARK_HEART.get()), 0);
                 }
             }
-            // For all other weapons (not Soul Eater or Dream Sword), drop a Green Rupee
+            else if (weapon.getItem() == RegistryHandler.STAR_HAMMER.get()) {
+                if (entity instanceof EntityGoomba ||
+                        entity instanceof EntityKoopa) {
+
+                    // Drop a Dark Heart if it's one of the specified mobs
+                    entity.entityDropItem(new ItemStack(RegistryHandler.DARK_HEART.get()), 0);
+                }
+            }
+            // For all other weapons, drop a Green Rupee
             else {
                 entity.entityDropItem(new ItemStack(RegistryHandler.RUPEE_GREEN.get()), 0);
             }

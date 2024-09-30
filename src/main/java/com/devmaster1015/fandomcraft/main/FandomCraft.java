@@ -2,6 +2,7 @@ package com.devmaster1015.fandomcraft.main;
 
 import com.devmaster1015.fandomcraft.client.render.*;
 import com.devmaster1015.fandomcraft.entities.EntityGoomba;
+import com.devmaster1015.fandomcraft.entities.EntityKoopa;
 import com.devmaster1015.fandomcraft.main.events.*;
 import com.devmaster1015.fandomcraft.util.BaseConfig;
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
@@ -53,11 +54,14 @@ public class FandomCraft {
         MinecraftForge.EVENT_BUS.register(PickupEvent.class);
         MinecraftForge.EVENT_BUS.register(MobDrops.class);
         MinecraftForge.EVENT_BUS.register(ModEventBusEvents.class);
+        MinecraftForge.EVENT_BUS.addListener(EntitySpawns::onBiomeLoad);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(RegistryHandler.GOOMBA.get(), EntityGoomba.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.KOOPA.get(), EntityKoopa.setCustomAttributes().create());
+
         });
     }
 
@@ -67,6 +71,8 @@ public class FandomCraft {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WOOD_SLINGSHOT_AMMO.get(), RenderWoodenSlingshotAmmo::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DEKUNUT_ENTITY.get(), RenderDekuNut::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.GOOMBA.get(), RenderGoomba::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.KOOPA.get(), RenderKoopa::new);
+
     }
 
     public static final ItemGroup tabFandomCraftBlocks = new ItemGroup("tabFandomCraftBlocks") {
