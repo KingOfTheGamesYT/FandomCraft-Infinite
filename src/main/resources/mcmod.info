@@ -1,0 +1,16 @@
+[
+{
+  "modid": "fandomcraft",
+  "name": "FandomCraft",
+  "description": "Adds a thousand different items, blocks, mobs, dungeons and other features from many *fandoms* into one massive Minecraft mod.",
+  "version": "Halloween",
+  "mcversion": "1.7.10",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/fandomcraft-remix",
+  "updateUrl": "",
+  "authorList": ["DevMaster1015 (RedRoseWarrior1)"],
+  "credits": "LightAdept (packaging fix), Desfang (textures), zsora16x (textures), TmmCrafter (mob AI), coolAlias (backpack & overlay tutorials), Eria8 (making all versions below the 4.0 update),  Ms_Raven (Miss_Apocalypse) (Making 4.0 - 4.1.5 and doing most the Halloween update",
+  "logoFile": "FandomCraft_Infinite.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

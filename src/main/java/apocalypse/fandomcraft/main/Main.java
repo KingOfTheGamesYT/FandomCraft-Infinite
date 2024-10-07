@@ -1,7 +1,3 @@
-//Deobfuscated with https://github.com/SimplyProgrammer/Minecraft-Deobfuscator3000 using mappings "C:\Users\minec\Desktop\mappings\mcp_stable-12-1.7.10"!
-
-//Decompiled by Procyon!
-
 package apocalypse.fandomcraft.main;
 
 import apocalypse.fandomcraft.otherworld.BiomeBadlands;
@@ -42,14 +38,10 @@ import net.minecraftforge.common.*;
 import net.minecraft.util.*;
 import net.minecraftforge.common.util.*;
 
-@Mod(modid = "fandomcraft", version = "4.1.1")
+@Mod(modid = "fandomcraft", version = "5.0.0")
 public class Main
 {
-    public static final String modid = "fandomcraft";
-    public static final String name = "FandomCraft";
-    public static final String version = "4.1.1";
-    public static final String description = "Features from tons of popular videogames and films in Minecraft.";
-    public static final String url = "missapocalypse.wix.com/fandomcraft";
+    public static final String version = "5.0.0";
     public BiomeBadlands badlands;
     public BiomeDarkForest darkForest;
     public static int FGuideHome;
@@ -810,7 +802,7 @@ public class Main
         GameRegistry.registerBlock(Main.eridiumOre = new eridiumOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("eridiumOre").setBlockTextureName("fandomcraft:eridiumOre"), "eridiumOre");
         GameRegistry.registerBlock(Main.unobtainiumOre = new unobtainiumOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("unobtainiumOre").setBlockTextureName("fandomcraft:unobtainiumOre"), "unobtainiumOre");
         GameRegistry.registerWorldGenerator((IWorldGenerator)Main.PixelmonOres, 1);
-        GameRegistry.registerBlock(Main.GoddessOre = new GoddessOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("GoddessOre").setBlockTextureName("fandomcraft:oreGoddess"), "GoddessOre");
+        GameRegistry.registerBlock(Main.GoddessOre = new GoddessOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("goddessoreblock").setBlockTextureName("fandomcraft:goddessoreblock"), "GoddessOre");
         GameRegistry.registerWorldGenerator((IWorldGenerator)Main.CommonGen, 1);
         GameRegistry.registerBlock(Main.RockStone = new RockStone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("RockStone").setBlockTextureName("fandomcraft:rock"), "RockStone");
         GameRegistry.registerBlock(Main.Limestone = new Limestone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("Limestone").setBlockTextureName("fandomcraft:limestone"), "Limestone");

@@ -82,11 +82,11 @@ public class UndergroundOres implements IWorldGenerator
             final int chunkZ = z + random.nextInt(16);
             new WorldGenMinable(Main.unknownOre, 5).generate(world, random, chunkX, chunkY, chunkZ);
         }
-        for (int i = 0; i < 1; ++i) {
+        for (int i = 0; i < 6; ++i) {
             final int chunkX = x + random.nextInt(16);
-            final int chunkY = random.nextInt(4);
+            final int chunkY = 10 + random.nextInt(39); // Adjust Y to spawn between 10 and 48
             final int chunkZ = z + random.nextInt(16);
-            new WorldGenMinable(Main.GoddessOre, 2, Blocks.bedrock).generate(world, random, chunkX, chunkY, chunkZ);
+            new WorldGenMinable(Main.GoddessOre, 2, Blocks.stone).generate(world, random, chunkX, chunkY, chunkZ);
         }
         for (int i = 0; i < 2; ++i) {
             final int chunkX = x + random.nextInt(16);
