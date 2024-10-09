@@ -94,8 +94,8 @@
      ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBrownPot.class, (TileEntitySpecialRenderer)renderBrownPot);
      MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Main.brownPot), (IItemRenderer)new ItemRenderPot((TileEntitySpecialRenderer)renderBrownPot, (TileEntity)new TileEntityBrownPot()));
 
-    // RenderPC renderPC = new RenderPC();
-    // ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPC.class, (TileEntitySpecialRenderer)renderPC);
+     RenderPC renderPC = new RenderPC();
+     ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPC.class, (TileEntitySpecialRenderer)renderPC);
 
      RenderPlant renderPlant = new RenderPlant();
      ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPlant.class, (TileEntitySpecialRenderer)renderPlant);

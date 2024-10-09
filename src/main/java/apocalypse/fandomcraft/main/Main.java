@@ -1,12 +1,8 @@
 package apocalypse.fandomcraft.main;
 
 import apocalypse.fandomcraft.otherworld.BiomeBadlands;
-import net.minecraft.creativetab.*;
 import apocalypse.fandomcraft.world.*;
-import net.minecraft.entity.*;
 import apocalypse.fandomcraft.terraria.*;
-import net.minecraft.block.material.*;
-import net.minecraft.block.*;
 import apocalypse.fandomcraft.ore.*;
 import apocalypse.fandomcraft.chaos.*;
 import apocalypse.fandomcraft.items.*;
@@ -17,12 +13,6 @@ import apocalypse.fandomcraft.finalfantasy.*;
 import apocalypse.fandomcraft.zelda.*;
 import apocalypse.fandomcraft.blocks.*;
 import apocalypse.fandomcraft.tileEntity.*;
-import net.minecraft.potion.*;
-import net.minecraft.item.*;
-import net.minecraft.init.*;
-import net.minecraft.enchantment.*;
-import cpw.mods.fml.common.*;
-import cpw.mods.fml.common.registry.*;
 import apocalypse.fandomcraft.otherworld.structures.*;
 import apocalypse.fandomcraft.horror.*;
 import apocalypse.fandomcraft.entity.*;
@@ -31,11 +21,24 @@ import apocalypse.fandomcraft.network.*;
 import apocalypse.fandomcraft.otherworld.*;
 import apocalypse.fandomcraft.events.*;
 import apocalypse.fandomcraft.player.*;
+
+import net.minecraft.creativetab.*;
+import net.minecraft.entity.*;
+import net.minecraft.block.material.*;
+import net.minecraft.block.*;
+import net.minecraft.potion.*;
+import net.minecraft.item.*;
+import net.minecraft.init.*;
+import net.minecraft.enchantment.*;
+import net.minecraft.util.*;
 import net.minecraft.world.biome.*;
+
+import cpw.mods.fml.common.*;
+import cpw.mods.fml.common.registry.*;
 import cpw.mods.fml.common.network.*;
 import cpw.mods.fml.common.event.*;
+
 import net.minecraftforge.common.*;
-import net.minecraft.util.*;
 import net.minecraftforge.common.util.*;
 
 @Mod(modid = "fandomcraft", version = "5.0.0")
@@ -59,6 +62,7 @@ public class Main
     public static int GuiBackpack;
     public static int GuiTravellerOver;
     public static int GuiTravellerOther;
+
     @Mod.Metadata
     public static ModMetadata meta;
     @Mod.Instance("fandomcraft")
@@ -751,10 +755,10 @@ public class Main
         GameRegistry.registerItem(Main.fancyDiamondPick = new fancyDiamondPick(Main.FancyDiamond).setCreativeTab(Main.tabFandomCraftTools).setUnlocalizedName("fancyDiamondPick").setTextureName("fandomcraft:fancyDiamondPickaxe"), "fancyDiamondPickaxe");
         GameRegistry.registerItem(Main.fancyRainbowPick = new fancyRainbowPick(Main.Rainbow).setCreativeTab(Main.tabFandomCraftTools).setUnlocalizedName("fancyRainbowPick").setTextureName("fandomcraft:fancyRainbowPickaxe"), "fancyRainbowPickaxe");
         GameRegistry.registerItem(Main.nightmarePick = new nightmarePick(Main.Nightmare).setCreativeTab(Main.tabFandomCraftTools).setUnlocalizedName("nightmarePick").setTextureName("fandomcraft:nightmarePickaxe"), "nightmarePick");
-        GameRegistry.registerItem(Main.rupeeGreen = new rupeeGreen().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeGreen").setTextureName("fandomcraft:rupeeGreen"), "rupeeGreen");
-        GameRegistry.registerItem(Main.rupeeBlue = new rupeeBlue().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeBlue").setTextureName("fandomcraft:rupeeBlue"), "rupeeBlue");
+        GameRegistry.registerItem(Main.rupeeGreen = new rupeeGreen().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeGreen").setTextureName("fandomcraft:rupee_green"), "rupeeGreen");
+        GameRegistry.registerItem(Main.rupeeBlue = new rupeeBlue().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeBlue").setTextureName("fandomcraft:rupee_blue"), "rupeeBlue");
         GameRegistry.registerItem(Main.rupeeYellow = new rupeeYellow().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeYellow").setTextureName("fandomcraft:rupeeYellow"), "rupeeYellow");
-        GameRegistry.registerItem(Main.rupeeRed = new rupeeRed().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeRed").setTextureName("fandomcraft:rupeeRed"), "rupeeRed");
+        GameRegistry.registerItem(Main.rupeeRed = new rupeeRed().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeRed").setTextureName("fandomcraft:rupee_red"), "rupeeRed");
         GameRegistry.registerItem(Main.rupeePurple = new rupeePurple().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeePurple").setTextureName("fandomcraft:rupeePurple"), "rupeePurple");
         GameRegistry.registerItem(Main.rupeeOrange = new rupeeOrange().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeOrange").setTextureName("fandomcraft:rupeeOrange"), "rupeeOrange");
         GameRegistry.registerItem(Main.rupeeSilver = new rupeeSilver().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeSilver").setTextureName("fandomcraft:rupeeSilver"), "rupeeSilver");
@@ -802,7 +806,7 @@ public class Main
         GameRegistry.registerBlock(Main.eridiumOre = new eridiumOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("eridiumOre").setBlockTextureName("fandomcraft:eridiumOre"), "eridiumOre");
         GameRegistry.registerBlock(Main.unobtainiumOre = new unobtainiumOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("unobtainiumOre").setBlockTextureName("fandomcraft:unobtainiumOre"), "unobtainiumOre");
         GameRegistry.registerWorldGenerator((IWorldGenerator)Main.PixelmonOres, 1);
-        GameRegistry.registerBlock(Main.GoddessOre = new GoddessOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("goddessoreblock").setBlockTextureName("fandomcraft:goddessoreblock"), "GoddessOre");
+        GameRegistry.registerBlock(Main.GoddessOre = new GoddessOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("GoddessOre").setBlockTextureName("fandomcraft:goddessoreblock"), "GoddessOre");
         GameRegistry.registerWorldGenerator((IWorldGenerator)Main.CommonGen, 1);
         GameRegistry.registerBlock(Main.RockStone = new RockStone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("RockStone").setBlockTextureName("fandomcraft:rock"), "RockStone");
         GameRegistry.registerBlock(Main.Limestone = new Limestone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("Limestone").setBlockTextureName("fandomcraft:limestone"), "Limestone");
@@ -1044,7 +1048,7 @@ public class Main
         GameRegistry.registerTileEntity((Class)TileEntityBluePot.class, "bluePot");
         GameRegistry.registerBlock(Main.brownPot = new EntityBrownPot().setCreativeTab(Main.tabFandomCraftModels).setBlockName("brownPot"), "brownPot");
         GameRegistry.registerTileEntity((Class)TileEntityBrownPot.class, "brownPot");
-        GameRegistry.registerBlock(Main.PC = new EntityPC().setCreativeTab(Main.tabFandomCraftModels).setBlockName("PC"), "PC");
+        GameRegistry.registerBlock(Main.PC = new EntityPC().setCreativeTab(Main.tabFandomCraftModels).setBlockName("PC").setBlockTextureName("fandomcraft:PC"), "PC");
         GameRegistry.registerTileEntity((Class)TileEntityPC.class, "PC");
         GameRegistry.registerBlock(Main.Plant = new EntityPlant().setCreativeTab(Main.tabFandomCraftModels).setBlockName("plant"), "Plant");
         GameRegistry.registerTileEntity((Class)TileEntityPlant.class, "Plant");
