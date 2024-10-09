@@ -1050,11 +1050,11 @@ public class Main
         GameRegistry.registerTileEntity((Class)TileEntityBrownPot.class, "brownPot");
         GameRegistry.registerBlock(Main.PC = new EntityPC().setCreativeTab(Main.tabFandomCraftModels).setBlockName("PC").setBlockTextureName("fandomcraft:PC"), "PC");
         GameRegistry.registerTileEntity((Class)TileEntityPC.class, "PC");
-        GameRegistry.registerBlock(Main.Plant = new EntityPlant().setCreativeTab(Main.tabFandomCraftModels).setBlockName("plant"), "Plant");
+        GameRegistry.registerBlock(Main.Plant = new EntityPlant().setCreativeTab(Main.tabFandomCraftModels).setBlockName("plant").setBlockTextureName("fandomcraft:Plant"), "Plant");
         GameRegistry.registerTileEntity((Class)TileEntityPlant.class, "Plant");
-        GameRegistry.registerBlock(Main.CuttingBoard = new EntityCuttingBoard().setCreativeTab(Main.tabFandomCraftModels).setBlockName("cuttingboard"), "CuttingBoard");
+        GameRegistry.registerBlock(Main.CuttingBoard = new EntityCuttingBoard().setCreativeTab(Main.tabFandomCraftModels).setBlockName("cuttingboard").setBlockTextureName("fandomcraft:cuttingboard"), "CuttingBoard");
         GameRegistry.registerTileEntity((Class)TileEntityCuttingBoard.class, "CuttingBoard");
-        GameRegistry.registerBlock(Main.Skillet = new EntitySkillet().setCreativeTab(Main.tabFandomCraftModels).setBlockName("skillet"), "Skillet");
+        GameRegistry.registerBlock(Main.Skillet = new EntitySkillet().setCreativeTab(Main.tabFandomCraftModels).setBlockName("skillet").setBlockTextureName("fandomcraft:skillet"), "Skillet");
         GameRegistry.registerTileEntity((Class)TileEntitySkillet.class, "Skillet");
         GameRegistry.registerItem(Main.masamune = new EntityMasamune(Main.OneWingedAngelKey).setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("masamune"), "masamune");
         GameRegistry.registerItem(Main.legendMasterSword = new EntityMasterSword(Main.UltimaKey).setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("legendMasterSword"), "legendMasterSword");
@@ -1182,7 +1182,7 @@ public class Main
         GameRegistry.registerBlock(Main.sepiaMetal = new UnbreakableBlock(Material.iron).setBlockName("sepiaMetal").setBlockTextureName("fandomcraft:sepiaMetal").setCreativeTab(Main.tabFandomCraftDungeons), "sepiaMetal");
         GameRegistry.registerBlock(Main.sepiaGlass = new UnbreakableGlass(Material.glass).setBlockName("sepiaGlass").setBlockTextureName("fandomcraft:sepiaGlass").setCreativeTab(Main.tabFandomCraftDungeons), "sepiaGlass");
         GameRegistry.registerBlock(Main.sepiaBookshelf = new UnbreakableBlock(Material.wood).setBlockName("sepiaBookshelf").setBlockTextureName("fandomcraft:sepiaBookshelf").setCreativeTab(Main.tabFandomCraftDungeons), "sepiaBookshelf");
-        GameRegistry.registerBlock(Main.boulder = new Boulder().setCreativeTab(Main.tabFandomCraftModels).setBlockName("boulder"), "boulder");
+        GameRegistry.registerBlock(Main.boulder = new Boulder().setCreativeTab(Main.tabFandomCraftModels).setBlockName("boulder").setBlockTextureName("fandomcraft:boulder"), "boulder");
         GameRegistry.registerTileEntity((Class)TileEntityBoulder.class, "boulder");
         GameRegistry.registerItem(Main.slingshot = new Slingshot().setUnlocalizedName("slingshot").setTextureName("fandomcraft:slingshot").setCreativeTab(Main.tabFandomCraftWeapons), "slingshot");
         GameRegistry.registerItem(Main.fairySlingshot = new FairySlingshot().setUnlocalizedName("fairySlingshot").setTextureName("fandomcraft:fairySlingshot").setCreativeTab(Main.tabFandomCraftWeapons), "fairySlingshot");

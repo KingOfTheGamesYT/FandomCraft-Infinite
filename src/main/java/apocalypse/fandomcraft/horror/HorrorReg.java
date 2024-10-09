@@ -164,7 +164,7 @@ public class HorrorReg {
         GameRegistry.registerItem(handgun, "handgun");
         giantKnife = (new FableSword("", 1000, 15.0F, true, 0)).setUnlocalizedName("giantKnife").setTextureName("fandomcraft:giantKnife").setCreativeTab(Main.tabFandomCraftWeapons);
         GameRegistry.registerItem(giantKnife, "giantKnife");
-        trash_bin = (new TrashBin()).setBlockName("trash_bin").setCreativeTab(Main.tabFandomCraftModels);
+        trash_bin = (new TrashBin()).setBlockName("trash_bin").setBlockTextureName("fandomcraft:trash_bin").setCreativeTab(Main.tabFandomCraftModels);
         GameRegistry.registerBlock(trash_bin, "trash_bin");
     }
 
