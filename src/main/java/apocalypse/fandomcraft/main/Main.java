@@ -1217,7 +1217,7 @@ public class Main
         GameRegistry.registerItem(Main.cleaver = new FableSword("", 540, 6.0f, false, 0).setUnlocalizedName("cleaver").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:cleaver"), "cleaver");
         GameRegistry.registerItem(Main.cutlass = new FableSword("", 380, 6.5f, false, 0).setUnlocalizedName("cutlass").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:cutlass"), "cutlass");
         GameRegistry.registerItem(Main.fryingPan = new FableSword("'Mob omelet'", 1000, 6.0f, false, 0).setUnlocalizedName("fryingPan").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:fryingPan"), "fryingPan");
-        GameRegistry.registerItem(Main.scmitar = new FableSword("", 800, 6.5f, false, 0).setUnlocalizedName("scmitar").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:scmitar"), "scmitar");
+        GameRegistry.registerItem(Main.scmitar = new FableSword("", 800, 6.5f, false, 0).setUnlocalizedName("scimitar").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:scmitar"), "scimitar");
         GameRegistry.registerItem(Main.pickhammer = new FablePickaxe(Main.Pickhammer).setUnlocalizedName("pickhammer").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:pickhammer"), "pickhammer");
         GameRegistry.registerItem(Main.mace = new FableSword("", 515, 6.5f, false, 0).setUnlocalizedName("mace").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:mace"), "mace");
         GameRegistry.registerItem(Main.greataxe = new FableAxe(Main.GreatAxe).setUnlocalizedName("greataxe").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:greataxe"), "greataxe");

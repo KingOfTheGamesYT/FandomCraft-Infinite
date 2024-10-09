@@ -32,7 +32,6 @@ keybinds.weapons.armCannon=Arm Cannon
 keybinds.gui=GUI's
 keybinds.gui.help=Help
 
-
 achievement.rupee=Legend of Zelda
 achievement.rupee.desc=Find your first Rupee
 achievement.FCdarkHeart=Heartless
@@ -103,7 +102,6 @@ entity.Freezard.name=Freezard
 entity.DarkLink.name=Dark Link
 entity.FireKeese.name=Fire Keese
 entity.Metroid.name=Metroid
-entity.Redead.name=Redead
 entity.Regigigas.name=Regigigas
 entity.ShadowBeast.name=Shadow Beast
 entity.Tingle.name=Tingle
@@ -341,7 +339,6 @@ item.RedVine.name=Red Vine
 item.seasalticecream.name=Sea-Salt Ice Cream
 item.paupu.name=Paupu Fruit
 
-
 item.PlasmaHood.name=Plasma Hood
 item.PlasmaShaul.name=Plasma Shaul
 item.PlasmaTunic.name=Plasma Tunic
@@ -369,7 +366,6 @@ tile.mythrilOre.name=Mythril Ore
 tile.eridiumOre.name=Eridium Ore
 tile.adamantiumOre.name=Adamantium Ore
 tile.unobtainiumOre.name=Unobtainium Ore
-tile.darkSteelOre.name=Darksteel Ore
 
 tile.RockStone.name=Rock
 tile.Limestone.name=Limestone
@@ -436,6 +432,11 @@ item.MegatonBoots.name=Megaton Boots
 item.MagicCrown.name=Hylian Crown
 item.MagicChainmail.name=Hylian Chainmail
 item.MagicArmour.name=Hylian Armour
+item.redLion.name=Red Lion
+item.chaoEggBlue.name=Hero Chao Egg
+item.chaoEggPink.name=Companion Chao Egg
+item.chaoEggGreen.name=Lonely Chao Egg
+item.rustClump.name=Rust Clump
 
 item.OrichulumBoots.name=Orichulum Boots
 item.OrichulumChest.name=Orichulum Chestplate
@@ -460,8 +461,12 @@ item.UnobtainiumLegs.name=Unobtainium Greaves
 item.DarkSteelHat.name=Darksteel Helmet
 item.DarkSteelBoots.name=Darksteel Boots
 item.DarkSteelChest.name=Darksteel Chestplate
+item.gold_coin.name=Gold Coin
 item.DarkSteelLegs.name=Darksteel Greaves
-item.DarkSteelHat.name=Darksteel Helmet
+item.silver_coin.name=Silver Coini
+item.platinum_coin.name=Platinum Coin
+item.copper_coin.name=Copper Coin
+item.giantKnife.name=Giant Knife
 
 tile.bluePot.name=Blue Pot
 tile.brownPot.name=Brown Pot
@@ -469,6 +474,9 @@ tile.plant.name=Potted Plant
 tile.PC.name=Desktop Computer (WIP)
 tile.skillet.name=Skillet (WIP)
 tile.cuttingboard.name=Cutting Board (WIP)
+tile.plant_trap.name=Trap Plant
+tile.plant_thorns.name=Thorns Plant
+tile.plant_grass.name=Grass Plant
 
 item.lumpOfDough.name=Flour
 item.pizzaDough.name=Pizza Dough
@@ -490,7 +498,6 @@ item.tea.name=Tea
 item.hotcocoa.name=Hot Cocoa
 item.cola.name=Cola
 item.lettuce.name=Lettuce
-
 
 tile.pearlstone.name=Pearlstone
 tile.pearlstoneBlock.name=Pearlstone Block
@@ -667,7 +674,6 @@ item.seedBlueberry.name=Blueberry Seeds
 item.compoundBow.name=Compound Bow
 item.eridiumArrow.name=Powered Arrow
 
-
 item.pikoHammer.name=Piko Piko Hammer
 item.cardboardBox.name=Cardboard Box WIP
 item.invisibilityCloak.name=Invisibility Cloak
@@ -721,7 +727,6 @@ item.song4.name=Sun's Song
 item.song5.name=Nocturne of Shadow
 item.song6.name=Song of Healing
 item.song7.name=Song of Time
-
 
 tile.marble.name=Marble
 tile.slate.name=Slate
@@ -785,7 +790,7 @@ tile.heartPot.name=Heart Pot
 item.dinsPearl.name=Din's Pearl
 item.gannonSword.name=Ganon's Sword
 item.zantSword.name=Zant's Sword
-
+tile.sepiaBookshelf.name=Sepia Bookshelf
 tile.gannonStatue.name=Prince of Darkness Statue
 
 itemGroup.fableWeapons=Fable Weapons
@@ -802,9 +807,9 @@ item.bullet.name=Bullet
 item.bolt.name=Bolt
 item.jet.name=Jet
 item.amethyst.name=Amethyst
-item.ruby.name=Ruby
+
 item.chocolate.name=Chocolate
-item.beer.name=Beer
+
 item.cider.name=Cider
 item.fryingPan.name=Frying Pan
 item.cutlass.name=Cutlass
