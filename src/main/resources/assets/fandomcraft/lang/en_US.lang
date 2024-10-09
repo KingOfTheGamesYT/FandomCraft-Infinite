@@ -850,11 +850,12 @@ tile.bloodstoneRock.name=Bleeding Rock
 tile.bloodleaf.name=Shade Leaves
 tile.gravitite.name=Gravitite Ore
 tile.otherworldBlock.name=Otherworld Dungeon Wall
-tile.otherworldBlock2.nameOtherworld Dungeon Floor
+tile.otherworldBlock2.name=Otherworld Dungeon Floor
 tile.otherworldBlockBreakable.name=Otherworld Wall
 tile.otherworldBlockBreakable2.name=Otherworld Floor
 tile.flowervine.name=Flowered Vine
 tile.rusty_iron_bars.name=Rusty Iron Bars
+tile.trash_bin.name=Trash Bin
 tile.bloodstoneOre.name=Bloodstone Ore
 tile.bloodBlock.name=Blood
 item.gravititeDust.name=Gravitite Dust
