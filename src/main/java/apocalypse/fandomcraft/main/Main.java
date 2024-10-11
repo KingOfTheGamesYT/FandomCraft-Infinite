@@ -653,7 +653,6 @@ public class Main
     public static Item katana;
     public static Item harbinger;
     public static Item axeOfDisharmony;
-    public static Item dirtSword;
     public static Item halsRifle;
     public static Item crossbow;
     public static Entity balverine;
@@ -1224,7 +1223,6 @@ public class Main
         GameRegistry.registerItem(Main.katana = new FableSword("", 320, 7.0f, false, 0).setUnlocalizedName("katana").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:katana"), "katana");
         GameRegistry.registerItem(Main.harbinger = new FableSword("'...of death'", 4000, 12.0f, false, 0).setUnlocalizedName("harbinger").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:harbinger"), "harbinger");
         GameRegistry.registerItem(Main.axeOfDisharmony = new FableSword("'Heavy metal slayage'", 4000, 14.0f, false, 0).setUnlocalizedName("axeOfDisharmony").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:axeOfDisharmony"), "axeOfDisharmony");
-        GameRegistry.registerItem(Main.dirtSword = new FableSwordSpecial("'It crumbles away when swung...'", 5, 1.0f, false, 0, Item.getItemFromBlock(Blocks.dirt), Potion.blindness, 60, 2).setUnlocalizedName("dirtSword").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:dirtSword"), "dirtSword");
         GameRegistry.registerItem(Main.crossbow = new Crossbow().setUnlocalizedName("crossbow").setTextureName("fandomcraft:crossbow").setCreativeTab(Main.tabFandomCraftWeapons), "crossbow");
         GameRegistry.registerItem(Main.halsRifle = new Rifle().setUnlocalizedName("halsRifle").setTextureName("fandomcraft:halsRifle").setCreativeTab(Main.tabFandomCraftWeapons), "halsRifle");
         System.out.print("[FandomCraft] Registered blocks & items");
@@ -1737,7 +1735,7 @@ public class Main
         };
         Main.tabFandomCraftMisc = new CreativeTabs("tabFandomCraftMisc") {
             public Item getTabIconItem() {
-                return Main.elvenSteelIngot;
+                return Main.rupeeGreen;
             }
         };
         Main.tabFandomCraftTools = new CreativeTabs("tabFandomCraftTools") {
