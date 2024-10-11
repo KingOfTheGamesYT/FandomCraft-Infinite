@@ -2,6 +2,7 @@ package apocalypse.fandomcraft.items;
 
 import net.minecraft.item.*;
 import net.minecraft.entity.player.*;
+
 import java.util.*;
 
 public class rupeeRed extends Item
@@ -11,6 +12,6 @@ public class rupeeRed extends Item
     }
     
     public void addInformation(final ItemStack item, final EntityPlayer player, final List list, final boolean par4) {
-        list.add("Value: 20.");
+        list.add("A gem of 20 value.");
     }
 }

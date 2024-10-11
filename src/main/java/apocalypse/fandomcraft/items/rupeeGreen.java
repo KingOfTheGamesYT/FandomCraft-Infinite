@@ -11,6 +11,6 @@ public class rupeeGreen extends Item
     }
     
     public void addInformation(final ItemStack item, final EntityPlayer player, final List list, final boolean par4) {
-        list.add("Value: 1.");
+        list.add("A gem of 1 value.");
     }
 }
