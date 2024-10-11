@@ -3,9 +3,11 @@ package apocalypse.fandomcraft.ore;
 import net.minecraft.item.*;
 import net.minecraft.world.*;
 import net.minecraft.entity.player.*;
-import apocalypse.fandomcraft.main.*;
-import java.util.*;
 import net.minecraft.init.*;
+
+import apocalypse.fandomcraft.main.*;
+
+import java.util.*;
 
 public class AppraisingOre extends Item
 {
