@@ -1,7 +1,7 @@
 itemGroup.tabFandomCraftWeapons=Fandom Weapons
 itemGroup.tabFandomCraftOutfits=Fandom Armour
 itemGroup.tabFandomCraftKeyItems=Fandom Key Items
-itemGroup.tabFandomCraftValuables=Fandom Valuables
+itemGroup.tabFandomCraftValuables=Fandom Materials
 itemGroup.tabFandomCraftBlocks=Fandom Worldgen
 itemGroup.tabFandomCraftMisc=Fandom Misc
 itemGroup.tabFandomCraftTools=Fandom Tools
@@ -467,6 +467,7 @@ item.silver_coin.name=Silver Coini
 item.platinum_coin.name=Platinum Coin
 item.copper_coin.name=Copper Coin
 item.giantKnife.name=Giant Knife
+item.KnightsCrest.name=Knights Crest
 
 tile.bluePot.name=Blue Pot
 tile.brownPot.name=Brown Pot
