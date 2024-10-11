@@ -15,7 +15,7 @@ public class HorrorPlant extends Block
         this.setResistance(0.1f);
         this.setStepSound(HorrorPlant.soundTypeGrass);
         this.setBlockBounds(f, 0.0f, f, 1.0f - f, 1.0f - f, 1.0f - f);
-        this.setCreativeTab(Main.tabFandomCraftBuilding);
+        this.setCreativeTab(Main.tabFandomCraftBlocks);
     }
     
     protected boolean canPlaceBlockOn(final Block block) {

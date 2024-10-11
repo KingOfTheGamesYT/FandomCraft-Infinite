@@ -16,7 +16,7 @@ public class BlockBlood extends Block
         this.setResistance(0.1f);
         this.setStepSound(BlockBlood.soundTypeSnow);
         this.setBlockBounds(0.0f, 0.0f, 0.0f, 1.0f, 0.0625f, 1.0f);
-        this.setCreativeTab(Main.tabFandomCraftBuilding);
+        this.setCreativeTab(Main.tabFandomCraftBlocks);
         this.setBlockBoundsFromMeta(0);
     }
     

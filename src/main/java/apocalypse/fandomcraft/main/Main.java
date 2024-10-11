@@ -80,7 +80,6 @@ public class Main
     public static CreativeTabs tabFandomCraftMisc;
     public static CreativeTabs tabFandomCraftTools;
     public static CreativeTabs tabFandomCraftFood;
-    public static CreativeTabs tabFandomCraftBuilding;
     public static CreativeTabs tabFandomCraftModels;
     public static CreativeTabs tabFandomCraftDungeons;
     public static CreativeTabs tabFandomCraftSpells;
@@ -811,7 +810,7 @@ public class Main
         GameRegistry.registerBlock(Main.RockStone = new RockStone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("RockStone").setBlockTextureName("fandomcraft:rock"), "RockStone");
         GameRegistry.registerBlock(Main.Limestone = new Limestone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("Limestone").setBlockTextureName("fandomcraft:limestone"), "Limestone");
         GameRegistry.registerBlock(Main.bloodstone = new bloodstone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("bloodstone").setBlockTextureName("fandomcraft:bloodstone"), "bloodstone");
-        GameRegistry.registerBlock(Main.bloodstoneBrick = new bloodstoneBrick().setCreativeTab(Main.tabFandomCraftBuilding).setBlockName("bloodstoneBrick").setBlockTextureName("fandomcraft:bloodstoneBrick"), "bloodstoneBrick");
+        GameRegistry.registerBlock(Main.bloodstoneBrick = new bloodstoneBrick().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("bloodstoneBrick").setBlockTextureName("fandomcraft:bloodstoneBrick"), "bloodstoneBrick");
         GameRegistry.registerItem(Main.ragecandybar = new ragecandybar(6, 1.0f, false).setCreativeTab(Main.tabFandomCraftFood).setUnlocalizedName("ragecandybar").setTextureName("fandomcraft:ragecandybar"), "ragecandybar");
         GameRegistry.registerItem(Main.berryJuice = new berryJuice(4, 1.0f, false).setCreativeTab(Main.tabFandomCraftFood).setUnlocalizedName("berryJuice").setTextureName("fandomcraft:berryJuice"), "berryJuice");
         GameRegistry.registerItem(Main.banana = new banana(6, 1.0f, true).setCreativeTab(Main.tabFandomCraftFood).setUnlocalizedName("banana").setTextureName("fandomcraft:banana"), "banana");
@@ -935,11 +934,11 @@ public class Main
         GameRegistry.registerItem(Main.adamantiumPick = new adamantiumPick(Main.ADAMANTIUM).setCreativeTab(Main.tabFandomCraftTools).setUnlocalizedName("adamantiumPick").setTextureName("fandomcraft:adamantiumPick"), "adamantiumPick");
         GameRegistry.registerItem(Main.unobtainiumPick = new unobtainiumPick(Main.UNOBTAINIUM).setCreativeTab(Main.tabFandomCraftTools).setUnlocalizedName("unobtainiumPick").setTextureName("fandomcraft:unobtainiumPick"), "unobtainiumPick");
         GameRegistry.registerBlock(Main.pearlstone = new Pearlstone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("pearlstone").setBlockTextureName("fandomcraft:pearlstone"), "pearlstone");
-        GameRegistry.registerBlock(Main.pearlstoneBlock = new pearlstoneBlock().setCreativeTab(Main.tabFandomCraftBuilding).setBlockName("pearlstoneBlock").setBlockTextureName("fandomcraft:pearlstoneBlock"), "pearlstoneBlock");
-        GameRegistry.registerBlock(Main.pearlstoneBrick = new pearlstoneBlock().setCreativeTab(Main.tabFandomCraftBuilding).setBlockName("pearlstoneBrick").setBlockTextureName("fandomcraft:pearlstoneBrick"), "pearlstoneBrick");
+        GameRegistry.registerBlock(Main.pearlstoneBlock = new pearlstoneBlock().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("pearlstoneBlock").setBlockTextureName("fandomcraft:pearlstoneBlock"), "pearlstoneBlock");
+        GameRegistry.registerBlock(Main.pearlstoneBrick = new pearlstoneBlock().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("pearlstoneBrick").setBlockTextureName("fandomcraft:pearlstoneBrick"), "pearlstoneBrick");
         GameRegistry.registerBlock(Main.pearlstonePillar = new pearlstoneBlock().setBlockName("pearlstonePillar").setBlockTextureName("fandomcraft:pearlstonePillar"), "pearlstonePillar");
         GameRegistry.registerBlock(Main.hellstoneOre = new hellstoneOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("hellstoneOre").setBlockTextureName("fandomcraft:hellstoneOre"), "hellstoneOre");
-        GameRegistry.registerBlock(Main.pearlstoneChiseled = new pearlstoneBlock().setCreativeTab(Main.tabFandomCraftBuilding).setBlockName("pearlstoneChiseled").setBlockTextureName("fandomcraft:pearlstoneChiseled"), "pearlstoneChiseled");
+        GameRegistry.registerBlock(Main.pearlstoneChiseled = new pearlstoneBlock().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("pearlstoneChiseled").setBlockTextureName("fandomcraft:pearlstoneChiseled"), "pearlstoneChiseled");
         GameRegistry.registerBlock(Main.obsidianOre = new obsidianOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("obsidianOre").setBlockTextureName("fandomcraft:obsidianOre"), "obsidianOre");
         GameRegistry.registerBlock(Main.sandFossil = new sandFossil().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("sandFossil").setBlockTextureName("fandomcraft:sandFossil"), "sandFossil");
         GameRegistry.registerItem(Main.pearl = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("pearl").setTextureName("fandomcraft:pearl"), "pearl");
@@ -958,9 +957,9 @@ public class Main
         GameRegistry.registerBlock(Main.infestedDirt = new infestedDirt().setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:infestedDirt").setBlockName("infestedDirt"), "infestedDirt");
         GameRegistry.registerItem(Main.DesfangSword = new DesfangSword(Main.DestinyEmbraceKey).setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("DesfangSword").setTextureName("fandomcraft:DesfangSword"), "DesfangSword");
         GameRegistry.registerItem(Main.cloth = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("cloth").setTextureName("fandomcraft:cloth"), "cloth");
-        GameRegistry.registerBlock(Main.asphalt = new clayBlock(Material.rock).setCreativeTab(Main.tabFandomCraftBuilding).setBlockTextureName("fandomcraft:asphalt").setBlockName("asphalt"), "asphalt");
-        GameRegistry.registerBlock(Main.asphaltRoad = new clayBlock(Material.rock).setCreativeTab(Main.tabFandomCraftBuilding).setBlockTextureName("fandomcraft:asphaltRoad").setBlockName("asphaltRoad"), "asphaltRoad");
-        GameRegistry.registerBlock(Main.clothBlock = new clayBlock(Material.cloth).setCreativeTab(Main.tabFandomCraftBuilding).setBlockTextureName("fandomcraft:clothBlock").setBlockName("clothBlock"), "clothBlock");
+        GameRegistry.registerBlock(Main.asphalt = new clayBlock(Material.rock).setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:asphalt").setBlockName("asphalt"), "asphalt");
+        GameRegistry.registerBlock(Main.asphaltRoad = new clayBlock(Material.rock).setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:asphaltRoad").setBlockName("asphaltRoad"), "asphaltRoad");
+        GameRegistry.registerBlock(Main.clothBlock = new clayBlock(Material.cloth).setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:clothBlock").setBlockName("clothBlock"), "clothBlock");
         GameRegistry.registerItem(Main.tot = new ItemFood(3, 0.5f, true).setCreativeTab(Main.tabFandomCraftFood).setUnlocalizedName("tot").setTextureName("fandomcraft:tot"), "tot");
         GameRegistry.registerBlock(Main.foolsGoldOre = new foolsGoldOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("gold_ore").setBlockName("foolsGoldOre"), "foolsGoldOre");
         GameRegistry.registerItem(Main.foolsGold = new Item().setCreativeTab(Main.tabFandomCraftMisc).setTextureName("gold_ingot").setUnlocalizedName("foolsGold"), "foolsGold");
@@ -993,14 +992,14 @@ public class Main
         GameRegistry.registerItem(Main.xcomLegs, "xcomLegs");
         GameRegistry.registerItem(Main.xcomChest, "xcomChest");
         GameRegistry.registerItem(Main.energyCrystal = new Item().setUnlocalizedName("energyCrystal").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:energyCrystal"), "energyCrystal");
-        GameRegistry.registerBlock(Main.whiteWood = new wood(Material.wood).setBlockName("whiteWood").setCreativeTab(Main.tabFandomCraftBuilding).setBlockTextureName("fandomcraft:whiteWood"), "whiteWood");
-        GameRegistry.registerBlock(Main.blackWood = new wood(Material.wood).setBlockName("blackWood").setCreativeTab(Main.tabFandomCraftBuilding).setBlockTextureName("fandomcraft:blackWood"), "blackWood");
-        GameRegistry.registerBlock(Main.whiteWoodFence = new BlockFence("fandomcraft:whiteWood", Material.wood).setBlockName("whiteFence").setCreativeTab(Main.tabFandomCraftBuilding), "whiteFence");
-        GameRegistry.registerBlock(Main.blackWoodFence = new BlockFence("fandomcraft:blackWood", Material.wood).setBlockName("blackFence").setCreativeTab(Main.tabFandomCraftBuilding), "blackFence");
-        GameRegistry.registerBlock(Main.whiteWoodStairs = new stairs(Main.whiteWood, 0).setBlockName("whiteWoodStairs").setCreativeTab(Main.tabFandomCraftBuilding), "whiteWoodStairs");
-        GameRegistry.registerBlock(Main.blackWoodStairs = new stairs(Main.blackWood, 0).setBlockName("blackWoodStairs").setCreativeTab(Main.tabFandomCraftBuilding), "blackWoodStairs");
-        GameRegistry.registerBlock(Main.concrete = new RockCobble().setBlockName("concrete").setCreativeTab(Main.tabFandomCraftBuilding).setBlockTextureName("fandomcraft:concrete"), "concrete");
-        GameRegistry.registerBlock(Main.siding = new wood(Material.clay).setBlockName("siding").setCreativeTab(Main.tabFandomCraftBuilding).setBlockTextureName("fandomcraft:siding"), "siding");
+        GameRegistry.registerBlock(Main.whiteWood = new wood(Material.wood).setBlockName("whiteWood").setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:whiteWood"), "whiteWood");
+        GameRegistry.registerBlock(Main.blackWood = new wood(Material.wood).setBlockName("blackWood").setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:blackWood"), "blackWood");
+        GameRegistry.registerBlock(Main.whiteWoodFence = new BlockFence("fandomcraft:whiteWood", Material.wood).setBlockName("whiteFence").setCreativeTab(Main.tabFandomCraftBlocks), "whiteFence");
+        GameRegistry.registerBlock(Main.blackWoodFence = new BlockFence("fandomcraft:blackWood", Material.wood).setBlockName("blackFence").setCreativeTab(Main.tabFandomCraftBlocks), "blackFence");
+        GameRegistry.registerBlock(Main.whiteWoodStairs = new stairs(Main.whiteWood, 0).setBlockName("whiteWoodStairs").setCreativeTab(Main.tabFandomCraftBlocks), "whiteWoodStairs");
+        GameRegistry.registerBlock(Main.blackWoodStairs = new stairs(Main.blackWood, 0).setBlockName("blackWoodStairs").setCreativeTab(Main.tabFandomCraftBlocks), "blackWoodStairs");
+        GameRegistry.registerBlock(Main.concrete = new RockCobble().setBlockName("concrete").setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:concrete"), "concrete");
+        GameRegistry.registerBlock(Main.siding = new wood(Material.clay).setBlockName("siding").setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:siding"), "siding");
         GameRegistry.registerItem(Main.soul = new Item().setUnlocalizedName("soul").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:soul"), "soul");
         GameRegistry.registerItem(Main.soulStone = new Item().setUnlocalizedName("soulStone").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:soulStone"), "soulStone");
         GameRegistry.registerItem(Main.soulHarness = new Item().setUnlocalizedName("soulHarness").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:soulHarness"), "soulHarness");
@@ -1090,7 +1089,7 @@ public class Main
         GameRegistry.registerItem(Main.boltIcon = new Item().setUnlocalizedName("boltIcon").setTextureName("fandomcraft:thundershock"), "boltIcon");
         GameRegistry.registerItem(Main.starHammer = new EntityStarHammer(Main.ADAMANTIUM).setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("starHammer"), "starHammer");
         GameRegistry.registerItem(Main.koopaShell = new koopaShell().setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("koopaShell").setTextureName("fandomcraft:koopaShell"), "koopaShell");
-        GameRegistry.registerBlock(Main.invisible = new invisible().setCreativeTab(Main.tabFandomCraftBuilding).setBlockTextureName("fandomcraft:invisible").setBlockName("invisible"), "invisible");
+        GameRegistry.registerBlock(Main.invisible = new invisible().setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:invisible").setBlockName("invisible"), "invisible");
         GameRegistry.registerItem(Main.superShroom = new itemSuperShroom(10, 1.0f, false).setUnlocalizedName("superShroom").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:superShroom"), "superShroom");
         GameRegistry.registerItem(Main.coin = new Item().setUnlocalizedName("coin").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:coin"), "coin");
         GameRegistry.registerItem(Main.bonusCoin = new Item().setUnlocalizedName("bonusCoin").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:bonusCoin"), "bonusCoin");
@@ -1137,18 +1136,18 @@ public class Main
         GameRegistry.registerBlock(Main.shale = new BlockRock(Material.rock).setHardness(1.0f).setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("shale").setBlockTextureName("fandomcraft:shale"), "shale");
         GameRegistry.registerBlock(Main.gneiss = new BlockRock(Material.rock).setHardness(3.0f).setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("gneiss").setBlockTextureName("fandomcraft:gneiss"), "gneiss");
         GameRegistry.registerBlock(Main.cement = new BlockRock(Material.rock).setHardness(4.0f).setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("cement").setBlockTextureName("fandomcraft:cement"), "cement");
-        GameRegistry.registerBlock(Main.slatePath = new BlockRock(Material.rock).setHardness(4.0f).setCreativeTab(Main.tabFandomCraftBuilding).setBlockName("slatePath").setBlockTextureName("fandomcraft:slatePath"), "slatePath");
-        GameRegistry.registerBlock(Main.marbleBrick = new BlockRock(Material.rock).setHardness(3.0f).setCreativeTab(Main.tabFandomCraftBuilding).setBlockName("marbleBrick").setBlockTextureName("fandomcraft:marbleBrick"), "marbleBrick");
-        GameRegistry.registerBlock(Main.shaleBrick = new BlockRock(Material.rock).setHardness(4.0f).setCreativeTab(Main.tabFandomCraftBuilding).setBlockName("shaleBrick").setBlockTextureName("fandomcraft:shaleBrick"), "shaleBrick");
-        GameRegistry.registerBlock(Main.marbleStairs = new stairs(Main.marbleBrick, 0).setBlockName("marbleStairs").setCreativeTab(Main.tabFandomCraftBuilding), "marbleStairs");
-        GameRegistry.registerBlock(Main.shaleStairs = new stairs(Main.shaleBrick, 0).setBlockName("shaleStairs").setCreativeTab(Main.tabFandomCraftBuilding), "shaleStairs");
-        GameRegistry.registerBlock(Main.cementStairs = new stairs(Main.cement, 0).setBlockName("cementStairs").setCreativeTab(Main.tabFandomCraftBuilding), "cementStairs");
-        GameRegistry.registerBlock(Main.endstoneStairs = new stairs(Blocks.end_stone, 0).setBlockName("endstoneStairs").setCreativeTab(Main.tabFandomCraftBuilding), "endstoneStairs");
-        GameRegistry.registerBlock(Main.glassStairs = new stairs(Blocks.glass, 0).setBlockName("glassStairs").setCreativeTab(Main.tabFandomCraftBuilding), "glassStairs");
-        GameRegistry.registerBlock(Main.dirtStairs = new stairs(Blocks.dirt, 0).setBlockName("dirtStairs").setCreativeTab(Main.tabFandomCraftBuilding), "dirtStairs");
-        GameRegistry.registerBlock(Main.bloodstoneStairs = new stairs(Main.bloodstone, 0).setBlockName("bloodstoneStairs").setCreativeTab(Main.tabFandomCraftBuilding), "bloodstoneStairs");
-        GameRegistry.registerBlock(Main.rockStairs = new stairs(Main.RockStone, 0).setBlockName("rockStairs").setCreativeTab(Main.tabFandomCraftBuilding), "rockStairs");
-        GameRegistry.registerBlock(Main.slateStairs = new stairs(Main.slatePath, 0).setBlockName("slateStairs").setCreativeTab(Main.tabFandomCraftBuilding), "slateStairs");
+        GameRegistry.registerBlock(Main.slatePath = new BlockRock(Material.rock).setHardness(4.0f).setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("slatePath").setBlockTextureName("fandomcraft:slatePath"), "slatePath");
+        GameRegistry.registerBlock(Main.marbleBrick = new BlockRock(Material.rock).setHardness(3.0f).setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("marbleBrick").setBlockTextureName("fandomcraft:marbleBrick"), "marbleBrick");
+        GameRegistry.registerBlock(Main.shaleBrick = new BlockRock(Material.rock).setHardness(4.0f).setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("shaleBrick").setBlockTextureName("fandomcraft:shaleBrick"), "shaleBrick");
+        GameRegistry.registerBlock(Main.marbleStairs = new stairs(Main.marbleBrick, 0).setBlockName("marbleStairs").setCreativeTab(Main.tabFandomCraftBlocks), "marbleStairs");
+        GameRegistry.registerBlock(Main.shaleStairs = new stairs(Main.shaleBrick, 0).setBlockName("shaleStairs").setCreativeTab(Main.tabFandomCraftBlocks), "shaleStairs");
+        GameRegistry.registerBlock(Main.cementStairs = new stairs(Main.cement, 0).setBlockName("cementStairs").setCreativeTab(Main.tabFandomCraftBlocks), "cementStairs");
+        GameRegistry.registerBlock(Main.endstoneStairs = new stairs(Blocks.end_stone, 0).setBlockName("endstoneStairs").setCreativeTab(Main.tabFandomCraftBlocks), "endstoneStairs");
+        GameRegistry.registerBlock(Main.glassStairs = new stairs(Blocks.glass, 0).setBlockName("glassStairs").setCreativeTab(Main.tabFandomCraftBlocks), "glassStairs");
+        GameRegistry.registerBlock(Main.dirtStairs = new stairs(Blocks.dirt, 0).setBlockName("dirtStairs").setCreativeTab(Main.tabFandomCraftBlocks), "dirtStairs");
+        GameRegistry.registerBlock(Main.bloodstoneStairs = new stairs(Main.bloodstone, 0).setBlockName("bloodstoneStairs").setCreativeTab(Main.tabFandomCraftBlocks), "bloodstoneStairs");
+        GameRegistry.registerBlock(Main.rockStairs = new stairs(Main.RockStone, 0).setBlockName("rockStairs").setCreativeTab(Main.tabFandomCraftBlocks), "rockStairs");
+        GameRegistry.registerBlock(Main.slateStairs = new stairs(Main.slatePath, 0).setBlockName("slateStairs").setCreativeTab(Main.tabFandomCraftBlocks), "slateStairs");
         GameRegistry.registerItem(Main.ocarina = new Ocarina().setUnlocalizedName("ocarina").setTextureName("fandomcraft:ocarina").setCreativeTab(Main.tabFandomCraftMisc), "ocarina");
         GameRegistry.registerItem(Main.tingleTuner = new TingleTuner().setUnlocalizedName("tingleTuner").setTextureName("fandomcraft:tingleTuner").setCreativeTab(Main.tabFandomCraftMisc), "tingleTuner");
         GameRegistry.registerItem(Main.ooccoo = new Oocoo().setUnlocalizedName("ooccoo").setTextureName("fandomcraft:ooccoo").setCreativeTab(Main.tabFandomCraftMisc), "ooccoo");
@@ -1167,12 +1166,12 @@ public class Main
         GameRegistry.registerItem(Main.bomb = new itemBomb().setUnlocalizedName("bomb").setTextureName("fandomcraft:bomb").setCreativeTab(Main.tabFandomCraftWeapons), "bomb");
         GameRegistry.registerItem(Main.dekuNut = new Item().setUnlocalizedName("dekuNut").setTextureName("fandomcraft:dekuNut").setCreativeTab(Main.tabFandomCraftMisc), "dekuNut");
         GameRegistry.registerItem(Main.pellets = new Item().setUnlocalizedName("pellets").setTextureName("fandomcraft:pellets").setCreativeTab(Main.tabFandomCraftMisc), "pellets");
-        GameRegistry.registerBlock(Main.fairyTower = new UnbreakableBlock(Material.rock).setBlockName("fairyTower").setBlockTextureName("fandomcraft:fairyTower").setCreativeTab(Main.tabFandomCraftBuilding), "fairyTower");
-        GameRegistry.registerBlock(Main.fairyTowerChiseled = new UnbreakableBlock(Material.rock).setBlockName("fairyTowerChiseled").setBlockTextureName("fandomcraft:fairyTowerChiseled").setCreativeTab(Main.tabFandomCraftBuilding), "fairyTowerChiseled");
-        GameRegistry.registerBlock(Main.sepiaBrickMossy = new UnbreakableBlock(Material.rock).setBlockName("sepiaBrickMossy").setBlockTextureName("fandomcraft:sepiaBrickMossy").setCreativeTab(Main.tabFandomCraftBuilding), "sepiaBrickMossy");
-        GameRegistry.registerBlock(Main.sepiaBrick = new UnbreakableBlock(Material.rock).setBlockName("sepiaBrick").setBlockTextureName("fandomcraft:sepiaBrick").setCreativeTab(Main.tabFandomCraftBuilding), "sepiaBrick");
-        GameRegistry.registerBlock(Main.sepiaBlock = new UnbreakableBlock(Material.rock).setBlockName("sepiaBlock").setBlockTextureName("fandomcraft:sepiaBlock").setCreativeTab(Main.tabFandomCraftBuilding), "sepiaBlock");
-        GameRegistry.registerBlock(Main.sepiaThinBrick = new UnbreakableBlock(Material.rock).setBlockName("sepiaThinBrick").setBlockTextureName("fandomcraft:sepiaThinBrick").setCreativeTab(Main.tabFandomCraftBuilding), "sepiaThinBrick");
+        GameRegistry.registerBlock(Main.fairyTower = new UnbreakableBlock(Material.rock).setBlockName("fairyTower").setBlockTextureName("fandomcraft:fairyTower").setCreativeTab(Main.tabFandomCraftBlocks), "fairyTower");
+        GameRegistry.registerBlock(Main.fairyTowerChiseled = new UnbreakableBlock(Material.rock).setBlockName("fairyTowerChiseled").setBlockTextureName("fandomcraft:fairyTowerChiseled").setCreativeTab(Main.tabFandomCraftBlocks), "fairyTowerChiseled");
+        GameRegistry.registerBlock(Main.sepiaBrickMossy = new UnbreakableBlock(Material.rock).setBlockName("sepiaBrickMossy").setBlockTextureName("fandomcraft:sepiaBrickMossy").setCreativeTab(Main.tabFandomCraftBlocks), "sepiaBrickMossy");
+        GameRegistry.registerBlock(Main.sepiaBrick = new UnbreakableBlock(Material.rock).setBlockName("sepiaBrick").setBlockTextureName("fandomcraft:sepiaBrick").setCreativeTab(Main.tabFandomCraftBlocks), "sepiaBrick");
+        GameRegistry.registerBlock(Main.sepiaBlock = new UnbreakableBlock(Material.rock).setBlockName("sepiaBlock").setBlockTextureName("fandomcraft:sepiaBlock").setCreativeTab(Main.tabFandomCraftBlocks), "sepiaBlock");
+        GameRegistry.registerBlock(Main.sepiaThinBrick = new UnbreakableBlock(Material.rock).setBlockName("sepiaThinBrick").setBlockTextureName("fandomcraft:sepiaThinBrick").setCreativeTab(Main.tabFandomCraftBlocks), "sepiaThinBrick");
         GameRegistry.registerBlock(Main.waterDungeonBlock = new UnbreakableBlock(Material.rock).setBlockName("waterDungeonBlock").setBlockTextureName("fandomcraft:waterDungeonBlock").setCreativeTab(Main.tabFandomCraftDungeons), "waterDungeonBlock");
         GameRegistry.registerBlock(Main.fireDungeonBlock = new UnbreakableBlock(Material.rock).setBlockName("fireDungeonBlock").setBlockTextureName("fandomcraft:fireDungeonBlock").setCreativeTab(Main.tabFandomCraftDungeons), "fireDungeonBlock");
         GameRegistry.registerBlock(Main.forestDungeonBlock = new UnbreakableBlock(Material.rock).setBlockName("forestDungeonBlock").setBlockTextureName("fandomcraft:forestDungeonBlock").setCreativeTab(Main.tabFandomCraftDungeons), "forestDungeonBlock");
@@ -1728,7 +1727,7 @@ public class Main
         };
         Main.tabFandomCraftValuables = new CreativeTabs("tabFandomCraftValuables") {
             public Item getTabIconItem() {
-                return Main.rupeeGreen;
+                return Main.elvenSteelIngot;
             }
         };
         Main.tabFandomCraftBlocks = new CreativeTabs("tabFandomCraftBlocks") {
@@ -1751,11 +1750,7 @@ public class Main
                 return Main.RedVine;
             }
         };
-        Main.tabFandomCraftBuilding = new CreativeTabs("tabFandomCraftBuilding") {
-            public Item getTabIconItem() {
-                return Item.getItemFromBlock(Main.asphaltRoad);
-            }
-        };
+
         Main.tabFandomCraftModels = new CreativeTabs("tabFandomCraftModels") {
             public Item getTabIconItem() {
                 return Item.getItemFromBlock(Main.Plant);
