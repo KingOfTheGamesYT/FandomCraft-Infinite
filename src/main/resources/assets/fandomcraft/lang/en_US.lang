@@ -13,7 +13,7 @@ itemGroup.tabFandomCraftModels=Fandom WIP
 itemGroup.tabFandomCraftDungeons=Fandom Dungeons
 itemGroup.tabFandomCraftSpells=Fandom Spells
 itemGroup.tabFandomCraftMusic=Fandom Music
-itemGroup.junk=Junk. Ignore this.
+itemGroup.junk=Other Items
 
 keybinds.ocarina=Ocarina Songs
 keybinds.ocarina.nocturne=Nocturne of Shadow
@@ -573,7 +573,7 @@ item.saltedPeanuts.name=Salted Peanuts
 item.cheesyNachos.name=Cheesy Nachos
 item.tortilla.name=Tortilla
 item.taco.name=Taco
-tile.halite.name=Rocksalt Ore
+tile.halite.name=Halite
 item.rockSalt.name=Salt
 item.pepperSlice.name=Pepper Slice
 item.pretzel.name=Pretzel
