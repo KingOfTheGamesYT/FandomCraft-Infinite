@@ -120,7 +120,7 @@ public class HorrorReg {
         GameRegistry.registerItem(jetpack, "jetpack");
         jokepack = (new JokePack(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("jokepack").setTextureName("fandomcraft:jetpack").setCreativeTab(Main.tabFandomCraftOutfits);
         GameRegistry.registerItem(jokepack, "jokepack");
-        backpack = (new Backpack()).setUnlocalizedName("backpack").setTextureName("fandomcraft:backpack").setCreativeTab(Main.tabFandomCraftValuables);
+        backpack = (new Backpack()).setUnlocalizedName("backpack").setTextureName("fandomcraft:backpack").setCreativeTab(Main.tabFandomCraftMisc);
         GameRegistry.registerItem(backpack, "backpack");
         bloodleaf = (new Bloodleaf(Material.leaves)).setBlockName("bloodleaf").setBlockTextureName("fandomcraft:bloodleaf").setCreativeTab(Main.tabFandomCraftBlocks);
         GameRegistry.registerBlock(bloodleaf, "bloodleaf");

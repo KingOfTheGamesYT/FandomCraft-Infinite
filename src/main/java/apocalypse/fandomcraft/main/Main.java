@@ -753,26 +753,26 @@ public class Main
         GameRegistry.registerItem(Main.fancyDiamondPick = new fancyDiamondPick(Main.FancyDiamond).setCreativeTab(Main.tabFandomCraftTools).setUnlocalizedName("fancyDiamondPick").setTextureName("fandomcraft:fancyDiamondPickaxe"), "fancyDiamondPickaxe");
         GameRegistry.registerItem(Main.fancyRainbowPick = new fancyRainbowPick(Main.Rainbow).setCreativeTab(Main.tabFandomCraftTools).setUnlocalizedName("fancyRainbowPick").setTextureName("fandomcraft:fancyRainbowPickaxe"), "fancyRainbowPickaxe");
         GameRegistry.registerItem(Main.nightmarePick = new nightmarePick(Main.Nightmare).setCreativeTab(Main.tabFandomCraftTools).setUnlocalizedName("nightmarePick").setTextureName("fandomcraft:nightmarePickaxe"), "nightmarePick");
-        GameRegistry.registerItem(Main.rupeeGreen = new rupeeGreen().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeGreen").setTextureName("fandomcraft:rupee_green"), "rupeeGreen");
-        GameRegistry.registerItem(Main.rupeeBlue = new rupeeBlue().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeBlue").setTextureName("fandomcraft:rupee_blue"), "rupeeBlue");
-        GameRegistry.registerItem(Main.rupeeYellow = new rupeeYellow().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeYellow").setTextureName("fandomcraft:rupeeYellow"), "rupeeYellow");
-        GameRegistry.registerItem(Main.rupeeRed = new rupeeRed().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeRed").setTextureName("fandomcraft:rupee_red"), "rupeeRed");
-        GameRegistry.registerItem(Main.rupeePurple = new rupeePurple().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeePurple").setTextureName("fandomcraft:rupeePurple"), "rupeePurple");
-        GameRegistry.registerItem(Main.rupeeOrange = new rupeeOrange().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeOrange").setTextureName("fandomcraft:rupeeOrange"), "rupeeOrange");
-        GameRegistry.registerItem(Main.rupeeSilver = new rupeeSilver().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("rupeeSilver").setTextureName("fandomcraft:rupeeSilver"), "rupeeSilver");
+        GameRegistry.registerItem(Main.rupeeGreen = new rupeeGreen().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("rupeeGreen").setTextureName("fandomcraft:rupee_green"), "rupeeGreen");
+        GameRegistry.registerItem(Main.rupeeBlue = new rupeeBlue().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("rupeeBlue").setTextureName("fandomcraft:rupee_blue"), "rupeeBlue");
+        GameRegistry.registerItem(Main.rupeeYellow = new rupeeYellow().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("rupeeYellow").setTextureName("fandomcraft:rupeeYellow"), "rupeeYellow");
+        GameRegistry.registerItem(Main.rupeeRed = new rupeeRed().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("rupeeRed").setTextureName("fandomcraft:rupee_red"), "rupeeRed");
+        GameRegistry.registerItem(Main.rupeePurple = new rupeePurple().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("rupeePurple").setTextureName("fandomcraft:rupeePurple"), "rupeePurple");
+        GameRegistry.registerItem(Main.rupeeOrange = new rupeeOrange().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("rupeeOrange").setTextureName("fandomcraft:rupeeOrange"), "rupeeOrange");
+        GameRegistry.registerItem(Main.rupeeSilver = new rupeeSilver().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("rupeeSilver").setTextureName("fandomcraft:rupeeSilver"), "rupeeSilver");
         GameRegistry.registerItem(Main.emptyBottle = new emptyBottle().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("emptyBottle").setTextureName("fandomcraft:emptyBottle"), "emptyBottle");
         GameRegistry.registerItem(Main.potionRed = new potionRed(0, 1.0f, false).setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("potionRed").setTextureName("fandomcraft:potionRed"), "potionRed");
         GameRegistry.registerItem(Main.potionBlue = new potionBlue(16, 1.0f, false).setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("potionBlue").setTextureName("fandomcraft:potionBlue"), "potionBlue");
         GameRegistry.registerItem(Main.potionGreen = new potionGreen(16, 1.0f, false).setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("potionGreen").setTextureName("fandomcraft:potionGreen"), "potionGreen");
         GameRegistry.registerItem(Main.milkBottle = new milkBottle().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("milkBottle").setTextureName("fandomcraft:milkBottle"), "milkBottle");
-        GameRegistry.registerItem(Main.goldenFeather = new goldenFeather().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("goldenFeather").setTextureName("fandomcraft:goldenFeather"), "goldenFeather");
+        GameRegistry.registerItem(Main.goldenFeather = new goldenFeather().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("goldenFeather").setTextureName("fandomcraft:goldenFeather"), "goldenFeather");
         GameRegistry.registerItem(Main.jellyRed = new jellyRed().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("jellyRed").setTextureName("fandomcraft:jellyRed"), "jellyRed");
         GameRegistry.registerItem(Main.jellyBlue = new jellyBlue().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("jellyBlue").setTextureName("fandomcraft:jellyBlue"), "jellyBlue");
         GameRegistry.registerItem(Main.jellyGreen = new jellyGreen().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("jellyGreen").setTextureName("fandomcraft:jellyGreen"), "jellyGreen");
-        GameRegistry.registerItem(Main.hilt = new hilt().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("hilt").setTextureName("fandomcraft:hilt"), "hilt");
-        GameRegistry.registerItem(Main.jewelledHilt = new jewelledHilt().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("jewelledHilt").setTextureName("fandomcraft:jewelledHilt"), "jewelledHilt");
-        GameRegistry.registerItem(Main.blade = new blade().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("blade").setTextureName("fandomcraft:blade"), "blade");
-        GameRegistry.registerItem(Main.temperedBlade = new temperedBlade().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("temperedBlade").setTextureName("fandomcraft:temperedBlade"), "temperedBlade");
+        GameRegistry.registerItem(Main.hilt = new hilt().setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("hilt").setTextureName("fandomcraft:hilt"), "hilt");
+        GameRegistry.registerItem(Main.jewelledHilt = new jewelledHilt().setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("jewelledHilt").setTextureName("fandomcraft:jewelledHilt"), "jewelledHilt");
+        GameRegistry.registerItem(Main.blade = new blade().setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("blade").setTextureName("fandomcraft:blade"), "blade");
+        GameRegistry.registerItem(Main.temperedBlade = new temperedBlade().setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("temperedBlade").setTextureName("fandomcraft:temperedBlade"), "temperedBlade");
         GameRegistry.registerItem(Main.insignia = new insignia().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("insignia").setTextureName("fandomcraft:insignia"), "insignia");
         GameRegistry.registerItem(Main.goddessStone = new goddessStone().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("goddessStone").setTextureName("fandomcraft:goddessStone"), "goddessStone");
         GameRegistry.registerItem(Main.Triforce = new Triforce().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("Triforce").setTextureName("fandomcraft:Triforce"), "Triforce");
@@ -941,9 +941,9 @@ public class Main
         GameRegistry.registerBlock(Main.obsidianOre = new obsidianOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("obsidianOre").setBlockTextureName("fandomcraft:obsidianOre"), "obsidianOre");
         GameRegistry.registerBlock(Main.sandFossil = new sandFossil().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("sandFossil").setBlockTextureName("fandomcraft:sandFossil"), "sandFossil");
         GameRegistry.registerItem(Main.pearl = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("pearl").setTextureName("fandomcraft:pearl"), "pearl");
-        GameRegistry.registerItem(Main.hellstoneIngot = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("hellstoneIngot").setTextureName("fandomcraft:hellstoneIngot"), "hellstoneIngot");
+        GameRegistry.registerItem(Main.hellstoneIngot = new Item().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("hellstoneIngot").setTextureName("fandomcraft:hellstoneIngot"), "hellstoneIngot");
         GameRegistry.registerItem(Main.obsidianChunk = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("obsidianChunk").setTextureName("fandomcraft:obsidianChunk"), "obsidianChunk");
-        GameRegistry.registerItem(Main.aquaIngot = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("aquaIngot").setTextureName("fandomcraft:aquaIngot"), "aquaIngot");
+        GameRegistry.registerItem(Main.aquaIngot = new Item().setCreativeTab(Main.tabFandomCraftValuables).setUnlocalizedName("aquaIngot").setTextureName("fandomcraft:aquaIngot"), "aquaIngot");
         GameRegistry.registerItem(Main.aquaEssence = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("aquaEssence").setTextureName("fandomcraft:aquaEssence"), "aquaEssence");
         GameRegistry.registerItem(Main.earthEssence = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("earthEssence").setTextureName("fandomcraft:earthEssence"), "earthEssence");
         GameRegistry.registerItem(Main.fireEssence = new Item().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("fireEssence").setTextureName("fandomcraft:fireEssence"), "fireEssence");
@@ -961,7 +961,7 @@ public class Main
         GameRegistry.registerBlock(Main.clothBlock = new clayBlock(Material.cloth).setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:clothBlock").setBlockName("clothBlock"), "clothBlock");
         GameRegistry.registerItem(Main.tot = new ItemFood(3, 0.5f, true).setCreativeTab(Main.tabFandomCraftFood).setUnlocalizedName("tot").setTextureName("fandomcraft:tot"), "tot");
         GameRegistry.registerBlock(Main.foolsGoldOre = new foolsGoldOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("gold_ore").setBlockName("foolsGoldOre"), "foolsGoldOre");
-        GameRegistry.registerItem(Main.foolsGold = new Item().setCreativeTab(Main.tabFandomCraftMisc).setTextureName("gold_ingot").setUnlocalizedName("foolsGold"), "foolsGold");
+        GameRegistry.registerItem(Main.foolsGold = new Item().setCreativeTab(Main.tabFandomCraftValuables).setTextureName("gold_ingot").setUnlocalizedName("foolsGold"), "foolsGold");
         GameRegistry.registerItem(Main.dampMulch = new dampMulch().setUnlocalizedName("dampMulch").setCreativeTab(Main.tabFandomCraftMisc), "dampMulch");
         GameRegistry.registerItem(Main.stableMulch = new stableMulch().setUnlocalizedName("stableMulch").setCreativeTab(Main.tabFandomCraftMisc), "stableMulch");
         GameRegistry.registerItem(Main.growthMulch = new growthMulch().setUnlocalizedName("growthMulch").setCreativeTab(Main.tabFandomCraftMisc), "growthMulch");
@@ -1020,7 +1020,7 @@ public class Main
         GameRegistry.registerItem(Main.valiantKnife = new ItemSword(Main.UNOBTAINIUM).setUnlocalizedName("valiantKnife").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:valiantKnife"), "valiantKnife");
         GameRegistry.registerItem(Main.excalipoor = new ItemSword(Item.ToolMaterial.WOOD).setUnlocalizedName("excalipoor").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:excalipoor"), "excalipoor");
         GameRegistry.registerItem(Main.iceRod = new iceRod(Item.ToolMaterial.WOOD).setUnlocalizedName("iceRod").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:iceRod"), "iceRod");
-        GameRegistry.registerItem(Main.oversoul = new Item().setUnlocalizedName("oversoul").setCreativeTab(Main.tabFandomCraftValuables).setTextureName("fandomcraft:oversoul"), "oversoul");
+        GameRegistry.registerItem(Main.oversoul = new Item().setUnlocalizedName("oversoul").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:oversoul"), "oversoul");
         GameRegistry.registerItem(Main.spiritMedium = new ItemSword(Item.ToolMaterial.EMERALD).setUnlocalizedName("spiritMedium").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:spiritMedium"), "spiritMedium");
         GameRegistry.registerItem(Main.harusame = new ItemSword(Main.H1).setUnlocalizedName("harusame").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:harusame"), "harusame");
         GameRegistry.registerItem(Main.harusame2 = new ItemSword(Main.H2).setUnlocalizedName("harusame2").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:harusame2"), "harusame2");
@@ -1054,11 +1054,11 @@ public class Main
         GameRegistry.registerTileEntity((Class)TileEntityCuttingBoard.class, "CuttingBoard");
         GameRegistry.registerBlock(Main.Skillet = new EntitySkillet().setCreativeTab(Main.tabFandomCraftModels).setBlockName("skillet").setBlockTextureName("fandomcraft:skillet"), "Skillet");
         GameRegistry.registerTileEntity((Class)TileEntitySkillet.class, "Skillet");
-        GameRegistry.registerItem(Main.masamune = new EntityMasamune(Main.OneWingedAngelKey).setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("masamune"), "masamune");
-        GameRegistry.registerItem(Main.legendMasterSword = new EntityMasterSword(Main.UltimaKey).setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("legendMasterSword"), "legendMasterSword");
+        GameRegistry.registerItem(Main.masamune = new EntityMasamune(Main.OneWingedAngelKey).setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("masamune"), "masamune");
+        GameRegistry.registerItem(Main.legendMasterSword = new EntityMasterSword(Main.UltimaKey).setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("legendMasterSword"), "legendMasterSword");
         GameRegistry.registerItem(Main.compoundBow = new compoundBow().setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("compoundBow"), "compoundBow");
         GameRegistry.registerItem(Main.eridiumArrow = new Item().setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("eridiumArrow").setTextureName("fandomcraft:enderArrow"), "eridiumArrow");
-        GameRegistry.registerItem(Main.pikoHammer = new EntityPikoHammer(Main.ADAMANTIUM).setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("pikoHammer"), "pikoHammer");
+        GameRegistry.registerItem(Main.pikoHammer = new EntityPikoHammer(Main.ADAMANTIUM).setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("pikoHammer"), "pikoHammer");
         GameRegistry.registerItem(Main.cardboardBox = new EntityCardboardBox().setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("cardboardBox"), "cardboardBox");
         GameRegistry.registerItem(Main.invisibilityCloak = new invisibilityCloak(Main.Nothing, 4, 1).setUnlocalizedName("invisibilityCloak").setCreativeTab(Main.tabFandomCraftOutfits).setTextureName("fandomcraft:invisibilityCloak"), "invisibilityCloak");
         GameRegistry.registerItem(Main.smokeGrenade = new smokeBomb().setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("smokeGrenade").setTextureName("fandomcraft:smokeGrenade"), "smokeGrenade");
@@ -1086,8 +1086,8 @@ public class Main
         GameRegistry.registerItem(Main.chaoEggPink = new chaoEggPink().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("chaoEggPink").setTextureName("fandomcraft:chaoEggPink"), "chaoEggPink");
         GameRegistry.registerItem(Main.chaoEggGreen = new chaoEggGreen().setCreativeTab(Main.tabFandomCraftMisc).setUnlocalizedName("chaoEggGreen").setTextureName("fandomcraft:chaoEggGreen"), "chaoEggGreen");
         GameRegistry.registerItem(Main.boltIcon = new Item().setUnlocalizedName("boltIcon").setTextureName("fandomcraft:thundershock"), "boltIcon");
-        GameRegistry.registerItem(Main.starHammer = new EntityStarHammer(Main.ADAMANTIUM).setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("starHammer"), "starHammer");
-        GameRegistry.registerItem(Main.koopaShell = new koopaShell().setCreativeTab(Main.tabFandomCraftModels).setUnlocalizedName("koopaShell").setTextureName("fandomcraft:koopaShell"), "koopaShell");
+        GameRegistry.registerItem(Main.starHammer = new EntityStarHammer(Main.ADAMANTIUM).setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("starHammer"), "starHammer");
+        GameRegistry.registerItem(Main.koopaShell = new koopaShell().setCreativeTab(Main.tabFandomCraftWeapons).setUnlocalizedName("koopaShell").setTextureName("fandomcraft:koopaShell"), "koopaShell");
         GameRegistry.registerBlock(Main.invisible = new invisible().setCreativeTab(Main.tabFandomCraftBlocks).setBlockTextureName("fandomcraft:invisible").setBlockName("invisible"), "invisible");
         GameRegistry.registerItem(Main.superShroom = new itemSuperShroom(10, 1.0f, false).setUnlocalizedName("superShroom").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:superShroom"), "superShroom");
         GameRegistry.registerItem(Main.coin = new Item().setUnlocalizedName("coin").setCreativeTab(Main.tabFandomCraftMisc).setTextureName("fandomcraft:coin"), "coin");
@@ -1160,11 +1160,11 @@ public class Main
         GameRegistry.registerItem(Main.song6 = new Item().setUnlocalizedName("song6").setTextureName("fandomcraft:song6").setCreativeTab(Main.tabFandomCraftSpells), "song6");
         GameRegistry.registerItem(Main.song7 = new Item().setUnlocalizedName("song7").setTextureName("fandomcraft:song7").setCreativeTab(Main.tabFandomCraftSpells), "song7");
         GameRegistry.registerBlock(Main.quicksand = new Quicksand().setBlockName("quicksand").setBlockTextureName("sand").setCreativeTab(Main.tabFandomCraftBlocks), "quicksand");
-        GameRegistry.registerItem(Main.skullNecklace = new Item().setUnlocalizedName("skullNecklace").setTextureName("fandomcraft:skullNecklace").setCreativeTab(Main.tabFandomCraftValuables), "skullNecklace");
-        GameRegistry.registerItem(Main.knightsCrest = new Item().setUnlocalizedName("knightsCrest").setTextureName("fandomcraft:knightsCrest").setCreativeTab(Main.tabFandomCraftValuables), "knightsCrest");
+        GameRegistry.registerItem(Main.skullNecklace = new Item().setUnlocalizedName("skullNecklace").setTextureName("fandomcraft:skullNecklace").setCreativeTab(Main.tabFandomCraftMisc), "skullNecklace");
+        GameRegistry.registerItem(Main.knightsCrest = new Item().setUnlocalizedName("knightsCrest").setTextureName("fandomcraft:knightsCrest").setCreativeTab(Main.tabFandomCraftMisc), "knightsCrest");
         GameRegistry.registerItem(Main.bomb = new itemBomb().setUnlocalizedName("bomb").setTextureName("fandomcraft:bomb").setCreativeTab(Main.tabFandomCraftWeapons), "bomb");
-        GameRegistry.registerItem(Main.dekuNut = new Item().setUnlocalizedName("dekuNut").setTextureName("fandomcraft:dekuNut").setCreativeTab(Main.tabFandomCraftMisc), "dekuNut");
-        GameRegistry.registerItem(Main.pellets = new Item().setUnlocalizedName("pellets").setTextureName("fandomcraft:pellets").setCreativeTab(Main.tabFandomCraftMisc), "pellets");
+        GameRegistry.registerItem(Main.dekuNut = new Item().setUnlocalizedName("dekuNut").setTextureName("fandomcraft:dekuNut").setCreativeTab(Main.tabFandomCraftWeapons), "dekuNut");
+        GameRegistry.registerItem(Main.pellets = new Item().setUnlocalizedName("pellets").setTextureName("fandomcraft:pellets").setCreativeTab(Main.tabFandomCraftWeapons), "pellets");
         GameRegistry.registerBlock(Main.fairyTower = new UnbreakableBlock(Material.rock).setBlockName("fairyTower").setBlockTextureName("fandomcraft:fairyTower").setCreativeTab(Main.tabFandomCraftBlocks), "fairyTower");
         GameRegistry.registerBlock(Main.fairyTowerChiseled = new UnbreakableBlock(Material.rock).setBlockName("fairyTowerChiseled").setBlockTextureName("fandomcraft:fairyTowerChiseled").setCreativeTab(Main.tabFandomCraftBlocks), "fairyTowerChiseled");
         GameRegistry.registerBlock(Main.sepiaBrickMossy = new UnbreakableBlock(Material.rock).setBlockName("sepiaBrickMossy").setBlockTextureName("fandomcraft:sepiaBrickMossy").setCreativeTab(Main.tabFandomCraftBlocks), "sepiaBrickMossy");
@@ -1206,8 +1206,8 @@ public class Main
         GameRegistry.registerItem(Main.ruby = new Item().setUnlocalizedName("ruby").setTextureName("fandomcraft:ruby").setCreativeTab(Main.tabFandomCraftMisc), "ruby");
         GameRegistry.registerItem(Main.amethyst = new Item().setUnlocalizedName("amethyst").setTextureName("fandomcraft:amethyst").setCreativeTab(Main.tabFandomCraftMisc), "amethyst");
         GameRegistry.registerItem(Main.jet = new Item().setUnlocalizedName("jet").setTextureName("fandomcraft:jet").setCreativeTab(Main.tabFandomCraftMisc), "jet");
-        GameRegistry.registerItem(Main.bullet = new Item().setUnlocalizedName("bullet").setTextureName("fandomcraft:bullet").setCreativeTab(Main.tabFandomCraftMisc), "bullet");
-        GameRegistry.registerItem(Main.bolt = new Item().setUnlocalizedName("bolt").setTextureName("fandomcraft:bolt").setCreativeTab(Main.tabFandomCraftMisc), "bolt");
+        GameRegistry.registerItem(Main.bullet = new Item().setUnlocalizedName("bullet").setTextureName("fandomcraft:bullet").setCreativeTab(Main.tabFandomCraftWeapons), "bullet");
+        GameRegistry.registerItem(Main.bolt = new Item().setUnlocalizedName("bolt").setTextureName("fandomcraft:bolt").setCreativeTab(Main.tabFandomCraftWeapons), "bolt");
         GameRegistry.registerItem(Main.shotBullet = new Item().setUnlocalizedName("shotBullet").setTextureName("fandomcraft:bullet_2"), "shotBullet");
         GameRegistry.registerItem(Main.cider = new FableFood(6, 1.0f, false, true).setUnlocalizedName("cider").setTextureName("fandomcraft:cider").setCreativeTab(Main.tabFandomCraftFood), "cider");
         GameRegistry.registerItem(Main.chocolate = new FableFood(6, 1.0f, false, false).setUnlocalizedName("chocolate").setTextureName("fandomcraft:chocolate").setCreativeTab(Main.tabFandomCraftFood), "chocolate");
@@ -1764,11 +1764,7 @@ public class Main
                 return Main.song4;
             }
         };
-        Main.junk = new CreativeTabs("junk") {
-            public Item getTabIconItem() {
-                return Items.rotten_flesh;
-            }
-        };
+     
         Main.tabFandomCraftMusic = new CreativeTabs("tabFandomCraftMusic") {
             public Item getTabIconItem() {
                 return HorrorReg.record;

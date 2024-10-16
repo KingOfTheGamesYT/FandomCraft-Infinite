@@ -14,7 +14,7 @@ public class RedLion extends ItemBoat
 {
     public RedLion() {
         this.maxStackSize = 1;
-        this.setCreativeTab(Main.tabFandomCraftTools);
+        this.setCreativeTab(Main.tabFandomCraftMisc);
     }
     
     public ItemStack onItemRightClick(final ItemStack itemStackIn, final World worldIn, final EntityPlayer player) {
