@@ -20,8 +20,7 @@ public class ArmCannon extends Item
     }
     
     public void addInformation(final ItemStack item, final EntityPlayer player, final List list, final boolean par4) {
-        list.add("Requires Energy Tanks as ammo");
-        list.add("unless wearing the Power Suit.");
+        list.add("Requires Energy Tanks and Crystals as ammo");
     }
     
     public void onPlayerStoppedUsing(final ItemStack stack, final World world, final EntityPlayer player, final int i) {
