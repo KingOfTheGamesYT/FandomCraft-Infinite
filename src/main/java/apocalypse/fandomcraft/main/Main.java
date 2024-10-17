@@ -1211,7 +1211,7 @@ public class Main
         GameRegistry.registerItem(Main.shotBullet = new Item().setUnlocalizedName("shotBullet").setTextureName("fandomcraft:bullet_2"), "shotBullet");
         GameRegistry.registerItem(Main.cider = new FableFood(6, 1.0f, false, true).setUnlocalizedName("cider").setTextureName("fandomcraft:cider").setCreativeTab(Main.tabFandomCraftFood), "cider");
         GameRegistry.registerItem(Main.chocolate = new FableFood(6, 1.0f, false, false).setUnlocalizedName("chocolate").setTextureName("fandomcraft:chocolate").setCreativeTab(Main.tabFandomCraftFood), "chocolate");
-        GameRegistry.registerItem(Main.avosTear = new FableSword("'The hidden sword'", 2400, 19.0f, false, 0).setUnlocalizedName("avosTear").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:avosTear"), "avosTear");
+        GameRegistry.registerItem(Main.avosTear = new FableSword("'The hidden sword'", 2400, 19.0f, true, 0).setUnlocalizedName("avosTear").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:avosTear"), "avosTear");
         GameRegistry.registerItem(Main.cleaver = new FableSword("", 540, 6.0f, false, 0).setUnlocalizedName("cleaver").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:cleaver"), "cleaver");
         GameRegistry.registerItem(Main.cutlass = new FableSword("", 380, 6.5f, false, 0).setUnlocalizedName("cutlass").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:cutlass"), "cutlass");
         GameRegistry.registerItem(Main.fryingPan = new FableSword("'Mob omelet'", 1000, 6.0f, false, 0).setUnlocalizedName("fryingPan").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:fryingPan"), "fryingPan");
@@ -1219,10 +1219,10 @@ public class Main
         GameRegistry.registerItem(Main.pickhammer = new FablePickaxe(Main.Pickhammer).setUnlocalizedName("pickhammer").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:pickhammer"), "pickhammer");
         GameRegistry.registerItem(Main.mace = new FableSword("", 515, 6.5f, false, 0).setUnlocalizedName("mace").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:mace"), "mace");
         GameRegistry.registerItem(Main.greataxe = new FableAxe(Main.GreatAxe).setUnlocalizedName("greataxe").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:greataxe"), "greataxe");
-        GameRegistry.registerItem(Main.swordOfAeons = new FableSword("'The power of Albion'", 4000, 25.0f, false, 0).setUnlocalizedName("swordOfAeons").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:swordOfAeons"), "swordOfAeons");
+        GameRegistry.registerItem(Main.swordOfAeons = new FableSword("'The power of Albion'", 4000, 25.0f, true, 0).setUnlocalizedName("swordOfAeons").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:swordOfAeons"), "swordOfAeons");
         GameRegistry.registerItem(Main.katana = new FableSword("", 320, 7.0f, false, 0).setUnlocalizedName("katana").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:katana"), "katana");
-        GameRegistry.registerItem(Main.harbinger = new FableSword("'...of death'", 4000, 12.0f, false, 0).setUnlocalizedName("harbinger").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:harbinger"), "harbinger");
-        GameRegistry.registerItem(Main.axeOfDisharmony = new FableSword("'Heavy metal slayage'", 4000, 14.0f, false, 0).setUnlocalizedName("axeOfDisharmony").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:axeOfDisharmony"), "axeOfDisharmony");
+        GameRegistry.registerItem(Main.harbinger = new FableSword("'...of death'", 4000, 12.0f, true, 0).setUnlocalizedName("harbinger").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:harbinger"), "harbinger");
+        GameRegistry.registerItem(Main.axeOfDisharmony = new FableSword("'Heavy metal slayage'", 4000, 14.0f, true, 0).setUnlocalizedName("axeOfDisharmony").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:axeOfDisharmony"), "axeOfDisharmony");
         GameRegistry.registerItem(Main.crossbow = new Crossbow().setUnlocalizedName("crossbow").setTextureName("fandomcraft:crossbow").setCreativeTab(Main.tabFandomCraftWeapons), "crossbow");
         GameRegistry.registerItem(Main.halsRifle = new Rifle().setUnlocalizedName("halsRifle").setTextureName("fandomcraft:halsRifle").setCreativeTab(Main.tabFandomCraftWeapons), "halsRifle");
         System.out.print("[FandomCraft] Registered blocks & items");
@@ -1764,7 +1764,7 @@ public class Main
                 return Main.song4;
             }
         };
-     
+
         Main.tabFandomCraftMusic = new CreativeTabs("tabFandomCraftMusic") {
             public Item getTabIconItem() {
                 return HorrorReg.record;
