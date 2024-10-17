@@ -38,7 +38,7 @@ public class Slingshot extends Item
         }
         j = event.charge;
         final boolean flag = player.capabilities.isCreativeMode;
-        if (flag || player.inventory.hasItem(Main.pellets)) {
+        if (flag || player.inventory.hasItem(Main.DEKUSEED)) {
             float f = j / 20.0f;
             f = (f * f + f * 2.0f) / 3.0f;
             if (f < 0.1) {
@@ -50,7 +50,7 @@ public class Slingshot extends Item
             final EntityPellet entityenergyball = new EntityPellet(world, (EntityLivingBase)player, f * 2.0f);
             stack.damageItem(1, (EntityLivingBase)player);
             world.playSoundAtEntity((Entity)player, "random.bow", 0.5f, world.rand.nextFloat() * 0.1f + 0.9f);
-            player.inventory.consumeInventoryItem(Main.pellets);
+            player.inventory.consumeInventoryItem(Main.DEKUSEED);
             if (!world.isRemote) {
                 world.spawnEntityInWorld((Entity)entityenergyball);
             }
@@ -78,7 +78,7 @@ public class Slingshot extends Item
         if (event.isCanceled()) {
             return event.result;
         }
-        if (par3EntityPlayer.capabilities.isCreativeMode || par3EntityPlayer.inventory.hasItem(Main.pellets)) {
+        if (par3EntityPlayer.capabilities.isCreativeMode || par3EntityPlayer.inventory.hasItem(Main.DEKUSEED)) {
             par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
         }
         return par1ItemStack;

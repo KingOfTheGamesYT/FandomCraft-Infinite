@@ -310,11 +310,13 @@
      RenderingRegistry.registerEntityRenderingHandler(GrappledHook.class, (Render)new RenderSnowball(Main.grapplehook));
      RenderingRegistry.registerEntityRenderingHandler(EntityBomb.class, (Render)new RenderSnowball(Main.bomb));
      RenderingRegistry.registerEntityRenderingHandler(EntityPumpkinBomb.class, (Render)new RenderSnowball(HorrorReg.pumpkinBomb));
-     RenderingRegistry.registerEntityRenderingHandler(EntityDekuNut.class, (Render)new RenderSnowball(Main.dekuNut));
-     RenderingRegistry.registerEntityRenderingHandler(EntityPellet.class, (Render)new RenderSnowball(Main.pellets));
+     RenderingRegistry.registerEntityRenderingHandler(EntityDekuNut.class, (Render)new RenderSnowball(Main.DEKUSEED));
+     RenderingRegistry.registerEntityRenderingHandler(EntityPellet.class, (Render)new RenderSnowball(Main.DEKUSEED));
      RenderingRegistry.registerEntityRenderingHandler(EntityChakram.class, (Render)new RenderSnowball(Main.chakram));
      RenderingRegistry.registerEntityRenderingHandler(EntityThrowingKnife.class, (Render)new RenderSnowball(HorrorReg.throwingKnife));
      RenderingRegistry.registerEntityRenderingHandler(ProjectileBullet.class, (Render)new RenderSnowball(Main.shotBullet));
+     RenderingRegistry.registerEntityRenderingHandler(EntityKoopaShell.class, (Render)new RenderSnowball(Main.koopaShell));
+
    }
 
    public ModelBiped getArmorModel(int id) {

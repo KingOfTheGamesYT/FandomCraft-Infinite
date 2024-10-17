@@ -655,6 +655,7 @@ public class Main
     public static Item axeOfDisharmony;
     public static Item halsRifle;
     public static Item crossbow;
+    public static Item DEKUSEED;
     public static Entity balverine;
     public static Entity bandit;
     public static Entity beetle;
@@ -1163,7 +1164,7 @@ public class Main
         GameRegistry.registerItem(Main.skullNecklace = new Item().setUnlocalizedName("skullNecklace").setTextureName("fandomcraft:skullNecklace").setCreativeTab(Main.tabFandomCraftMisc), "skullNecklace");
         GameRegistry.registerItem(Main.knightsCrest = new Item().setUnlocalizedName("knightsCrest").setTextureName("fandomcraft:knightsCrest").setCreativeTab(Main.tabFandomCraftMisc), "knightsCrest");
         GameRegistry.registerItem(Main.bomb = new itemBomb().setUnlocalizedName("bomb").setTextureName("fandomcraft:bomb").setCreativeTab(Main.tabFandomCraftWeapons), "bomb");
-        GameRegistry.registerItem(Main.dekuNut = new Item().setUnlocalizedName("dekuNut").setTextureName("fandomcraft:dekuNut").setCreativeTab(Main.tabFandomCraftMisc), "dekuNut");
+        GameRegistry.registerItem(Main.dekuNut = new Item().setMaxStackSize(1).setUnlocalizedName("dekuNut").setTextureName("fandomcraft:dekuNut").setCreativeTab(Main.tabFandomCraftMisc), "dekuNut");
         GameRegistry.registerItem(Main.pellets = new Item().setUnlocalizedName("pellets").setTextureName("fandomcraft:pellets").setCreativeTab(Main.tabFandomCraftWeapons), "pellets");
         GameRegistry.registerBlock(Main.fairyTower = new UnbreakableBlock(Material.rock).setBlockName("fairyTower").setBlockTextureName("fandomcraft:fairyTower").setCreativeTab(Main.tabFandomCraftBlocks), "fairyTower");
         GameRegistry.registerBlock(Main.fairyTowerChiseled = new UnbreakableBlock(Material.rock).setBlockName("fairyTowerChiseled").setBlockTextureName("fandomcraft:fairyTowerChiseled").setCreativeTab(Main.tabFandomCraftBlocks), "fairyTowerChiseled");
@@ -1225,6 +1226,7 @@ public class Main
         GameRegistry.registerItem(Main.axeOfDisharmony = new FableSword("'Heavy metal slayage'", 4000, 14.0f, true, 0).setUnlocalizedName("axeOfDisharmony").setCreativeTab(Main.tabFandomCraftWeapons).setTextureName("fandomcraft:axeOfDisharmony"), "axeOfDisharmony");
         GameRegistry.registerItem(Main.crossbow = new Crossbow().setUnlocalizedName("crossbow").setTextureName("fandomcraft:crossbow").setCreativeTab(Main.tabFandomCraftWeapons), "crossbow");
         GameRegistry.registerItem(Main.halsRifle = new Rifle().setUnlocalizedName("halsRifle").setTextureName("fandomcraft:halsRifle").setCreativeTab(Main.tabFandomCraftWeapons), "halsRifle");
+        GameRegistry.registerItem(Main.DEKUSEED = new rupee("Not edible or plantable, but hard enough to use as slingshot ammo.").setUnlocalizedName("dekuseed").setTextureName("fandomcraft:dekuseed").setCreativeTab(Main.tabFandomCraftWeapons), "dekuseed");
         System.out.print("[FandomCraft] Registered blocks & items");
         GameRegistry.addSmelting(Main.Limestone, new ItemStack(Main.fiberglass), 0.8f);
         GameRegistry.addSmelting(Main.orichulumOre, new ItemStack(Main.orichulumIngot), 1.0f);
