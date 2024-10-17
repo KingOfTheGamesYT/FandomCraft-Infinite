@@ -1163,7 +1163,7 @@ public class Main
         GameRegistry.registerItem(Main.skullNecklace = new Item().setUnlocalizedName("skullNecklace").setTextureName("fandomcraft:skullNecklace").setCreativeTab(Main.tabFandomCraftMisc), "skullNecklace");
         GameRegistry.registerItem(Main.knightsCrest = new Item().setUnlocalizedName("knightsCrest").setTextureName("fandomcraft:knightsCrest").setCreativeTab(Main.tabFandomCraftMisc), "knightsCrest");
         GameRegistry.registerItem(Main.bomb = new itemBomb().setUnlocalizedName("bomb").setTextureName("fandomcraft:bomb").setCreativeTab(Main.tabFandomCraftWeapons), "bomb");
-        GameRegistry.registerItem(Main.dekuNut = new Item().setUnlocalizedName("dekuNut").setTextureName("fandomcraft:dekuNut").setCreativeTab(Main.tabFandomCraftWeapons), "dekuNut");
+        GameRegistry.registerItem(Main.dekuNut = new Item().setUnlocalizedName("dekuNut").setTextureName("fandomcraft:dekuNut").setCreativeTab(Main.tabFandomCraftMisc), "dekuNut");
         GameRegistry.registerItem(Main.pellets = new Item().setUnlocalizedName("pellets").setTextureName("fandomcraft:pellets").setCreativeTab(Main.tabFandomCraftWeapons), "pellets");
         GameRegistry.registerBlock(Main.fairyTower = new UnbreakableBlock(Material.rock).setBlockName("fairyTower").setBlockTextureName("fandomcraft:fairyTower").setCreativeTab(Main.tabFandomCraftBlocks), "fairyTower");
         GameRegistry.registerBlock(Main.fairyTowerChiseled = new UnbreakableBlock(Material.rock).setBlockName("fairyTowerChiseled").setBlockTextureName("fandomcraft:fairyTowerChiseled").setCreativeTab(Main.tabFandomCraftBlocks), "fairyTowerChiseled");

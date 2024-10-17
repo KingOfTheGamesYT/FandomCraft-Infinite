@@ -21,7 +21,7 @@ public class Slingshot extends Item
     
     public Slingshot() {
         this.maxStackSize = 1;
-        this.setMaxDamage(128);
+        this.setMaxDamage(32);
     }
     
     public void addInformation(final ItemStack item, final EntityPlayer player, final List list, final boolean par4) {

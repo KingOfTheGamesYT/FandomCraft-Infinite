@@ -67,8 +67,6 @@
 
            float damage = 4.0F;
            mop.entityHit.attackEntityFrom(DamageSource.causeThrownDamage((Entity)this, (Entity)getThrower()), damage);
-           living.addPotionEffect(new PotionEffect(Potion.weakness.id, 2, 1));
-           living.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 3, 2));
          }
 
          for (int l = 0; l < 5; l++)
@@ -77,7 +75,6 @@
          }
        }
      }
-     playSound("mob.slime.attack", 1.0F, 1.0F);
      if (!this.worldObj.isRemote)
      {
        setDead();
