@@ -1776,7 +1776,7 @@ public class Main
         Main.CommonGen = new CommonBlockGen();
         Main.KingdomKey = EnumHelper.addToolMaterial("KingdomKey", 3, -1, 1.0f, 3.0f, 0);
         Main.JungleKingKey = EnumHelper.addToolMaterial("JungleKingKey", 3, -1, 1.0f, 4.0f, 0);
-        Main.OblivionKey = EnumHelper.addToolMaterial("OblivionKey", 3, -1, 1.0f, 9.0f, 0);
+        Main.OblivionKey = EnumHelper.addToolMaterial("OblivionKey", 3, 1, 1.0f, 9.0f, 0);
         Main.DestinyEmbraceKey = EnumHelper.addToolMaterial("DestinyEmbraceKey", 3, -1, 1.0f, 8.0f, 0);
         Main.OneWingedAngelKey = EnumHelper.addToolMaterial("OneWingedAngelKey", 3, -1, 1.0f, 10.0f, 0);
         Main.UltimaKey = EnumHelper.addToolMaterial("UltimaKey", 3, -1, 1.0f, 21.0f, 0);
@@ -1817,14 +1817,14 @@ public class Main
         Main.PhotonDebuggerKey = EnumHelper.addToolMaterial("JungleKingKey", 3, -1, 1.0f, 5.0f, 0);
         Main.MetalChocoboKey = EnumHelper.addToolMaterial("JungleKingKey", 3, -1, 1.0f, 6.0f, 0);
         Main.OathkeeperKey = EnumHelper.addToolMaterial("JungleKingKey", 3, -1, 1.0f, 7.0f, 0);
-        Main.DREAMSWORD = EnumHelper.addToolMaterial("DREAMSWORD", 3, -1, 1.0f, 1.0f, 50);
+        Main.DREAMSWORD = EnumHelper.addToolMaterial("DREAMSWORD", 3, 1, 1.0f, 1.0f, 50);
         Main.H1 = EnumHelper.addToolMaterial("H1", 0, 800, 1.0f, 7.0f, 0);
         Main.H2 = EnumHelper.addToolMaterial("H2", 0, 2000, 1.0f, 10.0f, 0);
         Main.H3 = EnumHelper.addToolMaterial("H3", 0, 3000, 1.0f, 13.0f, 0);
         Main.PracticeSword = EnumHelper.addToolMaterial("PracticeSword", 2, -1, 1.0f, 2.0f, 0);
         Main.Skullhammer = EnumHelper.addToolMaterial("Skullhammer", 10, 800, 20.0f, 15.0f, 10);
         Main.Hylian = EnumHelper.addArmorMaterial("Hylian", -1, new int[] { 5, 8, 6, 3 }, 0);
-        Main.Nothing = EnumHelper.addArmorMaterial("Nothing", -1, new int[] { 1, 1, 1, 1 }, 0);
+        Main.Nothing = EnumHelper.addArmorMaterial("Nothing", 1, new int[] { 1, 1, 1, 1 }, 0);
         Main.Orichulum = EnumHelper.addArmorMaterial("Orichulum", 33, new int[] { 4, 8, 6, 3 }, 15);
         Main.Mythril = EnumHelper.addArmorMaterial("Mythril", 34, new int[] { 4, 8, 6, 3 }, 15);
         Main.Eridium = EnumHelper.addArmorMaterial("Eridium", 35, new int[] { 5, 8, 6, 3 }, 15);
