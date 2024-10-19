@@ -27,7 +27,7 @@ public class miningHelmet extends ItemArmor {
     }
 
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-        if (player.getCurrentArmor(1) != null) {
+        if (player.getCurrentArmor(3) != null) {
             ItemStack slot = player.getCurrentArmor(3);
             if (slot.getItem() == Main.miningHelmet) {
                 player.addPotionEffect(new PotionEffect(Potion.nightVision.getId(), 1, 5, true));
