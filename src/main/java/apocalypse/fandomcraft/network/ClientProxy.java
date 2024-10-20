@@ -110,6 +110,10 @@
      RenderBoulder renderBoulder = new RenderBoulder();
      ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBoulder.class, (TileEntitySpecialRenderer)renderBoulder);
 
+     RenderFloorSpikes renderFloorSpikes = new RenderFloorSpikes();
+     ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFloorSpikes.class, (TileEntitySpecialRenderer)renderFloorSpikes);
+     MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Main.FLOOR_SPIKES), (IItemRenderer)new ItemRenderTable2((TileEntitySpecialRenderer)renderFloorSpikes, (TileEntity)new TileEntityFloorSpikes()));
+
      TileRenderTrashBin tileRenderTrashBin = new TileRenderTrashBin();
      ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTrashBin.class, (TileEntitySpecialRenderer)tileRenderTrashBin);
 

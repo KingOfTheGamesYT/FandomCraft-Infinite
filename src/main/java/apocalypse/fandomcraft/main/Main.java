@@ -616,6 +616,7 @@ public class Main
     public static Block TRPortal;
     public static Block twilightStone;
     public static Block twilightBrick;
+    public static Block FLOOR_SPIKES;
     public static Block twilightBrick2;
     public static Block twilightBrick3;
     public static Block twilightBrick4;
@@ -1183,6 +1184,8 @@ public class Main
         GameRegistry.registerBlock(Main.sepiaBookshelf = new UnbreakableBlock(Material.wood).setBlockName("sepiaBookshelf").setBlockTextureName("fandomcraft:sepiaBookshelf").setCreativeTab(Main.tabFandomCraftDungeons), "sepiaBookshelf");
         GameRegistry.registerBlock(Main.boulder = new Boulder().setCreativeTab(Main.tabFandomCraftModels).setBlockName("boulder").setBlockTextureName("fandomcraft:boulder"), "boulder");
         GameRegistry.registerTileEntity((Class)TileEntityBoulder.class, "boulder");
+        GameRegistry.registerBlock(Main.FLOOR_SPIKES = new FloorSpikes().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("floor_spikes").setBlockTextureName("fandomcraft:floor_spikes"), "floor_spikes");
+        GameRegistry.registerTileEntity((Class)TileEntityFloorSpikes.class, "floor_spikes");
         GameRegistry.registerItem(Main.slingshot = new Slingshot().setUnlocalizedName("slingshot").setTextureName("fandomcraft:slingshot").setCreativeTab(Main.tabFandomCraftWeapons), "slingshot");
         GameRegistry.registerItem(Main.fairySlingshot = new FairySlingshot().setUnlocalizedName("fairySlingshot").setTextureName("fandomcraft:fairySlingshot").setCreativeTab(Main.tabFandomCraftWeapons), "fairySlingshot");
         GameRegistry.registerItem(Main.practiceSword = new ItemSword(Item.ToolMaterial.IRON).setUnlocalizedName("practiceSword").setTextureName("fandomcraft:practiceSword").setCreativeTab(Main.tabFandomCraftWeapons), "practiceSword");

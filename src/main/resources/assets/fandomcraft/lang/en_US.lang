@@ -365,6 +365,7 @@ tile.mythrilOre.name=Mythril Ore
 tile.eridiumOre.name=Eridium Ore
 tile.adamantiumOre.name=Adamantium Ore
 tile.unobtainiumOre.name=Unobtainium Ore
+tile.floor_spikes.name=Floor Spikes
 
 tile.RockStone.name=Rock
 tile.Limestone.name=Limestone

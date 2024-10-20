@@ -1,6 +1,6 @@
  package apocalypse.fandomcraft.entity;
 
- import apocalypse.fandomcraft.models.modelBoulder;
+ import apocalypse.fandomcraft.models.FloorSpike;
 
  import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
  import net.minecraft.tileentity.TileEntity;
@@ -8,12 +8,10 @@
 
  import org.lwjgl.opengl.GL11;
 
- public class RenderBoulder
-   extends TileEntitySpecialRenderer
- {
-   public static final ResourceLocation rl = new ResourceLocation("fandomcraft:textures/models/entity/boulder.png");
+ public class RenderFloorSpikes extends TileEntitySpecialRenderer {
+   public static final ResourceLocation rl = new ResourceLocation("fandomcraft:textures/models/entity/floor_spikes.png");
 
-   private modelBoulder model = new modelBoulder();
+   private FloorSpike model = new FloorSpike();
 
    public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f) {
      GL11.glPushMatrix();
