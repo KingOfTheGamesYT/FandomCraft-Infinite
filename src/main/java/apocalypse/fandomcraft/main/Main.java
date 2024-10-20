@@ -593,6 +593,7 @@ public class Main
     public static Item itemBossDoor;
     public static Item bomb;
     public static Block fairyTower;
+    public static Block BARBED_WIRE;
     public static Block fairyTowerChiseled;
     public static Block sepiaBrickMossy;
     public static Block sepiaBrick;
@@ -1186,6 +1187,7 @@ public class Main
         GameRegistry.registerTileEntity((Class)TileEntityBoulder.class, "boulder");
         GameRegistry.registerBlock(Main.FLOOR_SPIKES = new FloorSpikes().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("floor_spikes").setBlockTextureName("fandomcraft:floor_spikes"), "floor_spikes");
         GameRegistry.registerTileEntity((Class)TileEntityFloorSpikes.class, "floor_spikes");
+        GameRegistry.registerBlock(Main.BARBED_WIRE = new BarbedWire().setBlockName("barbed_wire").setBlockTextureName("fandomcraft:barbed_wire"), "barbed_wire");
         GameRegistry.registerItem(Main.slingshot = new Slingshot().setUnlocalizedName("slingshot").setTextureName("fandomcraft:slingshot").setCreativeTab(Main.tabFandomCraftWeapons), "slingshot");
         GameRegistry.registerItem(Main.fairySlingshot = new FairySlingshot().setUnlocalizedName("fairySlingshot").setTextureName("fandomcraft:fairySlingshot").setCreativeTab(Main.tabFandomCraftWeapons), "fairySlingshot");
         GameRegistry.registerItem(Main.practiceSword = new ItemSword(Item.ToolMaterial.IRON).setUnlocalizedName("practiceSword").setTextureName("fandomcraft:practiceSword").setCreativeTab(Main.tabFandomCraftWeapons), "practiceSword");
