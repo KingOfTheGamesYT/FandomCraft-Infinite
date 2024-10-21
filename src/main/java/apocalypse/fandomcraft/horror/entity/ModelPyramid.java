@@ -87,66 +87,19 @@ public class ModelPyramid extends ModelBase
         model.rotateAngleY = y;
         model.rotateAngleZ = z;
     }
-    
-    public void setRotationAngles(final float p_78087_1_, final float p_78087_2_, final float p_78087_3_, final float p_78087_4_, final float p_78087_5_, final float p_78087_6_, final Entity p_78087_7_) {
-        this.head.rotateAngleY = p_78087_4_ / 57.295776f;
-        this.head.rotateAngleX = p_78087_5_ / 57.295776f;
-        this.rightarm.rotateAngleZ = 0.0f;
-        this.leftarm.rotateAngleZ = 0.0f;
-        this.rightleg.rotateAngleX = MathHelper.cos(p_78087_1_ * 0.6662f) * 1.4f * p_78087_2_;
-        this.leftleg.rotateAngleX = MathHelper.cos(p_78087_1_ * 0.6662f + 3.1415927f) * 1.4f * p_78087_2_;
+
+    public void setRotationAngles(final float f, final float f1, final float f2, final float f3, final float f4, final float f5, final Entity potato) {
+        super.setRotationAngles(f, f1, f2, f3, f4, f5, potato);
+        super.setRotationAngles(f, f1, f2, f3, f4, f5, potato);
+        this.head.rotateAngleY = f3 / 57.295776f;
+        this.head.rotateAngleX = f4 / 57.295776f;
+        this.rightleg.rotateAngleX = MathHelper.cos(f * 0.6662f) * 1.4f * f1;
+        this.leftleg.rotateAngleX = MathHelper.cos(f * 0.6662f + 3.1415927f) * 1.4f * f1;
         this.rightleg.rotateAngleY = 0.0f;
         this.leftleg.rotateAngleY = 0.0f;
-        this.handle.rotateAngleX = this.rightarm.rotateAngleX;
-        this.handle.rotateAngleY = this.rightarm.rotateAngleY;
-        this.handle.rotateAngleZ = this.rightarm.rotateAngleZ;
-        this.hilt.rotateAngleX = this.handle.rotateAngleX;
-        this.hilt.rotateAngleY = this.handle.rotateAngleY;
-        this.hilt.rotateAngleZ = this.handle.rotateAngleZ;
-        this.blade.rotateAngleX = this.hilt.rotateAngleX;
-        this.blade.rotateAngleY = this.hilt.rotateAngleY;
-        this.blade.rotateAngleZ = this.hilt.rotateAngleZ;
-        if (this.isRiding) {}
-        final ModelRenderer leftarm = this.leftarm;
-        leftarm.rotateAngleX -= 0.62831855f;
-        this.rightleg.rotateAngleX = -1.2566371f;
-        this.leftleg.rotateAngleX = -1.2566371f;
-        this.rightleg.rotateAngleY = 0.31415927f;
-        this.leftleg.rotateAngleY = -0.31415927f;
-        if (this.heldItemLeft != 0) {
-            this.leftarm.rotateAngleX = this.leftarm.rotateAngleX * 0.5f - 0.31415927f * this.heldItemLeft;
-        }
-        if (this.heldItemRight != 0) {
-            this.rightarm.rotateAngleX = this.rightarm.rotateAngleX * 0.5f - 0.31415927f * this.heldItemRight;
-        }
-        this.leftarm.rotateAngleY = 0.0f;
-        if (this.heldItemLeft > -9990.0f) {
-            float f6 = this.heldItemRight;
-            this.body.rotateAngleY = MathHelper.sin(MathHelper.sqrt_float(f6) * 3.1415927f * 2.0f) * 0.2f;
-            this.leftarm.rotationPointZ = -MathHelper.sin(this.body.rotateAngleY) * 5.0f;
-            this.leftarm.rotationPointX = MathHelper.cos(this.body.rotateAngleY) * 5.0f;
-            final ModelRenderer rightarm = this.rightarm;
-            rightarm.rotateAngleY += this.body.rotateAngleY;
-            final ModelRenderer leftarm2 = this.leftarm;
-            leftarm2.rotateAngleY += this.body.rotateAngleY;
-            final ModelRenderer leftarm3 = this.leftarm;
-            leftarm3.rotateAngleX += this.body.rotateAngleY;
-            f6 = 1.0f - this.heldItemLeft;
-            f6 *= f6;
-            f6 *= f6;
-            f6 = 1.0f - f6;
-            final float f7 = MathHelper.sin(f6 * 3.1415927f);
-            final float n = MathHelper.sin(this.heldItemLeft * 3.1415927f) * -(this.head.rotateAngleX - 0.7f) * 0.75f;
-        }
-        this.body.rotateAngleX = 0.0f;
-        this.rightleg.rotationPointZ = 0.1f;
-        this.leftleg.rotationPointZ = 0.1f;
-        this.rightleg.rotationPointY = 12.0f;
-        this.leftleg.rotationPointY = 12.0f;
-        this.head.rotationPointY = 0.0f;
-        final ModelRenderer leftarm4 = this.leftarm;
-        leftarm4.rotateAngleZ -= MathHelper.cos(p_78087_3_ * 0.09f) * 0.05f + 0.05f;
-        final ModelRenderer leftarm5 = this.leftarm;
-        leftarm5.rotateAngleX -= MathHelper.sin(p_78087_3_ * 0.067f) * 0.05f;
+        this.rightarm.rotateAngleX = MathHelper.cos(f * 0.6662f + 3.1415927f) * 2.0f * f1 * 0.5f;
+        this.leftarm.rotateAngleX = MathHelper.cos(f * 0.6662f) * 2.0f * f1 * 0.5f;
+        this.rightarm.rotateAngleZ = 0.0f;
+        this.leftarm.rotateAngleZ = 0.0f;
     }
 }
