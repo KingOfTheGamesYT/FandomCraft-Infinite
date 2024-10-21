@@ -207,7 +207,7 @@
      RenderingRegistry.registerEntityRenderingHandler(EntityBeastGannon.class, (Render)new RenderBeastGannon((ModelBase)new modelBeastGannon(), 0.0F, 3.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityPhantomGannon.class, (Render)new RenderPhantomGannon((ModelBase)new modelPhantomGannon(), 0.0F, 1.2F));
      RenderingRegistry.registerEntityRenderingHandler(EntityArgorok.class, (Render)new RenderArgorok((ModelBase)new modelArgorok(), 0.0F, 1.0F));
-
+     RenderingRegistry.registerEntityRenderingHandler(EntityTank.class, (Render)new RenderTank((ModelBase)new ModelTank(), 0.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownA.class, (Render)new RenderUnown((ModelBase)new modelUnownA(), 0.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownB.class, (Render)new RenderUnown((ModelBase)new modelUnownB(), 0.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownC.class, (Render)new RenderUnown((ModelBase)new modelUnownC(), 0.0F));

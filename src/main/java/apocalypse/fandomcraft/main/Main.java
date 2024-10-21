@@ -658,6 +658,7 @@ public class Main
     public static Item halsRifle;
     public static Item crossbow;
     public static Item DEKUSEED;
+    public static Entity TANK;
     public static Entity balverine;
     public static Entity bandit;
     public static Entity beetle;
@@ -1538,6 +1539,7 @@ public class Main
         EntityRegistry.registerModEntity((Class)EntityPumpkinBomb.class, "PumpkinBombEntity", 58, (Object)this, 64, 10, true);
         System.out.print("[FandomCraft] Registered projectiles\n");
         EntityFriendlyChao.mainRegistry();
+        EntityTank.mainRegistry();
         EntityDarkChao.mainRegistry();
         EntityPinkChao.mainRegistry();
         EntityJungleChao.mainRegistry();

@@ -24,7 +24,7 @@ public class BarbedWire extends Block {
     @Override
     public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
         if (entity instanceof EntityLiving) {
-            entity.attackEntityFrom(DamageSource.generic, 4.0F); // Deal 4 damage to players
+            entity.attackEntityFrom(DamageSource.generic, 4.0F);
         }
     }
 
