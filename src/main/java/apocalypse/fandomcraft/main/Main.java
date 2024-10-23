@@ -659,6 +659,7 @@ public class Main
     public static Item crossbow;
     public static Item DEKUSEED;
     public static Entity TANK;
+    public static Entity CHARGER;
     public static Entity balverine;
     public static Entity bandit;
     public static Entity beetle;
@@ -1540,6 +1541,7 @@ public class Main
         System.out.print("[FandomCraft] Registered projectiles\n");
         EntityFriendlyChao.mainRegistry();
         EntityTank.mainRegistry();
+        EntityCharger.mainRegistry();
         EntityDarkChao.mainRegistry();
         EntityPinkChao.mainRegistry();
         EntityJungleChao.mainRegistry();

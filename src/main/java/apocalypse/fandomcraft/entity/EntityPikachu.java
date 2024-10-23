@@ -150,11 +150,11 @@
    }
 
    public static void createEntity(Class entityClass, String entityName, int solidColour, int spotColour) {
-/* 162 */     int id = EntityRegistry.findGlobalUniqueEntityId();
-/* 163 */     EntityRegistry.registerGlobalEntityID(entityClass, entityName, id);
-/* 164 */     EntityRegistry.registerModEntity(entityClass, entityName, id, Main.instance, 64, 1, true);
-/* 165 */     createEgg(id, solidColour, spotColour);
-/*     */   }
+     int id = EntityRegistry.findGlobalUniqueEntityId();
+     EntityRegistry.registerGlobalEntityID(entityClass, entityName, id);
+     EntityRegistry.registerModEntity(entityClass, entityName, id, Main.instance, 64, 1, true);
+     createEgg(id, solidColour, spotColour);
+   }
 
    private static void createEgg(int id, int solidColour, int spotColour) {
      EntityList.entityEggs.put(Integer.valueOf(id), new EntityList.EntityEggInfo(id, solidColour, spotColour));

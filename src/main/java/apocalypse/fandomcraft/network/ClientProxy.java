@@ -208,6 +208,7 @@
      RenderingRegistry.registerEntityRenderingHandler(EntityPhantomGannon.class, (Render)new RenderPhantomGannon((ModelBase)new modelPhantomGannon(), 0.0F, 1.2F));
      RenderingRegistry.registerEntityRenderingHandler(EntityArgorok.class, (Render)new RenderArgorok((ModelBase)new modelArgorok(), 0.0F, 1.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityTank.class, (Render)new RenderTank((ModelBase)new ModelTank(), 0.0F));
+     RenderingRegistry.registerEntityRenderingHandler(EntityCharger.class, (Render)new RenderCharger((ModelBase)new ModelCharger(), 0.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownA.class, (Render)new RenderUnown((ModelBase)new modelUnownA(), 0.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownB.class, (Render)new RenderUnown((ModelBase)new modelUnownB(), 0.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownC.class, (Render)new RenderUnown((ModelBase)new modelUnownC(), 0.0F));
@@ -255,6 +256,7 @@
      EntityRegistry.addSpawn(EntityJungleChao.class, FConfig.mobJungleChaoSpawn(), 1, 2, EnumCreatureType.monster, new BiomeGenBase[] { BiomeGenBase.jungle, BiomeGenBase.jungleEdge, BiomeGenBase.jungleHills });
      EntityRegistry.addSpawn(EntityPinkChao.class, FConfig.mobPinkChaoSpawn(), 1, 1, EnumCreatureType.creature, new BiomeGenBase[] { BiomeGenBase.plains, BiomeGenBase.savanna, BiomeGenBase.roofedForest });
      EntityRegistry.addSpawn(EntityGreenChao.class, FConfig.mobGreenChaoSpawn(), 1, 2, EnumCreatureType.creature, new BiomeGenBase[] { BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills });
+     EntityRegistry.addSpawn(EntityCharger.class, FConfig.MobChargerSpawn(), 1, 2, EnumCreatureType.creature, new BiomeGenBase[] { BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills, BiomeGenBase.coldTaiga });
      EntityRegistry.addSpawn(EntityShadow.class, FConfig.mobShadowSpawn(), 1, 2, EnumCreatureType.monster, new BiomeGenBase[] { BiomeGenBase.forest, BiomeGenBase.birchForest, BiomeGenBase.coldTaiga, BiomeGenBase.desert, BiomeGenBase.extremeHills, BiomeGenBase.frozenRiver, BiomeGenBase.jungle, BiomeGenBase.mushroomIsland, BiomeGenBase.sky, BiomeGenBase.swampland, BiomeGenBase.taiga });
      EntityRegistry.addSpawn(EntityPikachu.class, FConfig.mobPikachuSpawn(), 1, 2, EnumCreatureType.creature, new BiomeGenBase[] { BiomeGenBase.plains, BiomeGenBase.savanna, BiomeGenBase.roofedForest, BiomeGenBase.forest });
      EntityRegistry.addSpawn(EntityGoomba.class, FConfig.mobGoombaSpawn(), 1, 2, EnumCreatureType.creature, new BiomeGenBase[] { BiomeGenBase.plains, BiomeGenBase.forest, BiomeGenBase.roofedForest, BiomeGenBase.desert });

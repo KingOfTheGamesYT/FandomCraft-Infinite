@@ -9,14 +9,13 @@
  import net.minecraft.command.IEntitySelector;
  import net.minecraft.entity.*;
  import net.minecraft.entity.ai.*;
- import net.minecraft.entity.boss.IBossDisplayData;
  import net.minecraft.entity.monster.EntityMob;
  import net.minecraft.item.Item;
  import net.minecraft.util.DamageSource;
  import net.minecraft.util.MathHelper;
  import net.minecraft.world.World;
 
- public class EntityTank extends EntityMob implements IBossDisplayData {
+ public class EntityCharger extends EntityMob {
    private int attackTimer;
 
    private static final IEntitySelector attackEntitySelector = new IEntitySelector()
@@ -27,13 +26,13 @@
        }
      };
 
-   public EntityTank(World world) {
+   public EntityCharger(World world) {
      super(world);
      this.setSize(1.0F, 2.0F);  // Set mob size
      getNavigator().setAvoidsWater(true);
-     this.tasks.addTask(0, (EntityAIBase)new EntityAIWander((EntityCreature)this, 0.3D));
+     this.tasks.addTask(0, (EntityAIBase)new EntityAIWander((EntityCreature)this, 0.15D));
      this.tasks.addTask(1, (EntityAIBase)new EntityAILookIdle((EntityLiving)this));
-     this.tasks.addTask(3, (EntityAIBase)new EntityAIMoveTowardsTarget((EntityCreature)this, 0.9D, 32.0F));
+     this.tasks.addTask(3, (EntityAIBase)new EntityAIMoveTowardsTarget((EntityCreature)this, 0.15D, 32.0F));
      this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityLiving.class, 1.0D, false));
      this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityLiving.class, 0, true));
      this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, true));
@@ -75,7 +74,13 @@
      double attackDamage = this.getEntityAttribute(SharedMonsterAttributes.attackDamage).getAttributeValue();
 
      // Deal the damage using the randomized attack damage
-     return target.attackEntityFrom(DamageSource.causeMobDamage(this), (float) attackDamage);
+     boolean flag = target.attackEntityFrom(DamageSource.causeMobDamage(this), (float) attackDamage);
+
+     if (flag) {
+       target.motionY += 0.2D;  // Knockback effect
+     }
+
+     return flag;
    }
 
    public static void mainRegistry() {
@@ -83,7 +88,7 @@
    }
 
    private static void registerEntity() {
-     createEntity(EntityTank.class, "TANK", 16711680, 14483533);
+     createEntity(EntityCharger.class, "CHARGER", 13685702, 14548205);
    }
 
    public static void createEntity(Class entityClass, String entityName, int solidColour, int spotColour) {
@@ -105,28 +110,22 @@
      super.applyEntityAttributes();
 
      // Set base health and attack damage (will be randomized later)
-     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(3000.0D);
+     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(600D);
      this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
-     this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
+     this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.45D);
    }
 
    @Override
    public IEntityLivingData onSpawnWithEgg(IEntityLivingData entityLivingData) {
      super.onSpawnWithEgg(entityLivingData);
 
-     // Randomize Health
-     int[] possibleHealthValues = {3000, 4000, 6000, 8000};
-     int randomHealthIndex = MathHelper.getRandomIntegerInRange(this.rand, 0, possibleHealthValues.length - 1);
-     int randomHealth = possibleHealthValues[randomHealthIndex];
-     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(randomHealth);
-     this.setHealth(randomHealth);
-
      // Randomize Attack Damage
-     double[] possibleDamageValues = {12.0D, 24.0D, 33.0D, 100.0D};
+     double[] possibleDamageValues = {10.0D, 15.0D, 20.0D};
      int randomDamageIndex = MathHelper.getRandomIntegerInRange(this.rand, 0, possibleDamageValues.length - 1);
      double randomDamage = possibleDamageValues[randomDamageIndex];
      this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(randomDamage);
 
      return entityLivingData;
    }
+
  }

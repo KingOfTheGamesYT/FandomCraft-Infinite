@@ -802,7 +802,7 @@ itemGroup.fableMagic=Fable Magic
 entity.Hobbe.name=Hobbe
 entity.HollowMan.name=Hollow Man
 entity.TANK.name=Tank
-
+entity.CHARGER.name=Charger
 item.java.name=Java
 item.silverKey.name=Silver Key
 item.bullet.name=Bullet

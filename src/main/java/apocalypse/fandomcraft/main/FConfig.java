@@ -38,6 +38,7 @@ public class FConfig
     private static int mobBulboSpawn;
     private static int mobBokoblinSpawn;
     private static int mobTektiteSpawn;
+    private static int mobChargerSpawn;
     private static int mobCharmanderSpawn;
     private static int mobArmosSpawn;
     private static int mobDarknutSpawn;
@@ -221,7 +222,9 @@ public class FConfig
     public static int mobBulboSpawn() {
         return FConfig.mobBulboSpawn;
     }
-    
+    public static int MobChargerSpawn() {
+        return FConfig.mobChargerSpawn;
+    }
     public static int mobBokoblinSpawn() {
         return FConfig.mobBokoblinSpawn;
     }
