@@ -39,9 +39,9 @@ public class NewPane extends BlockPane
     public boolean renderAsNormalBlock() {
         return false;
     }
-    
+
     public int getRenderType() {
-        return (this.blockMaterial == Material.glass) ? 41 : 18;
+        return 1;
     }
     
     @SideOnly(Side.CLIENT)
