@@ -812,6 +812,7 @@ public class Main
         GameRegistry.registerBlock(Main.GoddessOre = new GoddessOre().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("GoddessOre").setBlockTextureName("fandomcraft:goddessoreblock"), "GoddessOre");
         GameRegistry.registerWorldGenerator((IWorldGenerator)Main.CommonGen, 1);
         GameRegistry.registerBlock(Main.RockStone = new RockStone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("RockStone").setBlockTextureName("fandomcraft:rock"), "RockStone");
+        GameRegistry.registerBlock(Main.oreFossil = new sandFossil().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("oreFossil").setBlockTextureName("fandomcraft:oreFossil"), "oreFossil");
         GameRegistry.registerBlock(Main.Limestone = new Limestone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("Limestone").setBlockTextureName("fandomcraft:limestone"), "Limestone");
         GameRegistry.registerBlock(Main.bloodstone = new bloodstone().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("bloodstone").setBlockTextureName("fandomcraft:bloodstone"), "bloodstone");
         GameRegistry.registerBlock(Main.bloodstoneBrick = new bloodstoneBrick().setCreativeTab(Main.tabFandomCraftBlocks).setBlockName("bloodstoneBrick").setBlockTextureName("fandomcraft:bloodstoneBrick"), "bloodstoneBrick");

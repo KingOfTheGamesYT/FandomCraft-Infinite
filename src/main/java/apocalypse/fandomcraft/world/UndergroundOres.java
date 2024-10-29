@@ -188,14 +188,14 @@ public class UndergroundOres implements IWorldGenerator
                 ice.generateSurface(world, random, chunkX2, chunkY2, chunkZ2);
             }
         }
-      /*  for (int j = 0; j < 1; ++j) {
+        for (int j = 0; j < 1; ++j) {
             final int chunkX2 = x + random.nextInt(16);
             final int chunkZ2 = z + random.nextInt(16);
             final int chunkY2 = world.getHeightValue(chunkX2, chunkZ2);
             if (chance < FConfig.desertDungeon()) {
                 desert.generateSurface(world, random, chunkX2, chunkY2, chunkZ2);
             }
-        }*/
+        }
         for (int j = 0; j < 1; ++j) {
             final int chunkX2 = x + random.nextInt(16);
             final int chunkZ2 = z + random.nextInt(16);
