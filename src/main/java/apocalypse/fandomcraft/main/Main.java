@@ -1542,6 +1542,7 @@ public class Main
         System.out.print("[FandomCraft] Registered projectiles\n");
         EntityFriendlyChao.mainRegistry();
         EntityTank.mainRegistry();
+        EntitySpitter.mainRegistry();
         EntityCharger.mainRegistry();
         EntityDarkChao.mainRegistry();
         EntityPinkChao.mainRegistry();

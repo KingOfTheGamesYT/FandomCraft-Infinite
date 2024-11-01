@@ -223,6 +223,7 @@
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownT.class, (Render)new RenderUnown((ModelBase)new modelUnownT(), 0.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownEx.class, (Render)new RenderUnown((ModelBase)new modelUnownEx(), 0.0F));
      RenderingRegistry.registerEntityRenderingHandler(EntityUnownQu.class, (Render)new RenderUnown((ModelBase)new modelUnownQu(), 0.0F));
+     RenderingRegistry.registerEntityRenderingHandler(EntitySpitter.class, (Render)new RenderSpitter(new ModelSpitter(), 0.0F, 0.75F));
 
      RenderingRegistry.registerEntityRenderingHandler(EntityHollowMan.class, (Render)new RenderHollowMan((ModelBase)new modelHollowMan(), 0.0F, 1.0F));
      EntityRegistry.addSpawn(EntityHollowMan.class, FableConfig.spawnHollowMan(), 1, 2, EnumCreatureType.monster, new BiomeGenBase[] { BiomeGenBase.plains, BiomeGenBase.beach, BiomeGenBase.birchForest, BiomeGenBase.coldTaiga, BiomeGenBase.desert, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.forest, BiomeGenBase.frozenRiver, BiomeGenBase.jungle, BiomeGenBase.megaTaiga, BiomeGenBase.mesa, BiomeGenBase.mesaPlateau, BiomeGenBase.mushroomIsland, BiomeGenBase.river, BiomeGenBase.roofedForest, BiomeGenBase.savanna, BiomeGenBase.savannaPlateau, BiomeGenBase.stoneBeach, BiomeGenBase.swampland, BiomeGenBase.taiga });
