@@ -213,38 +213,6 @@ public class Sword extends SwordItem implements IHasElement
 		stack.setDamage(0);
 	}
 
-	@Override
-	public float getDestroySpeed(ItemStack stack, BlockState state)
-	{
-		if (isblunt)
-		{
-			if (state.getMaterial() == Material.ROCK || state.getMaterial() == Material.GLASS || state.getMaterial() == Material.REDSTONE_LIGHT || state.getMaterial() == Material.ICE
-					|| state.getMaterial() == Material.PACKED_ICE || state.getMaterial() == Material.GOURD)
-			{
-				return 15;
-			}
-		}
-		else
-		{
-			if (state.equals(Blocks.COBWEB))
-			{
-				return 15.0F;
-			}
-			else
-			{
-				Material material = state.getMaterial();
-				return material != Material.PLANTS && material != Material.TALL_PLANTS && material != Material.CORAL && !state.equals(BlockTags.LEAVES) && material != Material.GOURD ? 1.0F : 1.5F;
-			}
-		}
-		return 1f;
-	}
-
-	@Override
-	public boolean canHarvestBlock(BlockState state)
-	{
-		return isblunt ? state.getMaterial() == Material.ROCK : state.equals(Blocks.COBWEB);
-	}
-
 	public Sword addInfo(String... newInfo) {
 		if (newInfo != null && newInfo.length > 0) {
 			String[] combinedInfo = new String[this.info.length + newInfo.length];
