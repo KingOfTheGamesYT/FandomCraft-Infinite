@@ -196,7 +196,11 @@ public class RegistryHandler{
                         .trackingRange(4)
                         .updateInterval(4)
                         .build(new ResourceLocation(FandomCraft.MOD_ID, "shell").toString()));
-
+        public static final RegistryObject<EntityType<HeroChao>>HERO_CHAO =
+                ENTITIES.register("hero_chao", () -> EntityType.Builder.
+                                <HeroChao>create(HeroChao::new, EntityClassification.CREATURE)
+                        .size(0.5f, 2.0f)
+                        .build(new ResourceLocation(FandomCraft.MOD_ID, "chao").toString()));
         //Spawn Eggs
         public static final RegistryObject<Item> GOOMBA_SPAWN_EGG = ITEMS.register("goomba_spawn_egg", () -> new ForgeSpawnEggItem(RegistryHandler.GOOMBA, 7888668, 16110193, new Item.Properties().group(FandomCraft.tabFandomCraftMisc)));
         public static final RegistryObject<Item> KOOPA_SPAWN_EGG = ITEMS.register("koopa_spawn_egg", () -> new ForgeSpawnEggItem(RegistryHandler.KOOPA, 892431, 16777215, new Item.Properties().group(FandomCraft.tabFandomCraftMisc)));

@@ -3,6 +3,7 @@ package com.devmaster1015.fandomcraft.main;
 import com.devmaster1015.fandomcraft.client.render.*;
 import com.devmaster1015.fandomcraft.entities.EntityGoomba;
 import com.devmaster1015.fandomcraft.entities.EntityKoopa;
+import com.devmaster1015.fandomcraft.entities.HeroChao;
 import com.devmaster1015.fandomcraft.main.events.*;
 import com.devmaster1015.fandomcraft.util.BaseConfig;
 import com.devmaster1015.fandomcraft.util.RegistryHandler;
@@ -61,6 +62,7 @@ public class FandomCraft {
         DeferredWorkQueue.runLater(() -> {
             GlobalEntityTypeAttributes.put(RegistryHandler.GOOMBA.get(), EntityGoomba.setCustomAttributes().create());
             GlobalEntityTypeAttributes.put(RegistryHandler.KOOPA.get(), EntityKoopa.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(RegistryHandler.HERO_CHAO.get(), HeroChao.createAttributes().create());
 
         });
     }
@@ -73,6 +75,7 @@ public class FandomCraft {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.GOOMBA.get(), RenderGoomba::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.KOOPA.get(), RenderKoopa::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.SHELL_ENTITY.get(), RenderShell::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.HERO_CHAO.get(), RenderHeroChao::new);
 
     }
 
