@@ -45,9 +45,9 @@
      }
 
      ItemStack stack = player.getCurrentEquippedItem();
-     Item item = player.inventory.getCurrentItem().getItem();
 
-     if (player.inventory.getCurrentItem() != null) {
+       if (stack != null) {
+           Item item = stack.getItem();
 
        if (item == Main.keyKingdom || item == Main.keyKingdomD || item == Main.jungleKing || item == Main.oblivion || item == Main.ultima || item == Main.oneWingedAngel || item == Main.destinyEmbrace || item == Main.oathkeeper || item == Main.photonDebugger || item == Main.metalChocobo || item == Main.dreamSword) {
 
