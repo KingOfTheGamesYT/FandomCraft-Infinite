@@ -1,5 +1,6 @@
 package apocalypse.fandomcraft.otherworld;
 
+import apocalypse.fandomcraft.events.RegistryHandler;
 import apocalypse.fandomcraft.main.Main;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +15,7 @@ public class OtherworldTrigger extends Item {
     public OtherworldTrigger() {
         this.maxStackSize = 1;
         this.setMaxDamage(1);
-        this.setCreativeTab(Main.tabFandomCraftMisc);
+        this.setCreativeTab(RegistryHandler.tabFandomCraftMisc);
     }
 
     public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {

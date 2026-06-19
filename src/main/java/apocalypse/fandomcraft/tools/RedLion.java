@@ -1,5 +1,6 @@
 package apocalypse.fandomcraft.tools;
 
+import apocalypse.fandomcraft.events.RegistryHandler;
 import apocalypse.fandomcraft.main.*;
 import net.minecraft.item.*;
 import net.minecraft.world.*;
@@ -14,7 +15,7 @@ public class RedLion extends ItemBoat
 {
     public RedLion() {
         this.maxStackSize = 1;
-        this.setCreativeTab(Main.tabFandomCraftMisc);
+        this.setCreativeTab(RegistryHandler.tabFandomCraftMisc);
     }
     
     public ItemStack onItemRightClick(final ItemStack itemStackIn, final World worldIn, final EntityPlayer player) {

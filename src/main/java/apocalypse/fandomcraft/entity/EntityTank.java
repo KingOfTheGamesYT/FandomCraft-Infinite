@@ -2,7 +2,6 @@
 
  import apocalypse.fandomcraft.main.Main;
 
- import cpw.mods.fml.common.registry.EntityRegistry;
  import cpw.mods.fml.relauncher.Side;
  import cpw.mods.fml.relauncher.SideOnly;
 
@@ -71,30 +70,11 @@
      this.attackTimer = 10;
      this.worldObj.setEntityState(this, (byte) 4);
 
-     // Get the randomized attack damage from SharedMonsterAttributes
+     //Get the randomized attack damage from SharedMonsterAttributes
      double attackDamage = this.getEntityAttribute(SharedMonsterAttributes.attackDamage).getAttributeValue();
 
-     // Deal the damage using the randomized attack damage
+     //Deal the damage using the randomized attack damage
      return target.attackEntityFrom(DamageSource.causeMobDamage(this), (float) attackDamage);
-   }
-
-   public static void mainRegistry() {
-     registerEntity();
-   }
-
-   private static void registerEntity() {
-     createEntity(EntityTank.class, "TANK", 16711680, 14483533);
-   }
-
-   public static void createEntity(Class entityClass, String entityName, int solidColour, int spotColour) {
-     int id = EntityRegistry.findGlobalUniqueEntityId();
-     EntityRegistry.registerGlobalEntityID(entityClass, entityName, id);
-     EntityRegistry.registerModEntity(entityClass, entityName, id, Main.instance, 64, 1, true);
-     createEgg(id, solidColour, spotColour);
-   }
-
-   private static void createEgg(int id, int solidColour, int spotColour) {
-     EntityList.entityEggs.put(Integer.valueOf(id), new EntityList.EntityEggInfo(id, solidColour, spotColour));
    }
 
    public boolean isAIenabled() {
@@ -104,7 +84,6 @@
    protected void applyEntityAttributes() {
      super.applyEntityAttributes();
 
-     // Set base health and attack damage (will be randomized later)
      this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(3000.0D);
      this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
      this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
@@ -114,14 +93,14 @@
    public IEntityLivingData onSpawnWithEgg(IEntityLivingData entityLivingData) {
      super.onSpawnWithEgg(entityLivingData);
 
-     // Randomize Health
+     //Randomize health
      int[] possibleHealthValues = {3000, 4000, 6000, 8000};
      int randomHealthIndex = MathHelper.getRandomIntegerInRange(this.rand, 0, possibleHealthValues.length - 1);
      int randomHealth = possibleHealthValues[randomHealthIndex];
      this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(randomHealth);
      this.setHealth(randomHealth);
 
-     // Randomize Attack Damage
+     //Randomize attack Damage
      double[] possibleDamageValues = {12.0D, 24.0D, 33.0D, 100.0D};
      int randomDamageIndex = MathHelper.getRandomIntegerInRange(this.rand, 0, possibleDamageValues.length - 1);
      double randomDamage = possibleDamageValues[randomDamageIndex];

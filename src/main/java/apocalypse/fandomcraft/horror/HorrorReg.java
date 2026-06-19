@@ -4,6 +4,7 @@ import apocalypse.fandomcraft.armour.JokePack;
 import apocalypse.fandomcraft.blocks.BlockRock;
 import apocalypse.fandomcraft.blocks.UnbreakableBlock;
 import apocalypse.fandomcraft.blocks.compressedBlock;
+import apocalypse.fandomcraft.events.RegistryHandler;
 import apocalypse.fandomcraft.fable.FableSword;
 import apocalypse.fandomcraft.horror.entity.EntityBloodhound;
 import apocalypse.fandomcraft.horror.entity.EntityCultist;
@@ -98,7 +99,7 @@ public class HorrorReg {
         GameRegistry.registerItem(record_omen, "record_omen");
         otherworldPortal = (new OtherworldPortalBlock()).setBlockName("otherworldPortal").setBlockTextureName("fandomcraft:otherworldPortal");
         GameRegistry.registerBlock(otherworldPortal, "otherworldPortal");
-        haloOfTheSun = (new OtherworldTrigger()).setUnlocalizedName("haloOfTheSun").setTextureName("fandomcraft:haloOfTheSun").setCreativeTab(Main.tabFandomCraftMisc);
+        haloOfTheSun = (new OtherworldTrigger()).setUnlocalizedName("haloOfTheSun").setTextureName("fandomcraft:haloOfTheSun").setCreativeTab(RegistryHandler.tabFandomCraftMisc);
         GameRegistry.registerItem(haloOfTheSun, "haloOfTheSun");
         bloodGrass = (new BloodGrass(Material.grass)).setBlockName("bloodGrass").setBlockTextureName("fandomcraft:bloodgrass").setCreativeTab(Main.tabFandomCraftBlocks);
         GameRegistry.registerBlock(bloodGrass, "bloodGrass");
@@ -106,7 +107,7 @@ public class HorrorReg {
         GameRegistry.registerBlock(bloodstoneRock, "bloodstoneRock");
         gravitite = (new Gravitite()).setBlockName("gravitite").setBlockTextureName("fandomcraft:gravititeOre").setCreativeTab(Main.tabFandomCraftBlocks);
         GameRegistry.registerBlock(gravitite, "gravitite");
-        gravititeDust = (new Item()).setUnlocalizedName("gravititeDust").setTextureName("fandomcraft:gravititeDust").setCreativeTab(Main.tabFandomCraftMisc);
+        gravititeDust = (new Item()).setUnlocalizedName("gravititeDust").setTextureName("fandomcraft:gravititeDust").setCreativeTab(RegistryHandler.tabFandomCraftMisc);
         GameRegistry.registerItem(gravititeDust, "gravititeDust");
         machette = (new FableSword("", 400, 6.0F, true, 0)).setUnlocalizedName("machette").setTextureName("fandomcraft:machette").setCreativeTab(Main.tabFandomCraftWeapons);
         GameRegistry.registerItem(machette, "machette");
@@ -120,7 +121,7 @@ public class HorrorReg {
         GameRegistry.registerItem(jetpack, "jetpack");
         jokepack = (new JokePack(ArmorMaterial.IRON, 4, 1)).setUnlocalizedName("jokepack").setTextureName("fandomcraft:jetpack").setCreativeTab(Main.tabFandomCraftOutfits);
         GameRegistry.registerItem(jokepack, "jokepack");
-        backpack = (new Backpack()).setUnlocalizedName("backpack").setTextureName("fandomcraft:backpack").setCreativeTab(Main.tabFandomCraftMisc);
+        backpack = (new Backpack()).setUnlocalizedName("backpack").setTextureName("fandomcraft:backpack").setCreativeTab(RegistryHandler.tabFandomCraftMisc);
         GameRegistry.registerItem(backpack, "backpack");
         bloodleaf = (new Bloodleaf(Material.leaves)).setBlockName("bloodleaf").setBlockTextureName("fandomcraft:bloodleaf").setCreativeTab(Main.tabFandomCraftBlocks);
         GameRegistry.registerBlock(bloodleaf, "bloodleaf");
@@ -128,15 +129,15 @@ public class HorrorReg {
         GameRegistry.registerItem(maskJason, "maskJason");
         maskMyers = (new MaskMyers(ArmorMaterial.IRON, 4, 0)).setUnlocalizedName("maskMyers").setTextureName("fandomcraft:maskMyers").setCreativeTab(Main.tabFandomCraftOutfits);
         GameRegistry.registerItem(maskMyers, "maskMyers");
-        smallPumpkin = (new Item()).setUnlocalizedName("smallPumpkin").setTextureName("fandomcraft:smallPumpkin").setCreativeTab(Main.tabFandomCraftMisc);
+        smallPumpkin = (new Item()).setUnlocalizedName("smallPumpkin").setTextureName("fandomcraft:smallPumpkin").setCreativeTab(RegistryHandler.tabFandomCraftMisc);
         GameRegistry.registerItem(smallPumpkin, "smallPumpkin");
         pumpkinBomb = (new PumpkinBomb()).setUnlocalizedName("pumpkinBomb").setTextureName("fandomcraft:pumpkinBomb").setCreativeTab(Main.tabFandomCraftWeapons);
         GameRegistry.registerItem(pumpkinBomb, "pumpkinBomb");
-        holyWater = (new HolyWater()).setUnlocalizedName("holyWater").setTextureName("fandomcraft:holyWater").setCreativeTab(Main.tabFandomCraftMisc);
+        holyWater = (new HolyWater()).setUnlocalizedName("holyWater").setTextureName("fandomcraft:holyWater").setCreativeTab(RegistryHandler.tabFandomCraftMisc);
         GameRegistry.registerItem(holyWater, "holyWater");
-        gravityRod = (new Item()).setUnlocalizedName("gravityRod").setTextureName("fandomcraft:shadowleaf").setCreativeTab(Main.tabFandomCraftMisc);
+        gravityRod = (new Item()).setUnlocalizedName("gravityRod").setTextureName("fandomcraft:shadowleaf").setCreativeTab(RegistryHandler.tabFandomCraftMisc);
         GameRegistry.registerItem(gravityRod, "gravityRod");
-        rustClump = (new Item()).setUnlocalizedName("rustClump").setTextureName("fandomcraft:rustClump").setCreativeTab(Main.tabFandomCraftMisc);
+        rustClump = (new Item()).setUnlocalizedName("rustClump").setTextureName("fandomcraft:rustClump").setCreativeTab(RegistryHandler.tabFandomCraftMisc);
         GameRegistry.registerItem(rustClump, "rustClump");
         plant_thorns = (new PlantThorns(0.2F)).setBlockName("plant_thorns").setBlockTextureName("fandomcraft:plant_thorns").setCreativeTab(Main.tabFandomCraftBlocks);
         GameRegistry.registerBlock(plant_thorns, "plant_thorns");
@@ -166,24 +167,5 @@ public class HorrorReg {
         GameRegistry.registerItem(giantKnife, "giantKnife");
         trash_bin = (new TrashBin()).setBlockName("trash_bin").setBlockTextureName("fandomcraft:trash_bin").setCreativeTab(Main.tabFandomCraftModels);
         GameRegistry.registerBlock(trash_bin, "trash_bin");
-    }
-
-    public static void mobs() {
-        EntityMerchantOver.mainRegistry();
-        EntityMerchantOther.mainRegistry();
-        EntityFBI.mainRegistry();
-        EntityLGM.mainRegistry();
-        EntityMummy.mainRegistry();
-        EntityCultist.mainRegistry();
-        EntityHeretic.mainRegistry();
-        EntityPoe.mainRegistry();
-        EntityJason.mainRegistry();
-        EntityFreddy.mainRegistry();
-        EntityMyers.mainRegistry();
-        EntityBloodhound.mainRegistry();
-        EntityGreyChild.mainRegistry();
-        EntityStalker.mainRegistry();
-        EntityNurse.mainRegistry();
-        EntityPyramid.mainRegistry();
     }
 }

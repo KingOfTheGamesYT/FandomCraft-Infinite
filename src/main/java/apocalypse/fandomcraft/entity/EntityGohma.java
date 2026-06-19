@@ -144,23 +144,4 @@
      playSound("fandomcraft:fierceHit", 1.0F, 1.0F / (getRNG().nextFloat() * 0.4F + 0.8F));
      return flag;
    }
-
-   public static void mainRegistry() {
-     registerEntity();
-   }
-
-   private static void registerEntity() {
-     createEntity(EntityGohma.class, "Gohma", 4598809, 12669440);
-   }
-
-   public static void createEntity(Class entityClass, String entityName, int solidColour, int spotColour) {
-     int id = EntityRegistry.findGlobalUniqueEntityId();
-     EntityRegistry.registerGlobalEntityID(entityClass, entityName, id);
-     EntityRegistry.registerModEntity(entityClass, entityName, id, Main.instance, 64, 1, true);
-     createEgg(id, solidColour, spotColour);
-   }
-
-   private static void createEgg(int id, int solidColour, int spotColour) {
-     EntityList.entityEggs.put(Integer.valueOf(id), new EntityList.EntityEggInfo(id, solidColour, spotColour));
-   }
  }

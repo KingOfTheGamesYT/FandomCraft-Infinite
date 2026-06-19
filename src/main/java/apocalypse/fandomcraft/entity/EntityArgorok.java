@@ -22,6 +22,7 @@
  import net.minecraft.util.DamageSource;
  import net.minecraft.util.MathHelper;
  import net.minecraft.util.Vec3;
+ import net.minecraft.world.EnumDifficulty;
  import net.minecraft.world.Explosion;
  import net.minecraft.world.IBlockAccess;
  import net.minecraft.world.World;
@@ -107,6 +108,16 @@
    }
 
    public void onLivingUpdate() {
+       if (!this.worldObj.isRemote && this.worldObj.difficultySetting == EnumDifficulty.PEACEFUL) {
+               for (EntityArgorokPart part : this.dragonPartArray) {
+                   if (part != null) {
+                       part.setDead();
+                   }
+               }
+               setDead();
+               return;
+           }
+
        if (this.worldObj.isRemote) {
 
            float f = MathHelper.cos(this.animTime * 3.1415927F * 2.0F);
@@ -603,22 +614,4 @@
      return 5.0F;
    }
 
-   public static void mainRegistry() {
-     registerEntity();
-   }
-
-   private static void registerEntity() {
-     createEntity(EntityArgorok.class, "Argorok", 0, 8388608);
-   }
-
-   public static void createEntity(Class entityClass, String entityName, int solidColour, int spotColour) {
-     int id = EntityRegistry.findGlobalUniqueEntityId();
-     EntityRegistry.registerGlobalEntityID(entityClass, entityName, id);
-     EntityRegistry.registerModEntity(entityClass, entityName, id, Main.instance, 64, 1, true);
-     createEgg(id, solidColour, spotColour);
-   }
-
-   private static void createEgg(int id, int solidColour, int spotColour) {
-     EntityList.entityEggs.put(Integer.valueOf(id), new EntityList.EntityEggInfo(id, solidColour, spotColour));
-   }
  }

@@ -164,22 +164,4 @@
      return this.aiControlledByPlayer;
    }
 
-   public static void mainRegistry() {
-     registerEntity();
-   }
-
-   private static void registerEntity() {
-     createEntity(EntityBulbo.class, "Bulbo", 565760, 16711680);
-   }
-
-   public static void createEntity(Class entityClass, String entityName, int solidColour, int spotColour) {
-     int id = EntityRegistry.findGlobalUniqueEntityId();
-     EntityRegistry.registerGlobalEntityID(entityClass, entityName, id);
-     EntityRegistry.registerModEntity(entityClass, entityName, id, Main.instance, 64, 1, true);
-     createEgg(id, solidColour, spotColour);
-   }
-
-   private static void createEgg(int id, int solidColour, int spotColour) {
-     EntityList.entityEggs.put(Integer.valueOf(id), new EntityList.EntityEggInfo(id, solidColour, spotColour));
-   }
  }

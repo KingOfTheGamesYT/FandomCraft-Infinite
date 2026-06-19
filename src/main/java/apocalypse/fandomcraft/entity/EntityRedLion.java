@@ -492,18 +492,4 @@
    public void setIsBoatEmpty(boolean p_70270_1_) {
      this.isBoatEmpty = p_70270_1_;
    }
-
-   public static void mainRegistry() {
-     registerEntity();
-   }
-
-   private static void registerEntity() {
-     createEntity(EntityRedLion.class, "RedLion");
-   }
-
-   public static void createEntity(Class entityClass, String entityName) {
-     int id = EntityRegistry.findGlobalUniqueEntityId();
-     EntityRegistry.registerGlobalEntityID(entityClass, entityName, id);
-     EntityRegistry.registerModEntity(entityClass, entityName, id, Main.instance, 64, 1, true);
-   }
  }
