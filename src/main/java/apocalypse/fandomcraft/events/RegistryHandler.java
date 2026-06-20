@@ -3,6 +3,9 @@ package apocalypse.fandomcraft.events;
 import apocalypse.fandomcraft.entity.*;
 import apocalypse.fandomcraft.fable.EntityHobbe;
 import apocalypse.fandomcraft.fable.EntityHollowMan;
+import apocalypse.fandomcraft.fable.ProjectileBolt;
+import apocalypse.fandomcraft.fable.ProjectileBullet;
+import apocalypse.fandomcraft.horror.EntityPumpkinBomb;
 import apocalypse.fandomcraft.horror.entity.*;
 import apocalypse.fandomcraft.items.FCSpawnEgg;
 import apocalypse.fandomcraft.main.Main;
@@ -93,6 +96,38 @@ public class RegistryHandler
 
     private static void registerProjectiles()
     {
+        //Halo
+        registerProjectile(EntityEnergyBall.class, "EnergyBall");
+
+        //Kingdom Hearts
+        registerProjectile(EntityChakram.class, "Chakram"); //Todo Rename to Eternal Flames
+
+        //Mario
+        registerProjectile(EntityKoopaShell.class, "KoopaShell");
+
+        //Marvel
+        registerProjectile(EntityPumpkinBomb.class, "PumpkinBombEntity");
+
+        //Metal Gear Solid
+        registerProjectile(EntitySmokeBomb.class, "SmokeBomb"); //Todo Rename to Grenade
+
+        //Resident Evil
+        registerProjectile(ProjectileBullet.class, "Bullet"); //Todo Rename to Handgun Bullet
+
+        //Skyrim
+        registerProjectile(ProjectileBolt.class, "Bolt");
+
+        //Zelda
+        registerProjectile(EntityBomb.class, "Bomb");
+        registerProjectile(EntityDekuNut.class, "DekuNut");
+        registerProjectile(GrappledHook.class, "GrappledHook");
+        registerProjectile(EntityPellet.class, "Pellet");
+
+    }
+
+    private static void registerProjectile(Class<? extends Entity> entityClass, String name)
+    {
+        EntityRegistry.registerModEntity(entityClass, name, entityId++, Main.instance, 64, 1, true);
     }
 
     private static void registerEntities()

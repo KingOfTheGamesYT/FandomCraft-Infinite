@@ -1527,20 +1527,8 @@ public class Main
         Main.proxy.spawnMobs();
         System.out.print("[FandomCraft] Registered mob spawning\n");
         Main.proxy.registerEvents();
-        EntityRegistry.registerModEntity((Class)ProjectileBullet.class, "Bullet", 90, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)ProjectileBolt.class, "Bolt", 91, (Object)this, 64, 10, true);
         BiomeGen.registerBiomes();
         GameRegistry.registerWorldGenerator((IWorldGenerator)new WorldGenOWBloodTreeSmall(), 1);
-        EntityRegistry.registerModEntity((Class)EntitySmokeBomb.class, "SmokeBomb", 50, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)EntityKoopaShell.class, "KoopaShell", 51, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)EntityEnergyBall.class, "EnergyBall", 52, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)GrappledHook.class, "GrappledHook", 53, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)EntityBomb.class, "BombEntity", 54, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)EntityDekuNut.class, "DekuNut", 55, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)EntityPellet.class, "Pellet", 56, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)EntityChakram.class, "Chakram", 57, (Object)this, 64, 10, true);
-        EntityRegistry.registerModEntity((Class)EntityPumpkinBomb.class, "PumpkinBombEntity", 58, (Object)this, 64, 10, true);
-        System.out.print("[FandomCraft] Registered projectiles\n");
     }
     
     @Mod.EventHandler

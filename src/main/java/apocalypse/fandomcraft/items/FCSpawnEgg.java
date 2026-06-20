@@ -137,16 +137,6 @@ public class FCSpawnEgg extends Item
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
-    {
-        if (!world.isRemote)
-        {
-            spawnEntity(world, getNameFromStack(stack), player.posX, player.posY + 1, player.posZ);
-        }
-        return stack;
-    }
-
-    @Override
     public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
     {
         Block block = world.getBlock(x, y, z);
