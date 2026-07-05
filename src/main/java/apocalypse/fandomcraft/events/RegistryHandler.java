@@ -19,12 +19,17 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.item.Item;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+
 public class RegistryHandler
 {
-    public static Item fcSpawnEgg;
     private static int entityId = 0;
+    public static Item fcSpawnEgg;
+    public static Item tabIcon;
 
     public static CreativeTabs tabFandomCraftMisc;
+    public static CreativeTabs tabFandomCraftEgg;
 
     public static void preInit()
     {
@@ -68,6 +73,21 @@ public class RegistryHandler
                 return Main.rupeeGreen;
             }
         };
+
+        tabFandomCraftEgg = new CreativeTabs("tabspawneggs")
+        {
+            @Override
+            public Item getTabIconItem()
+            {
+                return RegistryHandler.fcSpawnEgg;
+            }
+
+            @Override
+            public ItemStack getIconItemStack()
+            {
+                return FCSpawnEgg.getCyclingEgg();
+            }
+        };
     }
 
     private static void registerItems()
@@ -92,6 +112,7 @@ public class RegistryHandler
 
     private static void registerEvents()
     {
+        MinecraftForge.EVENT_BUS.register(new TooltipHandler());
     }
 
     private static void registerProjectiles()
@@ -137,7 +158,7 @@ public class RegistryHandler
         BlockDispenser.dispenseBehaviorRegistry.putObject(fcSpawnEgg, new BehaviorSpawnEggDispense());
 
         //Doctor Who
-        createEntity(EntityLGM.class, "EntityLGM", 16777215, 16777215);
+        createEntity(EntityLGM.class, "EntityLGM", 16777215, 16777215); //Todo Rename to Green Alien when we add more Aliens
 
         //Fable
         createEntity(EntityHollowMan.class, "EntityHollowMan", 5128747, 16777215);
@@ -215,15 +236,12 @@ public class RegistryHandler
 
         //Supernatural
 
-        //The Mummy
-        createEntity(EntityMummy.class, "EntityMummy", 5128747, 16777215);
-
         //The Legend of Zelda
         createEntity(EntityArgorok.class,"Argorok",0,8388608);
         createEntity(EntityArmos.class, "Armos",3551054,3604302);
         createEntity(EntityAttackChicken.class,"AttackChicken",16711680,16777215);
         createEntity(EntityAttackPig.class,"AttackPig",16751846,10289259);
-        createEntity(EntityBeastGannon.class, "BeastGannon", 69376, 11750400);
+        createEntity(EntityBeastGannon.class, "beast_ganon", 69376, 11750400);
         createEntity(EntityBlueTektite.class, "BlueTektite", 466029, 4336196);
         createEntity(EntityBombskit.class, "Bombskit", 3552334, 9502754);
         createEntity(EntityBulbo.class, "Bulbo", 565760, 16711680);
@@ -232,12 +250,12 @@ public class RegistryHandler
         createEntity(EntityBokoblin.class,"EntityBokoblin",16775936,6047510);
         createEntity(EntityFireKeese.class,"FireKeese",16734720,16763904);
         createEntity(EntityFreezard.class,"Freezard",16514815,14021887);
-        createEntity(EntityGannondorf.class, "Gannondorf", 69376, 11750400);
+        createEntity(EntityGannondorf.class, "ganondorf", 69376, 11750400);
         createEntity(EntityGohma.class, "Gohma", 4598809, 12669440);
         createEntity(EntityIceKeese.class,"IceKeese",16734720,16763904);
         createEntity(EntityMightyDarknut.class,"MightyDarknut",6169893,4606303);
         createEntity(EntityMiniblin.class, "Miniblin", 7733248, 16775936);
-        createEntity(EntityPhantomGannon.class, "PhantomGannon", 69376, 11750400);
+        createEntity(EntityPhantomGannon.class, "phantom_ganon", 69376, 11750400);
         createEntity(EntityPoe.class, "EntityPoe", 5128747, 16777215);
         createEntity(EntityRedead.class,"Redead",5049600, 3820800);
         createEntity(EntityShadowbeast.class, "ShadowBeast", 0, 7733248);
@@ -246,6 +264,9 @@ public class RegistryHandler
         createEntity(EntityToado.class,"Toado",3552334,9502754);
         createEntity(EntityWolfos.class, "Wolfos", 16514815, 14021887);
         createEntity(EntityZant.class, "Zant", 0, 65508);
+
+        //The Mummy
+        createEntity(EntityMummy.class, "EntityMummy", 5128747, 16777215);
 
         //Boats
         EntityRegistry.registerModEntity(EntityRedLion.class, "RedLion", entityId++, Main.instance, 64, 1, true);

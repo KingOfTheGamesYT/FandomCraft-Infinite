@@ -1,13 +1,14 @@
  package apocalypse.fandomcraft.entity;
 
  import apocalypse.fandomcraft.main.Main;
- import cpw.mods.fml.common.registry.EntityRegistry;
+
  import cpw.mods.fml.relauncher.Side;
  import cpw.mods.fml.relauncher.SideOnly;
+
  import java.util.Random;
+
  import net.minecraft.entity.Entity;
  import net.minecraft.entity.EntityCreature;
- import net.minecraft.entity.EntityList;
  import net.minecraft.entity.EntityLiving;
  import net.minecraft.entity.EntityLivingBase;
  import net.minecraft.entity.SharedMonsterAttributes;
@@ -28,8 +29,7 @@
  import net.minecraft.util.DamageSource;
  import net.minecraft.world.World;
 
- public class EntityZant
-   extends EntityMob implements IBossDisplayData {
+ public class EntityZant extends EntityMob implements IBossDisplayData {
    private int attackTimer;
    private EntityAITempt aiTempt;
 
@@ -144,4 +144,5 @@
      getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(32.0D);
      getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(16.0D);
    }
+
  }

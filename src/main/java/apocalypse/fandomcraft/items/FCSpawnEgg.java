@@ -17,8 +17,10 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +35,7 @@ public class FCSpawnEgg extends Item
     {
         setHasSubtypes(true);
         setMaxStackSize(64);
-        setCreativeTab(RegistryHandler.tabFandomCraftMisc);
+        setCreativeTab(RegistryHandler.tabFandomCraftEgg);
         setUnlocalizedName("fc_spawn_egg");
     }
 
@@ -77,6 +79,12 @@ public class FCSpawnEgg extends Item
     }
 
     @Override
+    public String getItemStackDisplayName(ItemStack stack)
+    {
+        return StatCollector.translateToLocal(getUnlocalizedName(stack));
+    }
+
+    @Override
     public String getUnlocalizedName(ItemStack stack)
     {
         String name = getNameFromStack(stack);
@@ -86,7 +94,7 @@ public class FCSpawnEgg extends Item
             return "item.null";
         }
 
-        return "item." + name.toLowerCase() + "_spawn_egg";
+        return "item.fandomcraft." + name.toLowerCase() + "_spawn_egg";
     }
 
     @SideOnly(Side.CLIENT)
@@ -223,5 +231,21 @@ public class FCSpawnEgg extends Item
         {
             throw new RuntimeException("Dispenser spawn failed: " + name, e);
         }
+    }
+
+    public static ItemStack getCyclingEgg()
+    {
+        if (CLASS_MAP.isEmpty())
+        {
+            return new ItemStack(RegistryHandler.fcSpawnEgg);
+        }
+
+        List<String> keys = new ArrayList<String>(CLASS_MAP.keySet());
+
+        int index = (int)((System.currentTimeMillis() / 3000L) % keys.size());
+
+        return createEgg(
+                keys.get(index)
+        );
     }
 }

@@ -41,10 +41,12 @@ import cpw.mods.fml.common.event.*;
 import net.minecraftforge.common.*;
 import net.minecraftforge.common.util.*;
 
-@Mod(modid = "fandomcraft", version = "5.0.0")
+@Mod(modid = "fandomcraft", version = "5.0.1")
 public class Main
 {
-    public static final String version = "5.0.0";
+    public static final String MODID = "fandomcraft";
+    public static final String NAME = "FandomCraft";
+    public static final String version = "5.0.1";
     public BiomeBadlands badlands;
     public BiomeDarkForest darkForest;
     public static int FGuideHome;
@@ -77,7 +79,6 @@ public class Main
     public static CreativeTabs tabFandomCraftOutfits;
     public static CreativeTabs tabFandomCraftValuables;
     public static CreativeTabs tabFandomCraftBlocks;
-    //public static CreativeTabs tabFandomCraftMisc;
     public static CreativeTabs tabFandomCraftTools;
     public static CreativeTabs tabFandomCraftFood;
     public static CreativeTabs tabFandomCraftModels;

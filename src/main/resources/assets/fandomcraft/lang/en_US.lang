@@ -1,37 +1,4 @@
-itemGroup.tabFandomCraftWeapons=Fandom Weapons
-itemGroup.tabFandomCraftOutfits=Fandom Armour
-itemGroup.tabFandomCraftKeyItems=Fandom Key Items
-itemGroup.tabFandomCraftValuables=Fandom Materials
-itemGroup.tabFandomCraftBlocks=Fandom Blocks
-itemGroup.tabFandomCraftMisc=Fandom Misc
-itemGroup.tabFandomCraftTools=Fandom Tools
-itemGroup.tabFandomCraftDecoration=Fandom Paints
-itemGroup.tabFandomCraftFood=Fandom Food
-itemGroup.tabFandomCraftBadges=[Unused]
-itemGroup.tabFandomCraftNature=[Unused]
-itemGroup.tabFandomCraftModels=Fandom WIP
-itemGroup.tabFandomCraftDungeons=Fandom Dungeons
-itemGroup.tabFandomCraftSpells=Fandom Spells
-itemGroup.tabFandomCraftMusic=Fandom Music
-itemGroup.fableWeapons=Fable Weapons
-itemGroup.fableArmour=Fable Armour
-itemGroup.fableMisc=Fable Misc.
-itemGroup.fableMagic=Fable Magic
-
-keybinds.ocarina=Ocarina Songs
-keybinds.ocarina.nocturne=Nocturne of Shadow
-keybinds.ocarina.lullaby=Zelda's Lullaby
-keybinds.ocarina.prelude=Prelude of Light
-keybinds.ocarina.saria=Saria's Song
-keybinds.ocarina.healingsong=Song of Healing
-keybinds.ocarina.stormsSong=Song of Storms
-keybinds.ocarina.sunsSong=Sun's Song
-keybinds.ocarina.bolero=Bolero of Fire
-keybinds.weapons=Weapons
-keybinds.weapons.armCannon=Arm Cannon
-keybinds.gui=GUI's
-keybinds.gui.help=Help
-
+#Achievements
 achievement.rupee=Legend of Zelda
 achievement.rupee.desc=Find your first Rupee
 achievement.FCdarkHeart=Heartless
@@ -73,82 +40,235 @@ achievement.murder.desc=Execute an FBI Agent.
 achievement.otherworld=Into The Dark
 achievement.otherworld.desc=Visit the Otherworld.
 
-entity.fandomcraft.FriendlyChao.name=Hero Chao
-entity.fandomcraft.PinkChao.name=Companion Chao
-entity.fandomcraft.JungleChao.name=Nesting Chao
-entity.fandomcraft.DarkChao.name=Dark Chao
-entity.fandomcraft.GreenChao.name=Lonely Chao
-entity.fandomcraft.ChaosBoss.name=Chaos
-entity.fandomcraft.Shadow.name=Shadow
-entity.fandomcraft.Goomba.name=Goomba
-entity.fandomcraft.Koopa.name=Koopa
-entity.fandomcraft.Pikachu.name=Pikachu
-entity.fandomcraft.Redead.name=Redead
-entity.fandomcraft.Charmander.name=Charmander
-entity.fandomcraft.Mew.name=Mew
-entity.fandomcraft.AttackChicken.name=Angry Chicken
-entity.fandomcraft.AttackPig.name=Angry Pig
-entity.fandomcraft.Bulbo.name=Bulbo
-entity.fandomcraft.Ditto.name=Ditto
-entity.fandomcraft.Miniblin.name=Miniblin
-entity.fandomcraft.EntityBokoblin.name=Bokoblin
-entity.fandomcraft.Darknut.name=Darknut
-entity.fandomcraft.MightyDarknut.name=Mighty Darknut
-entity.fandomcraft.Tektite.name=Tektite
-entity.fandomcraft.Armos.name=Armos
-entity.fandomcraft.Bombskit.name=Bombskit
-entity.fandomcraft.Toado.name=Toado
-entity.fandomcraft.Freezard.name=Freezard
-entity.fandomcraft.DarkLink.name=Dark Link
-entity.fandomcraft.FireKeese.name=Fire Keese
-entity.fandomcraft.Metroid.name=Metroid
-entity.fandomcraft.Regigigas.name=Regigigas
-entity.fandomcraft.ShadowBeast.name=Shadow Beast
-entity.fandomcraft.Tingle.name=Tingle
-entity.fandomcraft.BlueTektite.name=Blue Tektite
-entity.fandomcraft.IceKeese.name=Ice Keese
-entity.fandomcraft.Wolfos.name=Wolfos
-entity.fandomcraft.Ifrit.name=Ifrit
-entity.fandomcraft.Gohma.name=Gohma
-entity.fandomcraft.Gannondorf.name=Prince of Darkness: Gannondorf
-entity.fandomcraft.BeastGannon.name=Dark Beast: Ganon
-entity.fandomcraft.Zant.name=Usurper King: Zant
-entity.fandomcraft.PhantomGannon.name=Phantom Ganon
-entity.fandomcraft.Argorok.name=Twilight Dragon: Argorok
-entity.fandomcraft.UnownA.name=Unown A
-entity.fandomcraft.UnownB.name=Unown B
-entity.fandomcraft.UnownC.name=Unown C
-entity.fandomcraft.UnownE.name=Unown E
-entity.fandomcraft.UnownF.name=Unown F
-entity.fandomcraft.UnownG.name=Unown G
-entity.fandomcraft.UnownH.name=Unown H
-entity.fandomcraft.UnownI.name=Unown I
-entity.fandomcraft.UnownJ.name=Unown J
-entity.fandomcraft.UnownK.name=Unown K
-entity.fandomcraft.UnownP.name=Unown P
-entity.fandomcraft.UnownQu.name=Unown Query
-entity.fandomcraft.UnownEx.name=Unown Exclaim
-entity.fandomcraft.Hobbe.name=Hobbe
-entity.fandomcraft.HollowMan.name=Hollow Man
-entity.fandomcraft.TANK.name=Tank
-entity.fandomcraft.CHARGER.name=Charger
-entity.fandomcraft.EntityMerchantOver.name=Travelling Merchant (Overworld)
-entity.fandomcraft.EntityMerchantOther.name=Travelling Merchant (Otherworld)
-entity.fandomcraft.EntityGreyChild.name=Grey Child
-entity.fandomcraft.EntityNurse.name=Nurse
-entity.fandomcraft.EntityStalker.name=Stalker
-entity.fandomcraft.EntityJason.name=Jason Vorhees
-entity.fandomcraft.EntityMyers.name=Michael Myers
-entity.fandomcraft.EntityFreddy.name=Freddy Krueger
-entity.fandomcraft.EntityLGM.name=Alien
-entity.fandomcraft.EntityFBI.name=FBI Agent
-entity.fandomcraft.EntityMummy.name=Mummy
-entity.fandomcraft.EntityCultist.name=Cultist
-entity.fandomcraft.EntityHeretic.name=Heretic
-entity.fandomcraft.EntityPoe.name=Poe
-entity.fandomcraft.EntityBloodhound.name=Bloodhound
-entity.fandomcraft.EntityPyramid.name=Red Pyramid
+#Creative Tabs
+itemGroup.tabFandomCraftWeapons=Fandom Weapons
+itemGroup.tabFandomCraftOutfits=Fandom Armour
+itemGroup.tabFandomCraftKeyItems=Fandom Key Items
+itemGroup.tabFandomCraftValuables=Fandom Materials
+itemGroup.tabFandomCraftBlocks=Fandom Blocks
+itemGroup.tabFandomCraftMisc=Fandom Misc
+itemGroup.tabFandomCraftTools=Fandom Tools
+itemGroup.tabFandomCraftDecoration=Fandom Paints
+itemGroup.tabFandomCraftFood=Fandom Food
+itemGroup.tabFandomCraftBadges=[Unused]
+itemGroup.tabFandomCraftNature=[Unused]
+itemGroup.tabFandomCraftModels=Fandom WIP
+itemGroup.tabFandomCraftDungeons=Fandom Dungeons
+itemGroup.tabFandomCraftSpells=Fandom Spells
+itemGroup.tabFandomCraftMusic=Fandom Music
+itemGroup.tabspawneggs=Fandom Spawn Eggs
+itemGroup.fableArmour=Fable Armour
+itemGroup.fableMisc=Fable Misc.
+itemGroup.fableMagic=Fable Magic
 
+#Entities
+entity.FriendlyChao.name=Hero Chao
+entity.PinkChao.name=Companion Chao
+entity.JungleChao.name=Nesting Chao
+entity.DarkChao.name=Dark Chao
+entity.GreenChao.name=Lonely Chao
+entity.ChaosBoss.name=Chaos
+entity.Shadow.name=Shadow
+entity.Goomba.name=Goomba
+entity.Koopa.name=Koopa
+entity.Pikachu.name=Pikachu
+entity.Redead.name=Redead
+entity.Charmander.name=Charmander
+entity.Mew.name=Mew
+entity.AttackChicken.name=Angry Chicken
+entity.AttackPig.name=Angry Pig
+entity.Bulbo.name=Bulbo
+entity.Ditto.name=Ditto
+entity.Miniblin.name=Miniblin
+entity.EntityBokoblin.name=Bokoblin
+entity.Darknut.name=Darknut
+entity.MightyDarknut.name=Mighty Darknut
+entity.Tektite.name=Tektite
+entity.Armos.name=Armos
+entity.Bombskit.name=Bombskit
+entity.Toado.name=Toado
+entity.Freezard.name=Freezard
+entity.DarkLink.name=Dark Link
+entity.FireKeese.name=Fire Keese
+entity.Metroid.name=Metroid
+entity.Regigigas.name=Regigigas
+entity.ShadowBeast.name=Shadow Beast
+entity.Tingle.name=Tingle
+entity.BlueTektite.name=Blue Tektite
+entity.IceKeese.name=Ice Keese
+entity.Wolfos.name=Wolfos
+entity.Ifrit.name=Ifrit
+entity.Gohma.name=Gohma
+entity.ganondorf.name=Prince of Darkness: Ganondorf
+entity.beast_ganon.name=Dark Beast: Ganon
+entity.Zant.name=Usurper King: Zant
+entity.phantom_ganon.name=Phantom Ganon
+entity.Argorok.name=Twilight Dragon: Argorok
+entity.UnownA.name=Unown A
+entity.UnownB.name=Unown B
+entity.UnownC.name=Unown C
+entity.UnownE.name=Unown E
+entity.UnownF.name=Unown F
+entity.UnownG.name=Unown G
+entity.UnownH.name=Unown H
+entity.UnownI.name=Unown I
+entity.UnownJ.name=Unown J
+entity.UnownK.name=Unown K
+entity.UnownP.name=Unown P
+entity.UnownQu.name=Unown Query
+entity.UnownT.name=Unown T
+entity.UnownEx.name=Unown Exclaim
+entity.EntityHobbe.name=Hobbe
+entity.EntityHollowMan.name=Hollow Man
+entity.TANK.name=Tank
+entity.SPITTER.name=Spitter
+entity.CHARGER.name=Charger
+entity.EntityMerchantOver.name=Travelling Merchant (Overworld)
+entity.EntityMerchantOther.name=Travelling Merchant (Otherworld)
+entity.EntityGreyChild.name=Grey Child
+entity.EntityNurse.name=Nurse
+entity.EntityStalker.name=Stalker
+entity.EntityJason.name=Jason Vorhees
+entity.EntityMyers.name=Michael Myers
+entity.EntityFreddy.name=Freddy Krueger
+entity.EntityLGM.name=Alien
+entity.EntityFBI.name=FBI Agent
+entity.EntityMummy.name=Mummy
+entity.EntityCultist.name=Cultist
+entity.EntityHeretic.name=Heretic
+entity.EntityPoe.name=Poe
+entity.EntityBloodhound.name=Bloodhound
+entity.EntityPyramid.name=Red Pyramid
+
+#Keybinds
+keybinds.ocarina=Ocarina Songs
+keybinds.ocarina.nocturne=Nocturne of Shadow
+keybinds.ocarina.lullaby=Zelda's Lullaby
+keybinds.ocarina.prelude=Prelude of Light
+keybinds.ocarina.saria=Saria's Song
+keybinds.ocarina.healingsong=Song of Healing
+keybinds.ocarina.stormsSong=Song of Storms
+keybinds.ocarina.sunsSong=Sun's Song
+keybinds.ocarina.bolero=Bolero of Fire
+keybinds.weapons=Weapons
+keybinds.weapons.armCannon=Arm Cannon
+keybinds.gui=GUI's
+keybinds.gui.help=Help
+
+# ===== Spawn Eggs =====
+
+#Doctor Who
+item.fandomcraft.entitylgm_spawn_egg=Spawn Alien
+
+#Fable
+item.fandomcraft.entityhobbe_spawn_egg=Spawn Hobbe
+item.fandomcraft.entityhollowman_spawn_egg=Spawn Hollow Man
+
+#Friday The 13th
+item.fandomcraft.entityjason_spawn_egg=Spawn Jason Vorhees
+
+#Fringe
+item.fandomcraft.entityfbi_spawn_egg=Spawn FBI Agent
+
+#Halloween
+item.fandomcraft.entitymyers_spawn_egg=Spawn Michael Myers
+
+#Kingdom Hearts
+item.fandomcraft.ifrit_spawn_egg=Spawn Ifrit
+item.fandomcraft.shadow_spawn_egg=Spawn Shadow
+
+#Left 4 Dead
+item.fandomcraft.charger_spawn_egg=Spawn Charger
+item.fandomcraft.spitter_spawn_egg=Spawn Spitter
+item.fandomcraft.tank_spawn_egg=Spawn Tank
+
+#Mario
+item.fandomcraft.goomba_spawn_egg=Spawn Goomba
+item.fandomcraft.koopa_spawn_egg=Spawn Koopa
+
+#Metroid
+item.fandomcraft.metroid_spawn_egg=Spawn Metroid
+
+#Nightmare on Elm Street
+item.fandomcraft.entityfreddy_spawn_egg=Spawn Freddy Krueger
+
+#Pokemon
+item.fandomcraft.charmander_spawn_egg=Spawn Charmander
+item.fandomcraft.ditto_spawn_egg=Spawn Ditto
+item.fandomcraft.mew_spawn_egg=Spawn Mew
+item.fandomcraft.pikachu_spawn_egg=Spawn Pikachu
+item.fandomcraft.regigigas_spawn_egg=Spawn Regigigas
+item.fandomcraft.unowna_spawn_egg=Spawn Unknown A
+item.fandomcraft.unownb_spawn_egg=Spawn Unknown B
+item.fandomcraft.unownc_spawn_egg=Spawn Unknown C
+#item.fandomcraft.unownd_spawn_egg=Spawn Unknown D
+item.fandomcraft.unowne_spawn_egg=Spawn Unknown E
+item.fandomcraft.unownex_spawn_egg=Spawn Unknown Exclaim
+item.fandomcraft.unownf_spawn_egg=Spawn Unknown F
+item.fandomcraft.unowng_spawn_egg=Spawn Unknown G
+item.fandomcraft.unownh_spawn_egg=Spawn Unknown H
+item.fandomcraft.unowni_spawn_egg=Spawn Unknown I
+item.fandomcraft.unownj_spawn_egg=Spawn Unknown J
+item.fandomcraft.unownk_spawn_egg=Spawn Unknown K
+item.fandomcraft.unownp_spawn_egg=Spawn Unknown P
+item.fandomcraft.unownqu_spawn_egg=Spawn Unknown Query
+item.fandomcraft.unownt_spawn_egg=Spawn Unknown T
+
+#Resident Evil
+item.fandomcraft.entitymerchantother_spawn_egg=Spawn Travelling Merchant (Otherworld)
+item.fandomcraft.entitymerchantover_spawn_egg=Spawn Travelling Merchant (Overworld)
+
+#Silent Hill
+item.fandomcraft.entitybloodhound_spawn_egg=Spawn Bloodhound
+item.fandomcraft.entitycultist_spawn_egg=Spawn Cultist
+item.fandomcraft.entitygreychild_spawn_egg=Spawn Grey Child
+item.fandomcraft.entityheretic_spawn_egg=Spawn Heretic
+item.fandomcraft.entitynurse_spawn_egg=Spawn Nurse
+item.fandomcraft.entitypyramid_spawn_egg=Spawn Red Pyramid
+item.fandomcraft.entitystalker_spawn_egg=Spawn Stalker
+
+#Sonic
+item.fandomcraft.chaosboss_spawn_egg=Spawn Chaos
+item.fandomcraft.pinkchao_spawn_egg=Spawn Companion Chao
+item.fandomcraft.darkchao_spawn_egg=Spawn Dark Chao
+item.fandomcraft.friendlychao_spawn_egg=Spawn Hero Chao
+item.fandomcraft.greenchao_spawn_egg=Spawn Lonely Chao
+item.fandomcraft.junglechao_spawn_egg=Spawn Nesting Chao
+
+#The Legend of Zelda
+item.fandomcraft.attackchicken_spawn_egg=Spawn Angry Chicken
+item.fandomcraft.attackpig_spawn_egg=Spawn Angry Pig
+item.fandomcraft.armos_spawn_egg=Spawn Armos
+item.fandomcraft.bluetektite_spawn_egg=Spawn Blue Tektite
+item.fandomcraft.entitybokoblin_spawn_egg=Spawn Bokoblin
+item.fandomcraft.bombskit_spawn_egg=Spawn Bombskit
+item.fandomcraft.bulbo_spawn_egg=Spawn Bulbo
+item.fandomcraft.beast_ganon_spawn_egg=Spawn Dark Beast: Ganon
+item.fandomcraft.darklink_spawn_egg=Spawn Dark Link
+item.fandomcraft.darknut_spawn_egg=Spawn Darknut
+item.fandomcraft.firekeese_spawn_egg=Spawn Fire Keese
+item.fandomcraft.freezard_spawn_egg=Spawn Freezard
+item.fandomcraft.gohma_spawn_egg=Spawn Gohma
+item.fandomcraft.icekeese_spawn_egg=Spawn Ice Keese
+item.fandomcraft.mightydarknut_spawn_egg=Spawn Mighty Darknut
+item.fandomcraft.miniblin_spawn_egg=Spawn Miniblin
+item.fandomcraft.phantom_ganon_spawn_egg=Spawn Phantom Ganon
+item.fandomcraft.entitypoe_spawn_egg=Spawn Poe
+item.fandomcraft.ganondorf_spawn_egg=Spawn Prince of Darkness: Ganondorf
+item.fandomcraft.redead_spawn_egg=Spawn Redead
+item.fandomcraft.shadowbeast_spawn_egg=Spawn Shadow Beast
+item.fandomcraft.tektite_spawn_egg=Spawn Tektite
+item.fandomcraft.tingle_spawn_egg=Spawn Tingle
+item.fandomcraft.toado_spawn_egg=Spawn Toado
+item.fandomcraft.argorok_spawn_egg=Spawn Twilight Dragon: Argorok
+item.fandomcraft.wolfos_spawn_egg=Spawn Wolfos
+item.fandomcraft.zant_spawn_egg=Spawn Usurper King: Zant
+
+#The Mummy
+item.fandomcraft.entitymummy_spawn_egg=Spawn Mummy
+
+
+# ===== Items =====
 item.kingdomKey.name=Kingdom Key
 item.dekuseed.name=Deku Seed
 item.kingdomKeyD.name=Kingdom Key D

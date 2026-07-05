@@ -1,11 +1,7 @@
  package apocalypse.fandomcraft.network;
  import apocalypse.fandomcraft.entity.*;
 
-  import apocalypse.fandomcraft.events.CommandFC;
- import apocalypse.fandomcraft.events.CraftingEvent;
- import apocalypse.fandomcraft.events.KeyHandlerEvents;
- import apocalypse.fandomcraft.events.LoadingEvent;
- import apocalypse.fandomcraft.events.PickupEvents;
+ import apocalypse.fandomcraft.events.*;
  import apocalypse.fandomcraft.fable.*;
 
  import apocalypse.fandomcraft.fable.EntityHollowMan;
@@ -81,7 +77,6 @@
      RenderBluePot renderBluePot = new RenderBluePot();
      ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBluePot.class, (TileEntitySpecialRenderer)renderBluePot);
      MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Main.bluePot), (IItemRenderer)new ItemRenderPot((TileEntitySpecialRenderer)renderBluePot, (TileEntity)new TileEntityBluePot()));
-
      RenderGannonStatue renderGannonStatue = new RenderGannonStatue();
      ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGannonStatue.class, (TileEntitySpecialRenderer)renderGannonStatue);
      MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Main.gannonStatue), (IItemRenderer)new ItemRendererGannonStatue((TileEntitySpecialRenderer)renderGannonStatue, (TileEntity)new TileEntityGannonStatue()));
