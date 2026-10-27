@@ -1,113 +1,127 @@
-#Achievements
-achievement.rupee=Legend of Zelda
-achievement.rupee.desc=Find your first Rupee
+# ===== Achievements =====
+
+#Fringe
+achievement.murder=Conspirator
+achievement.murder.desc=Execute an FBI Agent.
+
+#Kingdom of Hearts
+achievement.FCdreamSword=Kingdom Hearts
+achievement.FCdreamSword.desc=Obtain the Dream Sword from the bonus chest or blacksmith.
 achievement.FCdarkHeart=Heartless
 achievement.FCdarkHeart.desc=Use the Dream Sword to kill an evil mob.
-achievement.goldenFeather=King Midas Had A Chicken
-achievement.goldenFeather.desc=Use the True Four Sword to kill a chicken.
 achievement.FCkingdomKey=Chosen One
 achievement.FCkingdomKey.desc=Trade the Dream Sword to a blacksmith for the queller of darkness.
 achievement.FCjungleKing=Bling Bling
 achievement.FCjungleKing.desc=Customise your Keyblade by giving it new power.
-achievement.trueFourSword=The Power Of Four
-achievement.trueFourSword.desc=Trade your fake Four Sword for the real deal.
-achievement.masterSword=Blade of Evil's Bane
-achievement.masterSword.desc=Forge the Master Sword!
 achievement.FCultima=True Heart
 achievement.FCultima.desc=Upgrade the Keyblade to its final form.
 achievement.ragnarok=Cocoon of Destruction
 achievement.ragnarok.desc=Spend your life's savings and travel thousands of miles to obtain this sword's parts.
-achievement.chaos=True Chaos
-achievement.chaos.desc=Summon and defeat the master of chaos.
-achievement.ring=Sonic the Hedgehog
-achievement.ring.desc=Find your first Ring.
-achievement.FCdreamSword=Kingdom Hearts
-achievement.FCdreamSword.desc=Obtain the Dream Sword from the bonus chest or blacksmith.
+
+#Mario
 achievement.coin=Super Mario
 achievement.coin.desc=Find your first Coin.
+
+#Silent Hill
+achievement.otherworld=Into The Dark
+achievement.otherworld.desc=Visit the Otherworld.
+
+#Sonic
+achievement.ring=Sonic the Hedgehog
+achievement.ring.desc=Find your first Ring.
+achievement.chaos=True Chaos
+achievement.chaos.desc=Summon and defeat the master of chaos.
+
+#The Legend of Zelda
+achievement.rupee=Legend of Zelda
+achievement.rupee.desc=Find your first Rupee
+achievement.trueFourSword=The Power Of Four
+achievement.trueFourSword.desc=Trade your fake Four Sword for the real deal.
+achievement.goldenFeather=King Midas Had A Chicken
+achievement.goldenFeather.desc=Use the True Four Sword to kill a chicken.
+achievement.masterSword=Blade of Evil's Bane
+achievement.masterSword.desc=Forge the Master Sword!
+achievement.masterQuest=Master Quest
+achievement.masterQuest.desc=Defeat Gannondorf.
 achievement.bombskit=Creeper's Best Friend
 achievement.bombskit.desc=Kill a Bombskit before it has the chance to explode.
 achievement.armos=Classic Kaboom
 achievement.armos.desc=Kill an Armos with a Bomb.
-achievement.masterQuest=Master Quest
-achievement.masterQuest.desc=Defeat Gannondorf.
 achievement.hylianHero=Hylian Hero
 achievement.hylianHero.desc=Defeat a Zelda boss.
 achievement.dragon2=Return To The End?
 achievement.dragon2.desc=Find a way to kill Argorok.
-achievement.murder=Conspirator
-achievement.murder.desc=Execute an FBI Agent.
-achievement.otherworld=Into The Dark
-achievement.otherworld.desc=Visit the Otherworld.
 
-#Creative Tabs
+
+# ===== Creative Tabs =====
 itemGroup.tabFandomCraftWeapons=Fandom Weapons
 itemGroup.tabFandomCraftOutfits=Fandom Armour
-itemGroup.tabFandomCraftKeyItems=Fandom Key Items
 itemGroup.tabFandomCraftValuables=Fandom Materials
 itemGroup.tabFandomCraftBlocks=Fandom Blocks
-itemGroup.tabFandomCraftMisc=Fandom Misc
 itemGroup.tabFandomCraftTools=Fandom Tools
-itemGroup.tabFandomCraftDecoration=Fandom Paints
 itemGroup.tabFandomCraftFood=Fandom Food
-itemGroup.tabFandomCraftBadges=[Unused]
-itemGroup.tabFandomCraftNature=[Unused]
+itemGroup.tabFandomCraftMisc=Fandom Misc
 itemGroup.tabFandomCraftModels=Fandom WIP
 itemGroup.tabFandomCraftDungeons=Fandom Dungeons
 itemGroup.tabFandomCraftSpells=Fandom Spells
 itemGroup.tabFandomCraftMusic=Fandom Music
 itemGroup.tabspawneggs=Fandom Spawn Eggs
-itemGroup.fableArmour=Fable Armour
-itemGroup.fableMisc=Fable Misc.
-itemGroup.fableMagic=Fable Magic
+#itemGroup.tabFandomCraftDecoration=Fandom Paints
+#itemGroup.tabFandomCraftKeyItems=Fandom Key Items
+#itemGroup.tabFandomCraftBadges=[Unused]
+#itemGroup.tabFandomCraftNature=[Unused]
+#itemGroup.fableArmour=Fable Armour
+#itemGroup.fableMisc=Fable Misc.
+#itemGroup.fableMagic=Fable Magic
 
-#Entities
-entity.FriendlyChao.name=Hero Chao
-entity.PinkChao.name=Companion Chao
-entity.JungleChao.name=Nesting Chao
-entity.DarkChao.name=Dark Chao
-entity.GreenChao.name=Lonely Chao
-entity.ChaosBoss.name=Chaos
+# ===== Entities =====
+
+#Doctor Who
+entity.EntityLGM.name=Alien
+
+#Fable
+entity.EntityHobbe.name=Hobbe
+entity.EntityHollowMan.name=Hollow Man
+
+#Friday The 13th
+entity.EntityJason.name=Jason Vorhees
+
+#Fringe
+entity.EntityFBI.name=FBI Agent
+
+#Halloween
+entity.EntityMyers.name=Michael Myers
+
+#Kingdom Hearts
+entity.Ifrit.name=Ifrit
 entity.Shadow.name=Shadow
+
+#Left 4 Dead
+entity.CHARGER.name=Charger
+entity.SPITTER.name=Spitter
+entity.TANK.name=Tank
+
+#Mario
 entity.Goomba.name=Goomba
 entity.Koopa.name=Koopa
-entity.Pikachu.name=Pikachu
-entity.Redead.name=Redead
+
+#Metroid
+entity.Metroid.name=Metroid
+
+#Nightmare on Elm Street
+entity.EntityFreddy.name=Freddy Krueger
+
+#Pokemon
+entity.Ditto.name=Ditto
 entity.Charmander.name=Charmander
 entity.Mew.name=Mew
-entity.AttackChicken.name=Angry Chicken
-entity.AttackPig.name=Angry Pig
-entity.Bulbo.name=Bulbo
-entity.Ditto.name=Ditto
-entity.Miniblin.name=Miniblin
-entity.EntityBokoblin.name=Bokoblin
-entity.Darknut.name=Darknut
-entity.MightyDarknut.name=Mighty Darknut
-entity.Tektite.name=Tektite
-entity.Armos.name=Armos
-entity.Bombskit.name=Bombskit
-entity.Toado.name=Toado
-entity.Freezard.name=Freezard
-entity.DarkLink.name=Dark Link
-entity.FireKeese.name=Fire Keese
-entity.Metroid.name=Metroid
+entity.Pikachu.name=Pikachu
 entity.Regigigas.name=Regigigas
-entity.ShadowBeast.name=Shadow Beast
-entity.Tingle.name=Tingle
-entity.BlueTektite.name=Blue Tektite
-entity.IceKeese.name=Ice Keese
-entity.Wolfos.name=Wolfos
-entity.Ifrit.name=Ifrit
-entity.Gohma.name=Gohma
-entity.ganondorf.name=Prince of Darkness: Ganondorf
-entity.beast_ganon.name=Dark Beast: Ganon
-entity.Zant.name=Usurper King: Zant
-entity.phantom_ganon.name=Phantom Ganon
-entity.Argorok.name=Twilight Dragon: Argorok
 entity.UnownA.name=Unown A
 entity.UnownB.name=Unown B
 entity.UnownC.name=Unown C
 entity.UnownE.name=Unown E
+entity.UnownEx.name=Unown Exclaim
 entity.UnownF.name=Unown F
 entity.UnownG.name=Unown G
 entity.UnownH.name=Unown H
@@ -117,30 +131,67 @@ entity.UnownK.name=Unown K
 entity.UnownP.name=Unown P
 entity.UnownQu.name=Unown Query
 entity.UnownT.name=Unown T
-entity.UnownEx.name=Unown Exclaim
-entity.EntityHobbe.name=Hobbe
-entity.EntityHollowMan.name=Hollow Man
-entity.TANK.name=Tank
-entity.SPITTER.name=Spitter
-entity.CHARGER.name=Charger
+
+#Resident Evil
 entity.EntityMerchantOver.name=Travelling Merchant (Overworld)
 entity.EntityMerchantOther.name=Travelling Merchant (Otherworld)
-entity.EntityGreyChild.name=Grey Child
-entity.EntityNurse.name=Nurse
-entity.EntityStalker.name=Stalker
-entity.EntityJason.name=Jason Vorhees
-entity.EntityMyers.name=Michael Myers
-entity.EntityFreddy.name=Freddy Krueger
-entity.EntityLGM.name=Alien
-entity.EntityFBI.name=FBI Agent
-entity.EntityMummy.name=Mummy
-entity.EntityCultist.name=Cultist
-entity.EntityHeretic.name=Heretic
-entity.EntityPoe.name=Poe
-entity.EntityBloodhound.name=Bloodhound
-entity.EntityPyramid.name=Red Pyramid
 
-#Keybinds
+#Silent Hill
+entity.EntityBloodhound.name=Bloodhound
+entity.EntityCultist.name=Cultist
+entity.EntityGreyChild.name=Grey Child
+entity.EntityHeretic.name=Heretic
+entity.EntityNurse.name=Nurse
+entity.EntityPyramid.name=Red Pyramid
+entity.EntityStalker.name=Stalker
+
+#Sonic
+entity.ChaosBoss.name=Chaos
+entity.PinkChao.name=Companion Chao
+entity.DarkChao.name=Dark Chao
+entity.FriendlyChao.name=Hero Chao
+entity.GreenChao.name=Lonely Chao
+entity.JungleChao.name=Nesting Chao
+
+#The Legend of Zelda
+entity.AttackChicken.name=Angry Chicken
+entity.AttackPig.name=Angry Pig
+entity.Armos.name=Armos
+entity.BlueTektite.name=Blue Tektite
+entity.EntityBokoblin.name=Bokoblin
+entity.Bombskit.name=Bombskit
+entity.Bulbo.name=Bulbo
+entity.beast_ganon.name=Dark Beast: Ganon
+entity.DarkLink.name=Dark Link
+entity.Darknut.name=Darknut
+entity.FireKeese.name=Fire Keese
+entity.Freezard.name=Freezard
+entity.Gohma.name=Gohma
+entity.IceKeese.name=Ice Keese
+entity.MightyDarknut.name=Mighty Darknut
+entity.Miniblin.name=Miniblin
+entity.phantom_ganon.name=Phantom Ganon
+entity.EntityPoe.name=Poe
+entity.ganondorf.name=Prince of Darkness: Ganondorf
+entity.Redead.name=Redead
+entity.ShadowBeast.name=Shadow Beast
+entity.Tektite.name=Tektite
+entity.Tingle.name=Tingle
+entity.Toado.name=Toado
+entity.Argorok.name=Twilight Dragon: Argorok
+entity.Zant.name=Usurper King: Zant
+entity.Wolfos.name=Wolfos
+
+#The Mummy
+entity.EntityMummy.name=Mummy
+
+# ===== Keybinds =====
+
+#Metroid
+keybinds.weapons=Weapons
+keybinds.weapons.armCannon=Arm Cannon
+
+#The Legend of Zelda
 keybinds.ocarina=Ocarina Songs
 keybinds.ocarina.nocturne=Nocturne of Shadow
 keybinds.ocarina.lullaby=Zelda's Lullaby
@@ -150,8 +201,7 @@ keybinds.ocarina.healingsong=Song of Healing
 keybinds.ocarina.stormsSong=Song of Storms
 keybinds.ocarina.sunsSong=Sun's Song
 keybinds.ocarina.bolero=Bolero of Fire
-keybinds.weapons=Weapons
-keybinds.weapons.armCannon=Arm Cannon
+
 keybinds.gui=GUI's
 keybinds.gui.help=Help
 
@@ -269,90 +319,314 @@ item.fandomcraft.entitymummy_spawn_egg=Spawn Mummy
 
 
 # ===== Items =====
-item.kingdomKey.name=Kingdom Key
-item.dekuseed.name=Deku Seed
-item.kingdomKeyD.name=Kingdom Key D
-item.etherealBlade.name=Ethereal Blade
+
+#Avatar
+item.unobtainiumIngot.name=Unobtainium Ingot
+
+#Bleach
+item.quincy.name=Quincy Zangetsu
+
+# ===== Borderlands =====
+#Armor
+item.EridiumHat.name=Eridium Helmet
+item.EridiumBoots.name=Eridium Boots
+item.EridiumChest.name=Eridium Chestplate
+item.EridiumLegs.name=Eridium Greaves
+
+#Weapons
+item.eridiumSword.name=Eridium Sword
+
+#Ores
+item.eridiumIngot.name=Eridium Ingot
+
+#Castle Miner Z
+item.vampireSword.name=Vampire Sword
+
+#Cornucopia
+item.greenapple.name=Green Apple
+
+#Darksiders
+item.chaosSword.name=Chaos
+
+#Diablo
+item.chain.name=Chain Link
+
+# ===== Elder Scrolls =====
+#Consumables
+item.milkBottle.name=Bottle of Milk
+
+#Ores
+item.dwarvenSteelIngot.name=Dwarven Steel Ingot
+item.elvenSteelIngot.name=Elven Steel Ingot
+item.ruby.name=Ruby
+
+#Tools
+item.dwarvenAxe.name=Dwarven Axe
+
+#Weapons
+item.dwarvenSword.name=Dwarven Sword
+item.elvenSword.name=Elven Sword
+item.glassSword.name=Glass Sword
+
+#Fallout
+item.fiberglass.name=Fiberglass
+
+# ===== Final Fantasy =====
+#Armor
+item.DarkSteelBoots.name=Darksteel Boots
+item.DarkSteelHat.name=Darksteel Helmet
+item.DarkSteelChest.name=Darksteel Chestplate
+item.DarkSteelLegs.name=Darksteel Greaves
+item.MythrilBoots.name=Mythril Boots
+item.MythrilHat.name=Mythril Helmet
+item.MythrilChest.name=Mythril Chestplate
+item.MythrilLegs.name=Mythril Greaves
+
+#Consumables
+item.grapes.name=Grape
+
+#Ores
+item.darkSteelIngot.name=Darksteel Ingot
+item.mythrilIngot.name=Mythril Ingot
+
+#Weapons
+item.blazefireSaber.name=Blazefire Saber
+item.busterSword.name=Buster Sword
+item.darkSteelSword.name=Darksteel Sword
+item.flametounge.name=Flametounge
+item.icebrand.name=Ice Brand
+item.kikuichimonji.name=Kikuichimonji
+item.mythrilSword.name=Mythril Sword
+item.ragnarok.name=Ragnarok
+
+#Garfield
+item.texastoast.name=Texas Toast
+
+#Guild Wars
+
+#Halo
+item.energySword.name=Energy Sword
+
+#How to Eat Fried Worms
+item.friedWorm.name=Fried Worm
+
+# ===== Kingdom Hearts =====
+#Consumables
+item.paupu.name=Paopu Fruit
+item.seasalticecream.name=Sea-Salt Ice Cream
+
+#Weapons
 item.arpeggio.name=Arpeggio
 item.chakram.name=Chakram
+item.destinyEmbrace.name=Destiny's Embrace
+item.etherealBlade.name=Ethereal Blade
 item.foudre.name=Foudre
 item.gracefulDahlia.name=Graceful Dahlia
+item.jungleKing.name=Jungle King
+item.kingdomKey.name=Kingdom Key
+item.kingdomKeyD.name=Kingdom Key D
 item.lindworm.name=Lindworm
 item.lunatic.name=Lunatic
+item.masamune.name=Masamune
 item.oblivion.name=Oblivion
-item.skysplitter.name=Sky Splitter
-item.jungleKing.name=Jungle King
-item.destinyEmbrace.name=Destiny's Embrace
 item.oneWingedAngel.name=One Winged Angel
+item.skysplitter.name=Sky Splitter
 item.ultima.name=Ultima
-item.busterSword.name=Buster Sword
-item.aquaHelixSword.name=Helix Sword
-item.magmaHelixSword.name=Helix Sword
-item.rocketHelixSword.name=Helix Sword
-item.rangerHelixSword.name=Helix Sword
-item.chaosSword.name=Chaos
-item.deoxSword.name=Deoxord
-item.energySword.name=Energy Sword
-item.fourSword.name=Four Sword
-item.fourSword_2.name=True Four Sword
+
+# ===== Marvel =====
+#Armor
+item.AdamantiumHat.name=Adamantium Helmet
+item.AdamantiumBoots.name=Adamantium Boots
+item.AdamantiumChest.name=Adamantium Chestplate
+item.AdamantiumLegs.name=Adamantium Greaves
+
+#Ores
+item.adamantiumIngot.name=Adamantium Ingot
+
+#Weapons
+item.adamantiumClaws.name=Adamantium Claws
+item.adamantiumSword.name=Adamantium Sword
+
+#Monster Hunter
+item.rustClump.name=Rust Clump
+
+#Papa's Pancakeria
+item.frenchtoast.name=French Toast
+
+# ===== Pokemon =====
+#Consumables
+item.Bacon.name=Bacon
+item.banana.name=Banana
+item.BananaSlice.name=Banana Slice
+item.berryJuice.name=Berry Juice
+item.gummiBlue.name=Blue Gummi
+item.chestnut.name=Chestnut
+item.gummiGreen.name=Green Gummi
+item.ragecandybar.name=Rage Candybar
+item.gummiRed.name=Red Gummi
+item.Strawberry.name=Strawberry
+
+#Weapons
 item.honedgeSword.name=Honedge Blade
+
+# ===== Project Zomboid =====
+#Consumables
+item.Jerky.name=Beef Jerky
+item.Blueberry.name=Blueberry
+item.Molasses.name=Bottle of Syrup
+item.BreadSlice.name=Bread Slice
+item.Lollipop.name=Lollipop
+item.Pancake.name=Pancake
+item.Butterpancake.name=Pancake with Butter
+item.ButterSyrupPancake.name=Pancake with Butter & Syrup
+item.toast.name=Toast
+item.Buttertoast.name=Toast with Butter
+item.waffle.name=Waffle
+item.waffle1.name=Waffle with Butter
+item.waffle2.name=Waffle with Butter & Syrup
+
+#Weapons
+item.twoByFour.name=2x4
+item.nailedTwoByFour.name=Nailed 2x4
+item.boneclub.name=Bone Club
+
+#Simpsons
+item.bluepop.name=Blueberry Poptart
+item.Oreo.name=Oreo
+item.poptart.name=Strawberry Poptart
+item.poptart2.name=Toasted Strawberry Poptart
+
+#Sonic
+item.chaoEggPink.name=Companion Chao Egg
+item.chaoEggBlue.name=Hero Chao Egg
+item.chaoEggGreen.name=Lonely Chao Egg
+
+#Stardew Vally
+item.woodclub.name=Wooden Club
+
+#Star Wars
 item.lightsaber_blue.name=Lightsaber
 item.lightsaber_red.name=Lightsaber
 item.lightsaber_green.name=Lightsaber
 item.lightsaber_purple.name=Lightsaber
+
+# ===== Terraria =====
+#Armor
+item.OrichulumBoots.name=Orichulum Boots
+item.OrichulumChest.name=Orichulum Chestplate
+item.OrichulumLegs.name=Orichulum Greaves
+item.OrichulumHat.name=Orichulum Helmet
+
+#Weapons
+item.orichulumSword.name=Orichulum Sword
+
+#Ores
+item.orichulumIngot.name=Orichulum Ingot
+
+# =====The Legend of Zelda =====
+#Armor
+item.MegatonBoots.name=Megaton Boots
+item.MagicCrown.name=Hylian Crown
+item.MagicChainmail.name=Hylian Chainmail
+item.MagicArmour.name=Hylian Armour
+
+#Consumables
+item.potionBlue.name=Blue Potion
+item.potionGreen.name=Green Potion
+item.potionRed.name=Red Potion
+item.worm.name=Worm
+
+#Tools
+item.moleMitts.name=Mole Mitts
+item.nightmarePick.name=Nightmare Pickaxe
+
+#Weapons
+item.dekuseed.name=Deku Seed
+item.fourSword.name=Four Sword
 item.masterSword.name=Master Sword
 item.skullHammer.name=Skull Hammer
-item.masamune.name=Masamune
+item.fourSword_2.name=True Four Sword
 item.legendMasterSword.name=True Master Sword
-item.twoByFour.name=2x4
-item.nailedTwoByFour.name=Nailed 2x4
-item.enderSword.name=Ender Sword
-item.woodclub.name=Wooden Club
-item.boneclub.name=Bone Club
-item.fishHead.name=Fish Head
-item.snowmanOnAStick.name=Snowman On A Stick
-item.featherSword.name=Feather Sword
-item.deathByFlower.name=Death By Flower
-item.blazefireSaber.name=Blazefire Saber
-item.vampireSword.name=Vampire Sword
-item.glassSword.name=Glass Sword
-item.crawlerMaul.name=Crawler Maul
-item.dwarvenSword.name=Dwarven Sword
-item.elvenSword.name=Elven Sword
-item.orichulumSword.name=Orichulum Sword
-item.mythrilSword.name=Mythril Sword
-item.adamantiumSword.name=Adamantium Sword
-item.adamantiumClaws.name=Adamantium Claws
-item.unobtainiumSword.name=Unobtainium Sword
-item.darkSteelSword.name=Darksteel Sword
-item.elvenPickaxe.name=Elven Pickaxe
-item.dwarvenAxe.name=Dwarven Axe
+
+#MISC
+item.jellyBlue.name=Blue Chu Jelly
+item.goddessStone.name=Goddess Stone
+item.goldenFeather.name=Golden Feather
+item.jellyGreen.name=Green Chu Jelly
+item.jewelledHilt.name=Jewelled Master Hilt
+item.knightCrest.name=Knight's Crest
+item.blade.name=Master Blade
+item.hilt.name=Master Hilt
+item.insignia.name=Master Insignia
+item.jellyRed.name=Red Chu Jelly
+item.redLion.name=Red Lion
+item.rupeeGreen.name=Rupee
+item.rupeeBlue.name=Rupee
+item.rupeeYellow.name=Rupee
+item.rupeeRed.name=Rupee
+item.rupeePurple.name=Rupee
+item.rupeeOrange.name=Rupee
+item.rupeeSilver.name=Rupee
+item.skullNecklace.name=Skull Necklace
+item.temperedBlade.name=Tempered Master Blade
+item.Triforce.name=Triforce
+item.triforceOfPower.name=Triforce Shard
+item.triforceOfWisdom.name=Triforce Shard
+item.triforceOfCourage.name=Triforce Shard
+
+#Undertale
 item.plasticknife.name=Plastic Knife
-item.quincy.name=Quincy Zangetsu
-item.flametounge.name=Flametounge
-item.icebrand.name=Ice Brand
-item.kikuichimonji.name=Kikuichimonji
-item.ragnarok.name=Ragnarok
-item.orichulumIngot.name=Orichulum Ingot
-item.mythrilIngot.name=Mythril Ingot
-item.eridiumSword.name=Eridium Sword
-item.eridiumIngot.name=Eridium Ingot
-item.adamantiumIngot.name=Adamantium Ingot
-item.unobtainiumIngot.name=Unobtainium Ingot
-item.darkSteelIngot.name=Darksteel Ingot
-item.dwarvenSteelIngot.name=Dwarven Steel Ingot
-item.elvenSteelIngot.name=Elven Steel Ingot
-item.moleMitts.name=Mole Mitts
-item.fancyLeafPick.name=Fancy Leaf Pickaxe
-item.fancyDirtPick.name=Fancy Dirt Pickaxe
-item.fancyStonePick.name=Fancy Stone Pickaxe
+
+#world of Warcraft
+item.philosopherStone.name=Philosopher's Stone
+
+# ===== Original =====
+#Project Zomboid based
+
+#Pokemon based weapons
+item.deoxSword.name=Deoxord
+item.aquaHelixSword.name=Helix Sword
+item.magmaHelixSword.name=Helix Sword
+item.rocketHelixSword.name=Helix Sword
+item.rangerHelixSword.name=Helix Sword
+#Pokemon based consumables
+item.Butter.name=Bottle of Butter
+
+#Minecraft based
+item.fancyDiamondPick.name=Fancy Diamond Pickaxe
+item.fancyGoldPick.name=Fancy Gold Pickaxe
 item.fancyIronPick.name=Fancy Iron Pickaxe
 item.fancyLapisPick.name=Fancy Lapis Pickaxe
-item.fancyRedstonePick.name=Fancy Redstone Pickaxe
-item.fancyGoldPick.name=Fancy Gold Pickaxe
-item.fancyDiamondPick.name=Fancy Diamond Pickaxe
 item.fancyRainbowPick.name=Fancy Rainbow Pickaxe
-item.nightmarePick.name=Nightmare Pickaxe
+item.fancyStonePick.name=Fancy Stone Pickaxe
+item.snowmanOnAStick.name=Snowman On A Stick
+
+#Simpsons based
+item.bluepop2.name=Toasted Blueberry Poptart
+
+#Remove
+item.enderSword.name=Ender Sword
+item.fishHead.name=Fish Head
+item.featherSword.name=Feather Sword
+item.deathByFlower.name=Death By Flower
+item.crawlerMaul.name=Crawler Maul
+item.unobtainiumSword.name=Unobtainium Sword
+item.elvenPickaxe.name=Elven Pickaxe
+item.fancyLeafPick.name=Fancy Leaf Pickaxe
+item.fancyDirtPick.name=Fancy Dirt Pickaxe
+#Dirt pickaxe
+item.fancyRedstonePick.name=Fancy Redstone Pickaxe
+item.emptyBottle.name=Empty Bottle
+item.chocopop.name=Chocolate Poptart
+item.chocopop2.name=Toasted Chocolate Poptart
+item.cookiepop.name=Cookie Dough Poptart
+item.cookiepop2.name=Toast Cookie Dough Poptart
+item.UnobtainiumHat.name=Unobtainium Helmet
+item.UnobtainiumBoots.name=Unobtainium Boots
+item.UnobtainiumChest.name=Unobtainium Chestplate
+item.UnobtainiumLegs.name=Unobtainium Greaves
+
+#Not Added yet
 item.nugget.name=Nugget
 item.starDust.name=Stardust
 item.starPiece.name=Star Piece
@@ -364,9 +638,6 @@ item.relicVase.name=Relic Vase
 item.relicCopper.name=Copper Relic Coin
 item.relicSilver.name=Silver Relic Coin
 item.relicGold.name=Gold Relic Coin
-item.fiberglass.name=Fiberglass
-item.worm.name=Worm
-item.friedWorm.name=Fried Worm
 item.braxHooves.name=Brax Hooves
 item.rawhide.name=Rawhide
 item.paintBucket.name=Paint Bucket
@@ -396,81 +667,10 @@ item.mysteryEgg.name=Mystery Egg
 item.oldSeaMap.name=Old Sea Map
 item.parcel.name=Parcel
 item.redScale.name=Red Scale
-item.ruby.name=Ruby
 item.sapphire.name=Sapphire
 item.secretpotion.name=Secret Potion
 item.intriguingStone.name=Intriguing Stone
-item.rupeeGreen.name=Rupee
-item.rupeeBlue.name=Rupee
-item.rupeeYellow.name=Rupee
-item.rupeeRed.name=Rupee
-item.rupeePurple.name=Rupee
-item.rupeeOrange.name=Rupee
-item.rupeeSilver.name=Rupee
-item.blade.name=Master Blade
-item.temperedBlade.name=Tempered Master Blade
-item.hilt.name=Master Hilt
-item.jewelledHilt.name=Jewelled Master Hilt
-item.emptyBottle.name=Empty Bottle
-item.milkBottle.name=Bottle of Milk
-item.potionRed.name=Red Potion
-item.potionBlue.name=Blue Potion
-item.potionGreen.name=Green Potion
-item.knightCrest.name=Knight's Crest
-item.skullNecklace.name=Skull Necklace
-item.Triforce.name=Triforce
-item.triforceOfPower.name=Triforce Shard
-item.triforceOfWisdom.name=Triforce Shard
-item.triforceOfCourage.name=Triforce Shard
-item.jellyRed.name=Red Chu Jelly
-item.jellyBlue.name=Blue Chu Jelly
-item.jellyGreen.name=Green Chu Jelly
-item.goldenFeather.name=Golden Feather
-item.insignia.name=Master Insignia
-item.goddessStone.name=Goddess Stone
 item.diamondBadge.name=Diamond Badge
-item.chain.name=Chain Link
-item.philosopherStone.name=Philosopher's Stone
-item.ragecandybar.name=Rage Candybar
-item.berryJuice.name=Berry Juice
-item.waffle.name=Waffle
-item.waffle1.name=Waffle with Butter
-item.waffle2.name=Waffle with Butter & Syrup
-item.Pancake.name=Pancake
-item.Butterpancake.name=Pancake with Butter
-item.ButterSyrupPancake.name=Pancake with Butter & Syrup
-item.gummiRed.name=Red Gummi
-item.gummiBlue.name=Blue Gummi
-item.gummiGreen.name=Green Gummi
-item.chestnut.name=Chestnut
-item.banana.name=Banana
-item.BananaSlice.name=Banana Slice
-item.BreadSlice.name=Bread Slice
-item.toast.name=Toast
-item.Buttertoast.name=Toast with Butter
-item.texastoast.name=Texas Toast
-item.frenchtoast.name=French Toast
-item.Butter.name=Bottle of Butter
-item.Molasses.name=Bottle of Syrup
-item.chocopop.name=Chocolate Poptart
-item.chocopop2.name=Toasted Chocolate Poptart
-item.bluepop.name=Blueberry Poptart
-item.bluepop2.name=Toasted Blueberry Poptart
-item.poptart.name=Strawberry Poptart
-item.poptart2.name=Toasted Strawberry Poptart
-item.cookiepop.name=Cookie Dough Poptart
-item.cookiepop2.name=Toast Cookie Dough Poptart
-item.grapes.name=Grape
-item.Strawberry.name=Strawberry
-item.Blueberry.name=Blueberry
-item.Oreo.name=Oreo
-item.greenapple.name=Green Apple
-item.Jerky.name=Beef Jerky
-item.Bacon.name=Bacon
-item.Lollipop.name=Lollipop
-item.RedVine.name=Red Vine
-item.seasalticecream.name=Sea-Salt Ice Cream
-item.paupu.name=Paopu Fruit
 item.PlasmaHood.name=Plasma Hood
 item.PlasmaShaul.name=Plasma Shaul
 item.PlasmaTunic.name=Plasma Tunic
@@ -502,40 +702,8 @@ item.HeroHat.name=Hero's Hat
 item.HeroTunic.name=Hero's Tunic
 item.HeroPants.name=Hero's Pants
 item.HeroBoots.name=Hero's Boots
-item.MegatonBoots.name=Megaton Boots
-item.MagicCrown.name=Hylian Crown
-item.MagicChainmail.name=Hylian Chainmail
-item.MagicArmour.name=Hylian Armour
-item.redLion.name=Red Lion
-item.chaoEggBlue.name=Hero Chao Egg
-item.chaoEggPink.name=Companion Chao Egg
-item.chaoEggGreen.name=Lonely Chao Egg
-item.rustClump.name=Rust Clump
-item.OrichulumBoots.name=Orichulum Boots
-item.OrichulumChest.name=Orichulum Chestplate
-item.OrichulumLegs.name=Orichulum Greaves
-item.OrichulumHat.name=Orichulum Helmet
-item.MythrilHat.name=Mythril Helmet
-item.MythrilBoots.name=Mythril Boots
-item.MythrilChest.name=Mythril Chestplate
-item.MythrilLegs.name=Mythril Greaves
-item.EridiumHat.name=Eridium Helmet
-item.EridiumBoots.name=Eridium Boots
-item.EridiumChest.name=Eridium Chestplate
-item.EridiumLegs.name=Eridium Greaves
-item.AdamantiumHat.name=Adamantium Helmet
-item.AdamantiumBoots.name=Adamantium Boots
-item.AdamantiumChest.name=Adamantium Chestplate
-item.AdamantiumLegs.name=Adamantium Greaves
-item.UnobtainiumHat.name=Unobtainium Helmet
-item.UnobtainiumBoots.name=Unobtainium Boots
-item.UnobtainiumChest.name=Unobtainium Chestplate
-item.UnobtainiumLegs.name=Unobtainium Greaves
-item.DarkSteelHat.name=Darksteel Helmet
-item.DarkSteelBoots.name=Darksteel Boots
-item.DarkSteelChest.name=Darksteel Chestplate
+
 item.gold_coin.name=Gold Coin
-item.DarkSteelLegs.name=Darksteel Greaves
 item.silver_coin.name=Silver Coini
 item.platinum_coin.name=Platinum Coin
 item.copper_coin.name=Copper Coin

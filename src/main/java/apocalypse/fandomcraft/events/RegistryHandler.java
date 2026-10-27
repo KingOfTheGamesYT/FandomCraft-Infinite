@@ -138,7 +138,7 @@ public class RegistryHandler
         //Skyrim
         registerProjectile(ProjectileBolt.class, "Bolt");
 
-        //Zelda
+        //The Legend of Zelda
         registerProjectile(EntityBomb.class, "Bomb");
         registerProjectile(EntityDekuNut.class, "DekuNut");
         registerProjectile(GrappledHook.class, "GrappledHook");
@@ -161,8 +161,8 @@ public class RegistryHandler
         createEntity(EntityLGM.class, "EntityLGM", 16777215, 16777215); //Todo Rename to Green Alien when we add more Aliens
 
         //Fable
-        createEntity(EntityHollowMan.class, "EntityHollowMan", 5128747, 16777215);
         createEntity(EntityHobbe.class, "EntityHobbe", 11903890, 12797184);
+        createEntity(EntityHollowMan.class, "EntityHollowMan", 5128747, 16777215);
 
         //Friday The 13th
         createEntity(EntityJason.class, "EntityJason", 0, 0);
@@ -178,13 +178,13 @@ public class RegistryHandler
         createEntity(EntityShadow.class,"Shadow",15,16776960);
 
         //Left 4 Dead
-        createEntity(EntityTank.class,"TANK",16711680,14483533);
-        createEntity(EntitySpitter.class,"SPITTER",15685702,14548205);
         createEntity(EntityCharger.class,"CHARGER",13685702,14548205);
+        createEntity(EntitySpitter.class,"SPITTER",15685702,14548205);
+        createEntity(EntityTank.class,"TANK",16711680,14483533);
 
         //Mario
-        createEntity(EntityKoopa.class,"Koopa",892431, 16777215);
         createEntity(EntityGoomba.class,"Goomba",7888668, 16110193);
+        createEntity(EntityKoopa.class,"Koopa",892431, 16777215);
 
         //Metroid
         createEntity(EntityMetroid.class,"Metroid",7667690,8912896);
@@ -214,12 +214,12 @@ public class RegistryHandler
         createEntity(EntityUnownQu.class,"UnownQu",551,16777215);
 
         //Resident Evil
-        createEntity(EntityMerchantOver.class, "EntityMerchantOver", 16777215, 16777215);
         createEntity(EntityMerchantOther.class, "EntityMerchantOther", 16777215, 16777215);
+        createEntity(EntityMerchantOver.class, "EntityMerchantOver", 16777215, 16777215);
 
         //Silent Hill
+        createEntity(EntityBloodhound.class, "EntityBloodhound", 5128747, 16777215); //TODO: Rename to Feral Dog
         createEntity(EntityCultist.class, "EntityCultist", 5128747, 16777215);
-        createEntity(EntityBloodhound.class, "EntityBloodhound", 5128747, 16777215); //TODO: Rename to Feral
         createEntity(EntityGreyChild.class, "EntityGreyChild", 5128747, 16777215);
         createEntity(EntityHeretic.class, "EntityHeretic", 5128747, 16777215);
         createEntity(EntityNurse.class, "EntityNurse", 5128747, 16777215);
@@ -243,11 +243,12 @@ public class RegistryHandler
         createEntity(EntityAttackPig.class,"AttackPig",16751846,10289259);
         createEntity(EntityBeastGannon.class, "beast_ganon", 69376, 11750400);
         createEntity(EntityBlueTektite.class, "BlueTektite", 466029, 4336196);
-        createEntity(EntityBombskit.class, "Bombskit", 3552334, 9502754);
         createEntity(EntityBulbo.class, "Bulbo", 565760, 16711680);
-        createEntity(EntityDarknut.class,"Darknut",14476237,4606303);
+        createEntity(EntityBombskit.class, "Bombskit", 3552334, 9502754);
         createEntity(EntityDarkLink.class,"DarkLink",0,340224);
+        createEntity(EntityDarknut.class,"Darknut",14476237,4606303);
         createEntity(EntityBokoblin.class,"EntityBokoblin",16775936,6047510);
+        createEntity(EntityPoe.class, "EntityPoe", 5128747, 16777215);
         createEntity(EntityFireKeese.class,"FireKeese",16734720,16763904);
         createEntity(EntityFreezard.class,"Freezard",16514815,14021887);
         createEntity(EntityGannondorf.class, "ganondorf", 69376, 11750400);
@@ -256,7 +257,6 @@ public class RegistryHandler
         createEntity(EntityMightyDarknut.class,"MightyDarknut",6169893,4606303);
         createEntity(EntityMiniblin.class, "Miniblin", 7733248, 16775936);
         createEntity(EntityPhantomGannon.class, "phantom_ganon", 69376, 11750400);
-        createEntity(EntityPoe.class, "EntityPoe", 5128747, 16777215);
         createEntity(EntityRedead.class,"Redead",5049600, 3820800);
         createEntity(EntityShadowbeast.class, "ShadowBeast", 0, 7733248);
         createEntity(EntityTektite.class,"Tektite",10420224,4336196);

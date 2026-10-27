@@ -35909,7 +35909,7 @@ public class DungeonGannon extends StructureComponent
         world.setBlock(chunkX + 31, j + 71, chunkZ + 26, Main.twilightBrick3, 0, 2);
         world.setBlock(chunkX + 32, j + 71, chunkZ + 26, Main.twilightBrick3, 0, 2);
         world.setBlock(chunkX + 19, j + 71, chunkZ + 28, Main.twilightBrick3, 0, 2);
-        final Entity boss = EntityList.createEntityByName("MightDarknut", world);
+        final Entity boss = EntityList.createEntityByName("MightyDarknut", world);
         boss.setLocationAndAngles((double)(chunkX + 19), (double)(j + 68), (double)(chunkZ + 28), 0.0f, 0.0f);
         world.spawnEntityInWorld(boss);
         System.out.println("Ended Gannon's Tower at (" + (chunkX + 19) + ", " + (j + 71) + ", " + (chunkZ + 28) + ")");
